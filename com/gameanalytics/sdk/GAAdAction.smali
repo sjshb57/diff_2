@@ -113,7 +113,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v3, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->DQCB:Ljava/lang/String;
+    sget-object v3, Lcom/saucesdk/android/HGf/BqwBVtsr;->AJItDuQjui:Ljava/lang/String;
 
     invoke-direct {v0, v3, v1, v2, v1}, Lcom/gameanalytics/sdk/GAAdAction;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 
@@ -137,9 +137,7 @@
 
     const-string v2, "failed_show"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->NfAB:Ljava/lang/String;
+    const-string v3, "FailedShow"
 
     invoke-direct {v0, v3, v1, v2, v1}, Lcom/gameanalytics/sdk/GAAdAction;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 

@@ -280,7 +280,7 @@
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentState;->mInstance:Landroidx/fragment/app/Fragment;
 
-    if-nez v0, :cond_90
+    if-nez v0, :cond_8f
 
     iget-object v0, p0, Landroidx/fragment/app/FragmentState;->mArguments:Landroid/os/Bundle;
 
@@ -399,13 +399,11 @@
 
     sget-boolean p1, Landroidx/fragment/app/FragmentManagerImpl;->DEBUG:Z
 
-    if-eqz p1, :cond_90
+    if-eqz p1, :cond_8f
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/core/content/Whm/HgKojeDw;->suHrSMZAHMVTD:Ljava/lang/String;
+    const-string p2, "Instantiated fragment "
 
     invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -421,7 +419,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_90
+    :cond_8f
     iget-object p1, p0, Landroidx/fragment/app/FragmentState;->mInstance:Landroidx/fragment/app/Fragment;
 
     return-object p1

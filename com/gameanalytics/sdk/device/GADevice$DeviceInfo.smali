@@ -564,7 +564,7 @@
 
     cmpl-double v0, v0, v2
 
-    if-nez v0, :cond_6c
+    if-nez v0, :cond_6d
 
     :cond_e
     new-instance v0, Ljava/io/BufferedReader;
@@ -583,7 +583,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_6c
+    if-eqz v1, :cond_6d
 
     const-string v2, "MemTotal"
 
@@ -591,8 +591,8 @@
 
     move-result v2
     :try_end_26
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_26} :catch_68
-    .catchall {:try_start_0 .. :try_end_26} :catchall_63
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_26} :catch_69
+    .catchall {:try_start_0 .. :try_end_26} :catchall_64
 
     const/4 v3, 0x1
 
@@ -660,26 +660,26 @@
     long-to-double v1, v1
 
     iput-wide v1, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->memAvailable:D
-    :try_end_62
-    .catch Ljava/io/IOException; {:try_start_2b .. :try_end_62} :catch_68
-    .catchall {:try_start_2b .. :try_end_62} :catchall_63
+    :try_end_63
+    .catch Ljava/io/IOException; {:try_start_2b .. :try_end_63} :catch_69
+    .catchall {:try_start_2b .. :try_end_63} :catchall_64
 
     goto :goto_1a
 
-    :catchall_63
+    :catchall_64
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :catch_68
+    :catch_69
     move-exception v0
 
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_6c
-    :goto_6c
+    :cond_6d
+    :goto_6d
     return-void
 .end method
 
@@ -910,7 +910,7 @@
 
     const/4 v3, 0x1
 
-    if-eqz v1, :cond_50
+    if-eqz v1, :cond_51
 
     iget-object v4, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->cpuName:Ljava/lang/String;
 
@@ -939,7 +939,7 @@
     :cond_2b
     iget-object v4, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->hardware:Ljava/lang/String;
 
-    if-nez v4, :cond_42
+    if-nez v4, :cond_43
 
     const-string v4, "Hardware"
 
@@ -947,9 +947,11 @@
 
     move-result v4
 
-    if-eqz v4, :cond_42
+    if-eqz v4, :cond_43
 
-    const-string v3, "\\s+"
+    const/4 v3, 0x0
+
+    sget-object v3, Lcom/dobest/analyticshwsdk/c/YY/DTcAcStO;->HVYHTmkophthPQ:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -961,7 +963,7 @@
 
     goto :goto_c
 
-    :cond_42
+    :cond_43
     const-string v2, "processor"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -978,14 +980,14 @@
 
     goto :goto_c
 
-    :cond_50
+    :cond_51
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     const/4 v4, 0x0
 
-    if-ge v0, v1, :cond_80
+    if-ge v0, v1, :cond_81
 
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -997,12 +999,12 @@
 
     invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    :cond_63
+    :cond_64
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_c0
+    if-eqz v1, :cond_c1
 
     const-string v5, "^cpu\\s"
 
@@ -1010,7 +1012,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_63
+    if-eqz v5, :cond_64
 
     const-string v0, "\\s+"
 
@@ -1026,23 +1028,23 @@
 
     iput-wide v0, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->cpuLoad:J
 
-    goto :goto_c0
+    goto :goto_c1
 
-    :cond_80
+    :cond_81
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->cpuLoad:J
-    :try_end_84
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_84} :catch_1b9
-    .catchall {:try_start_0 .. :try_end_84} :catchall_1b4
+    :try_end_85
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_85} :catch_1b9
+    .catchall {:try_start_0 .. :try_end_85} :catchall_1b4
 
     move v5, v4
 
-    :goto_85
-    :try_start_85
+    :goto_86
+    :try_start_86
     iget v6, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->numCores:I
 
-    if-ge v5, v6, :cond_b1
+    if-ge v5, v6, :cond_b2
 
     new-instance v6, Ljava/io/BufferedReader;
 
@@ -1082,37 +1084,37 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_85
+    goto :goto_86
 
-    :cond_b1
+    :cond_b2
     iget-wide v7, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->cpuLoad:J
 
     cmp-long v0, v7, v0
 
-    if-lez v0, :cond_c0
+    if-lez v0, :cond_c1
 
     int-to-long v0, v6
 
     div-long/2addr v7, v0
 
     iput-wide v7, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->cpuLoad:J
-    :try_end_bb
-    .catchall {:try_start_85 .. :try_end_bb} :catchall_bc
+    :try_end_bc
+    .catchall {:try_start_86 .. :try_end_bc} :catchall_bd
 
-    goto :goto_c0
+    goto :goto_c1
 
-    :catchall_bc
+    :catchall_bd
     move-exception v0
 
-    :try_start_bd
+    :try_start_be
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-    :try_end_c0
-    .catch Ljava/io/IOException; {:try_start_bd .. :try_end_c0} :catch_1b9
-    .catchall {:try_start_bd .. :try_end_c0} :catchall_1b4
+    :try_end_c1
+    .catch Ljava/io/IOException; {:try_start_be .. :try_end_c1} :catch_1b9
+    .catchall {:try_start_be .. :try_end_c1} :catchall_1b4
 
-    :cond_c0
-    :goto_c0
-    :try_start_c0
+    :cond_c1
+    :goto_c1
+    :try_start_c1
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1150,34 +1152,34 @@
     move-result-object v1
 
     monitor-enter v1
-    :try_end_e5
-    .catch Ljava/io/IOException; {:try_start_c0 .. :try_end_e5} :catch_137
-    .catchall {:try_start_c0 .. :try_end_e5} :catchall_132
+    :try_end_e6
+    .catch Ljava/io/IOException; {:try_start_c1 .. :try_end_e6} :catch_138
+    .catchall {:try_start_c1 .. :try_end_e6} :catchall_133
 
-    :try_start_e5
+    :try_start_e6
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1a
 
     const-wide/16 v4, 0x64
 
-    if-lt v2, v3, :cond_f3
+    if-lt v2, v3, :cond_f4
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v1, v4, v5, v2}, Ljava/lang/Process;->waitFor(JLjava/util/concurrent/TimeUnit;)Z
 
-    goto :goto_f6
+    goto :goto_f7
 
-    :cond_f3
+    :cond_f4
     invoke-virtual {v1, v4, v5}, Ljava/lang/Object;->wait(J)V
 
-    :goto_f6
+    :goto_f7
     monitor-exit v1
-    :try_end_f7
-    .catchall {:try_start_e5 .. :try_end_f7} :catchall_12f
+    :try_end_f8
+    .catchall {:try_start_e6 .. :try_end_f8} :catchall_130
 
-    :try_start_f7
+    :try_start_f8
     new-instance v2, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
@@ -1190,18 +1192,18 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    :cond_105
+    :cond_106
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_13b
+    if-eqz v1, :cond_13c
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_105
+    if-eqz v3, :cond_106
 
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1232,41 +1234,41 @@
     double-to-long v0, v0
 
     iput-wide v0, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->appCpuUsage:J
-    :try_end_12e
-    .catch Ljava/io/IOException; {:try_start_f7 .. :try_end_12e} :catch_137
-    .catchall {:try_start_f7 .. :try_end_12e} :catchall_132
+    :try_end_12f
+    .catch Ljava/io/IOException; {:try_start_f8 .. :try_end_12f} :catch_138
+    .catchall {:try_start_f8 .. :try_end_12f} :catchall_133
 
-    goto :goto_13b
+    goto :goto_13c
 
-    :catchall_12f
+    :catchall_130
     move-exception v0
-
-    :try_start_130
-    monitor-exit v1
-    :try_end_131
-    .catchall {:try_start_130 .. :try_end_131} :catchall_12f
 
     :try_start_131
-    throw v0
+    monitor-exit v1
     :try_end_132
-    .catch Ljava/io/IOException; {:try_start_131 .. :try_end_132} :catch_137
-    .catchall {:try_start_131 .. :try_end_132} :catchall_132
+    .catchall {:try_start_131 .. :try_end_132} :catchall_130
 
-    :catchall_132
+    :try_start_132
+    throw v0
+    :try_end_133
+    .catch Ljava/io/IOException; {:try_start_132 .. :try_end_133} :catch_138
+    .catchall {:try_start_132 .. :try_end_133} :catchall_133
+
+    :catchall_133
     move-exception v0
 
-    :try_start_133
+    :try_start_134
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto :goto_13b
+    goto :goto_13c
 
-    :catch_137
+    :catch_138
     move-exception v0
 
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_13b
-    :goto_13b
+    :cond_13c
+    :goto_13c
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/class/misc/mali0/device/utilization"
@@ -1277,7 +1279,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_15d
+    if-eqz v1, :cond_15e
 
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -1299,12 +1301,10 @@
 
     goto :goto_1bd
 
-    :cond_15d
+    :cond_15e
     new-instance v0, Ljava/io/File;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->MgQgWRVbHCUy:Ljava/lang/String;
+    const-string v1, "/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -1380,8 +1380,8 @@
 
     iput-object v0, p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->gpuModel:Ljava/lang/String;
     :try_end_1b3
-    .catch Ljava/io/IOException; {:try_start_133 .. :try_end_1b3} :catch_1b9
-    .catchall {:try_start_133 .. :try_end_1b3} :catchall_1b4
+    .catch Ljava/io/IOException; {:try_start_134 .. :try_end_1b3} :catch_1b9
+    .catchall {:try_start_134 .. :try_end_1b3} :catchall_1b4
 
     goto :goto_1bd
 

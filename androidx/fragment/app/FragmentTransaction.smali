@@ -404,9 +404,7 @@
     :cond_8
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->Inlo:Ljava/lang/String;
+    const-string v1, "This transaction is already being added to the back stack"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -428,13 +426,13 @@
 
     move-result v2
 
-    if-nez v2, :cond_b6
+    if-nez v2, :cond_b8
 
     invoke-static {v1}, Ljava/lang/reflect/Modifier;->isPublic(I)Z
 
     move-result v2
 
-    if-eqz v2, :cond_b6
+    if-eqz v2, :cond_b8
 
     invoke-virtual {v0}, Ljava/lang/Class;->isMemberClass()Z
 
@@ -446,7 +444,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b6
+    if-eqz v1, :cond_b8
 
     :cond_20
     const-string v0, " now "
@@ -503,7 +501,7 @@
     iput-object p3, p2, Landroidx/fragment/app/Fragment;->mTag:Ljava/lang/String;
 
     :cond_57
-    if-eqz p1, :cond_ad
+    if-eqz p1, :cond_af
 
     const/4 v2, -0x1
 
@@ -554,7 +552,7 @@
 
     iput p1, p2, Landroidx/fragment/app/Fragment;->mContainerId:I
 
-    goto :goto_ad
+    goto :goto_af
 
     :cond_8c
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -585,8 +583,8 @@
 
     throw p1
 
-    :cond_ad
-    :goto_ad
+    :cond_af
+    :goto_af
     new-instance p1, Landroidx/fragment/app/FragmentTransaction$Op;
 
     invoke-direct {p1, p4, p2}, Landroidx/fragment/app/FragmentTransaction$Op;-><init>(ILandroidx/fragment/app/Fragment;)V
@@ -595,7 +593,7 @@
 
     return-void
 
-    :cond_b6
+    :cond_b8
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-instance p2, Ljava/lang/StringBuilder;

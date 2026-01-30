@@ -131,19 +131,19 @@
 
     move-result v1
 
-    if-nez v1, :cond_3d
+    if-nez v1, :cond_3e
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->isInitialized()Z
 
     move-result v1
 
-    if-nez v1, :cond_3c
+    if-nez v1, :cond_3d
 
     invoke-static {}, Lcom/gameanalytics/sdk/GameAnalytics;->access$300()I
 
     move-result v1
 
-    if-ge v1, v3, :cond_3c
+    if-ge v1, v3, :cond_3d
 
     iget-object v4, v0, Lcom/gameanalytics/sdk/GameAnalytics$17;->val$currency:Ljava/lang/String;
 
@@ -169,10 +169,10 @@
 
     invoke-static {}, Lcom/gameanalytics/sdk/GameAnalytics;->access$304()I
 
-    :cond_3c
+    :cond_3d
     return-void
 
-    :cond_3d
+    :cond_3e
     iget-object v14, v0, Lcom/gameanalytics/sdk/GameAnalytics$17;->val$currency:Ljava/lang/String;
 
     iget v15, v0, Lcom/gameanalytics/sdk/GameAnalytics$17;->val$amount:I

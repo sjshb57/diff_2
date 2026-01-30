@@ -126,9 +126,7 @@
 .method public getName()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/flatbuffers/OSq/msMBb;->cNiETWVHVUS:Ljava/lang/String;
+    const-string v0, "addProgressionEvent"
 
     return-object v0
 .end method

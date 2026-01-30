@@ -78,9 +78,7 @@
 .method public getName()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->fbUeUwPDFraewp:Ljava/lang/String;
+    const-string v0, "configureAvailableResourceCurrencies"
 
     return-object v0
 .end method

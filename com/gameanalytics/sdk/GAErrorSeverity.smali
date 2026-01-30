@@ -127,9 +127,7 @@
 
     const-string v2, "warning"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->IvzygXGqNNnnG:Ljava/lang/String;
+    const-string v3, "Warning"
 
     invoke-direct {v0, v3, v1, v2, v1}, Lcom/gameanalytics/sdk/GAErrorSeverity;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 

@@ -521,7 +521,7 @@
 
     sget-boolean v0, Landroidx/fragment/app/FragmentManagerImpl;->DEBUG:Z
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_18
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -539,7 +539,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_17
+    :cond_18
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mHasBeenCleared:Z
@@ -761,13 +761,13 @@
 
     move-result-object v1
 
-    :cond_45
-    :goto_45
+    :cond_46
+    :goto_46
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_5e
+    if-eqz v2, :cond_5f
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -781,16 +781,14 @@
 
     move-result v2
 
-    if-eqz v2, :cond_45
+    if-eqz v2, :cond_46
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_45
+    goto :goto_46
 
-    :cond_5e
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->LAIDWeJ:Ljava/lang/String;
+    :cond_5f
+    const-string v1, ") ViewModelStores ("
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

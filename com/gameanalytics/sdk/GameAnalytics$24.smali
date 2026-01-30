@@ -71,11 +71,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_b
 
     return-void
 
-    :cond_a
+    :cond_b
     iget-object v1, p0, Lcom/gameanalytics/sdk/GameAnalytics$24;->val$eventId:Ljava/lang/String;
 
     iget-object v5, p0, Lcom/gameanalytics/sdk/GameAnalytics$24;->val$customFields:Ljava/util/Map;

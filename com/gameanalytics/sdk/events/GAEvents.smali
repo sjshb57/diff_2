@@ -396,9 +396,7 @@
 
     invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lkotlin/collections/zgTb/JhPPV;->GnxsxDElKZpa:Ljava/lang/String;
+    const-string v2, ", ad_type:"
 
     invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -411,19 +409,19 @@
     invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget-object v2, Lcom/gameanalytics/sdk/GAAdAction;->FailedShow:Lcom/gameanalytics/sdk/GAAdAction;
-    :try_end_107
-    .catch Lorg/json/JSONException; {:try_start_4e .. :try_end_107} :catch_155
+    :try_end_106
+    .catch Lorg/json/JSONException; {:try_start_4e .. :try_end_106} :catch_154
 
     const-string v3, ""
 
-    if-ne v0, v2, :cond_123
+    if-ne v0, v2, :cond_122
 
-    :try_start_10b
+    :try_start_10a
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-lez v0, :cond_123
+    if-lez v0, :cond_122
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -439,25 +437,25 @@
 
     move-result-object v0
 
-    goto :goto_124
+    goto :goto_123
 
-    :cond_123
+    :cond_122
     move-object v0, v3
 
-    :goto_124
+    :goto_123
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p7, :cond_142
+    if-eqz p7, :cond_141
 
     sget-object v0, Lcom/gameanalytics/sdk/GAAdType;->RewardedVideo:Lcom/gameanalytics/sdk/GAAdType;
 
-    if-eq v1, v0, :cond_131
+    if-eq v1, v0, :cond_130
 
     sget-object v0, Lcom/gameanalytics/sdk/GAAdType;->Video:Lcom/gameanalytics/sdk/GAAdType;
 
-    if-ne v1, v0, :cond_142
+    if-ne v1, v0, :cond_141
 
-    :cond_131
+    :cond_130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -472,7 +470,7 @@
 
     move-result-object v3
 
-    :cond_142
+    :cond_141
     invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "}"
@@ -486,12 +484,12 @@
     invoke-static {v0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
     invoke-static {v9}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
-    :try_end_154
-    .catch Lorg/json/JSONException; {:try_start_10b .. :try_end_154} :catch_155
+    :try_end_153
+    .catch Lorg/json/JSONException; {:try_start_10a .. :try_end_153} :catch_154
 
-    goto :goto_15e
+    goto :goto_15d
 
-    :catch_155
+    :catch_154
     move-exception v0
 
     const-string v1, "addAdEvent: Error creating json"
@@ -500,7 +498,7 @@
 
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    :goto_15e
+    :goto_15d
     return-void
 .end method
 
@@ -684,7 +682,7 @@
 
     move-result v0
     :try_end_85
-    .catch Lorg/json/JSONException; {:try_start_7a .. :try_end_85} :catch_1d5
+    .catch Lorg/json/JSONException; {:try_start_7a .. :try_end_85} :catch_1d4
 
     if-eqz v0, :cond_ae
 
@@ -706,7 +704,7 @@
     invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_97
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_87 .. :try_end_97} :catch_98
-    .catch Lorg/json/JSONException; {:try_start_87 .. :try_end_97} :catch_1d5
+    .catch Lorg/json/JSONException; {:try_start_87 .. :try_end_97} :catch_1d4
 
     goto :goto_9c
 
@@ -925,28 +923,26 @@
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/api/client/util/Uhr/zXgie;->gIgCfkVNMTPqrf:Ljava/lang/String;
+    const-string v3, ", cartType:"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_183
-    .catch Lorg/json/JSONException; {:try_start_99 .. :try_end_183} :catch_1d5
+    :try_end_182
+    .catch Lorg/json/JSONException; {:try_start_99 .. :try_end_182} :catch_1d4
 
     const-string v2, "}"
 
     const-string v3, ""
 
-    if-eqz v15, :cond_1c4
+    if-eqz v15, :cond_1c3
 
-    :try_start_189
+    :try_start_188
     invoke-virtual/range {p5 .. p5}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    if-eqz v4, :cond_1c4
+    if-eqz v4, :cond_1c3
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -962,13 +958,13 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v6, :cond_1ba
+    if-eqz v6, :cond_1b9
 
     invoke-virtual/range {p7 .. p7}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    if-eqz v5, :cond_1ba
+    if-eqz v5, :cond_1b9
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -984,7 +980,7 @@
 
     move-result-object v3
 
-    :cond_1ba
+    :cond_1b9
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -993,7 +989,7 @@
 
     move-result-object v3
 
-    :cond_1c4
+    :cond_1c3
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1005,12 +1001,12 @@
     invoke-static {v0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
-    :try_end_1d4
-    .catch Lorg/json/JSONException; {:try_start_189 .. :try_end_1d4} :catch_1d5
+    :try_end_1d3
+    .catch Lorg/json/JSONException; {:try_start_188 .. :try_end_1d3} :catch_1d4
 
-    goto :goto_205
+    goto :goto_204
 
-    :catch_1d5
+    :catch_1d4
     move-exception v0
 
     const-string v1, "addBusinessEvent: Error creating json"
@@ -1057,7 +1053,7 @@
 
     invoke-virtual/range {p0 .. p6}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_205
+    :goto_204
     return-void
 .end method
 
@@ -1079,14 +1075,14 @@
     return-void
 
     :cond_3
-    if-eqz p1, :cond_34
+    if-eqz p1, :cond_33
 
     :try_start_5
     invoke-virtual {p1}, Lorg/json/JSONObject;->length()I
 
     move-result v0
 
-    if-lez v0, :cond_34
+    if-lez v0, :cond_33
 
     const-string v0, "custom_fields"
 
@@ -1094,14 +1090,12 @@
     :try_end_10
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_10} :catch_11
 
-    goto :goto_34
+    goto :goto_33
 
     :catch_11
     move-exception p0
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/print/nh/SlomKQFs;->MrLLU:Ljava/lang/String;
+    const-string p1, "addFieldsToEvent: Error creating json"
 
     invoke-static {p1}, Lcom/gameanalytics/sdk/logging/GALogger;->e(Ljava/lang/String;)V
 
@@ -1131,8 +1125,8 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_34
-    :goto_34
+    :cond_33
+    :goto_33
     return-void
 .end method
 
@@ -1338,9 +1332,7 @@
 
     invoke-virtual {p3, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lkotlin/collections/zgTb/JhPPV;->BymosOzDoi:Ljava/lang/String;
+    const-string p0, "}"
 
     invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1351,12 +1343,12 @@
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
-    :try_end_bb
-    .catch Lorg/json/JSONException; {:try_start_2c .. :try_end_bb} :catch_bc
+    :try_end_ba
+    .catch Lorg/json/JSONException; {:try_start_2c .. :try_end_ba} :catch_bb
 
-    goto :goto_de
+    goto :goto_dd
 
-    :catch_bc
+    :catch_bb
     move-exception p0
 
     const-string p1, "addDesignEvent: Error creating json"
@@ -1389,7 +1381,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_de
+    :goto_dd
     return-void
 .end method
 
@@ -2378,7 +2370,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_66
+    if-eqz v1, :cond_65
 
     new-instance v1, Lorg/json/JSONArray;
 
@@ -2411,7 +2403,7 @@
     goto :goto_26
 
     :cond_31
-    if-eqz p1, :cond_61
+    if-eqz p1, :cond_60
 
     goto :goto_44
 
@@ -2458,18 +2450,16 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->OKBSCeQv:Ljava/lang/String;
+    const-string p0, "addHealthEvent: Inaccurate fps reading."
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->e(Ljava/lang/String;)V
 
-    :cond_61
+    :cond_60
     const-string p0, "fps_data_table"
 
     invoke-virtual {v0, p0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_66
+    :cond_65
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->ReadDeviceInfo()Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;
 
     move-result-object p0
@@ -2484,11 +2474,11 @@
 
     sget-boolean p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->enableMemoryTracking:Z
 
-    if-eqz p0, :cond_b9
+    if-eqz p0, :cond_b8
 
     sget-boolean p0, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->enableMemoryHistograms:Z
 
-    if-eqz p0, :cond_b9
+    if-eqz p0, :cond_b8
 
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice$DeviceInfo;->GetAppMemoryPercentage()[I
 
@@ -2498,11 +2488,11 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_9f
+    if-eqz p1, :cond_9e
 
     array-length v1, p1
 
-    if-lez v1, :cond_9f
+    if-lez v1, :cond_9e
 
     new-instance v1, Lorg/json/JSONArray;
 
@@ -2512,8 +2502,8 @@
 
     move v4, v2
 
-    :goto_90
-    if-ge v4, v3, :cond_9a
+    :goto_8f
+    if-ge v4, v3, :cond_99
 
     aget v5, p1, v4
 
@@ -2521,19 +2511,19 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_90
+    goto :goto_8f
 
-    :cond_9a
+    :cond_99
     const-string p1, "memory_sys_data_table"
 
     invoke-virtual {v0, p1, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_9f
-    if-eqz p0, :cond_b9
+    :cond_9e
+    if-eqz p0, :cond_b8
 
     array-length p1, p0
 
-    if-lez p1, :cond_b9
+    if-lez p1, :cond_b8
 
     new-instance p1, Lorg/json/JSONArray;
 
@@ -2541,8 +2531,8 @@
 
     array-length v1, p0
 
-    :goto_aa
-    if-ge v2, v1, :cond_b4
+    :goto_a9
+    if-ge v2, v1, :cond_b3
 
     aget v3, p0, v2
 
@@ -2550,14 +2540,14 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_aa
+    goto :goto_a9
 
-    :cond_b4
+    :cond_b3
     const-string p0, "memory_app_data_table"
 
     invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_b9
+    :cond_b8
     invoke-static {v0}, Lcom/gameanalytics/sdk/events/GAEvents;->addDimensionsToEvent(Lorg/json/JSONObject;)V
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getGlobalCustomEventFields()Ljava/util/Map;
@@ -2575,20 +2565,20 @@
     const-string p0, "Add HEALTH event."
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
-    :try_end_cf
-    .catch Lorg/json/JSONException; {:try_start_e .. :try_end_cf} :catch_d5
-    .catchall {:try_start_e .. :try_end_cf} :catchall_d0
+    :try_end_ce
+    .catch Lorg/json/JSONException; {:try_start_e .. :try_end_ce} :catch_d4
+    .catchall {:try_start_e .. :try_end_ce} :catchall_cf
 
-    goto :goto_f7
+    goto :goto_f6
 
-    :catchall_d0
+    :catchall_cf
     move-exception p0
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto :goto_f7
+    goto :goto_f6
 
-    :catch_d5
+    :catch_d4
     move-exception p0
 
     const-string p1, "addHealthEvent: Error creating json"
@@ -2621,7 +2611,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_f7
+    :goto_f6
     return-void
 .end method
 
@@ -2838,9 +2828,7 @@
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->aslWLBWbqm:Ljava/lang/String;
+    const-string p0, ", impression_data:#impressionData}"
 
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2851,12 +2839,12 @@
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
-    :try_end_c6
-    .catch Lorg/json/JSONException; {:try_start_2c .. :try_end_c6} :catch_c7
+    :try_end_c5
+    .catch Lorg/json/JSONException; {:try_start_2c .. :try_end_c5} :catch_c6
 
-    goto :goto_d0
+    goto :goto_cf
 
-    :catch_c7
+    :catch_c6
     move-exception p0
 
     const-string p1, "addImpressionEvent: Error creating json"
@@ -2865,7 +2853,7 @@
 
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
-    :goto_d0
+    :goto_cf
     return-void
 .end method
 
@@ -3425,35 +3413,35 @@
 
     new-instance p0, Ljava/util/HashMap;
 
-    if-eqz p6, :cond_7c
+    if-eqz p6, :cond_7d
 
     invoke-interface {p6}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_7c
+    if-nez v0, :cond_7d
 
     move-object v0, p6
 
-    goto :goto_80
+    goto :goto_81
 
-    :cond_7c
+    :cond_7d
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getGlobalCustomEventFields()Ljava/util/Map;
 
     move-result-object v0
 
-    :goto_80
+    :goto_81
     invoke-direct {p0, v0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    if-eqz p7, :cond_bd
+    if-eqz p7, :cond_be
 
-    if-eqz p6, :cond_bd
+    if-eqz p6, :cond_be
 
     invoke-interface {p6}, Ljava/util/Map;->isEmpty()Z
 
     move-result p6
 
-    if-nez p6, :cond_bd
+    if-nez p6, :cond_be
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getGlobalCustomEventFields()Ljava/util/Map;
 
@@ -3467,13 +3455,13 @@
 
     move-result-object p6
 
-    :cond_99
-    :goto_99
+    :cond_9a
+    :goto_9a
     invoke-interface {p6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p7
 
-    if-eqz p7, :cond_bd
+    if-eqz p7, :cond_be
 
     invoke-interface {p6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -3489,7 +3477,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_99
+    if-nez v0, :cond_9a
 
     invoke-interface {p7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3503,9 +3491,9 @@
 
     invoke-interface {p0, v0, p7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_99
+    goto :goto_9a
 
-    :cond_bd
+    :cond_be
     invoke-static {p0}, Lcom/gameanalytics/sdk/state/GAState;->validateAndCleanCustomFields(Ljava/util/Map;)Lorg/json/JSONObject;
 
     move-result-object p0
@@ -3551,12 +3539,12 @@
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
-    :try_end_f8
-    .catch Lorg/json/JSONException; {:try_start_35 .. :try_end_f8} :catch_f9
+    :try_end_f9
+    .catch Lorg/json/JSONException; {:try_start_35 .. :try_end_f9} :catch_fa
 
-    goto :goto_11b
+    goto :goto_11c
 
-    :catch_f9
+    :catch_fa
     move-exception p0
 
     const-string p1, "addResourceEvent: Error creating json"
@@ -3589,7 +3577,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_11b
+    :goto_11c
     return-void
 .end method
 
@@ -3663,25 +3651,25 @@
     const-string v0, "Add SDK_INIT event."
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
-    :try_end_45
-    .catch Lorg/json/JSONException; {:try_start_e .. :try_end_45} :catch_4b
-    .catchall {:try_start_e .. :try_end_45} :catchall_46
+    :try_end_46
+    .catch Lorg/json/JSONException; {:try_start_e .. :try_end_46} :catch_4c
+    .catchall {:try_start_e .. :try_end_46} :catchall_47
 
-    goto :goto_4f
+    goto :goto_50
 
-    :catchall_46
+    :catchall_47
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto :goto_4f
+    goto :goto_50
 
-    :catch_4b
+    :catch_4c
     move-exception v0
 
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    :goto_4f
+    :goto_50
     return-void
 .end method
 
@@ -3772,7 +3760,7 @@
     :try_end_54
     .catch Lorg/json/JSONException; {:try_start_48 .. :try_end_54} :catch_55
 
-    goto :goto_77
+    goto :goto_78
 
     :catch_55
     move-exception v1
@@ -3807,7 +3795,7 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_77
+    :goto_78
     invoke-static {v0}, Lcom/gameanalytics/sdk/events/GAEvents;->addDimensionsToEvent(Lorg/json/JSONObject;)V
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getGlobalCustomEventFields()Ljava/util/Map;
@@ -3858,9 +3846,7 @@
     const/4 v3, 0x0
 
     :try_start_10
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->JedWf:Ljava/lang/String;
+    const-string v4, "category"
 
     invoke-virtual {v1, v4, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -3868,19 +3854,19 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2e
+    if-eqz v4, :cond_2d
 
     const-string v4, "install"
 
     invoke-virtual {v1, v4, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     invoke-static {v3}, Lcom/gameanalytics/sdk/state/GAState;->setNewInstall(Z)V
-    :try_end_24
-    .catch Lorg/json/JSONException; {:try_start_10 .. :try_end_24} :catch_25
+    :try_end_23
+    .catch Lorg/json/JSONException; {:try_start_10 .. :try_end_23} :catch_24
 
-    goto :goto_2e
+    goto :goto_2d
 
-    :catch_25
+    :catch_24
     move-exception v4
 
     const-string v5, "addSessionStartEvent: error creating json"
@@ -3889,8 +3875,8 @@
 
     invoke-virtual {v4}, Lorg/json/JSONException;->printStackTrace()V
 
-    :cond_2e
-    :goto_2e
+    :cond_2d
+    :goto_2d
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->incrementSessionNum()V
 
     new-instance v4, Ljava/util/ArrayList;
@@ -3925,7 +3911,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_67
+    if-eqz v4, :cond_66
 
     invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -3941,7 +3927,7 @@
 
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    :cond_67
+    :cond_66
     invoke-static {v1}, Lcom/gameanalytics/sdk/events/GAEvents;->addDimensionsToEvent(Lorg/json/JSONObject;)V
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getGlobalCustomEventFields()Ljava/util/Map;
@@ -3962,7 +3948,7 @@
 
     sget v2, Lcom/gameanalytics/sdk/events/GAEvents;->countEnd:I
 
-    if-le v2, v4, :cond_b2
+    if-le v2, v4, :cond_b1
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4010,7 +3996,7 @@
 
     invoke-virtual/range {v4 .. v10}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_b2
+    :cond_b1
     invoke-static {v1}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
 
     const-string v1, "Add SESSION START event"
@@ -4025,9 +4011,7 @@
 .method public static cleanupEvents()V
     .registers 1
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->DAsPpRq:Ljava/lang/String;
+    const-string v0, "UPDATE ga_events SET status = \'new\';"
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
@@ -4102,17 +4086,17 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_c1
+    if-eqz v0, :cond_c2
 
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v1
 
-    if-nez v1, :cond_23
+    if-nez v1, :cond_24
 
-    goto/16 :goto_c1
+    goto/16 :goto_c2
 
-    :cond_23
+    :cond_24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4135,12 +4119,12 @@
 
     const/4 v1, 0x0
 
-    :goto_3c
+    :goto_3d
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v2
 
-    if-ge v1, v2, :cond_c1
+    if-ge v1, v2, :cond_c2
 
     invoke-virtual {v0, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -4192,15 +4176,15 @@
 
     move-result v8
 
-    if-eqz v8, :cond_7c
+    if-eqz v8, :cond_7d
 
     const-string v2, "fixMissingSessionEndEvents duplicate session_end!"
 
     invoke-static {v2}, Lcom/gameanalytics/sdk/logging/GALogger;->e(Ljava/lang/String;)V
 
-    goto :goto_bd
+    goto :goto_be
 
-    :cond_7c
+    :cond_7d
     sget-object v8, Lcom/gameanalytics/sdk/events/GAEvents;->fixedMissingSessionEnds:Ljava/util/HashSet;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4253,13 +4237,13 @@
 
     invoke-static {v3}, Lcom/gameanalytics/sdk/events/GAEvents;->addEventToStore(Lorg/json/JSONObject;)V
 
-    :goto_bd
+    :goto_be
     add-int/lit8 v1, v1, 0x1
 
-    goto/16 :goto_3c
+    goto/16 :goto_3d
 
-    :cond_c1
-    :goto_c1
+    :cond_c2
+    :goto_c2
     return-void
 .end method
 
@@ -4324,11 +4308,11 @@
 
     const-string v0, " AND client_ts<=\'"
 
-    const/4 v1, 0x0
+    const-string v1, ";"
 
-    sget-object v1, Lcom/google/flatbuffers/OSq/msMBb;->RxSSHcjh:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    const-string v2, "\';"
+    sget-object v2, Lcom/google/android/libraries/play/hpe/Nqz/HXjHgRCaYyjPn;->Zfy:Ljava/lang/String;
 
     const-string v3, "UPDATE ga_events SET status=\'"
 
@@ -4350,12 +4334,12 @@
 
     move-result v11
 
-    if-nez v11, :cond_1e
+    if-nez v11, :cond_1f
 
     return-void
 
-    :cond_1e
-    :try_start_1e
+    :cond_1f
+    :try_start_1f
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v11
@@ -4390,20 +4374,20 @@
 
     move-result-object v9
 
-    if-eqz p1, :cond_4e
+    if-eqz p1, :cond_4f
 
     invoke-static {}, Lcom/gameanalytics/sdk/events/GAEvents;->cleanupEvents()V
 
     invoke-static {}, Lcom/gameanalytics/sdk/events/GAEvents;->fixMissingSessionEndEvents()V
 
-    :cond_4e
+    :cond_4f
     const-string p1, ""
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v12
 
-    if-eqz v12, :cond_67
+    if-eqz v12, :cond_69
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -4419,7 +4403,7 @@
 
     move-result-object p1
 
-    :cond_67
+    :cond_69
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -4454,30 +4438,30 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_1f6
+    if-eqz p0, :cond_1f8
 
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
     move-result v7
 
-    if-nez v7, :cond_9b
+    if-nez v7, :cond_9d
 
-    goto/16 :goto_1f6
+    goto/16 :goto_1f8
 
-    :cond_9b
+    :cond_9d
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
     move-result v7
-    :try_end_9f
-    .catch Lorg/json/JSONException; {:try_start_1e .. :try_end_9f} :catch_1ff
+    :try_end_a1
+    .catch Lorg/json/JSONException; {:try_start_1f .. :try_end_a1} :catch_201
 
     const/16 v8, 0x1f4
 
     const-string v12, "client_ts"
 
-    if-le v7, v8, :cond_109
+    if-le v7, v8, :cond_10b
 
-    :try_start_a5
+    :try_start_a7
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -4496,11 +4480,11 @@
 
     move-result-object p0
 
-    if-nez p0, :cond_bd
+    if-nez p0, :cond_bf
 
     return-void
 
-    :cond_bd
+    :cond_bf
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
     move-result v1
@@ -4537,11 +4521,11 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_e9
+    if-nez v1, :cond_eb
 
     return-void
 
-    :cond_e9
+    :cond_eb
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -4570,7 +4554,7 @@
 
     move-object p0, v13
 
-    :cond_109
+    :cond_10b
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -4595,23 +4579,23 @@
 
     move-result-object p1
 
-    if-nez p1, :cond_128
+    if-nez p1, :cond_12a
 
     return-void
 
-    :cond_128
+    :cond_12a
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v0, 0x0
 
-    :goto_12e
+    :goto_130
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
     move-result v1
 
-    if-ge v0, v1, :cond_163
+    if-ge v0, v1, :cond_165
 
     invoke-virtual {p0, v0}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
@@ -4633,13 +4617,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_160
+    if-eqz v2, :cond_162
 
     invoke-virtual {v1, v12}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_15d
+    if-eqz v2, :cond_15f
 
     invoke-virtual {v1, v12}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
@@ -4649,19 +4633,19 @@
 
     move-result v2
 
-    if-nez v2, :cond_15d
+    if-nez v2, :cond_15f
 
     invoke-virtual {v1, v12}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
 
-    :cond_15d
+    :cond_15f
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_160
+    :cond_162
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_12e
+    goto :goto_130
 
-    :cond_163
+    :cond_165
     invoke-static {}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->getInstance()Lcom/gameanalytics/sdk/http/GAHTTPApi;
 
     move-result-object v0
@@ -4675,14 +4659,14 @@
     iget-object p1, p1, Lcom/gameanalytics/sdk/http/GAHTTPApi$GAHTTPApiResponseJSONObjectPair;->json:Lorg/json/JSONObject;
 
     sget-object v1, Lcom/gameanalytics/sdk/http/EGAHTTPApiResponse;->Ok:Lcom/gameanalytics/sdk/http/EGAHTTPApiResponse;
-    :try_end_171
-    .catch Lorg/json/JSONException; {:try_start_a5 .. :try_end_171} :catch_1ff
+    :try_end_173
+    .catch Lorg/json/JSONException; {:try_start_a7 .. :try_end_173} :catch_201
 
     const-string v2, "Event queue: "
 
-    if-ne v0, v1, :cond_195
+    if-ne v0, v1, :cond_197
 
-    :try_start_175
+    :try_start_177
     invoke-static {v10}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -4707,29 +4691,29 @@
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
-    goto/16 :goto_21c
+    goto/16 :goto_21e
 
-    :cond_195
+    :cond_197
     sget-object v1, Lcom/gameanalytics/sdk/http/EGAHTTPApiResponse;->NoResponse:Lcom/gameanalytics/sdk/http/EGAHTTPApiResponse;
 
-    if-ne v0, v1, :cond_1a3
+    if-ne v0, v1, :cond_1a5
 
     const-string p0, "Event queue: Failed to send events to collector - Retrying next time"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->w(Ljava/lang/String;)V
 
     invoke-static {v9}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
-    :try_end_1a1
-    .catch Lorg/json/JSONException; {:try_start_175 .. :try_end_1a1} :catch_1ff
+    :try_end_1a3
+    .catch Lorg/json/JSONException; {:try_start_177 .. :try_end_1a3} :catch_201
 
-    goto/16 :goto_21c
+    goto/16 :goto_21e
 
-    :cond_1a3
+    :cond_1a5
     const-string v1, "Event queue: Failed to send events."
 
-    if-eqz p1, :cond_1ef
+    if-eqz p1, :cond_1f1
 
-    :try_start_1a7
+    :try_start_1a9
     new-instance v3, Lorg/json/JSONTokener;
 
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
@@ -4750,11 +4734,11 @@
 
     sget-object v4, Lcom/gameanalytics/sdk/http/EGAHTTPApiResponse;->BadRequest:Lcom/gameanalytics/sdk/http/EGAHTTPApiResponse;
 
-    if-ne v0, v4, :cond_1eb
+    if-ne v0, v4, :cond_1ed
 
     instance-of v0, v3, Lorg/json/JSONArray;
 
-    if-eqz v0, :cond_1eb
+    if-eqz v0, :cond_1ed
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4788,34 +4772,34 @@
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->w(Ljava/lang/String;)V
 
-    goto :goto_1f2
+    goto :goto_1f4
 
-    :cond_1eb
+    :cond_1ed
     invoke-static {v1}, Lcom/gameanalytics/sdk/logging/GALogger;->w(Ljava/lang/String;)V
 
-    goto :goto_1f2
+    goto :goto_1f4
 
-    :cond_1ef
+    :cond_1f1
     invoke-static {v1}, Lcom/gameanalytics/sdk/logging/GALogger;->w(Ljava/lang/String;)V
 
-    :goto_1f2
+    :goto_1f4
     invoke-static {v10}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    goto :goto_21c
+    goto :goto_21e
 
-    :cond_1f6
-    :goto_1f6
+    :cond_1f8
+    :goto_1f8
     const-string p0, "Event queue: No events to send"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
     invoke-static {}, Lcom/gameanalytics/sdk/events/GAEvents;->updateSessionTime()V
-    :try_end_1fe
-    .catch Lorg/json/JSONException; {:try_start_1a7 .. :try_end_1fe} :catch_1ff
+    :try_end_200
+    .catch Lorg/json/JSONException; {:try_start_1a9 .. :try_end_200} :catch_201
 
     return-void
 
-    :catch_1ff
+    :catch_201
     move-exception p0
 
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
@@ -4844,7 +4828,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_21c
+    :goto_21e
     return-void
 .end method
 

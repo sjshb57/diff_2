@@ -92,9 +92,7 @@
 .method public getName()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->Cfe:Ljava/lang/String;
+    const-string v0, "setCustomDimension02"
 
     return-object v0
 .end method

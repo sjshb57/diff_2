@@ -59,7 +59,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     const-string v0, "Available custom dimensions must be set before SDK is initialized"
 
@@ -67,7 +67,7 @@
 
     return-void
 
-    :cond_e
+    :cond_f
     iget-object v0, p0, Lcom/gameanalytics/sdk/GameAnalytics$1;->val$customDimensions:[Ljava/lang/String;
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/state/GAState;->setAvailableCustomDimensions01([Ljava/lang/String;)V

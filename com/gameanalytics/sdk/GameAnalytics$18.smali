@@ -89,19 +89,17 @@
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->OdBUhSz:Ljava/lang/String;
+    const-string v1, "Could not add resource event"
 
     invoke-static {v0, v0, v1}, Lcom/gameanalytics/sdk/GameAnalytics;->access$200(ZZLjava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
     return-void
 
-    :cond_b
+    :cond_a
     iget-object v1, p0, Lcom/gameanalytics/sdk/GameAnalytics$18;->val$flowType:Lcom/gameanalytics/sdk/GAResourceFlowType;
 
     iget-object v2, p0, Lcom/gameanalytics/sdk/GameAnalytics$18;->val$currency:Ljava/lang/String;

@@ -1061,9 +1061,7 @@
 
     const-string v6, ""
 
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->XIYKbZPUCCRhhK:Ljava/lang/String;
+    const-string v7, ""
 
     const-string v5, ""
 
@@ -2815,9 +2813,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/util/Uhr/zXgie;->pbvRqMTGL:Ljava/lang/String;
+    const-string v0, "fyber"
 
     invoke-static {v0, p0, p1, p2}, Lcom/gameanalytics/sdk/GameAnalytics;->addImpressionEvent(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/util/Map;)V
 
@@ -3925,9 +3921,7 @@
         }
     .end annotation
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->PsivcyUNYv:Ljava/lang/String;
+    const-string v3, ""
 
     const/4 v7, 0x0
 
@@ -4531,9 +4525,7 @@
 
     const-string v2, ""
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/print/nh/SlomKQFs;->RcG:Ljava/lang/String;
+    const-string v3, ""
 
     move-object v0, p0
 

@@ -1229,9 +1229,7 @@
     :cond_62
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/print/nh/SlomKQFs;->Gvcd:Ljava/lang/String;
+    const-string p1, "Invalid Transition types"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

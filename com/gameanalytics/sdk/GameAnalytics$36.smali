@@ -77,19 +77,17 @@
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->gzLxgpE:Ljava/lang/String;
+    const-string v1, "Could not add impression event"
 
     invoke-static {v0, v0, v1}, Lcom/gameanalytics/sdk/GameAnalytics;->access$200(ZZLjava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
     return-void
 
-    :cond_b
+    :cond_a
     iget-object v0, p0, Lcom/gameanalytics/sdk/GameAnalytics$36;->val$adNetworkName:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/gameanalytics/sdk/GameAnalytics$36;->val$adNetworkVersion:Ljava/lang/String;

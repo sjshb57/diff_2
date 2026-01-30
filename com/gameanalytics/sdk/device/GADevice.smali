@@ -455,15 +455,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8c
+    if-eqz v0, :cond_8b
 
     sget-boolean v0, Lcom/gameanalytics/sdk/device/GADevice;->_lazySetGAID:Z
 
-    if-eqz v0, :cond_8c
+    if-eqz v0, :cond_8b
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/collections/zgTb/JhPPV;->OhHUxLlXNVAu:Ljava/lang/String;
+    const-string v0, "00000000-0000-0000-0000-000000000000"
 
     invoke-static {v0}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
@@ -473,12 +471,12 @@
 
     move v2, v1
 
-    :goto_1c
+    :goto_1b
     const/4 v3, 0x3
 
-    if-ge v2, v3, :cond_56
+    if-ge v2, v3, :cond_55
 
-    :try_start_1f
+    :try_start_1e
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
@@ -493,24 +491,24 @@
 
     sput-object v4, Lcom/gameanalytics/sdk/device/GADevice;->_gaid:Ljava/lang/String;
 
-    if-eqz v4, :cond_3b
+    if-eqz v4, :cond_3a
 
     invoke-static {v4}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v4
 
-    if-eq v4, v0, :cond_3b
+    if-eq v4, v0, :cond_3a
 
     const-string v4, "service"
 
     invoke-static {v4}, Lcom/gameanalytics/sdk/device/GADevice;->setAdIdSource(Ljava/lang/String;)V
-    :try_end_3a
-    .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_3a} :catch_3b
+    :try_end_39
+    .catch Ljava/lang/Exception; {:try_start_1e .. :try_end_39} :catch_3a
 
-    goto :goto_56
+    goto :goto_55
 
-    :catch_3b
-    :cond_3b
+    :catch_3a
+    :cond_3a
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
@@ -521,33 +519,33 @@
 
     sput-object v4, Lcom/gameanalytics/sdk/device/GADevice;->_gaid:Ljava/lang/String;
 
-    if-eqz v4, :cond_53
+    if-eqz v4, :cond_52
 
     invoke-static {v4}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v4
 
-    if-eq v4, v0, :cond_53
+    if-eq v4, v0, :cond_52
 
     const-string v0, "library"
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/device/GADevice;->setAdIdSource(Ljava/lang/String;)V
 
-    goto :goto_56
+    goto :goto_55
 
-    :cond_53
+    :cond_52
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_56
-    :goto_56
+    :cond_55
+    :goto_55
     move v0, v1
 
-    :goto_57
-    if-ge v0, v3, :cond_8a
+    :goto_56
+    if-ge v0, v3, :cond_89
 
-    :try_start_59
+    :try_start_58
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -569,15 +567,15 @@
     move-result v2
 
     invoke-static {v2}, Lcom/gameanalytics/sdk/device/GADevice;->setIsLimitedAdTracking(Z)V
-    :try_end_70
-    .catch Ljava/lang/Exception; {:try_start_59 .. :try_end_70} :catch_73
+    :try_end_6f
+    .catch Ljava/lang/Exception; {:try_start_58 .. :try_end_6f} :catch_72
 
-    if-eqz v4, :cond_73
+    if-eqz v4, :cond_72
 
-    goto :goto_8a
+    goto :goto_89
 
-    :catch_73
-    :cond_73
+    :catch_72
+    :cond_72
     const-string v2, "com.google.android.gms.ads.identifier"
 
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
@@ -588,7 +586,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_87
+    if-eqz v2, :cond_86
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -596,18 +594,18 @@
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/device/GADevice;->setIsLimitedAdTracking(Z)V
 
-    goto :goto_8a
+    goto :goto_89
 
-    :cond_87
+    :cond_86
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_57
+    goto :goto_56
 
-    :cond_8a
-    :goto_8a
+    :cond_89
+    :goto_89
     sput-boolean v1, Lcom/gameanalytics/sdk/device/GADevice;->_lazySetGAID:Z
 
-    :cond_8c
+    :cond_8b
     sget-object v0, Lcom/gameanalytics/sdk/device/GADevice;->_gaid:Ljava/lang/String;
 
     return-object v0
