@@ -62,9 +62,7 @@
 .method public toString()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->ljSyUDAQyr:Ljava/lang/String;
+    const-string v0, "Hashing.crc32c()"
 
     return-object v0
 .end method

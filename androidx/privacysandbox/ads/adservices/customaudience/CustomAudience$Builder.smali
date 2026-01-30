@@ -217,9 +217,7 @@
 .method public final setBiddingLogicUri(Landroid/net/Uri;)Landroidx/privacysandbox/ads/adservices/customaudience/CustomAudience$Builder;
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->yUH:Ljava/lang/String;
+    const-string v0, "biddingLogicUri"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -235,9 +233,7 @@
 .method public final setBuyer(Landroidx/privacysandbox/ads/adservices/common/AdTechIdentifier;)Landroidx/privacysandbox/ads/adservices/customaudience/CustomAudience$Builder;
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->KcVb:Ljava/lang/String;
+    const-string v0, "buyer"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

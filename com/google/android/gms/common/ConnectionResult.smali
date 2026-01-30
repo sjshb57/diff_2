@@ -152,15 +152,15 @@
 
     const/16 v0, 0x63
 
-    if-eq p0, v0, :cond_74
+    if-eq p0, v0, :cond_73
 
     const/16 v0, 0x5dc
 
-    if-eq p0, v0, :cond_71
+    if-eq p0, v0, :cond_70
 
-    packed-switch p0, :pswitch_data_78
+    packed-switch p0, :pswitch_data_76
 
-    packed-switch p0, :pswitch_data_96
+    packed-switch p0, :pswitch_data_94
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -216,138 +216,134 @@
     return-object p0
 
     :pswitch_37  #0x12
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/core/util/LEr/bFMYUr;->vJY:Ljava/lang/String;
+    const-string p0, "SERVICE_UPDATING"
 
     return-object p0
 
-    :pswitch_3b  #0x11
+    :pswitch_3a  #0x11
     const-string p0, "SIGN_IN_FAILED"
 
     return-object p0
 
-    :pswitch_3e  #0x10
+    :pswitch_3d  #0x10
     const-string p0, "API_UNAVAILABLE"
 
     return-object p0
 
-    :pswitch_41  #0xf
+    :pswitch_40  #0xf
     const-string p0, "INTERRUPTED"
 
     return-object p0
 
-    :pswitch_44  #0xe
+    :pswitch_43  #0xe
     const-string p0, "TIMEOUT"
 
     return-object p0
 
-    :pswitch_47  #0xd
+    :pswitch_46  #0xd
     const-string p0, "CANCELED"
 
     return-object p0
 
-    :pswitch_4a  #0xb
+    :pswitch_49  #0xb
     const-string p0, "LICENSE_CHECK_FAILED"
 
     return-object p0
 
-    :pswitch_4d  #0xa
+    :pswitch_4c  #0xa
     const-string p0, "DEVELOPER_ERROR"
 
     return-object p0
 
-    :pswitch_50  #0x9
+    :pswitch_4f  #0x9
     const-string p0, "SERVICE_INVALID"
 
     return-object p0
 
-    :pswitch_53  #0x8
+    :pswitch_52  #0x8
     const-string p0, "INTERNAL_ERROR"
 
     return-object p0
 
-    :pswitch_56  #0x7
+    :pswitch_55  #0x7
     const-string p0, "NETWORK_ERROR"
 
     return-object p0
 
-    :pswitch_59  #0x6
+    :pswitch_58  #0x6
     const-string p0, "RESOLUTION_REQUIRED"
 
     return-object p0
 
-    :pswitch_5c  #0x5
+    :pswitch_5b  #0x5
     const-string p0, "INVALID_ACCOUNT"
 
     return-object p0
 
-    :pswitch_5f  #0x4
+    :pswitch_5e  #0x4
     const-string p0, "SIGN_IN_REQUIRED"
 
     return-object p0
 
-    :pswitch_62  #0x3
+    :pswitch_61  #0x3
     const-string p0, "SERVICE_DISABLED"
 
     return-object p0
 
-    :pswitch_65  #0x2
+    :pswitch_64  #0x2
     const-string p0, "SERVICE_VERSION_UPDATE_REQUIRED"
 
     return-object p0
 
-    :pswitch_68  #0x1
+    :pswitch_67  #0x1
     const-string p0, "SERVICE_MISSING"
 
     return-object p0
 
-    :pswitch_6b  #0x0
+    :pswitch_6a  #0x0
     const-string p0, "SUCCESS"
 
     return-object p0
 
-    :pswitch_6e  #0xffffffff
+    :pswitch_6d  #0xffffffff
     const-string p0, "UNKNOWN"
 
     return-object p0
 
-    :cond_71
+    :cond_70
     const-string p0, "DRIVE_EXTERNAL_STORAGE_REQUIRED"
 
     return-object p0
 
-    :cond_74
+    :cond_73
     const-string p0, "UNFINISHED"
 
     return-object p0
 
-    nop
-
-    :pswitch_data_78
+    :pswitch_data_76
     .packed-switch -0x1
-        :pswitch_6e  #ffffffff
-        :pswitch_6b  #00000000
-        :pswitch_68  #00000001
-        :pswitch_65  #00000002
-        :pswitch_62  #00000003
-        :pswitch_5f  #00000004
-        :pswitch_5c  #00000005
-        :pswitch_59  #00000006
-        :pswitch_56  #00000007
-        :pswitch_53  #00000008
-        :pswitch_50  #00000009
-        :pswitch_4d  #0000000a
-        :pswitch_4a  #0000000b
+        :pswitch_6d  #ffffffff
+        :pswitch_6a  #00000000
+        :pswitch_67  #00000001
+        :pswitch_64  #00000002
+        :pswitch_61  #00000003
+        :pswitch_5e  #00000004
+        :pswitch_5b  #00000005
+        :pswitch_58  #00000006
+        :pswitch_55  #00000007
+        :pswitch_52  #00000008
+        :pswitch_4f  #00000009
+        :pswitch_4c  #0000000a
+        :pswitch_49  #0000000b
     .end packed-switch
 
-    :pswitch_data_96
+    :pswitch_data_94
     .packed-switch 0xd
-        :pswitch_47  #0000000d
-        :pswitch_44  #0000000e
-        :pswitch_41  #0000000f
-        :pswitch_3e  #00000010
-        :pswitch_3b  #00000011
+        :pswitch_46  #0000000d
+        :pswitch_43  #0000000e
+        :pswitch_40  #0000000f
+        :pswitch_3d  #00000010
+        :pswitch_3a  #00000011
         :pswitch_37  #00000012
         :pswitch_34  #00000013
         :pswitch_31  #00000014

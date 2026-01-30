@@ -474,9 +474,7 @@
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->QGk:Ljava/lang/String;
+    const-string v2, "androidx.activity.result.contract.extra.PERMISSIONS"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
@@ -494,11 +492,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1d
 
     invoke-super {p0, p1, p2, p3}, Landroidx/core/app/ComponentActivity;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
-    :cond_1e
+    :cond_1d
     return-void
 .end method
 

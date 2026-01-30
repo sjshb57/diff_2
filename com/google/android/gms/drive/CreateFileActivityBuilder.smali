@@ -97,7 +97,7 @@
 
     const/4 v0, 0x1
 
-    if-eqz p1, :cond_3a
+    if-eqz p1, :cond_39
 
     instance-of v1, p1, Lcom/google/android/gms/internal/drive/zzbi;
 
@@ -127,7 +127,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/drive/CreateFileActivityBuilder;->zzo:Lcom/google/android/gms/drive/DriveContents;
 
-    goto :goto_3f
+    goto :goto_3e
 
     :cond_21
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -150,20 +150,18 @@
     :cond_31
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->teRawTyaMMlThcw:Ljava/lang/String;
+    const-string v0, "Only DriveContents obtained from the Drive API are accepted."
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_3a
+    :cond_39
     iget-object p1, p0, Lcom/google/android/gms/drive/CreateFileActivityBuilder;->zzn:Lcom/google/android/gms/internal/drive/zzt;
 
     invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/drive/zzt;->zzd(I)V
 
-    :goto_3f
+    :goto_3e
     iput-boolean v0, p0, Lcom/google/android/gms/drive/CreateFileActivityBuilder;->zzp:Z
 
     return-object p0
@@ -228,19 +226,17 @@
 
     iget-boolean v0, p0, Lcom/google/android/gms/drive/CreateFileActivityBuilder;->zzp:Z
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->rcbPebgZEaWmJm:Ljava/lang/String;
+    const-string v1, "Must call setInitialDriveContents."
 
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
 
     iget-object v0, p0, Lcom/google/android/gms/drive/CreateFileActivityBuilder;->zzo:Lcom/google/android/gms/drive/DriveContents;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_e
 
     invoke-interface {v0}, Lcom/google/android/gms/drive/DriveContents;->zzj()V
 
-    :cond_f
+    :cond_e
     iget-object v0, p0, Lcom/google/android/gms/drive/CreateFileActivityBuilder;->zzn:Lcom/google/android/gms/internal/drive/zzt;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/drive/zzt;->zzg()V

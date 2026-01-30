@@ -70,9 +70,7 @@
 
     const-class v1, Landroid/app/job/JobScheduler;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->DdVDwcogVE:Ljava/lang/String;
+    const-string v2, "jobscheduler"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -102,9 +100,7 @@
 
     const-class v1, Landroid/telecom/TelecomManager;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->OQHDCLzKiVSsRH:Ljava/lang/String;
+    const-string v2, "telecom"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -122,9 +118,7 @@
 
     const-class v1, Landroid/view/accessibility/CaptioningManager;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->vRCrUlsTpHZq:Ljava/lang/String;
+    const-string v2, "captioning"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -214,9 +208,7 @@
 
     const-class v1, Landroid/net/ConnectivityManager;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/api/client/util/Uhr/zXgie;->GuhWrVlMqI:Ljava/lang/String;
+    const-string v2, "connectivity"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

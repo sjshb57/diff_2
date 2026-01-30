@@ -6,6 +6,7 @@
 # direct methods
 .method public static $default$get(Lcom/google/firebase/components/ComponentContainer;Lcom/google/firebase/components/Qualified;)Ljava/lang/Object;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-interface {p0, p1}, Lcom/google/firebase/components/ComponentContainer;->getProvider(Lcom/google/firebase/components/Qualified;)Lcom/google/firebase/inject/Provider;
 
@@ -27,6 +28,7 @@
 
 .method public static $default$get(Lcom/google/firebase/components/ComponentContainer;Ljava/lang/Class;)Ljava/lang/Object;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-static {p1}, Lcom/google/firebase/components/Qualified;->unqualified(Ljava/lang/Class;)Lcom/google/firebase/components/Qualified;
 
@@ -41,6 +43,7 @@
 
 .method public static $default$getDeferred(Lcom/google/firebase/components/ComponentContainer;Ljava/lang/Class;)Lcom/google/firebase/inject/Deferred;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-static {p1}, Lcom/google/firebase/components/Qualified;->unqualified(Ljava/lang/Class;)Lcom/google/firebase/components/Qualified;
 
@@ -55,6 +58,7 @@
 
 .method public static $default$getProvider(Lcom/google/firebase/components/ComponentContainer;Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-static {p1}, Lcom/google/firebase/components/Qualified;->unqualified(Ljava/lang/Class;)Lcom/google/firebase/components/Qualified;
 
@@ -69,6 +73,7 @@
 
 .method public static $default$setOf(Lcom/google/firebase/components/ComponentContainer;Lcom/google/firebase/components/Qualified;)Ljava/util/Set;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-interface {p0, p1}, Lcom/google/firebase/components/ComponentContainer;->setOfProvider(Lcom/google/firebase/components/Qualified;)Lcom/google/firebase/inject/Provider;
 
@@ -85,6 +90,7 @@
 
 .method public static $default$setOf(Lcom/google/firebase/components/ComponentContainer;Ljava/lang/Class;)Ljava/util/Set;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-static {p1}, Lcom/google/firebase/components/Qualified;->unqualified(Ljava/lang/Class;)Lcom/google/firebase/components/Qualified;
 
@@ -99,6 +105,7 @@
 
 .method public static $default$setOfProvider(Lcom/google/firebase/components/ComponentContainer;Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
     .registers 2
+    .param p0, "_this"  # Lcom/google/firebase/components/ComponentContainer;
 
     invoke-static {p1}, Lcom/google/firebase/components/Qualified;->unqualified(Ljava/lang/Class;)Lcom/google/firebase/components/Qualified;
 

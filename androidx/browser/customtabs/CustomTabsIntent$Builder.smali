@@ -175,9 +175,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lkotlin/collections/zgTb/JhPPV;->zNdORHZfMuqwX:Ljava/lang/String;
+    const-string p1, "android.support.customtabs.customaction.PENDING_INTENT"
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -407,9 +405,7 @@
 
     iget-object p1, p0, Landroidx/browser/customtabs/CustomTabsIntent$Builder;->mIntent:Landroid/content/Intent;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/flatbuffers/OSq/msMBb;->mHwYaqXOsNKq:Ljava/lang/String;
+    const-string p2, "android.support.customtabs.extra.TINT_ACTION_BUTTON"
 
     invoke-virtual {p1, p2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 

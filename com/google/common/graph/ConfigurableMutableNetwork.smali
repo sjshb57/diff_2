@@ -224,24 +224,22 @@
 
     move-result v2
 
-    if-nez v2, :cond_5b
+    if-nez v2, :cond_5a
 
     xor-int/lit8 v2, v1, 0x1
 
-    const/4 v4, 0x0
-
-    sget-object v4, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->aaCPArhYTsB:Ljava/lang/String;
+    const-string v4, "Cannot add self-loop edge on node %s, as self-loops are not allowed. To construct a graph that allows self-loops, call allowsSelfLoops(true) on the Builder."
 
     invoke-static {v2, v4, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    :cond_5b
-    if-nez v0, :cond_61
+    :cond_5a
+    if-nez v0, :cond_60
 
     invoke-direct {p0, p1}, Lcom/google/common/graph/ConfigurableMutableNetwork;->addNodeInternal(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object v0
 
-    :cond_61
+    :cond_60
     invoke-interface {v0, p3, p2}, Lcom/google/common/graph/NetworkConnections;->addOutEdge(Ljava/lang/Object;Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/google/common/graph/ConfigurableMutableNetwork;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
@@ -252,13 +250,13 @@
 
     check-cast v0, Lcom/google/common/graph/NetworkConnections;
 
-    if-nez v0, :cond_72
+    if-nez v0, :cond_71
 
     invoke-direct {p0, p2}, Lcom/google/common/graph/ConfigurableMutableNetwork;->addNodeInternal(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object v0
 
-    :cond_72
+    :cond_71
     invoke-interface {v0, p3, p1, v1}, Lcom/google/common/graph/NetworkConnections;->addInEdge(Ljava/lang/Object;Ljava/lang/Object;Z)V
 
     iget-object p2, p0, Lcom/google/common/graph/ConfigurableMutableNetwork;->edgeToReferenceNode:Lcom/google/common/graph/MapIteratorCache;

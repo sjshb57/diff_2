@@ -41,7 +41,7 @@
 
     check-cast p1, Landroid/net/NetworkInfo;
 
-    if-eqz p1, :cond_13
+    if-eqz p1, :cond_14
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -53,7 +53,7 @@
 
     return-object p0
 
-    :cond_13
+    :cond_14
     const/4 p0, 0x0
 
     return-object p0

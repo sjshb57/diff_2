@@ -302,7 +302,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_31
+    if-eqz v2, :cond_30
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -326,9 +326,7 @@
     :catch_27
     move-exception v2
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/print/nh/SlomKQFs;->JKCLOtjMXrRmjL:Ljava/lang/String;
+    const-string v3, "ComponentDiscovery"
 
     const-string v4, "Invalid component registrar."
 
@@ -336,7 +334,7 @@
 
     goto :goto_11
 
-    :cond_31
+    :cond_30
     return-object v0
 .end method
 

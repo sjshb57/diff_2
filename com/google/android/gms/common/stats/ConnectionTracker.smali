@@ -166,7 +166,7 @@
 
     move-result p6
 
-    if-eqz p6, :cond_67
+    if-eqz p6, :cond_66
 
     iget-object p6, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -176,9 +176,9 @@
 
     check-cast p6, Landroid/content/ServiceConnection;
 
-    if-eqz p6, :cond_53
+    if-eqz p6, :cond_52
 
-    if-eq p4, p6, :cond_53
+    if-eq p4, p6, :cond_52
 
     invoke-virtual {p3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -198,9 +198,7 @@
 
     aput-object p6, v2, p2
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->XuhsJZ:Ljava/lang/String;
+    const-string p2, "Duplicate binding with the same ServiceConnection: %s, %s, %s."
 
     invoke-static {p2, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -208,26 +206,26 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_53
-    :try_start_53
+    :cond_52
+    :try_start_52
     invoke-static {p1, p3, p4, p5, p7}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zze(Landroid/content/Context;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
 
     move-result p1
-    :try_end_57
-    .catchall {:try_start_53 .. :try_end_57} :catchall_60
+    :try_end_56
+    .catchall {:try_start_52 .. :try_end_56} :catchall_5f
 
-    if-eqz p1, :cond_5a
+    if-eqz p1, :cond_59
 
-    goto :goto_6b
+    goto :goto_6a
 
-    :cond_5a
+    :cond_59
     iget-object p1, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p1, p4, p4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return v1
 
-    :catchall_60
+    :catchall_5f
     move-exception p1
 
     iget-object p2, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
@@ -236,12 +234,12 @@
 
     throw p1
 
-    :cond_67
+    :cond_66
     invoke-static {p1, p3, p4, p5, p7}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zze(Landroid/content/Context;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
 
     move-result p1
 
-    :goto_6b
+    :goto_6a
     return p1
 .end method
 

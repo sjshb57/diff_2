@@ -351,7 +351,7 @@
 
     invoke-direct {p0, v0}, Landroidx/browser/customtabs/CustomTabsSession;->addIdToBundle(Landroid/os/Bundle;)V
 
-    :try_start_17
+    :try_start_18
     iget-object p1, p0, Landroidx/browser/customtabs/CustomTabsSession;->mService:Landroid/support/customtabs/ICustomTabsService;
 
     iget-object p2, p0, Landroidx/browser/customtabs/CustomTabsSession;->mCallback:Landroid/support/customtabs/ICustomTabsCallback;
@@ -359,12 +359,12 @@
     invoke-interface {p1, p2, v0}, Landroid/support/customtabs/ICustomTabsService;->updateVisuals(Landroid/support/customtabs/ICustomTabsCallback;Landroid/os/Bundle;)Z
 
     move-result p1
-    :try_end_1f
-    .catch Landroid/os/RemoteException; {:try_start_17 .. :try_end_1f} :catch_20
+    :try_end_20
+    .catch Landroid/os/RemoteException; {:try_start_18 .. :try_end_20} :catch_21
 
     return p1
 
-    :catch_20
+    :catch_21
     const/4 p1, 0x0
 
     return p1

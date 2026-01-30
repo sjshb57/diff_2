@@ -593,9 +593,7 @@
     return p1
 
     :cond_7
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->pSXTqcEEty:Ljava/lang/String;
+    const-string v0, "occurences"
 
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkPositive(ILjava/lang/String;)V
 
@@ -609,16 +607,16 @@
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_19
+    if-nez v0, :cond_18
 
     return v1
 
-    :cond_19
+    :cond_18
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v2
 
-    if-eqz v2, :cond_33
+    if-eqz v2, :cond_32
 
     sub-int v3, v2, p2
 
@@ -630,18 +628,18 @@
 
     move-result v4
 
-    if-eqz v4, :cond_19
+    if-eqz v4, :cond_18
 
-    if-nez v3, :cond_32
+    if-nez v3, :cond_31
 
     iget-object p2, p0, Lcom/google/common/collect/ConcurrentHashMultiset;->countMap:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {p2, p1, v0}, Ljava/util/concurrent/ConcurrentMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :cond_32
+    :cond_31
     return v2
 
-    :cond_33
+    :cond_32
     return v1
 .end method
 

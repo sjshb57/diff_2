@@ -115,33 +115,31 @@
     return-object p0
 
     :pswitch_22  #0x1f60
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/savedstate/xT/fgyAspfzfnhI;->KrooiJeXzSopUBn:Ljava/lang/String;
+    const-string p0, "MISSING_PERMISSION_ACCESS_WIFI_STATE"
 
     return-object p0
 
-    :pswitch_26  #0x1f5f
+    :pswitch_25  #0x1f5f
     const-string p0, "MISSING_PERMISSION_BLUETOOTH_ADMIN"
 
     return-object p0
 
-    :pswitch_29  #0x1f5e
+    :pswitch_28  #0x1f5e
     const-string p0, "MISSING_PERMISSION_BLUETOOTH"
 
     return-object p0
 
-    :pswitch_2c  #0x1f4e
+    :pswitch_2b  #0x1f4e
     const-string p0, "STATUS_PAYLOAD_UNKNOWN"
 
     return-object p0
 
-    :pswitch_2f  #0x1f4d
+    :pswitch_2e  #0x1f4d
     const-string p0, "STATUS_PAYLOAD_IO_ERROR"
 
     return-object p0
 
-    :pswitch_32  #0x1f4c
+    :pswitch_31  #0x1f4c
     const-string p0, "STATUS_ENDPOINT_IO_ERROR"
 
     return-object p0
@@ -228,15 +226,15 @@
         :pswitch_3b  #00001f49
         :pswitch_38  #00001f4a
         :pswitch_35  #00001f4b
-        :pswitch_32  #00001f4c
-        :pswitch_2f  #00001f4d
-        :pswitch_2c  #00001f4e
+        :pswitch_31  #00001f4c
+        :pswitch_2e  #00001f4d
+        :pswitch_2b  #00001f4e
     .end packed-switch
 
     :pswitch_data_80
     .packed-switch 0x1f5e
-        :pswitch_29  #00001f5e
-        :pswitch_26  #00001f5f
+        :pswitch_28  #00001f5e
+        :pswitch_25  #00001f5f
         :pswitch_22  #00001f60
         :pswitch_1f  #00001f61
         :pswitch_1c  #00001f62

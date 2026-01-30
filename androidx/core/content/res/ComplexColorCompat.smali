@@ -63,7 +63,7 @@
     goto :goto_8
 
     :cond_13
-    if-ne v1, v2, :cond_5c
+    if-ne v1, v2, :cond_5d
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -77,7 +77,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_53
+    if-nez v2, :cond_54
 
     const-string v2, "selector"
 
@@ -124,7 +124,7 @@
 
     throw p0
 
-    :cond_53
+    :cond_54
     invoke-static {p0, p1, v0, p2}, Landroidx/core/content/res/GradientColorInflaterCompat;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;
 
     move-result-object p0
@@ -135,7 +135,7 @@
 
     return-object p0
 
-    :cond_5c
+    :cond_5d
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string p1, "No start tag found"

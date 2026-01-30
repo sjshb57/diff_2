@@ -43,7 +43,7 @@
     :try_end_7
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_7} :catch_8
 
-    goto :goto_f
+    goto :goto_10
 
     :catch_8
     const-string p1, "CustomTabsSessionToken"
@@ -52,7 +52,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_f
+    :goto_10
     return-void
 .end method
 
@@ -75,9 +75,7 @@
     :catch_9
     const-string p1, "CustomTabsSessionToken"
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/savedstate/xT/fgyAspfzfnhI;->UbZak:Ljava/lang/String;
+    const-string p2, "RemoteException during ICustomTabsCallback transaction"
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -123,18 +121,16 @@
     :try_end_7
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_7} :catch_8
 
-    goto :goto_10
+    goto :goto_f
 
     :catch_8
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/api/client/util/Uhr/zXgie;->niLTQLtmP:Ljava/lang/String;
+    const-string p1, "CustomTabsSessionToken"
 
     const-string p2, "RemoteException during ICustomTabsCallback transaction"
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_10
+    :goto_f
     return-void
 .end method
 

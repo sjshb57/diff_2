@@ -160,19 +160,19 @@
 
     iget v0, p0, Landroidx/browser/trusted/ConnectionHolder;->mState:I
 
-    if-eqz v0, :cond_30
+    if-eqz v0, :cond_32
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_20
+    if-eq v0, v1, :cond_21
 
     const/4 p1, 0x2
 
-    if-eq v0, p1, :cond_18
+    if-eq v0, p1, :cond_19
 
     const/4 p1, 0x3
 
-    if-eq v0, p1, :cond_15
+    if-eq v0, p1, :cond_16
 
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -182,12 +182,12 @@
 
     throw p1
 
-    :cond_15
+    :cond_16
     iget-object p1, p0, Landroidx/browser/trusted/ConnectionHolder;->mCancellationException:Ljava/lang/Exception;
 
     throw p1
 
-    :cond_18
+    :cond_19
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "Service has been disconnected."
@@ -196,16 +196,16 @@
 
     throw p1
 
-    :cond_20
+    :cond_21
     iget-object v0, p0, Landroidx/browser/trusted/ConnectionHolder;->mService:Landroidx/browser/trusted/TrustedWebActivityServiceConnection;
 
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_29
 
     invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;->set(Ljava/lang/Object;)Z
 
-    goto :goto_35
+    goto :goto_37
 
-    :cond_28
+    :cond_29
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "ConnectionHolder state is incorrect."
@@ -214,12 +214,12 @@
 
     throw p1
 
-    :cond_30
+    :cond_32
     iget-object v0, p0, Landroidx/browser/trusted/ConnectionHolder;->mCompleters:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :goto_35
+    :goto_37
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string v0, "ConnectionHolder, state = "
