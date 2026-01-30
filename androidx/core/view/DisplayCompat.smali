@@ -277,9 +277,7 @@
 
     move-result-object p0
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->yoJCyMPRLwLqfPK:Ljava/lang/String;
+    const-string v0, "x"
 
     const/4 v1, -0x1
 
@@ -291,7 +289,7 @@
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_28
+    if-ne v0, v1, :cond_27
 
     const/4 v0, 0x0
 
@@ -309,9 +307,9 @@
 
     move-result p0
 
-    if-lez v0, :cond_28
+    if-lez v0, :cond_27
 
-    if-lez p0, :cond_28
+    if-lez p0, :cond_27
 
     new-instance v1, Landroid/graphics/Point;
 
@@ -319,7 +317,7 @@
 
     return-object v1
 
-    :cond_28
+    :cond_27
     new-instance p0, Ljava/lang/NumberFormatException;
 
     invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V

@@ -656,13 +656,13 @@
 
     sget-boolean v0, Lcom/dobest/analyticshwsdk/c/e;->i:Z
 
-    if-nez v0, :cond_2c
+    if-nez v0, :cond_2b
 
     sget-object v0, Lcom/dobest/analyticshwsdk/c/e;->j:Ljava/lang/Runnable;
 
     if-nez v0, :cond_9
 
-    goto :goto_2c
+    goto :goto_2b
 
     :cond_9
     invoke-static {}, Lcom/dobest/analyticshwsdk/c/e;->a()V
@@ -687,18 +687,16 @@
 
     sget-boolean v0, Lcom/dobest/analyticshwsdk/c/e;->c:Z
 
-    if-eqz v0, :cond_2c
+    if-eqz v0, :cond_2b
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/util/Uhr/zXgie;->hhnVd:Ljava/lang/String;
+    const-string v0, "AnalyticsHWSdk"
 
     const-string v1, "schedule remote task"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2c
-    :goto_2c
+    :cond_2b
+    :goto_2b
     return-void
 .end method
 

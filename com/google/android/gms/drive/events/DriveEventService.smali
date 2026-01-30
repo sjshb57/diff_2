@@ -119,19 +119,19 @@
 
     move-result v3
 
-    if-eq v3, v2, :cond_41
+    if-eq v3, v2, :cond_42
 
     const/4 v4, 0x2
 
-    if-eq v3, v4, :cond_3b
+    if-eq v3, v4, :cond_3c
 
     const/4 v5, 0x4
 
-    if-eq v3, v5, :cond_35
+    if-eq v3, v5, :cond_36
 
     const/4 v5, 0x7
 
-    if-eq v3, v5, :cond_23
+    if-eq v3, v5, :cond_24
 
     sget-object v3, Lcom/google/android/gms/drive/events/DriveEventService;->zzbz:Lcom/google/android/gms/common/internal/GmsLogger;
 
@@ -145,7 +145,7 @@
 
     return-void
 
-    :cond_23
+    :cond_24
     check-cast p1, Lcom/google/android/gms/drive/events/zzv;
 
     sget-object v3, Lcom/google/android/gms/drive/events/DriveEventService;->zzbz:Lcom/google/android/gms/common/internal/GmsLogger;
@@ -164,30 +164,30 @@
 
     return-void
 
-    :cond_35
+    :cond_36
     check-cast p1, Lcom/google/android/gms/drive/events/zzb;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/drive/events/DriveEventService;->zza(Lcom/google/android/gms/drive/events/zzb;)V
 
     return-void
 
-    :cond_3b
+    :cond_3c
     check-cast p1, Lcom/google/android/gms/drive/events/CompletionEvent;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/drive/events/DriveEventService;->onCompletion(Lcom/google/android/gms/drive/events/CompletionEvent;)V
 
     return-void
 
-    :cond_41
+    :cond_42
     check-cast p1, Lcom/google/android/gms/drive/events/ChangeEvent;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/drive/events/DriveEventService;->onChange(Lcom/google/android/gms/drive/events/ChangeEvent;)V
-    :try_end_46
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_46} :catch_47
+    :try_end_47
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_47} :catch_48
 
     return-void
 
-    :catch_47
+    :catch_48
     move-exception p1
 
     sget-object v3, Lcom/google/android/gms/drive/events/DriveEventService;->zzbz:Lcom/google/android/gms/common/internal/GmsLogger;
@@ -455,7 +455,7 @@
     :try_start_1
     iget-object v0, p0, Lcom/google/android/gms/drive/events/DriveEventService;->zzck:Lcom/google/android/gms/drive/events/DriveEventService$zza;
 
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_29
 
     invoke-static {v0}, Lcom/google/android/gms/drive/events/DriveEventService$zza;->zza(Lcom/google/android/gms/drive/events/DriveEventService$zza;)Landroid/os/Message;
 
@@ -469,7 +469,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/drive/events/DriveEventService;->zzck:Lcom/google/android/gms/drive/events/DriveEventService$zza;
     :try_end_11
-    .catchall {:try_start_1 .. :try_end_11} :catchall_2d
+    .catchall {:try_start_1 .. :try_end_11} :catchall_2e
 
     :try_start_11
     iget-object v1, p0, Lcom/google/android/gms/drive/events/DriveEventService;->zzcj:Ljava/util/concurrent/CountDownLatch;
@@ -482,7 +482,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_26
+    if-nez v1, :cond_27
 
     sget-object v1, Lcom/google/android/gms/drive/events/DriveEventService;->zzbz:Lcom/google/android/gms/common/internal/GmsLogger;
 
@@ -491,25 +491,25 @@
     const-string v3, "Failed to synchronously quit event handler. Will quit itself"
 
     invoke-virtual {v1, v2, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->w(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_26
-    .catch Ljava/lang/InterruptedException; {:try_start_11 .. :try_end_26} :catch_26
-    .catchall {:try_start_11 .. :try_end_26} :catchall_2d
+    :try_end_27
+    .catch Ljava/lang/InterruptedException; {:try_start_11 .. :try_end_27} :catch_27
+    .catchall {:try_start_11 .. :try_end_27} :catchall_2e
 
-    :catch_26
-    :cond_26
-    :try_start_26
+    :catch_27
+    :cond_27
+    :try_start_27
     iput-object v0, p0, Lcom/google/android/gms/drive/events/DriveEventService;->zzcj:Ljava/util/concurrent/CountDownLatch;
 
-    :cond_28
+    :cond_29
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
-    :try_end_2b
-    .catchall {:try_start_26 .. :try_end_2b} :catchall_2d
+    :try_end_2c
+    .catchall {:try_start_27 .. :try_end_2c} :catchall_2e
 
     monitor-exit p0
 
     return-void
 
-    :catchall_2d
+    :catchall_2e
     move-exception v0
 
     monitor-exit p0

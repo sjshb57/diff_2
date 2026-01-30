@@ -148,11 +148,11 @@
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    if-nez p3, :cond_68
+    if-nez p3, :cond_69
 
     sget-object p3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    :cond_68
+    :cond_69
     invoke-static {p1, p2, p3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p3

@@ -183,19 +183,19 @@
 
     move-result v0
 
-    if-eqz v0, :cond_46
+    if-eqz v0, :cond_44
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_43
+    if-eq v0, v1, :cond_41
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_3f
+    if-eq v0, v1, :cond_3e
 
     const/4 v1, 0x3
 
-    if-eq v0, v1, :cond_3c
+    if-eq v0, v1, :cond_3b
 
     const/4 v1, 0x4
 
@@ -225,61 +225,57 @@
 
     move-result-object v0
 
-    goto :goto_48
+    goto :goto_46
 
     :cond_29
     const-string v0, "IN_RAIL_VEHICLE"
 
-    goto :goto_48
+    goto :goto_46
 
     :cond_2c
     const-string v0, "IN_ROAD_VEHICLE"
 
-    goto :goto_48
+    goto :goto_46
 
     :cond_2f
     const-string v0, "RUNNING"
 
-    goto :goto_48
+    goto :goto_46
 
     :cond_32
     const-string v0, "WALKING"
 
-    goto :goto_48
+    goto :goto_46
 
     :cond_35
     const-string v0, "TILTING"
 
-    goto :goto_48
+    goto :goto_46
 
     :cond_38
-    const/4 v0, 0x0
+    const-string v0, "UNKNOWN"
 
-    sget-object v0, Landroidx/savedstate/xT/fgyAspfzfnhI;->cqcKpYZsDiOodM:Ljava/lang/String;
+    goto :goto_46
 
-    goto :goto_48
-
-    :cond_3c
+    :cond_3b
     const-string v0, "STILL"
 
-    goto :goto_48
+    goto :goto_46
 
-    :cond_3f
-    const/4 v0, 0x0
+    :cond_3e
+    const-string v0, "ON_FOOT"
 
-    sget-object v0, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->SpRPQDZnu:Ljava/lang/String;
+    goto :goto_46
 
-    goto :goto_48
-
-    :cond_43
+    :cond_41
     const-string v0, "ON_BICYCLE"
 
-    goto :goto_48
+    goto :goto_46
 
-    :cond_46
+    :cond_44
     const-string v0, "IN_VEHICLE"
 
-    :goto_48
+    :goto_46
     iget v1, p0, Lcom/google/android/gms/location/DetectedActivity;->zzc:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -310,7 +306,7 @@
 
     const/4 v0, 0x0
 
-    sget-object v0, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->iCiIGN:Ljava/lang/String;
+    sget-object v0, Lkotlin/jvm/optionals/NVB/ylZYEMtWDxk;->ugpWulkbrKy:Ljava/lang/String;
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

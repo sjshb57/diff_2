@@ -103,7 +103,7 @@
 
     const/4 p2, 0x0
 
-    sget-object p2, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->FkpFGZxoxpzPBWZ:Ljava/lang/String;
+    sget-object p2, Lcom/google/api/client/util/escape/TGjE/orViZ;->ADbcpw:Ljava/lang/String;
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

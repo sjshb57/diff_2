@@ -114,11 +114,11 @@
 .method private static describeInjection(I)Ljava/lang/String;
     .registers 4
 
-    if-eqz p0, :cond_22
+    if-eqz p0, :cond_24
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_1f
+    if-eq p0, v0, :cond_20
 
     const/4 v0, 0x2
 
@@ -147,12 +147,12 @@
 
     throw v0
 
-    :cond_1f
+    :cond_20
     const-string p0, "provider"
 
     return-object p0
 
-    :cond_22
+    :cond_24
     const-string p0, "direct"
 
     return-object p0
@@ -578,23 +578,23 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_19
+    if-ne v1, v2, :cond_1a
 
     const-string v1, "required"
 
-    goto :goto_20
+    goto :goto_21
 
-    :cond_19
-    if-nez v1, :cond_1e
+    :cond_1a
+    if-nez v1, :cond_1f
 
     const-string v1, "optional"
 
-    goto :goto_20
+    goto :goto_21
 
-    :cond_1e
+    :cond_1f
     const-string v1, "set"
 
-    :goto_20
+    :goto_21
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ", injection="

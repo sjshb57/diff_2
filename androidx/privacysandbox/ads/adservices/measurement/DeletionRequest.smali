@@ -459,15 +459,13 @@
 
     iget v0, p0, Landroidx/privacysandbox/ads/adservices/measurement/DeletionRequest;->deletionMode:I
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_7
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->FzgR:Ljava/lang/String;
+    const-string v0, "DELETION_MODE_ALL"
 
     goto :goto_a
 
-    :cond_8
+    :cond_7
     const-string v0, "DELETION_MODE_EXCLUDE_INTERNAL_DATA"
 
     :goto_a

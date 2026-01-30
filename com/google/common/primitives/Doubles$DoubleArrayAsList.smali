@@ -484,11 +484,9 @@
 
     iget v2, p0, Lcom/google/common/primitives/Doubles$DoubleArrayAsList;->end:I
 
-    if-ge v1, v2, :cond_2f
+    if-ge v1, v2, :cond_2e
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->DZQLufCD:Ljava/lang/String;
+    const-string v2, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -500,7 +498,7 @@
 
     goto :goto_1b
 
-    :cond_2f
+    :cond_2e
     const/16 v1, 0x5d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;

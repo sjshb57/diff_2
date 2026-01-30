@@ -216,9 +216,7 @@
 .method public toString()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->ARvRtkF:Ljava/lang/String;
+    const-string v0, "DiscreteDomain.bigIntegers()"
 
     return-object v0
 .end method

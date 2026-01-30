@@ -27,9 +27,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->OLkwxBzjJbdjOxL:Ljava/lang/String;
+    const-string v0, "data"
 
     filled-new-array {v0}, [Ljava/lang/String;
 

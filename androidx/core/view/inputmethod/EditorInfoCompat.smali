@@ -285,7 +285,7 @@
 
     and-int/lit8 p2, p2, 0x1
 
-    if-eqz p2, :cond_37
+    if-eqz p2, :cond_38
 
     add-int/2addr p1, p0
 
@@ -293,16 +293,16 @@
 
     move-result-object p0
 
-    goto :goto_3c
+    goto :goto_3d
 
-    :cond_37
+    :cond_38
     add-int/2addr p1, p0
 
     invoke-static {v0, p0, p1}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
 
     move-result-object p0
 
-    :goto_3c
+    :goto_3d
     return-object p0
 .end method
 
@@ -358,7 +358,7 @@
 
     and-int/lit8 p2, p2, 0x1
 
-    if-eqz p2, :cond_33
+    if-eqz p2, :cond_34
 
     sub-int p1, p0, p1
 
@@ -366,16 +366,16 @@
 
     move-result-object p0
 
-    goto :goto_39
+    goto :goto_3a
 
-    :cond_33
+    :cond_34
     sub-int p1, p0, p1
 
     invoke-static {v0, p1, p0}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
 
     move-result-object p0
 
-    :goto_39
+    :goto_3a
     return-object p0
 .end method
 

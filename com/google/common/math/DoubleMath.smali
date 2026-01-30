@@ -342,9 +342,7 @@
     move v0, v1
 
     :goto_11
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->TPBWd:Ljava/lang/String;
+    const-string v3, "x must be positive and finite"
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
@@ -356,7 +354,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_2b
+    if-nez v3, :cond_2a
 
     const-wide/high16 v0, 0x4330000000000000L  # 4.503599627370496E15
 
@@ -370,7 +368,7 @@
 
     return p0
 
-    :cond_2b
+    :cond_2a
     sget-object v3, Lcom/google/common/math/DoubleMath$1;->$SwitchMap$java$math$RoundingMode:[I
 
     invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
@@ -387,7 +385,7 @@
 
     throw p0
 
-    :pswitch_3c  #0x6, 0x7, 0x8
+    :pswitch_3b  #0x6, 0x7, 0x8
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->scaleNormalize(D)D
 
     move-result-wide p0
@@ -398,76 +396,78 @@
 
     cmpl-double p0, p0, v1
 
-    if-lez p0, :cond_6b
+    if-lez p0, :cond_6a
 
-    goto :goto_61
+    goto :goto_60
 
-    :pswitch_48  #0x5
-    if-ltz v0, :cond_4b
+    :pswitch_47  #0x5
+    if-ltz v0, :cond_4a
 
     move v1, v2
 
-    :cond_4b
+    :cond_4a
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
     move-result p0
 
-    goto :goto_57
+    goto :goto_56
 
-    :pswitch_50  #0x4
-    if-gez v0, :cond_53
+    :pswitch_4f  #0x4
+    if-gez v0, :cond_52
 
     move v1, v2
 
-    :cond_53
+    :cond_52
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
     move-result p0
 
-    :goto_57
+    :goto_56
     xor-int/2addr p0, v2
 
     and-int/2addr p0, v1
 
-    goto :goto_5f
+    goto :goto_5e
 
-    :pswitch_5a  #0x3
+    :pswitch_59  #0x3
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
     move-result p0
 
     xor-int/2addr p0, v2
 
-    :goto_5f
-    if-eqz p0, :cond_6b
+    :goto_5e
+    if-eqz p0, :cond_6a
 
-    :goto_61
+    :goto_60
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_6b
+    goto :goto_6a
 
-    :pswitch_64  #0x1
+    :pswitch_63  #0x1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
     move-result p0
 
     invoke-static {p0}, Lcom/google/common/math/MathPreconditions;->checkRoundingUnnecessary(Z)V
 
-    :cond_6b
-    :goto_6b
-    :pswitch_6b  #0x2
+    :cond_6a
+    :goto_6a
+    :pswitch_6a  #0x2
     return v0
+
+    nop
 
     :pswitch_data_6c
     .packed-switch 0x1
-        :pswitch_64  #00000001
-        :pswitch_6b  #00000002
-        :pswitch_5a  #00000003
-        :pswitch_50  #00000004
-        :pswitch_48  #00000005
-        :pswitch_3c  #00000006
-        :pswitch_3c  #00000007
-        :pswitch_3c  #00000008
+        :pswitch_63  #00000001
+        :pswitch_6a  #00000002
+        :pswitch_59  #00000003
+        :pswitch_4f  #00000004
+        :pswitch_47  #00000005
+        :pswitch_3b  #00000006
+        :pswitch_3b  #00000007
+        :pswitch_3b  #00000008
     .end packed-switch
 .end method
 
@@ -596,9 +596,7 @@
     move v0, v1
 
     :goto_8
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->WRad:Ljava/lang/String;
+    const-string v3, "Cannot take mean of 0 values"
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
@@ -612,10 +610,10 @@
 
     move-wide v5, v3
 
-    :goto_17
+    :goto_16
     array-length v7, p0
 
-    if-ge v2, v7, :cond_29
+    if-ge v2, v7, :cond_28
 
     aget-wide v7, p0, v2
 
@@ -635,9 +633,9 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_17
+    goto :goto_16
 
-    :cond_29
+    :cond_28
     return-wide v0
 .end method
 

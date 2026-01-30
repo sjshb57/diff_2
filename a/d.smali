@@ -82,9 +82,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->HVvMzNhwOLfo:Ljava/lang/String;
+    const-string v2, "Adding auth session to manager: "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

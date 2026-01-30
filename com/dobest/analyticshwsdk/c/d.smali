@@ -254,9 +254,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->UwbGgGTaU:Ljava/lang/String;
+    const-string v1, "error_time"
 
     filled-new-array {v1, v7}, [Ljava/lang/String;
 
@@ -326,9 +324,7 @@
 
     const/16 v1, 0x7d0
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/core/content/Whm/HgKojeDw;->ngDPcKu:Ljava/lang/String;
+    const-string v2, "collect_data.db"
 
     invoke-direct {p0, p1, v2, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
@@ -1052,7 +1048,7 @@
 
     move-result-object v2
     :try_end_9
-    .catchall {:try_start_5 .. :try_end_9} :catchall_11d
+    .catchall {:try_start_5 .. :try_end_9} :catchall_11e
 
     const/4 v3, 0x0
 
@@ -1087,12 +1083,12 @@
 
     move-result-object v5
 
-    :goto_26
+    :goto_27
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v7
 
-    if-eqz v7, :cond_106
+    if-eqz v7, :cond_107
 
     const/4 v7, 0x6
 
@@ -1102,17 +1098,17 @@
 
     const/4 v12, 0x3
 
-    if-eqz v0, :cond_c5
+    if-eqz v0, :cond_c6
 
-    if-eq v0, v8, :cond_90
+    if-eq v0, v8, :cond_91
 
-    if-eq v0, v6, :cond_61
+    if-eq v0, v6, :cond_62
 
-    if-eq v0, v12, :cond_39
+    if-eq v0, v12, :cond_3a
 
-    goto :goto_26
+    goto :goto_27
 
-    :cond_39
+    :cond_3a
     new-instance v7, Lcom/dobest/analyticshwsdk/c/r;
 
     invoke-direct {v7}, Lcom/dobest/analyticshwsdk/c/r;-><init>()V
@@ -1149,12 +1145,12 @@
 
     iput-object v10, v7, Lcom/dobest/analyticshwsdk/c/r;->f:Ljava/lang/String;
 
-    :goto_5d
+    :goto_5e
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_26
+    goto :goto_27
 
-    :cond_61
+    :cond_62
     new-instance v7, Lcom/dobest/analyticshwsdk/c/q;
 
     invoke-direct {v7}, Lcom/dobest/analyticshwsdk/c/q;-><init>()V
@@ -1201,9 +1197,9 @@
 
     iput-object v10, v7, Lcom/dobest/analyticshwsdk/c/q;->f:Ljava/lang/String;
 
-    goto :goto_5d
+    goto :goto_5e
 
-    :cond_90
+    :cond_91
     new-instance v13, Lcom/dobest/analyticshwsdk/c/a;
 
     invoke-direct {v13}, Lcom/dobest/analyticshwsdk/c/a;-><init>()V
@@ -1252,12 +1248,12 @@
 
     iput-wide v10, v13, Lcom/dobest/analyticshwsdk/c/a;->g:J
 
-    :goto_c0
+    :goto_c1
     invoke-interface {v4, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto/16 :goto_26
+    goto/16 :goto_27
 
-    :cond_c5
+    :cond_c6
     new-instance v13, Lcom/dobest/analyticshwsdk/c/t;
 
     invoke-direct {v13}, Lcom/dobest/analyticshwsdk/c/t;-><init>()V
@@ -1294,30 +1290,30 @@
 
     move-result v11
 
-    if-nez v11, :cond_ed
+    if-nez v11, :cond_ee
 
     iput v8, v13, Lcom/dobest/analyticshwsdk/c/t;->h:I
 
-    goto :goto_f9
+    goto :goto_fa
 
-    :cond_ed
+    :cond_ee
     iget-wide v14, v13, Lcom/dobest/analyticshwsdk/c/t;->g:J
 
     const-wide/16 v16, 0x0
 
     cmp-long v11, v16, v14
 
-    if-eqz v11, :cond_f6
+    if-eqz v11, :cond_f7
 
-    goto :goto_f7
+    goto :goto_f8
 
-    :cond_f6
+    :cond_f7
     move v12, v6
 
-    :goto_f7
+    :goto_f8
     iput v12, v13, Lcom/dobest/analyticshwsdk/c/t;->h:I
 
-    :goto_f9
+    :goto_fa
     invoke-interface {v5, v10}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v10
@@ -1330,54 +1326,54 @@
 
     iput v7, v13, Lcom/dobest/analyticshwsdk/c/t;->j:I
 
-    goto :goto_c0
+    goto :goto_c1
 
-    :cond_106
+    :cond_107
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
-    :try_end_109
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_109} :catch_110
-    .catchall {:try_start_a .. :try_end_109} :catchall_10e
+    :try_end_10a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_10a} :catch_111
+    .catchall {:try_start_a .. :try_end_10a} :catchall_10f
 
-    :try_start_109
+    :try_start_10a
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     monitor-exit v1
-    :try_end_10d
-    .catchall {:try_start_109 .. :try_end_10d} :catchall_11d
+    :try_end_10e
+    .catchall {:try_start_10a .. :try_end_10e} :catchall_11e
 
     return-object v4
 
-    :catchall_10e
+    :catchall_10f
     move-exception v0
 
-    goto :goto_119
+    goto :goto_11a
 
-    :catch_110
+    :catch_111
     move-exception v0
 
-    :try_start_111
+    :try_start_112
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_114
-    .catchall {:try_start_111 .. :try_end_114} :catchall_10e
+    :try_end_115
+    .catchall {:try_start_112 .. :try_end_115} :catchall_10f
 
-    :try_start_114
+    :try_start_115
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     monitor-exit v1
 
     return-object v3
 
-    :goto_119
+    :goto_11a
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     throw v0
 
-    :catchall_11d
+    :catchall_11e
     move-exception v0
 
     monitor-exit v1
-    :try_end_11f
-    .catchall {:try_start_114 .. :try_end_11f} :catchall_11d
+    :try_end_120
+    .catchall {:try_start_115 .. :try_end_120} :catchall_11e
 
     throw v0
 .end method

@@ -176,9 +176,7 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/nano/privacy/eM/RmZCOXza;->TbDnqOfbo:Ljava/lang/String;
+    const-string v3, "min (%s) must be less than or equal to max (%s)"
 
     invoke-static {v0, v3, v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -445,13 +443,13 @@
 
     array-length v0, p1
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     const-string p0, ""
 
     return-object p0
 
-    :cond_9
+    :cond_a
     new-instance v0, Ljava/lang/StringBuilder;
 
     array-length v1, p1
@@ -468,10 +466,10 @@
 
     const/4 v1, 0x1
 
-    :goto_18
+    :goto_19
     array-length v2, p1
 
-    if-ge v1, v2, :cond_26
+    if-ge v1, v2, :cond_27
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -481,9 +479,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_18
+    goto :goto_19
 
-    :cond_26
+    :cond_27
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

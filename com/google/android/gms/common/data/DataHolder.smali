@@ -462,14 +462,14 @@
     move v5, v4
 
     :goto_2a
-    if-ge v4, v1, :cond_186
+    if-ge v4, v1, :cond_187
 
     :try_start_2c
     invoke-virtual {v2}, Landroid/database/CursorWindow;->allocRow()Z
 
     move-result v6
     :try_end_30
-    .catch Ljava/lang/RuntimeException; {:try_start_2c .. :try_end_30} :catch_172
+    .catch Ljava/lang/RuntimeException; {:try_start_2c .. :try_end_30} :catch_173
 
     const-string v7, "DataHolder"
 
@@ -744,10 +744,10 @@
 
     move v5, v0
 
-    goto :goto_167
+    goto :goto_168
 
     :cond_133
-    if-nez v5, :cond_16a
+    if-nez v5, :cond_16b
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -791,12 +791,12 @@
 
     move v5, v8
 
-    :goto_167
+    :goto_168
     add-int/2addr v4, v8
 
     goto/16 :goto_2a
 
-    :cond_16a
+    :cond_16b
     const-string p0, "Could not add the value to a new CursorWindow. The size of value may be larger than what a CursorWindow can handle."
 
     new-instance p1, Lcom/google/android/gms/common/data/zad;
@@ -804,18 +804,18 @@
     invoke-direct {p1, p0}, Lcom/google/android/gms/common/data/zad;-><init>(Ljava/lang/String;)V
 
     throw p1
-    :try_end_172
-    .catch Ljava/lang/RuntimeException; {:try_start_34 .. :try_end_172} :catch_172
+    :try_end_173
+    .catch Ljava/lang/RuntimeException; {:try_start_34 .. :try_end_173} :catch_173
 
-    :catch_172
+    :catch_173
     move-exception p0
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    :goto_177
-    if-ge v0, p1, :cond_185
+    :goto_178
+    if-ge v0, p1, :cond_186
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -827,12 +827,12 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_177
-
-    :cond_185
-    throw p0
+    goto :goto_178
 
     :cond_186
+    throw p0
+
+    :cond_187
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result p0

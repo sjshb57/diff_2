@@ -100,28 +100,28 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2d
+    if-eqz p1, :cond_2e
 
     and-int/lit8 p1, p0, 0x8
 
-    if-eqz p1, :cond_2d
+    if-eqz p1, :cond_2e
 
     return v3
 
-    :cond_2d
+    :cond_2e
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-nez p1, :cond_37
+    if-nez p1, :cond_38
 
     and-int/2addr p0, v0
 
-    if-eqz p0, :cond_37
+    if-eqz p0, :cond_38
 
     return v3
 
-    :cond_37
+    :cond_38
     return v2
 .end method
 
@@ -268,9 +268,7 @@
 .method private static getRawType(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
     .registers 4
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->uxx:Ljava/lang/String;
+    const-string v0, "mime_type"
 
     const/4 v1, 0x0
 
@@ -294,11 +292,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     const/4 p0, 0x0
 
-    :cond_d
+    :cond_e
     return-object p0
 .end method
 

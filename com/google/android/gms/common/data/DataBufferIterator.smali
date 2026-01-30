@@ -123,9 +123,7 @@
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->sQDSn:Ljava/lang/String;
+    const-string v1, "Cannot remove elements from a DataBufferIterator"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
