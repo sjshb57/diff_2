@@ -152,9 +152,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->XIrR:Ljava/lang/String;
+    const-string v0, "Making request to: %s"
 
     iget-object v1, p1, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->url:Ljava/net/URL;
 
@@ -192,9 +190,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/nano/privacy/eM/RmZCOXza;->OvZteKxGGL:Ljava/lang/String;
+    const-string v4, "3.1.9"
 
     aput-object v4, v1, v3
 
@@ -226,7 +222,7 @@
 
     iget-object v3, p1, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->apiKey:Ljava/lang/String;
 
-    if-eqz v3, :cond_59
+    if-eqz v3, :cond_58
 
     const-string v3, "X-Goog-Api-Key"
 
@@ -234,29 +230,29 @@
 
     invoke-virtual {v0, v3, v4}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_59
+    :cond_58
     const-wide/16 v3, 0x0
 
     const/4 v6, 0x0
 
-    :try_start_5c
+    :try_start_5b
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v7
-    :try_end_60
-    .catch Ljava/net/ConnectException; {:try_start_5c .. :try_end_60} :catch_133
-    .catch Ljava/net/UnknownHostException; {:try_start_5c .. :try_end_60} :catch_131
-    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_5c .. :try_end_60} :catch_123
-    .catch Ljava/io/IOException; {:try_start_5c .. :try_end_60} :catch_121
+    :try_end_5f
+    .catch Ljava/net/ConnectException; {:try_start_5b .. :try_end_5f} :catch_132
+    .catch Ljava/net/UnknownHostException; {:try_start_5b .. :try_end_5f} :catch_130
+    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_5b .. :try_end_5f} :catch_122
+    .catch Ljava/io/IOException; {:try_start_5b .. :try_end_5f} :catch_120
 
-    :try_start_60
+    :try_start_5f
     new-instance v8, Ljava/util/zip/GZIPOutputStream;
 
     invoke-direct {v8, v7}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_65
-    .catchall {:try_start_60 .. :try_end_65} :catchall_115
+    :try_end_64
+    .catchall {:try_start_5f .. :try_end_64} :catchall_114
 
-    :try_start_65
+    :try_start_64
     iget-object v9, p0, Lcom/google/android/datatransport/cct/CctTransportBackend;->dataEncoder:Lcom/google/firebase/encoders/DataEncoder;
 
     iget-object p1, p1, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpRequest;->requestBody:Lcom/google/android/datatransport/cct/internal/BatchedLogRequest;
@@ -270,25 +266,25 @@
     invoke-direct {v10, v11}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
     invoke-interface {v9, p1, v10}, Lcom/google/firebase/encoders/DataEncoder;->encode(Ljava/lang/Object;Ljava/io/Writer;)V
-    :try_end_76
-    .catchall {:try_start_65 .. :try_end_76} :catchall_10b
+    :try_end_75
+    .catchall {:try_start_64 .. :try_end_75} :catchall_10a
 
-    :try_start_76
+    :try_start_75
     invoke-virtual {v8}, Ljava/io/OutputStream;->close()V
-    :try_end_79
-    .catchall {:try_start_76 .. :try_end_79} :catchall_115
+    :try_end_78
+    .catchall {:try_start_75 .. :try_end_78} :catchall_114
 
-    if-eqz v7, :cond_7e
+    if-eqz v7, :cond_7d
 
-    :try_start_7b
+    :try_start_7a
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
-    :try_end_7e
-    .catch Ljava/net/ConnectException; {:try_start_7b .. :try_end_7e} :catch_133
-    .catch Ljava/net/UnknownHostException; {:try_start_7b .. :try_end_7e} :catch_131
-    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_7b .. :try_end_7e} :catch_123
-    .catch Ljava/io/IOException; {:try_start_7b .. :try_end_7e} :catch_121
+    :try_end_7d
+    .catch Ljava/net/ConnectException; {:try_start_7a .. :try_end_7d} :catch_132
+    .catch Ljava/net/UnknownHostException; {:try_start_7a .. :try_end_7d} :catch_130
+    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_7a .. :try_end_7d} :catch_122
+    .catch Ljava/io/IOException; {:try_start_7a .. :try_end_7d} :catch_120
 
-    :cond_7e
+    :cond_7d
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result p1
@@ -319,22 +315,22 @@
 
     const/16 v2, 0x12e
 
-    if-eq p1, v2, :cond_fa
+    if-eq p1, v2, :cond_f9
 
     const/16 v2, 0x12d
 
-    if-eq p1, v2, :cond_fa
+    if-eq p1, v2, :cond_f9
 
     const/16 v2, 0x133
 
-    if-ne p1, v2, :cond_aa
+    if-ne p1, v2, :cond_a9
 
-    goto :goto_fa
+    goto :goto_f9
 
-    :cond_aa
+    :cond_a9
     const/16 v2, 0xc8
 
-    if-eq p1, v2, :cond_b4
+    if-eq p1, v2, :cond_b3
 
     new-instance v0, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;
 
@@ -342,12 +338,12 @@
 
     return-object v0
 
-    :cond_b4
+    :cond_b3
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v2
 
-    :try_start_b8
+    :try_start_b7
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -355,10 +351,10 @@
     invoke-static {v2, v0}, Lcom/google/android/datatransport/cct/CctTransportBackend;->maybeUnGzip(Ljava/io/InputStream;Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v0
-    :try_end_c0
-    .catchall {:try_start_b8 .. :try_end_c0} :catchall_ee
+    :try_end_bf
+    .catchall {:try_start_b7 .. :try_end_bf} :catchall_ed
 
-    :try_start_c0
+    :try_start_bf
     new-instance v1, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
@@ -378,71 +374,71 @@
     new-instance v1, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;
 
     invoke-direct {v1, p1, v6, v3, v4}, Lcom/google/android/datatransport/cct/CctTransportBackend$HttpResponse;-><init>(ILjava/net/URL;J)V
-    :try_end_d7
-    .catchall {:try_start_c0 .. :try_end_d7} :catchall_e2
+    :try_end_d6
+    .catchall {:try_start_bf .. :try_end_d6} :catchall_e1
 
-    if-eqz v0, :cond_dc
+    if-eqz v0, :cond_db
 
-    :try_start_d9
+    :try_start_d8
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-    :try_end_dc
-    .catchall {:try_start_d9 .. :try_end_dc} :catchall_ee
+    :try_end_db
+    .catchall {:try_start_d8 .. :try_end_db} :catchall_ed
 
-    :cond_dc
-    if-eqz v2, :cond_e1
+    :cond_db
+    if-eqz v2, :cond_e0
 
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
-    :cond_e1
+    :cond_e0
     return-object v1
 
-    :catchall_e2
+    :catchall_e1
     move-exception p1
 
-    if-eqz v0, :cond_ed
+    if-eqz v0, :cond_ec
 
-    :try_start_e5
+    :try_start_e4
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-    :try_end_e8
-    .catchall {:try_start_e5 .. :try_end_e8} :catchall_e9
+    :try_end_e7
+    .catchall {:try_start_e4 .. :try_end_e7} :catchall_e8
 
-    goto :goto_ed
+    goto :goto_ec
 
-    :catchall_e9
+    :catchall_e8
     move-exception v0
 
-    :try_start_ea
+    :try_start_e9
     invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :cond_ed
-    :goto_ed
+    :cond_ec
+    :goto_ec
     throw p1
-    :try_end_ee
-    .catchall {:try_start_ea .. :try_end_ee} :catchall_ee
+    :try_end_ed
+    .catchall {:try_start_e9 .. :try_end_ed} :catchall_ed
 
-    :catchall_ee
+    :catchall_ed
     move-exception p1
 
-    if-eqz v2, :cond_f9
+    if-eqz v2, :cond_f8
 
-    :try_start_f1
+    :try_start_f0
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_f4
-    .catchall {:try_start_f1 .. :try_end_f4} :catchall_f5
+    :try_end_f3
+    .catchall {:try_start_f0 .. :try_end_f3} :catchall_f4
 
-    goto :goto_f9
+    goto :goto_f8
 
-    :catchall_f5
+    :catchall_f4
     move-exception v0
 
     invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_f8
+    :goto_f8
+    throw p1
 
     :cond_f9
     :goto_f9
-    throw p1
-
-    :cond_fa
-    :goto_fa
     const-string v1, "Location"
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
@@ -459,63 +455,63 @@
 
     return-object v1
 
-    :catchall_10b
+    :catchall_10a
     move-exception p1
 
-    :try_start_10c
+    :try_start_10b
     invoke-virtual {v8}, Ljava/io/OutputStream;->close()V
-    :try_end_10f
-    .catchall {:try_start_10c .. :try_end_10f} :catchall_110
+    :try_end_10e
+    .catchall {:try_start_10b .. :try_end_10e} :catchall_10f
 
-    goto :goto_114
+    goto :goto_113
 
-    :catchall_110
+    :catchall_10f
     move-exception v0
 
-    :try_start_111
+    :try_start_110
     invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :goto_114
+    :goto_113
     throw p1
-    :try_end_115
-    .catchall {:try_start_111 .. :try_end_115} :catchall_115
+    :try_end_114
+    .catchall {:try_start_110 .. :try_end_114} :catchall_114
 
-    :catchall_115
+    :catchall_114
     move-exception p1
 
-    if-eqz v7, :cond_120
+    if-eqz v7, :cond_11f
 
-    :try_start_118
+    :try_start_117
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
-    :try_end_11b
-    .catchall {:try_start_118 .. :try_end_11b} :catchall_11c
+    :try_end_11a
+    .catchall {:try_start_117 .. :try_end_11a} :catchall_11b
 
-    goto :goto_120
+    goto :goto_11f
 
-    :catchall_11c
+    :catchall_11b
     move-exception v0
 
-    :try_start_11d
+    :try_start_11c
     invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :cond_120
-    :goto_120
+    :cond_11f
+    :goto_11f
     throw p1
-    :try_end_121
-    .catch Ljava/net/ConnectException; {:try_start_11d .. :try_end_121} :catch_133
-    .catch Ljava/net/UnknownHostException; {:try_start_11d .. :try_end_121} :catch_131
-    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_11d .. :try_end_121} :catch_123
-    .catch Ljava/io/IOException; {:try_start_11d .. :try_end_121} :catch_121
+    :try_end_120
+    .catch Ljava/net/ConnectException; {:try_start_11c .. :try_end_120} :catch_132
+    .catch Ljava/net/UnknownHostException; {:try_start_11c .. :try_end_120} :catch_130
+    .catch Lcom/google/firebase/encoders/EncodingException; {:try_start_11c .. :try_end_120} :catch_122
+    .catch Ljava/io/IOException; {:try_start_11c .. :try_end_120} :catch_120
 
-    :catch_121
+    :catch_120
     move-exception p1
 
-    goto :goto_124
+    goto :goto_123
 
-    :catch_123
+    :catch_122
     move-exception p1
 
-    :goto_124
+    :goto_123
     const-string v0, "Couldn\'t encode request, returning with 400"
 
     invoke-static {v2, v0, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -528,15 +524,15 @@
 
     return-object p1
 
-    :catch_131
+    :catch_130
     move-exception p1
 
-    goto :goto_134
+    goto :goto_133
 
-    :catch_133
+    :catch_132
     move-exception p1
 
-    :goto_134
+    :goto_133
     const-string v0, "Couldn\'t open connection, returning with 500"
 
     invoke-static {v2, v0, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -644,9 +640,7 @@
     :catch_10
     move-exception p0
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/nano/privacy/eM/RmZCOXza;->jPkYMPXzxyUkU:Ljava/lang/String;
+    const-string v0, "CctTransportBackend"
 
     const-string v1, "Unable to find version code for package"
 
@@ -914,9 +908,7 @@
 
     move-result-object v5
 
-    const/4 v6, 0x0
-
-    sget-object v6, Landroidx/print/nh/SlomKQFs;->pFVtCKiSI:Ljava/lang/String;
+    const-string v6, "application_build"
 
     invoke-virtual {v2, v6}, Lcom/google/android/datatransport/runtime/EventInternal;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1256,7 +1248,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_f
 
     new-instance p1, Ljava/util/zip/GZIPInputStream;
 
@@ -1264,7 +1256,7 @@
 
     return-object p1
 
-    :cond_e
+    :cond_f
     return-object p0
 .end method
 
@@ -1433,9 +1425,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->LnoX:Ljava/lang/String;
+    const-string v1, "locale"
 
     invoke-virtual {p1, v1, v0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->addMetadata(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 

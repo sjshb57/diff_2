@@ -51,13 +51,13 @@
 
     check-cast v0, Landroidx/concurrent/futures/CallbackToFutureAdapter$Completer;
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_10
 
     const-string v0, "Completer object has been garbage collected, future will fail soon"
 
     return-object v0
 
-    :cond_f
+    :cond_10
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "tag=["

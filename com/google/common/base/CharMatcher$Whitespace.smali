@@ -48,9 +48,7 @@
 .method constructor <init>()V
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->luS:Ljava/lang/String;
+    const-string v0, "CharMatcher.whitespace()"
 
     invoke-direct {p0, v0}, Lcom/google/common/base/CharMatcher$NamedFastMatcher;-><init>(Ljava/lang/String;)V
 

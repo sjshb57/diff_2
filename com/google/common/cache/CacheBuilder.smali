@@ -1087,9 +1087,7 @@
     move v4, v6
 
     :goto_d
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->cnxTSupVAJ:Ljava/lang/String;
+    const-string v7, "maximum size was already set to %s"
 
     invoke-static {v4, v7, v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;J)V
 
@@ -1097,34 +1095,32 @@
 
     cmp-long v2, v0, v2
 
-    if-nez v2, :cond_1b
+    if-nez v2, :cond_1a
 
     move v2, v5
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_1b
+    :cond_1a
     move v2, v6
 
-    :goto_1c
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->SNERMrJbwhyDRs:Ljava/lang/String;
+    :goto_1b
+    const-string v3, "maximum weight was already set to %s"
 
     invoke-static {v2, v3, v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;J)V
 
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->weigher:Lcom/google/common/cache/Weigher;
 
-    if-nez v0, :cond_28
+    if-nez v0, :cond_26
 
     move v0, v5
 
-    goto :goto_29
+    goto :goto_27
 
-    :cond_28
+    :cond_26
     move v0, v6
 
-    :goto_29
+    :goto_27
     const-string v1, "maximum size can not be combined with weigher"
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
@@ -1133,14 +1129,14 @@
 
     cmp-long v0, p1, v0
 
-    if-ltz v0, :cond_35
+    if-ltz v0, :cond_33
 
-    goto :goto_36
+    goto :goto_34
 
-    :cond_35
+    :cond_33
     move v5, v6
 
-    :goto_36
+    :goto_34
     const-string v0, "maximum size must not be negative"
 
     invoke-static {v5, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V

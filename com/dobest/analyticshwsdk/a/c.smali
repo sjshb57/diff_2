@@ -224,7 +224,7 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_b5
+    if-ne v0, v1, :cond_b3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -234,9 +234,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->mlSJpNcY:Ljava/lang/String;
+    const-string p1, "?"
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -260,12 +258,12 @@
 
     move-result-object v1
 
-    :goto_44
+    :goto_43
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_90
+    if-eqz v2, :cond_8e
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -293,9 +291,7 @@
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v6, 0x0
-
-    sget-object v6, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->EOJGGo:Ljava/lang/String;
+    const-string v6, "&"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -325,9 +321,9 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_44
+    goto :goto_43
 
-    :cond_90
+    :cond_8e
     const-string v1, "202dcbcb527924de601b5dcf6bf6128a"
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -360,12 +356,12 @@
 
     move-result-object p1
 
-    :cond_b5
+    :cond_b3
     iget v0, p0, Lcom/dobest/analyticshwsdk/a/c;->k:I
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_c4
+    if-ne v0, v1, :cond_c2
 
     iget-object v0, p0, Lcom/dobest/analyticshwsdk/a/c;->j:Lcom/dobest/analyticshwsdk/a/d;
 
@@ -375,14 +371,14 @@
 
     invoke-virtual {v0, p1, p2, p0}, Lcom/dobest/analyticshwsdk/a/d;->a(Ljava/lang/String;[BLcom/dobest/analyticshwsdk/a/i;)V
 
-    goto :goto_c9
+    goto :goto_c7
 
-    :cond_c4
+    :cond_c2
     iget-object p2, p0, Lcom/dobest/analyticshwsdk/a/c;->j:Lcom/dobest/analyticshwsdk/a/d;
 
     invoke-virtual {p2, p1, p0}, Lcom/dobest/analyticshwsdk/a/d;->a(Ljava/lang/String;Lcom/dobest/analyticshwsdk/a/i;)V
 
-    :goto_c9
+    :goto_c7
     return-void
 .end method
 
@@ -544,11 +540,9 @@
 
     iget v4, p0, Lcom/dobest/analyticshwsdk/a/c;->i:I
 
-    if-eqz v4, :cond_33
+    if-eqz v4, :cond_32
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->JUq:Ljava/lang/String;
+    const-string v1, "result"
 
     invoke-virtual {v3, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
@@ -558,7 +552,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_46
+    if-nez v4, :cond_45
 
     invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -566,9 +560,9 @@
 
     iput-object v0, p0, Lcom/dobest/analyticshwsdk/a/c;->o:Ljava/lang/String;
 
-    goto :goto_46
+    goto :goto_45
 
-    :cond_33
+    :cond_32
     const-string v0, "code"
 
     invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -579,7 +573,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_45
+    if-nez v4, :cond_44
 
     invoke-virtual {v3, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -587,12 +581,12 @@
 
     iput-object v1, p0, Lcom/dobest/analyticshwsdk/a/c;->o:Ljava/lang/String;
 
-    :cond_45
+    :cond_44
     move v1, v0
 
-    :cond_46
-    :goto_46
-    if-nez v1, :cond_54
+    :cond_45
+    :goto_45
+    if-nez v1, :cond_53
 
     invoke-virtual {p0, v3}, Lcom/dobest/analyticshwsdk/a/c;->b(Lorg/json/JSONObject;)V
 
@@ -602,12 +596,12 @@
 
     move-result-object v0
 
-    :goto_50
+    :goto_4f
     invoke-virtual {p0, v0}, Lcom/dobest/analyticshwsdk/a/c;->notifyObservers(Ljava/lang/Object;)V
 
-    goto :goto_72
+    goto :goto_71
 
-    :cond_54
+    :cond_53
     iput v1, p0, Lcom/dobest/analyticshwsdk/a/c;->p:I
 
     const/4 v0, 0x1
@@ -615,12 +609,12 @@
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
-    :try_end_5b
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5b} :catch_5c
+    :try_end_5a
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5a} :catch_5b
 
-    goto :goto_50
+    goto :goto_4f
 
-    :catch_5c
+    :catch_5b
     move-exception v0
 
     const-string v1, "AnalyticsHWSdk"
@@ -641,6 +635,6 @@
 
     invoke-virtual {p0, v0}, Lcom/dobest/analyticshwsdk/a/c;->notifyObservers(Ljava/lang/Object;)V
 
-    :goto_72
+    :goto_71
     return-void
 .end method

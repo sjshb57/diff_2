@@ -46,9 +46,7 @@
 
     const-string v0, "hts/frbslgiggolai.o/0clgbthfra=snpoo"
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/flatbuffers/OSq/msMBb;->miKGnzZkvxkJJ:Ljava/lang/String;
+    const-string v1, "tp:/ieaeogn.ogepscmvc/o/ac?omtjo_rt3"
 
     invoke-static {v0, v1}, Lcom/google/android/datatransport/cct/StringMerger;->mergeStrings(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

@@ -61,9 +61,7 @@
 
     sput-object v0, Lcom/google/common/base/Charsets;->UTF_16LE:Ljava/nio/charset/Charset;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->FBngxR:Ljava/lang/String;
+    const-string v0, "UTF-16"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 

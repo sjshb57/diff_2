@@ -41,9 +41,7 @@
 
     new-instance v0, Lcom/google/common/cache/CacheBuilder$OneWeigher;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/savedstate/xT/fgyAspfzfnhI;->BxHeAn:Ljava/lang/String;
+    const-string v1, "INSTANCE"
 
     const/4 v2, 0x0
 

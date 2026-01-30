@@ -97,7 +97,7 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_1d
+    if-eqz p0, :cond_1e
 
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -105,22 +105,22 @@
 
     const/4 v2, 0x1
 
-    if-ne v2, v1, :cond_1d
+    if-ne v2, v1, :cond_1e
 
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result p0
-    :try_end_1a
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1a} :catch_1e
+    :try_end_1b
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1b} :catch_1f
 
-    if-eqz p0, :cond_1d
+    if-eqz p0, :cond_1e
 
     move v0, v2
 
-    :cond_1d
+    :cond_1e
     return v0
 
-    :catch_1e
+    :catch_1f
     move-exception p0
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V

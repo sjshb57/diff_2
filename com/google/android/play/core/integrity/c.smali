@@ -40,9 +40,7 @@
     :cond_d
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->hVeix:Ljava/lang/String;
+    const-string v1, "Missing required properties: nonce"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

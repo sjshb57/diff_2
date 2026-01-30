@@ -104,9 +104,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->cycOGmgE:Ljava/lang/String;
+    const-string v1, "CharMatcher.forPredicate("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

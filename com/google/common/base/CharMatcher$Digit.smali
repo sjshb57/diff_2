@@ -44,9 +44,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->zuFguMAIVgigRlE:Ljava/lang/String;
+    const-string v2, "CharMatcher.digit()"
 
     invoke-direct {p0, v2, v0, v1}, Lcom/google/common/base/CharMatcher$RangesMatcher;-><init>(Ljava/lang/String;[C[C)V
 

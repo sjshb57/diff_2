@@ -1076,9 +1076,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->jqoJspLhL:Ljava/lang/String;
+    const-string v2, "Longest collision chain in symbol table (of size "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

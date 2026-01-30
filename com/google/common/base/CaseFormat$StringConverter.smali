@@ -188,9 +188,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->ljDopH:Ljava/lang/String;
+    const-string v1, ".converterTo("
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,7 +198,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->QKjRwegfPHA:Ljava/lang/String;
+    sget-object v1, Lcom/google/api/client/util/escape/TGjE/orViZ;->bfpzb:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
