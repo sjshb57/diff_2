@@ -29,9 +29,7 @@
 .method static constructor <clinit>()V
     .registers 15
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->DFYgUcUjfYXvJ:Ljava/lang/String;
+    const-string v0, "0123456789ABCDEF"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
@@ -49,8 +47,8 @@
 
     move v2, v1
 
-    :goto_10
-    if-ge v2, v0, :cond_1e
+    :goto_f
+    if-ge v2, v0, :cond_1d
 
     sget-object v3, Lcom/fasterxml/jackson/core/io/CharTypes;->HB:[B
 
@@ -64,29 +62,29 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_10
+    goto :goto_f
 
-    :cond_1e
+    :cond_1d
     const/16 v0, 0x100
 
     new-array v2, v0, [I
 
     move v3, v1
 
-    :goto_23
+    :goto_22
     const/16 v4, 0x20
 
     const/4 v5, -0x1
 
-    if-ge v3, v4, :cond_2d
+    if-ge v3, v4, :cond_2c
 
     aput v5, v2, v3
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_23
+    goto :goto_22
 
-    :cond_2d
+    :cond_2c
     const/16 v3, 0x22
 
     const/4 v6, 0x1
@@ -109,52 +107,52 @@
 
     move v8, v2
 
-    :goto_41
-    if-ge v8, v0, :cond_61
+    :goto_40
+    if-ge v8, v0, :cond_60
 
     and-int/lit16 v10, v8, 0xe0
 
     const/16 v11, 0xc0
 
-    if-ne v10, v11, :cond_4b
+    if-ne v10, v11, :cond_4a
 
     const/4 v10, 0x2
 
-    goto :goto_5c
+    goto :goto_5b
 
-    :cond_4b
+    :cond_4a
     and-int/lit16 v10, v8, 0xf0
 
     const/16 v11, 0xe0
 
-    if-ne v10, v11, :cond_53
+    if-ne v10, v11, :cond_52
 
     const/4 v10, 0x3
 
-    goto :goto_5c
+    goto :goto_5b
 
-    :cond_53
+    :cond_52
     and-int/lit16 v10, v8, 0xf8
 
     const/16 v11, 0xf0
 
-    if-ne v10, v11, :cond_5b
+    if-ne v10, v11, :cond_5a
 
     const/4 v10, 0x4
 
-    goto :goto_5c
+    goto :goto_5b
 
-    :cond_5b
+    :cond_5a
     move v10, v5
 
-    :goto_5c
+    :goto_5b
     aput v10, v9, v8
 
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_41
+    goto :goto_40
 
-    :cond_61
+    :cond_60
     sput-object v9, Lcom/fasterxml/jackson/core/io/CharTypes;->sInputCodesUTF8:[I
 
     new-array v8, v0, [I
@@ -163,8 +161,8 @@
 
     const/16 v9, 0x21
 
-    :goto_6a
-    if-ge v9, v0, :cond_78
+    :goto_69
+    if-ge v9, v0, :cond_77
 
     int-to-char v10, v9
 
@@ -172,16 +170,16 @@
 
     move-result v10
 
-    if-eqz v10, :cond_75
+    if-eqz v10, :cond_74
 
     aput v1, v8, v9
 
-    :cond_75
+    :cond_74
     add-int/lit8 v9, v9, 0x1
 
-    goto :goto_6a
+    goto :goto_69
 
-    :cond_78
+    :cond_77
     const/16 v9, 0x40
 
     aput v1, v8, v9
@@ -262,16 +260,16 @@
 
     move v6, v1
 
-    :goto_cd
-    if-ge v6, v4, :cond_d4
+    :goto_cc
+    if-ge v6, v4, :cond_d3
 
     aput v5, v0, v6
 
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_cd
+    goto :goto_cc
 
-    :cond_d4
+    :cond_d3
     aput v3, v0, v3
 
     aput v7, v0, v7
@@ -310,8 +308,8 @@
 
     move v0, v1
 
-    :goto_fa
-    if-ge v0, v13, :cond_105
+    :goto_f9
+    if-ge v0, v13, :cond_104
 
     sget-object v2, Lcom/fasterxml/jackson/core/io/CharTypes;->sHexValues:[I
 
@@ -321,13 +319,13 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_fa
+    goto :goto_f9
 
-    :cond_105
-    :goto_105
+    :cond_104
+    :goto_104
     const/4 v0, 0x6
 
-    if-ge v1, v0, :cond_117
+    if-ge v1, v0, :cond_116
 
     sget-object v0, Lcom/fasterxml/jackson/core/io/CharTypes;->sHexValues:[I
 
@@ -343,9 +341,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_105
+    goto :goto_104
 
-    :cond_117
+    :cond_116
     return-void
 .end method
 

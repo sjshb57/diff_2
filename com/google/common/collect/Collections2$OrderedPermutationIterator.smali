@@ -256,9 +256,7 @@
     :cond_22
     new-instance p1, Ljava/lang/AssertionError;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->Uovos:Ljava/lang/String;
+    const-string v0, "this statement should be unreachable"
 
     invoke-direct {p1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 

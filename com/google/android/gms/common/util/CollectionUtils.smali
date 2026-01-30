@@ -285,9 +285,7 @@
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->axcOUQyYpwBflaF:Ljava/lang/String;
+    const-string v2, "Key and values array lengths not equal: "
 
     invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

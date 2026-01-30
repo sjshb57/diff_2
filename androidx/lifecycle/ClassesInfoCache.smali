@@ -398,11 +398,11 @@
 
     check-cast v0, Landroidx/lifecycle/Lifecycle$Event;
 
-    if-eqz v0, :cond_41
+    if-eqz v0, :cond_42
 
     if-ne p3, v0, :cond_b
 
-    goto :goto_41
+    goto :goto_42
 
     :cond_b
     iget-object p1, p2, Landroidx/lifecycle/ClassesInfoCache$MethodReference;->mMethod:Ljava/lang/reflect/Method;
@@ -451,13 +451,13 @@
 
     throw p2
 
-    :cond_41
-    :goto_41
-    if-nez v0, :cond_46
+    :cond_42
+    :goto_42
+    if-nez v0, :cond_47
 
     invoke-interface {p1, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_46
+    :cond_47
     return-void
 .end method
 

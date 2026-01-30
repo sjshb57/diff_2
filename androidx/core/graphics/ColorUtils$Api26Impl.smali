@@ -166,9 +166,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/core/content/Whm/HgKojeDw;->BnYNbgse:Ljava/lang/String;
+    const-string p0, ")"
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

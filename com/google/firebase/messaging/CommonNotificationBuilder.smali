@@ -516,17 +516,15 @@
 
     move-result-object p0
 
-    if-nez p0, :cond_3c
+    if-nez p0, :cond_3b
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/core/util/LEr/bFMYUr;->JtZFVype:Ljava/lang/String;
+    const-string p1, "FirebaseMessaging"
 
     const-string p2, "No activity found to launch app"
 
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3c
+    :cond_3b
     return-object p0
 .end method
 
@@ -551,7 +549,7 @@
 
     const-string v1, "FirebaseMessaging"
 
-    if-nez v0, :cond_28
+    if-nez v0, :cond_27
 
     :try_start_8
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -569,9 +567,7 @@
     :catch_11
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/nano/privacy/eM/RmZCOXza;->RzsrMwBOH:Ljava/lang/String;
+    const-string v2, "Color is invalid: "
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -587,10 +583,8 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_28
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/flatbuffers/OSq/msMBb;->xPJdrCbOgNjkdVg:Ljava/lang/String;
+    :cond_27
+    const-string p1, "com.google.firebase.messaging.default_notification_color"
 
     const/4 v0, 0x0
 
@@ -598,9 +592,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_40
+    if-eqz p1, :cond_3e
 
-    :try_start_32
+    :try_start_30
     invoke-static {p0, p1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p0
@@ -608,17 +602,17 @@
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
-    :try_end_3a
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_32 .. :try_end_3a} :catch_3b
+    :try_end_38
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_30 .. :try_end_38} :catch_39
 
     return-object p0
 
-    :catch_3b
+    :catch_39
     const-string p0, "Cannot find the color resource referenced in AndroidManifest."
 
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_40
+    :cond_3e
     const/4 p0, 0x0
 
     return-object p0
@@ -894,7 +888,7 @@
 
     const-string v1, "FirebaseMessaging"
 
-    if-nez v0, :cond_3d
+    if-nez v0, :cond_3c
 
     const-string v0, "drawable"
 
@@ -938,9 +932,7 @@
 
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p3, 0x0
-
-    sget-object p3, Landroidx/core/content/Whm/HgKojeDw;->vfEm:Ljava/lang/String;
+    const-string p3, " not found. Notification will use default icon."
 
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -950,7 +942,7 @@
 
     invoke-static {v1, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3d
+    :cond_3c
     const-string p3, "com.google.firebase.messaging.default_notification_icon"
 
     const/4 v0, 0x0
@@ -959,34 +951,32 @@
 
     move-result p3
 
-    if-eqz p3, :cond_4c
+    if-eqz p3, :cond_4b
 
     invoke-static {p1, p3}, Lcom/google/firebase/messaging/CommonNotificationBuilder;->isValidIcon(Landroid/content/res/Resources;I)Z
 
     move-result p4
 
-    if-nez p4, :cond_66
+    if-nez p4, :cond_64
 
-    :cond_4c
-    :try_start_4c
+    :cond_4b
+    :try_start_4b
     invoke-virtual {p0, p2, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
     iget p3, p0, Landroid/content/pm/ApplicationInfo;->icon:I
-    :try_end_52
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4c .. :try_end_52} :catch_53
+    :try_end_51
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4b .. :try_end_51} :catch_52
 
-    goto :goto_66
+    goto :goto_64
 
-    :catch_53
+    :catch_52
     move-exception p0
 
     new-instance p2, Ljava/lang/StringBuilder;
 
-    const/4 p4, 0x0
-
-    sget-object p4, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->ORNnwVIEh:Ljava/lang/String;
+    const-string p4, "Couldn\'t get own application info: "
 
     invoke-direct {p2, p4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -998,20 +988,20 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_66
-    :goto_66
-    if-eqz p3, :cond_6e
+    :cond_64
+    :goto_64
+    if-eqz p3, :cond_6c
 
     invoke-static {p1, p3}, Lcom/google/firebase/messaging/CommonNotificationBuilder;->isValidIcon(Landroid/content/res/Resources;I)Z
 
     move-result p0
 
-    if-nez p0, :cond_71
+    if-nez p0, :cond_6f
 
-    :cond_6e
+    :cond_6c
     const p3, 0x1080093
 
-    :cond_71
+    :cond_6f
     return p3
 .end method
 

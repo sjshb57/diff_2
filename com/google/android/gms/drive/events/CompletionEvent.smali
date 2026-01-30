@@ -181,16 +181,16 @@
 
     const-string v5, "dismiss"
 
-    if-nez v1, :cond_44
+    if-nez v1, :cond_45
 
-    if-eqz p1, :cond_37
+    if-eqz p1, :cond_38
 
-    goto :goto_38
+    goto :goto_39
 
-    :cond_37
+    :cond_38
     move-object v4, v5
 
-    :goto_38
+    :goto_39
     sget-object p1, Lcom/google/android/gms/drive/events/CompletionEvent;->zzbz:Lcom/google/android/gms/common/internal/GmsLogger;
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -203,29 +203,29 @@
 
     return-void
 
-    :cond_44
-    :try_start_44
+    :cond_45
+    :try_start_45
     invoke-static {v1}, Lcom/google/android/gms/internal/drive/zzev;->zza(Landroid/os/IBinder;)Lcom/google/android/gms/internal/drive/zzeu;
 
     move-result-object v1
 
     invoke-interface {v1, p1}, Lcom/google/android/gms/internal/drive/zzeu;->zza(Z)V
-    :try_end_4b
-    .catch Landroid/os/RemoteException; {:try_start_44 .. :try_end_4b} :catch_4c
+    :try_end_4c
+    .catch Landroid/os/RemoteException; {:try_start_45 .. :try_end_4c} :catch_4d
 
     return-void
 
-    :catch_4c
+    :catch_4d
     move-exception v1
 
-    if-eqz p1, :cond_50
+    if-eqz p1, :cond_51
 
-    goto :goto_51
+    goto :goto_52
 
-    :cond_50
+    :cond_51
     move-object v4, v5
 
-    :goto_51
+    :goto_52
     sget-object p1, Lcom/google/android/gms/drive/events/CompletionEvent;->zzbz:Lcom/google/android/gms/common/internal/GmsLogger;
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -526,9 +526,7 @@
 
     aput-object v0, v5, v1
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/util/Uhr/zXgie;->QPiOltRvVpF:Ljava/lang/String;
+    const-string v0, "CompletionEvent [id=%s, status=%s, trackingTag=%s]"
 
     invoke-static {v2, v0, v5}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

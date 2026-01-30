@@ -67,26 +67,26 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     const/4 p0, 0x1
 
     return p0
 
-    :cond_a
+    :cond_b
     const-string v0, "normal"
 
     invoke-static {p0, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_14
+    if-eqz p0, :cond_15
 
     const/4 p0, 0x2
 
     return p0
 
-    :cond_14
+    :cond_15
     const/4 p0, 0x0
 
     return p0
@@ -264,7 +264,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_12
+    if-nez v0, :cond_13
 
     iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/CloudMessage;->zza:Landroid/content/Intent;
 
@@ -274,7 +274,7 @@
 
     move-result-object v0
 
-    :cond_12
+    :cond_13
     return-object v0
 .end method
 
@@ -283,9 +283,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/CloudMessage;->zza:Landroid/content/Intent;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->NTAzxWQQWuJ:Ljava/lang/String;
+    const-string v1, "message_type"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -334,7 +332,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_24
+    if-nez v0, :cond_25
 
     iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/CloudMessage;->zza:Landroid/content/Intent;
 
@@ -350,13 +348,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1d
 
     const/4 v0, 0x2
 
     return v0
 
-    :cond_1c
+    :cond_1d
     iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/CloudMessage;->zza:Landroid/content/Intent;
 
     const-string v1, "google.priority"
@@ -365,7 +363,7 @@
 
     move-result-object v0
 
-    :cond_24
+    :cond_25
     invoke-static {v0}, Lcom/google/android/gms/cloudmessaging/CloudMessage;->zzb(Ljava/lang/String;)I
 
     move-result v0
@@ -531,7 +529,7 @@
     :cond_1b
     instance-of v1, v0, Ljava/lang/String;
 
-    if-eqz v1, :cond_3a
+    if-eqz v1, :cond_3b
 
     :try_start_1f
     move-object v1, v0
@@ -565,7 +563,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3a
+    :cond_3b
     const/4 v0, 0x0
 
     return v0

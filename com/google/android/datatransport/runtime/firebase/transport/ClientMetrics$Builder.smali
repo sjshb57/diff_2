@@ -50,9 +50,7 @@
 
     iput-object v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->global_metrics_:Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->pfzGH:Ljava/lang/String;
+    const-string v0, ""
 
     iput-object v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->app_namespace_:Ljava/lang/String;
 

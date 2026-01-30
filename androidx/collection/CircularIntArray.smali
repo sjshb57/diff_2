@@ -74,9 +74,7 @@
     :cond_28
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->JQeyoXAP:Ljava/lang/String;
+    const-string v0, "capacity must be >= 1"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
