@@ -36,9 +36,7 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->YQSEBBMBAYJcun:Ljava/lang/String;
+    const-string v1, "playIntegrityToken"
 
     iget-object v2, p0, Lcom/google/firebase/appcheck/playintegrity/internal/ExchangePlayIntegrityTokenRequest;->playIntegrityToken:Ljava/lang/String;
 

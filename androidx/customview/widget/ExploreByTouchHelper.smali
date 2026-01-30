@@ -168,9 +168,7 @@
     :cond_45
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->eyBOdY:Ljava/lang/String;
+    const-string v0, "View may not be null"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -866,17 +864,17 @@
 
     const/4 v2, 0x0
 
-    if-eq p1, v1, :cond_2e
+    if-eq p1, v1, :cond_2f
 
     const/16 v1, 0x21
 
-    if-eq p1, v1, :cond_2a
+    if-eq p1, v1, :cond_2b
 
     const/16 v1, 0x42
 
     const/4 v3, -0x1
 
-    if-eq p1, v1, :cond_26
+    if-eq p1, v1, :cond_27
 
     const/16 p0, 0x82
 
@@ -884,7 +882,7 @@
 
     invoke-virtual {p2, v2, v3, v0, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    goto :goto_31
+    goto :goto_32
 
     :cond_1e
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -895,20 +893,20 @@
 
     throw p0
 
-    :cond_26
+    :cond_27
     invoke-virtual {p2, v3, v2, v3, p0}, Landroid/graphics/Rect;->set(IIII)V
 
-    goto :goto_31
+    goto :goto_32
 
-    :cond_2a
+    :cond_2b
     invoke-virtual {p2, v2, p0, v0, p0}, Landroid/graphics/Rect;->set(IIII)V
 
-    goto :goto_31
+    goto :goto_32
 
-    :cond_2e
+    :cond_2f
     invoke-virtual {p2, v0, v2, v0, p0}, Landroid/graphics/Rect;->set(IIII)V
 
-    :goto_31
+    :goto_32
     return-object p2
 .end method
 
@@ -1055,68 +1053,66 @@
 
     const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_58
+    if-eq p1, v0, :cond_57
 
     const/4 v1, 0x2
 
-    if-eq p1, v1, :cond_58
+    if-eq p1, v1, :cond_57
 
     const/16 v0, 0x11
 
-    if-eq p1, v0, :cond_33
+    if-eq p1, v0, :cond_32
 
     const/16 v0, 0x21
 
-    if-eq p1, v0, :cond_33
+    if-eq p1, v0, :cond_32
 
     const/16 v0, 0x42
 
-    if-eq p1, v0, :cond_33
+    if-eq p1, v0, :cond_32
 
     const/16 v0, 0x82
 
     if-ne p1, v0, :cond_2a
 
-    goto :goto_33
+    goto :goto_32
 
     :cond_2a
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->ixVQWLIVoWPN:Ljava/lang/String;
+    const-string p2, "direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD, FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}."
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_33
-    :goto_33
+    :cond_32
+    :goto_32
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
     iget v0, p0, Landroidx/customview/widget/ExploreByTouchHelper;->mKeyboardFocusedVirtualViewId:I
 
-    if-eq v0, v8, :cond_40
+    if-eq v0, v8, :cond_3f
 
     invoke-direct {p0, v0, v4}, Landroidx/customview/widget/ExploreByTouchHelper;->getBoundsInParent(ILandroid/graphics/Rect;)V
 
-    goto :goto_4b
+    goto :goto_4a
 
-    :cond_40
-    if-eqz p2, :cond_46
+    :cond_3f
+    if-eqz p2, :cond_45
 
     invoke-virtual {v4, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    goto :goto_4b
+    goto :goto_4a
 
-    :cond_46
+    :cond_45
     iget-object p2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->mHost:Landroid/view/View;
 
     invoke-static {p2, p1, v4}, Landroidx/customview/widget/ExploreByTouchHelper;->guessPreviouslyFocusedRect(Landroid/view/View;ILandroid/graphics/Rect;)Landroid/graphics/Rect;
 
-    :goto_4b
+    :goto_4a
     sget-object v1, Landroidx/customview/widget/ExploreByTouchHelper;->SPARSE_VALUES_ADAPTER:Landroidx/customview/widget/FocusStrategy$CollectionAdapter;
 
     sget-object v2, Landroidx/customview/widget/ExploreByTouchHelper;->NODE_ADAPTER:Landroidx/customview/widget/FocusStrategy$BoundsAdapter;
@@ -1131,27 +1127,27 @@
 
     check-cast p1, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
-    goto :goto_71
+    goto :goto_70
 
-    :cond_58
+    :cond_57
     iget-object p2, p0, Landroidx/customview/widget/ExploreByTouchHelper;->mHost:Landroid/view/View;
 
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result p2
 
-    if-ne p2, v0, :cond_62
+    if-ne p2, v0, :cond_61
 
     move v5, v0
 
-    goto :goto_64
+    goto :goto_63
 
-    :cond_62
+    :cond_61
     const/4 p2, 0x0
 
     move v5, p2
 
-    :goto_64
+    :goto_63
     sget-object v1, Landroidx/customview/widget/ExploreByTouchHelper;->SPARSE_VALUES_ADAPTER:Landroidx/customview/widget/FocusStrategy$CollectionAdapter;
 
     sget-object v2, Landroidx/customview/widget/ExploreByTouchHelper;->NODE_ADAPTER:Landroidx/customview/widget/FocusStrategy$BoundsAdapter;
@@ -1168,12 +1164,12 @@
 
     check-cast p1, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
-    :goto_71
-    if-nez p1, :cond_74
+    :goto_70
+    if-nez p1, :cond_73
 
-    goto :goto_7c
+    goto :goto_7b
 
-    :cond_74
+    :cond_73
     invoke-virtual {v7, p1}, Landroidx/collection/SparseArrayCompat;->indexOfValue(Ljava/lang/Object;)I
 
     move-result p1
@@ -1182,7 +1178,7 @@
 
     move-result v8
 
-    :goto_7c
+    :goto_7b
     invoke-virtual {p0, v8}, Landroidx/customview/widget/ExploreByTouchHelper;->requestKeyboardFocusForVirtualView(I)Z
 
     move-result p1

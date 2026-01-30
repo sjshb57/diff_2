@@ -583,9 +583,7 @@
 
     const-string v1, "SqlRawQuery"
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->LUmIVfRoGaHcVo:Ljava/lang/String;
+    const-string v2, "sql_raw_query"
 
     const/16 v3, 0x16
 
@@ -653,9 +651,7 @@
 
     const/16 v2, 0x1b
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->RwDj:Ljava/lang/String;
+    const-string v3, "FailHttp401"
 
     const/16 v4, 0x1a
 

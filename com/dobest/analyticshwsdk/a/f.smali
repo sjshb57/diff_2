@@ -77,7 +77,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2f
+    if-eqz v3, :cond_30
 
     invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -89,21 +89,19 @@
 
     invoke-virtual {v2, v3}, Ljavax/net/ssl/HttpsURLConnection;->setHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V
 
-    goto :goto_35
+    goto :goto_36
 
-    :cond_2f
+    :cond_30
     invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v2
 
     check-cast v2, Ljava/net/HttpURLConnection;
 
-    :goto_35
+    :goto_36
     move-object v1, v2
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->OUI:Ljava/lang/String;
+    const-string v2, "POST"
 
     invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 

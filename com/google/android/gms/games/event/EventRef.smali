@@ -140,9 +140,7 @@
 .method public final getName(Landroid/database/CharArrayBuffer;)V
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->WwazKRib:Ljava/lang/String;
+    const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/games/event/EventRef;->copyToBuffer(Ljava/lang/String;Landroid/database/CharArrayBuffer;)V
 

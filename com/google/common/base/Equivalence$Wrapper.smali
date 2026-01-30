@@ -184,7 +184,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->XTp:Ljava/lang/String;
+    sget-object v1, Lcom/google/android/gms/internal/ads_identifier/qn/GYVFDGEnzLd;->lQHPZqVFdVJy:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

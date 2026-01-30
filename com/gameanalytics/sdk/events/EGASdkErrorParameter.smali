@@ -255,9 +255,7 @@
 
     const-string v2, "item_type"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->VwBAlDSJokLZtVt:Ljava/lang/String;
+    const-string v3, "ItemType"
 
     invoke-direct {v0, v3, v1, v2, v1}, Lcom/gameanalytics/sdk/events/EGASdkErrorParameter;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 
@@ -411,9 +409,7 @@
 
     const/16 v1, 0x10
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->ywvxyagk:Ljava/lang/String;
+    const-string v2, "ad_type"
 
     const-string v3, "AdType"
 

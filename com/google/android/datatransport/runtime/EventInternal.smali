@@ -53,13 +53,11 @@
 
     check-cast p1, Ljava/lang/String;
 
-    if-nez p1, :cond_f
+    if-nez p1, :cond_e
 
-    const/4 p1, 0x0
+    const-string p1, ""
 
-    sget-object p1, Lkotlin/EDDN/hfnXJuYOaqC;->IbxlFFICqJIrr:Ljava/lang/String;
-
-    :cond_f
+    :cond_e
     return-object p1
 .end method
 

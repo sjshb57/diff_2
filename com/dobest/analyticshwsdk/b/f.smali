@@ -28,9 +28,7 @@
 
     const-string p1, "AnalyticsHWSdk"
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/nano/privacy/eM/RmZCOXza;->YJHRu:Ljava/lang/String;
+    const-string p2, "report sessions failure, cancel remote task"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

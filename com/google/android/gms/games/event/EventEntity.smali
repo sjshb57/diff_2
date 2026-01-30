@@ -300,9 +300,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->aHRBYBSooNrlrp:Ljava/lang/String;
+    const-string v1, "Player"
 
     invoke-interface {p0}, Lcom/google/android/gms/games/event/Event;->getPlayer()Lcom/google/android/gms/games/Player;
 

@@ -263,9 +263,7 @@
 
     const-string v2, "progression"
 
-    const/4 v4, 0x0
-
-    sget-object v4, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->YGCyYaJIGF:Ljava/lang/String;
+    const-string v4, "ProgressionEvent"
 
     invoke-direct {v0, v4, v1, v2, v1}, Lcom/gameanalytics/sdk/events/EGASdkErrorArea;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 
@@ -467,9 +465,7 @@
 
     const/16 v1, 0x14
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->xMBvXBaTOZum:Ljava/lang/String;
+    const-string v2, "ad"
 
     const-string v4, "AdEvent"
 
