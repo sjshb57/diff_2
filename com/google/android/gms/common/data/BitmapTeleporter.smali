@@ -222,7 +222,7 @@
 
     iget-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zae:Z
 
-    if-nez v0, :cond_19
+    if-nez v0, :cond_18
 
     :try_start_4
     iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zab:Landroid/os/ParcelFileDescriptor;
@@ -244,13 +244,11 @@
 
     const-string v1, "BitmapTeleporter"
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->WuLNsiufgmW:Ljava/lang/String;
+    const-string v2, "Could not close PFD"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_19
+    :cond_18
     return-void
 .end method
 

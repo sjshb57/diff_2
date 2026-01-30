@@ -468,9 +468,7 @@
     :cond_1a
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->lAV:Ljava/lang/String;
+    const-string p1, "len is negative"
 
     invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 

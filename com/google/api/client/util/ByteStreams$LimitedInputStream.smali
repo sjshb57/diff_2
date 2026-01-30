@@ -219,7 +219,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_24
 
     iget-wide v0, p0, Lcom/google/api/client/util/ByteStreams$LimitedInputStream;->mark:J
 
@@ -237,7 +237,7 @@
 
     iput-wide v0, p0, Lcom/google/api/client/util/ByteStreams$LimitedInputStream;->left:J
     :try_end_1a
-    .catchall {:try_start_1 .. :try_end_1a} :catchall_2d
+    .catchall {:try_start_1 .. :try_end_1a} :catchall_2c
 
     monitor-exit p0
 
@@ -247,15 +247,13 @@
     :try_start_1c
     new-instance v0, Ljava/io/IOException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->QpnnYpLM:Ljava/lang/String;
+    const-string v1, "Mark not set"
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_25
+    :cond_24
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Mark not supported"
@@ -263,10 +261,10 @@
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
-    :try_end_2d
-    .catchall {:try_start_1c .. :try_end_2d} :catchall_2d
+    :try_end_2c
+    .catchall {:try_start_1c .. :try_end_2c} :catchall_2c
 
-    :catchall_2d
+    :catchall_2c
     move-exception v0
 
     monitor-exit p0

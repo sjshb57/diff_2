@@ -47,7 +47,7 @@
 
     iget-boolean v0, p0, Lcom/google/android/gms/common/BlockingServiceConnection;->zza:Z
 
-    if-nez v0, :cond_15
+    if-nez v0, :cond_16
 
     const/4 v0, 0x1
 
@@ -63,7 +63,7 @@
 
     return-object v0
 
-    :cond_15
+    :cond_16
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot call get on this connection more than once"

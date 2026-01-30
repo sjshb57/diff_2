@@ -293,9 +293,7 @@
 
     new-instance v4, Landroidx/core/graphics/BlendModeCompat;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/core/util/LEr/bFMYUr;->kpIp:Ljava/lang/String;
+    const-string v2, "HARD_LIGHT"
 
     move-object/from16 v22, v6
 

@@ -66,9 +66,7 @@
     const/4 v0, 0x0
 
     :goto_a
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->JlEby:Ljava/lang/String;
+    const-string v1, "The result token does not belong to this batch"
 
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 

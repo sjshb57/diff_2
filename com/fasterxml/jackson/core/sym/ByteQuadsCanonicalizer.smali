@@ -1485,17 +1485,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->hcLEtF:Ljava/lang/String;
+    const-string v2, "Failed rehash(): old count="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->jXHs:Ljava/lang/String;
+    const-string v2, ", copyCount="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

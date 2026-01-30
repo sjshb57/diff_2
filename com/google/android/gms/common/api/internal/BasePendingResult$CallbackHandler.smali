@@ -53,11 +53,11 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_2d
+    if-eq v0, v1, :cond_2e
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_23
+    if-eq v0, v1, :cond_24
 
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -83,7 +83,7 @@
 
     return-void
 
-    :cond_23
+    :cond_24
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;
@@ -94,7 +94,7 @@
 
     return-void
 
-    :cond_2d
+    :cond_2e
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/util/Pair;
@@ -107,14 +107,14 @@
 
     check-cast p1, Lcom/google/android/gms/common/api/Result;
 
-    :try_start_39
+    :try_start_3a
     invoke-interface {v0, p1}, Lcom/google/android/gms/common/api/ResultCallback;->onResult(Lcom/google/android/gms/common/api/Result;)V
-    :try_end_3c
-    .catch Ljava/lang/RuntimeException; {:try_start_39 .. :try_end_3c} :catch_3d
+    :try_end_3d
+    .catch Ljava/lang/RuntimeException; {:try_start_3a .. :try_end_3d} :catch_3e
 
     return-void
 
-    :catch_3d
+    :catch_3e
     move-exception v0
 
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zal(Lcom/google/android/gms/common/api/Result;)V

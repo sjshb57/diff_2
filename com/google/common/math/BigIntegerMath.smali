@@ -67,38 +67,38 @@
 
     const/4 v0, 0x1
 
-    if-gt p1, p0, :cond_f
+    if-gt p1, p0, :cond_10
 
     move v1, v0
 
-    goto :goto_10
+    goto :goto_11
 
-    :cond_f
+    :cond_10
     const/4 v1, 0x0
 
-    :goto_10
+    :goto_11
     const-string v2, "k (%s) > n (%s)"
 
     invoke-static {v1, v2, p1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
     shr-int/lit8 v1, p0, 0x1
 
-    if-le p1, v1, :cond_1b
+    if-le p1, v1, :cond_1c
 
     sub-int p1, p0, p1
 
-    :cond_1b
+    :cond_1c
     sget-object v1, Lcom/google/common/math/LongMath;->biggestBinomials:[I
 
     array-length v1, v1
 
-    if-ge p1, v1, :cond_2f
+    if-ge p1, v1, :cond_30
 
     sget-object v1, Lcom/google/common/math/LongMath;->biggestBinomials:[I
 
     aget v1, v1, p1
 
-    if-gt p0, v1, :cond_2f
+    if-gt p0, v1, :cond_30
 
     invoke-static {p0, p1}, Lcom/google/common/math/LongMath;->binomial(II)J
 
@@ -110,7 +110,7 @@
 
     return-object p0
 
-    :cond_2f
+    :cond_30
     sget-object v1, Ljava/math/BigInteger;->ONE:Ljava/math/BigInteger;
 
     int-to-long v2, p0
@@ -123,11 +123,11 @@
 
     const-wide/16 v5, 0x1
 
-    :goto_3a
+    :goto_3b
     move v7, v4
 
-    :goto_3b
-    if-ge v0, p1, :cond_5e
+    :goto_3c
+    if-ge v0, p1, :cond_5f
 
     sub-int v8, p0, v0
 
@@ -137,7 +137,7 @@
 
     const/16 v9, 0x3f
 
-    if-lt v7, v9, :cond_59
+    if-lt v7, v9, :cond_5a
 
     invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
@@ -159,9 +159,9 @@
 
     int-to-long v5, v0
 
-    goto :goto_3a
+    goto :goto_3b
 
-    :cond_59
+    :cond_5a
     int-to-long v8, v8
 
     mul-long/2addr v2, v8
@@ -170,9 +170,9 @@
 
     mul-long/2addr v5, v8
 
-    goto :goto_3b
+    goto :goto_3c
 
-    :cond_5e
+    :cond_5f
     invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p0
@@ -841,9 +841,7 @@
 
     check-cast v0, Ljava/math/BigInteger;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->ekeO:Ljava/lang/String;
+    const-string v1, "x"
 
     invoke-static {v1, v0}, Lcom/google/common/math/MathPreconditions;->checkPositive(Ljava/lang/String;Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
@@ -869,10 +867,10 @@
 
     throw p0
 
-    :pswitch_23  #0x6, 0x7, 0x8
+    :pswitch_22  #0x6, 0x7, 0x8
     const/16 p1, 0x100
 
-    if-ge v1, p1, :cond_37
+    if-ge v1, p1, :cond_36
 
     sget-object p1, Lcom/google/common/math/BigIntegerMath;->SQRT2_PRECOMPUTED_BITS:Ljava/math/BigInteger;
 
@@ -886,14 +884,14 @@
 
     move-result p0
 
-    if-gtz p0, :cond_36
+    if-gtz p0, :cond_35
 
     return v1
 
-    :cond_36
+    :cond_35
     return v0
 
-    :cond_37
+    :cond_36
     const/4 p1, 0x2
 
     invoke-virtual {p0, p1}, Ljava/math/BigInteger;->pow(I)Ljava/math/BigInteger;
@@ -910,45 +908,47 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    if-ge p0, p1, :cond_49
+    if-ge p0, p1, :cond_48
 
     move v0, v1
 
-    :cond_49
+    :cond_48
     return v0
 
-    :pswitch_4a  #0x4, 0x5
+    :pswitch_49  #0x4, 0x5
     invoke-static {p0}, Lcom/google/common/math/BigIntegerMath;->isPowerOfTwo(Ljava/math/BigInteger;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_51
+    if-eqz p0, :cond_50
 
     move v0, v1
 
-    :cond_51
+    :cond_50
     return v0
 
-    :pswitch_52  #0x1
+    :pswitch_51  #0x1
     invoke-static {p0}, Lcom/google/common/math/BigIntegerMath;->isPowerOfTwo(Ljava/math/BigInteger;)Z
 
     move-result p0
 
     invoke-static {p0}, Lcom/google/common/math/MathPreconditions;->checkRoundingUnnecessary(Z)V
 
-    :pswitch_59  #0x2, 0x3
+    :pswitch_58  #0x2, 0x3
     return v1
+
+    nop
 
     :pswitch_data_5a
     .packed-switch 0x1
-        :pswitch_52  #00000001
-        :pswitch_59  #00000002
-        :pswitch_59  #00000003
-        :pswitch_4a  #00000004
-        :pswitch_4a  #00000005
-        :pswitch_23  #00000006
-        :pswitch_23  #00000007
-        :pswitch_23  #00000008
+        :pswitch_51  #00000001
+        :pswitch_58  #00000002
+        :pswitch_58  #00000003
+        :pswitch_49  #00000004
+        :pswitch_49  #00000005
+        :pswitch_22  #00000006
+        :pswitch_22  #00000007
+        :pswitch_22  #00000008
     .end packed-switch
 .end method
 

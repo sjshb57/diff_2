@@ -1448,12 +1448,12 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/billingclient/api/BillingClientImpl;->zzaJ(Lcom/android/billingclient/api/ExternalOfferAvailabilityListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    goto :goto_6b
+    goto :goto_6c
 
     :cond_11
     iget-boolean v0, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzB:Z
 
-    if-nez v0, :cond_24
+    if-nez v0, :cond_25
 
     const-string v0, "BillingClient"
 
@@ -1467,35 +1467,35 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/billingclient/api/BillingClientImpl;->zzaJ(Lcom/android/billingclient/api/ExternalOfferAvailabilityListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    goto :goto_6b
+    goto :goto_6c
 
-    :cond_24
+    :cond_25
     iget-object v0, p0, Lcom/android/billingclient/api/BillingClientImpl;->zza:Ljava/lang/Object;
 
     monitor-enter v0
-    :try_end_27
-    .catch Landroid/os/DeadObjectException; {:try_start_3 .. :try_end_27} :catch_63
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_27} :catch_5a
+    :try_end_28
+    .catch Landroid/os/DeadObjectException; {:try_start_3 .. :try_end_28} :catch_64
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_28} :catch_5b
 
-    :try_start_27
+    :try_start_28
     iget-object v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzi:Lcom/google/android/gms/internal/play_billing/zzam;
 
     monitor-exit v0
-    :try_end_2a
-    .catchall {:try_start_27 .. :try_end_2a} :catchall_57
+    :try_end_2b
+    .catchall {:try_start_28 .. :try_end_2b} :catchall_58
 
-    if-nez v1, :cond_34
+    if-nez v1, :cond_35
 
-    :try_start_2c
+    :try_start_2d
     sget-object v0, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
 
     sget-object v1, Lcom/google/android/gms/internal/play_billing/zzie;->zzbc:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/billingclient/api/BillingClientImpl;->zzaJ(Lcom/android/billingclient/api/ExternalOfferAvailabilityListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    goto :goto_6b
+    goto :goto_6c
 
-    :cond_34
+    :cond_35
     iget-object v0, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -1527,27 +1527,27 @@
     const/16 v5, 0x18
 
     invoke-interface {v1, v5, v0, v3, v4}, Lcom/google/android/gms/internal/play_billing/zzam;->zzq(ILjava/lang/String;Landroid/os/Bundle;Lcom/google/android/gms/internal/play_billing/zzaj;)V
-    :try_end_56
-    .catch Landroid/os/DeadObjectException; {:try_start_2c .. :try_end_56} :catch_63
-    .catch Ljava/lang/Exception; {:try_start_2c .. :try_end_56} :catch_5a
+    :try_end_57
+    .catch Landroid/os/DeadObjectException; {:try_start_2d .. :try_end_57} :catch_64
+    .catch Ljava/lang/Exception; {:try_start_2d .. :try_end_57} :catch_5b
 
-    goto :goto_6b
+    goto :goto_6c
 
-    :catchall_57
+    :catchall_58
     move-exception v1
 
-    :try_start_58
-    monitor-exit v0
-    :try_end_59
-    .catchall {:try_start_58 .. :try_end_59} :catchall_57
-
     :try_start_59
-    throw v1
+    monitor-exit v0
     :try_end_5a
-    .catch Landroid/os/DeadObjectException; {:try_start_59 .. :try_end_5a} :catch_63
-    .catch Ljava/lang/Exception; {:try_start_59 .. :try_end_5a} :catch_5a
+    .catchall {:try_start_59 .. :try_end_5a} :catchall_58
 
-    :catch_5a
+    :try_start_5a
+    throw v1
+    :try_end_5b
+    .catch Landroid/os/DeadObjectException; {:try_start_5a .. :try_end_5b} :catch_64
+    .catch Ljava/lang/Exception; {:try_start_5a .. :try_end_5b} :catch_5b
+
+    :catch_5b
     move-exception v0
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzh:Lcom/android/billingclient/api/BillingResult;
@@ -1556,9 +1556,9 @@
 
     invoke-direct {p0, p1, v1, v3, v0}, Lcom/android/billingclient/api/BillingClientImpl;->zzaJ(Lcom/android/billingclient/api/ExternalOfferAvailabilityListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    goto :goto_6b
+    goto :goto_6c
 
-    :catch_63
+    :catch_64
     move-exception v0
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
@@ -1567,7 +1567,7 @@
 
     invoke-direct {p0, p1, v1, v3, v0}, Lcom/android/billingclient/api/BillingClientImpl;->zzaJ(Lcom/android/billingclient/api/ExternalOfferAvailabilityListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    :goto_6b
+    :goto_6c
     return-object v2
 .end method
 
@@ -1798,9 +1798,7 @@
 .method private final zzaD(Lcom/android/billingclient/api/ConsumeParams;Lcom/android/billingclient/api/ConsumeResponseListener;)V
     .registers 12
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->ziVBMeBzCECyB:Ljava/lang/String;
+    const-string v0, "Error consuming purchase with token. Response code: "
 
     const-string v1, "Consuming purchase with token: "
 
@@ -1808,7 +1806,7 @@
 
     move-result-object p1
 
-    :try_start_9
+    :try_start_8
     const-string v2, "BillingClient"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1826,20 +1824,20 @@
     iget-object v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zza:Ljava/lang/Object;
 
     monitor-enter v1
-    :try_end_1d
-    .catch Landroid/os/DeadObjectException; {:try_start_9 .. :try_end_1d} :catch_a9
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_1d} :catch_9a
+    :try_end_1c
+    .catch Landroid/os/DeadObjectException; {:try_start_8 .. :try_end_1c} :catch_a9
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_1c} :catch_99
 
-    :try_start_1d
+    :try_start_1c
     iget-object v2, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzi:Lcom/google/android/gms/internal/play_billing/zzam;
 
     monitor-exit v1
-    :try_end_20
-    .catchall {:try_start_1d .. :try_end_20} :catchall_97
+    :try_end_1f
+    .catchall {:try_start_1c .. :try_end_1f} :catchall_96
 
-    if-nez v2, :cond_30
+    if-nez v2, :cond_2f
 
-    :try_start_22
+    :try_start_21
     sget-object v5, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
 
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzbc:Lcom/google/android/gms/internal/play_billing/zzie;
@@ -1858,10 +1856,10 @@
 
     return-void
 
-    :cond_30
+    :cond_2f
     iget-boolean v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzp:Z
 
-    if-eqz v1, :cond_63
+    if-eqz v1, :cond_62
 
     iget-object v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
@@ -1885,11 +1883,11 @@
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    if-eqz v3, :cond_50
+    if-eqz v3, :cond_4f
 
     invoke-static {v8, v4, v5, v6, v7}, Lcom/google/android/gms/internal/play_billing/zzc;->zzc(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;J)Landroid/os/Bundle;
 
-    :cond_50
+    :cond_4f
     const/16 v3, 0x9
 
     invoke-interface {v2, v3, v1, p1, v8}, Lcom/google/android/gms/internal/play_billing/zzam;->zze(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -1908,9 +1906,9 @@
 
     move-result-object v1
 
-    goto :goto_70
+    goto :goto_6f
 
-    :cond_63
+    :cond_62
     iget-object v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -1925,12 +1923,12 @@
 
     const-string v1, ""
 
-    :goto_70
+    :goto_6f
     invoke-static {v2, v1}, Lcom/android/billingclient/api/zzcj;->zza(ILjava/lang/String;)Lcom/android/billingclient/api/BillingResult;
 
     move-result-object v5
 
-    if-nez v2, :cond_81
+    if-nez v2, :cond_80
 
     const-string v0, "BillingClient"
 
@@ -1942,7 +1940,7 @@
 
     return-void
 
-    :cond_81
+    :cond_80
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzw:Lcom/google/android/gms/internal/play_billing/zzie;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1964,27 +1962,27 @@
     move-object v4, p1
 
     invoke-direct/range {v2 .. v8}, Lcom/android/billingclient/api/BillingClientImpl;->zzaG(Lcom/android/billingclient/api/ConsumeResponseListener;Ljava/lang/String;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/String;Ljava/lang/Exception;)V
-    :try_end_96
-    .catch Landroid/os/DeadObjectException; {:try_start_22 .. :try_end_96} :catch_a9
-    .catch Ljava/lang/Exception; {:try_start_22 .. :try_end_96} :catch_9a
+    :try_end_95
+    .catch Landroid/os/DeadObjectException; {:try_start_21 .. :try_end_95} :catch_a9
+    .catch Ljava/lang/Exception; {:try_start_21 .. :try_end_95} :catch_99
 
     return-void
 
-    :catchall_97
+    :catchall_96
     move-exception v0
 
-    :try_start_98
+    :try_start_97
     monitor-exit v1
-    :try_end_99
-    .catchall {:try_start_98 .. :try_end_99} :catchall_97
+    :try_end_98
+    .catchall {:try_start_97 .. :try_end_98} :catchall_96
 
-    :try_start_99
+    :try_start_98
     throw v0
-    :try_end_9a
-    .catch Landroid/os/DeadObjectException; {:try_start_99 .. :try_end_9a} :catch_a9
-    .catch Ljava/lang/Exception; {:try_start_99 .. :try_end_9a} :catch_9a
+    :try_end_99
+    .catch Landroid/os/DeadObjectException; {:try_start_98 .. :try_end_99} :catch_a9
+    .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_99} :catch_99
 
-    :catch_9a
+    :catch_99
     move-exception v0
 
     move-object v8, v0
@@ -2567,7 +2565,7 @@
 
     const/4 v3, 0x3
 
-    if-ne v1, v3, :cond_3c
+    if-ne v1, v3, :cond_3d
 
     const-string v1, "BillingClient"
 
@@ -2585,18 +2583,18 @@
 
     goto :goto_24
 
-    :cond_3c
+    :cond_3d
     invoke-direct {p0, v2}, Lcom/android/billingclient/api/BillingClientImpl;->zzaS(I)V
 
     const/4 v1, 0x0
 
-    if-nez p2, :cond_45
+    if-nez p2, :cond_46
 
     iput-object p1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzG:Lcom/android/billingclient/api/BillingClientStateListener;
 
     move p2, v1
 
-    :cond_45
+    :cond_46
     invoke-direct {p0}, Lcom/android/billingclient/api/BillingClientImpl;->zzaV()V
 
     const-string v3, "BillingClient"
@@ -2618,8 +2616,8 @@
     invoke-virtual {v3}, Lcom/android/billingclient/api/zzbf;->zzc()V
 
     monitor-exit v0
-    :try_end_5d
-    .catchall {:try_start_3 .. :try_end_5d} :catchall_130
+    :try_end_5e
+    .catchall {:try_start_3 .. :try_end_5e} :catchall_130
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2697,12 +2695,12 @@
 
     monitor-enter v0
 
-    :try_start_ae
+    :try_start_af
     iget v5, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzb:I
 
     const/4 v6, 0x2
 
-    if-ne v5, v6, :cond_ba
+    if-ne v5, v6, :cond_bb
 
     invoke-direct {p0, p2}, Lcom/android/billingclient/api/BillingClientImpl;->zzap(I)Lcom/android/billingclient/api/BillingResult;
 
@@ -2712,14 +2710,12 @@
 
     goto/16 :goto_12a
 
-    :cond_ba
+    :cond_bb
     iget v5, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzb:I
 
     if-eq v5, v2, :cond_d0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->zSawlh:Ljava/lang/String;
+    const-string v1, "BillingClient"
 
     const-string v2, "Client state no longer CONNECTING, returning service disconnected."
 
@@ -2740,7 +2736,7 @@
 
     monitor-exit v0
     :try_end_d3
-    .catchall {:try_start_ae .. :try_end_d3} :catchall_101
+    .catchall {:try_start_af .. :try_end_d3} :catchall_101
 
     if-lez p2, :cond_e6
 
@@ -3069,7 +3065,7 @@
 
     const-string v5, "BillingClient"
 
-    if-gt p2, v4, :cond_c3
+    if-gt p2, v4, :cond_c5
 
     const-wide/16 v6, 0x0
 
@@ -3157,17 +3153,17 @@
     move-result-object v2
 
     invoke-static {v5, v2}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_6a
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_6a} :catch_6b
+    :try_end_6b
+    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_6b} :catch_6c
 
-    goto :goto_7c
+    goto :goto_7e
 
-    :catch_6b
+    :catch_6c
     move-exception v2
 
     instance-of v3, v2, Ljava/lang/InterruptedException;
 
-    if-eqz v3, :cond_77
+    if-eqz v3, :cond_78
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -3175,12 +3171,12 @@
 
     invoke-virtual {v3}, Ljava/lang/Thread;->interrupt()V
 
-    :cond_77
+    :cond_78
     const-string v3, "Error during reconnection attempt: "
 
     invoke-static {v5, v3, v2}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_7c
+    :goto_7e
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {p1, v2}, Lcom/google/android/gms/internal/play_billing/zzbi;->zza(Ljava/util/concurrent/TimeUnit;)J
@@ -3207,7 +3203,7 @@
 
     cmp-long v10, v2, v8
 
-    if-gez v10, :cond_9f
+    if-gez v10, :cond_a1
 
     const-string p1, "Reconnection failed due to timeout limit reached."
 
@@ -3219,14 +3215,14 @@
 
     return p1
 
-    :cond_9f
-    if-ge p2, v4, :cond_bf
+    :cond_a1
+    if-ge p2, v4, :cond_c1
 
     cmp-long v4, v8, v6
 
-    if-lez v4, :cond_bf
+    if-lez v4, :cond_c1
 
-    :try_start_a5
+    :try_start_a7
     invoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -3234,14 +3230,14 @@
     invoke-virtual {p1, v2}, Lcom/google/android/gms/internal/play_billing/zzbi;->zza(Ljava/util/concurrent/TimeUnit;)J
 
     move-result-wide v2
-    :try_end_ae
-    .catch Ljava/lang/InterruptedException; {:try_start_a5 .. :try_end_ae} :catch_b1
+    :try_end_b0
+    .catch Ljava/lang/InterruptedException; {:try_start_a7 .. :try_end_b0} :catch_b3
 
     sub-long v2, v0, v2
 
-    goto :goto_bf
+    goto :goto_c1
 
-    :catch_b1
+    :catch_b3
     move-exception p1
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -3254,16 +3250,16 @@
 
     invoke-static {v5, p2, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_c3
+    goto :goto_c5
 
-    :cond_bf
-    :goto_bf
+    :cond_c1
+    :goto_c1
     add-int/lit8 p2, p2, 0x1
 
     goto/16 :goto_a
 
-    :cond_c3
-    :goto_c3
+    :cond_c5
+    :goto_c5
     const-string p1, "Max retries reached."
 
     invoke-static {v5, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
@@ -4410,11 +4406,9 @@
 
     const/16 v1, 0xd
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1d
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->iNzILYuOiB:Ljava/lang/String;
+    const-string v0, "BillingClient"
 
     const-string v3, "Service disconnected."
 
@@ -4428,12 +4422,12 @@
 
     invoke-interface {p1, v3, v2}, Lcom/android/billingclient/api/BillingConfigResponseListener;->onBillingConfigResponse(Lcom/android/billingclient/api/BillingResult;Lcom/android/billingclient/api/BillingConfig;)V
 
-    goto :goto_81
+    goto :goto_80
 
-    :cond_1e
+    :cond_1d
     iget-boolean v0, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzv:Z
 
-    if-nez v0, :cond_34
+    if-nez v0, :cond_33
 
     const-string v0, "BillingClient"
 
@@ -4449,35 +4443,35 @@
 
     invoke-interface {p1, v3, v2}, Lcom/android/billingclient/api/BillingConfigResponseListener;->onBillingConfigResponse(Lcom/android/billingclient/api/BillingResult;Lcom/android/billingclient/api/BillingConfig;)V
 
-    goto :goto_81
+    goto :goto_80
 
-    :cond_34
+    :cond_33
     iget-object v0, p0, Lcom/android/billingclient/api/BillingClientImpl;->zza:Ljava/lang/Object;
 
     monitor-enter v0
-    :try_end_37
-    .catch Landroid/os/DeadObjectException; {:try_start_3 .. :try_end_37} :catch_79
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_37} :catch_70
+    :try_end_36
+    .catch Landroid/os/DeadObjectException; {:try_start_3 .. :try_end_36} :catch_78
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_36} :catch_6f
 
-    :try_start_37
+    :try_start_36
     iget-object v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzi:Lcom/google/android/gms/internal/play_billing/zzam;
 
     monitor-exit v0
-    :try_end_3a
-    .catchall {:try_start_37 .. :try_end_3a} :catchall_6d
+    :try_end_39
+    .catchall {:try_start_36 .. :try_end_39} :catchall_6c
 
-    if-nez v1, :cond_44
+    if-nez v1, :cond_43
 
-    :try_start_3c
+    :try_start_3b
     sget-object v0, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
 
     sget-object v1, Lcom/google/android/gms/internal/play_billing/zzie;->zzbc:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/billingclient/api/BillingClientImpl;->zzaL(Lcom/android/billingclient/api/BillingConfigResponseListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    goto :goto_81
+    goto :goto_80
 
-    :cond_44
+    :cond_43
     iget-object v0, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -4513,27 +4507,27 @@
     const/16 v4, 0x12
 
     invoke-interface {v1, v4, v0, v7, v3}, Lcom/google/android/gms/internal/play_billing/zzam;->zzn(ILjava/lang/String;Landroid/os/Bundle;Lcom/google/android/gms/internal/play_billing/zzad;)V
-    :try_end_6c
-    .catch Landroid/os/DeadObjectException; {:try_start_3c .. :try_end_6c} :catch_79
-    .catch Ljava/lang/Exception; {:try_start_3c .. :try_end_6c} :catch_70
+    :try_end_6b
+    .catch Landroid/os/DeadObjectException; {:try_start_3b .. :try_end_6b} :catch_78
+    .catch Ljava/lang/Exception; {:try_start_3b .. :try_end_6b} :catch_6f
 
-    goto :goto_81
+    goto :goto_80
 
-    :catchall_6d
+    :catchall_6c
     move-exception v1
 
-    :try_start_6e
+    :try_start_6d
     monitor-exit v0
-    :try_end_6f
-    .catchall {:try_start_6e .. :try_end_6f} :catchall_6d
+    :try_end_6e
+    .catchall {:try_start_6d .. :try_end_6e} :catchall_6c
 
-    :try_start_6f
+    :try_start_6e
     throw v1
-    :try_end_70
-    .catch Landroid/os/DeadObjectException; {:try_start_6f .. :try_end_70} :catch_79
-    .catch Ljava/lang/Exception; {:try_start_6f .. :try_end_70} :catch_70
+    :try_end_6f
+    .catch Landroid/os/DeadObjectException; {:try_start_6e .. :try_end_6f} :catch_78
+    .catch Ljava/lang/Exception; {:try_start_6e .. :try_end_6f} :catch_6f
 
-    :catch_70
+    :catch_6f
     move-exception v0
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzh:Lcom/android/billingclient/api/BillingResult;
@@ -4542,9 +4536,9 @@
 
     invoke-direct {p0, p1, v1, v3, v0}, Lcom/android/billingclient/api/BillingClientImpl;->zzaL(Lcom/android/billingclient/api/BillingConfigResponseListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    goto :goto_81
+    goto :goto_80
 
-    :catch_79
+    :catch_78
     move-exception v0
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
@@ -4553,7 +4547,7 @@
 
     invoke-direct {p0, p1, v1, v3, v0}, Lcom/android/billingclient/api/BillingClientImpl;->zzaL(Lcom/android/billingclient/api/BillingConfigResponseListener;Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;Ljava/lang/Exception;)V
 
-    :goto_81
+    :goto_80
     return-object v2
 .end method
 
@@ -5269,47 +5263,47 @@
 
     const/4 v5, 0x1
 
-    if-eqz v1, :cond_42
+    if-eqz v1, :cond_43
 
-    if-eqz v3, :cond_42
+    if-eqz v3, :cond_43
 
     const-string v1, "enablePendingPurchases"
 
     invoke-virtual {v14, v1, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    :cond_42
+    :cond_43
     const/4 v1, 0x0
 
-    if-eqz v2, :cond_4c
+    if-eqz v2, :cond_4d
 
-    if-eqz v4, :cond_4c
+    if-eqz v4, :cond_4d
 
     const-string v2, "enablePendingPurchaseForSubscriptions"
 
     invoke-virtual {v14, v2, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    :cond_4c
+    :cond_4d
     move-object v12, v1
 
-    :goto_4d
-    :try_start_4d
+    :goto_4e
+    :try_start_4e
     iget-object v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zza:Ljava/lang/Object;
 
     monitor-enter v1
-    :try_end_50
-    .catch Landroid/os/DeadObjectException; {:try_start_4d .. :try_end_50} :catch_225
-    .catch Ljava/lang/Exception; {:try_start_4d .. :try_end_50} :catch_214
+    :try_end_51
+    .catch Landroid/os/DeadObjectException; {:try_start_4e .. :try_end_51} :catch_226
+    .catch Ljava/lang/Exception; {:try_start_4e .. :try_end_51} :catch_215
 
-    :try_start_50
+    :try_start_51
     iget-object v8, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzi:Lcom/google/android/gms/internal/play_billing/zzam;
 
     monitor-exit v1
-    :try_end_53
-    .catchall {:try_start_50 .. :try_end_53} :catchall_211
+    :try_end_54
+    .catchall {:try_start_51 .. :try_end_54} :catchall_212
 
-    if-nez v8, :cond_65
+    if-nez v8, :cond_66
 
-    :try_start_55
+    :try_start_56
     sget-object v3, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
 
     sget-object v4, Lcom/google/android/gms/internal/play_billing/zzie;->zzbc:Lcom/google/android/gms/internal/play_billing/zzie;
@@ -5328,10 +5322,10 @@
 
     return-object v0
 
-    :cond_65
+    :cond_66
     iget-boolean v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzp:Z
 
-    if-nez v1, :cond_77
+    if-nez v1, :cond_78
 
     iget-object v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
@@ -5347,44 +5341,44 @@
 
     move-result-object v1
 
-    goto :goto_9e
+    goto :goto_9f
 
-    :cond_77
+    :cond_78
     move-object/from16 v4, p1
 
     iget-boolean v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzC:Z
 
-    if-eqz v1, :cond_81
+    if-eqz v1, :cond_82
 
     const/16 v1, 0x1a
 
-    :goto_7f
+    :goto_80
     move v9, v1
 
-    goto :goto_91
+    goto :goto_92
 
-    :cond_81
+    :cond_82
     iget-boolean v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzB:Z
 
-    if-eqz v1, :cond_88
+    if-eqz v1, :cond_89
 
     const/16 v1, 0x18
 
-    goto :goto_7f
+    goto :goto_80
 
-    :cond_88
+    :cond_89
     iget-boolean v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzw:Z
 
-    if-eqz v1, :cond_8f
+    if-eqz v1, :cond_90
 
     const/16 v1, 0x13
 
-    goto :goto_7f
+    goto :goto_80
 
-    :cond_8f
+    :cond_90
     const/16 v9, 0x9
 
-    :goto_91
+    :goto_92
     iget-object v1, v7, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -5398,11 +5392,11 @@
     invoke-interface/range {v8 .. v13}, Lcom/google/android/gms/internal/play_billing/zzam;->zzi(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v1
-    :try_end_9e
-    .catch Landroid/os/DeadObjectException; {:try_start_55 .. :try_end_9e} :catch_225
-    .catch Ljava/lang/Exception; {:try_start_55 .. :try_end_9e} :catch_214
+    :try_end_9f
+    .catch Landroid/os/DeadObjectException; {:try_start_56 .. :try_end_9f} :catch_226
+    .catch Ljava/lang/Exception; {:try_start_56 .. :try_end_9f} :catch_215
 
-    :goto_9e
+    :goto_9f
     sget-object v3, Lcom/android/billingclient/api/zzcj;->zzh:Lcom/android/billingclient/api/BillingResult;
 
     const-string v6, "getPurchase()"
@@ -5411,7 +5405,7 @@
 
     const/4 v9, 0x0
 
-    if-nez v1, :cond_ba
+    if-nez v1, :cond_bc
 
     new-array v10, v5, [Ljava/lang/Object;
 
@@ -5427,14 +5421,14 @@
 
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzab:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    :goto_b6
+    :goto_b8
     move-object v8, v6
 
     move-object v6, v3
 
-    goto/16 :goto_166
+    goto/16 :goto_167
 
-    :cond_ba
+    :cond_bc
     invoke-static {v1, v8}, Lcom/google/android/gms/internal/play_billing/zzc;->zzb(Landroid/os/Bundle;Ljava/lang/String;)I
 
     move-result v10
@@ -5455,7 +5449,7 @@
 
     move-result-object v11
 
-    if-eqz v10, :cond_ec
+    if-eqz v10, :cond_ee
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5483,16 +5477,16 @@
 
     move-object v6, v11
 
-    goto/16 :goto_166
+    goto/16 :goto_167
 
-    :cond_ec
+    :cond_ee
     const-string v10, "INAPP_PURCHASE_ITEM_LIST"
 
     invoke-virtual {v1, v10}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_155
+    if-eqz v10, :cond_156
 
     const-string v10, "INAPP_PURCHASE_DATA_LIST"
 
@@ -5500,7 +5494,7 @@
 
     move-result v10
 
-    if-eqz v10, :cond_155
+    if-eqz v10, :cond_156
 
     const-string v10, "INAPP_DATA_SIGNATURE_LIST"
 
@@ -5508,11 +5502,11 @@
 
     move-result v10
 
-    if-nez v10, :cond_105
+    if-nez v10, :cond_107
 
-    goto :goto_155
+    goto :goto_156
 
-    :cond_105
+    :cond_107
     const-string v10, "INAPP_PURCHASE_ITEM_LIST"
 
     invoke-virtual {v1, v10}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -5531,7 +5525,7 @@
 
     move-result-object v12
 
-    if-nez v10, :cond_129
+    if-nez v10, :cond_12b
 
     new-array v10, v5, [Ljava/lang/Object;
 
@@ -5547,18 +5541,16 @@
 
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzad:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto :goto_b6
+    goto :goto_b8
 
-    :cond_129
-    if-nez v11, :cond_13d
+    :cond_12b
+    if-nez v11, :cond_13e
 
     new-array v10, v5, [Ljava/lang/Object;
 
     aput-object v6, v10, v9
 
-    const/4 v6, 0x0
-
-    sget-object v6, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->Auwmo:Ljava/lang/String;
+    const-string v6, "Bundle returned from %s contains null purchases list."
 
     invoke-static {v6, v10}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5568,10 +5560,10 @@
 
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzae:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto/16 :goto_b6
+    goto/16 :goto_b8
 
-    :cond_13d
-    if-nez v12, :cond_150
+    :cond_13e
+    if-nez v12, :cond_151
 
     new-array v10, v5, [Ljava/lang/Object;
 
@@ -5587,17 +5579,17 @@
 
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzaf:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto/16 :goto_b6
+    goto/16 :goto_b8
 
-    :cond_150
+    :cond_151
     sget-object v6, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
     sget-object v8, Lcom/google/android/gms/internal/play_billing/zzie;->zza:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto :goto_166
+    goto :goto_167
 
-    :cond_155
-    :goto_155
+    :cond_156
+    :goto_156
     new-array v10, v5, [Ljava/lang/Object;
 
     aput-object v6, v10, v9
@@ -5612,12 +5604,12 @@
 
     sget-object v6, Lcom/google/android/gms/internal/play_billing/zzie;->zzac:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto/16 :goto_b6
+    goto/16 :goto_b8
 
-    :goto_166
+    :goto_167
     sget-object v10, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    if-eq v6, v10, :cond_179
+    if-eq v6, v10, :cond_17a
 
     const-string v5, "Purchase bundle invalid"
 
@@ -5639,7 +5631,7 @@
 
     return-object v0
 
-    :cond_179
+    :cond_17a
     const-string v6, "INAPP_PURCHASE_ITEM_LIST"
 
     invoke-virtual {v1, v6}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -5660,12 +5652,12 @@
 
     move v11, v9
 
-    :goto_18c
+    :goto_18d
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v12
 
-    if-ge v9, v12, :cond_1e2
+    if-ge v9, v12, :cond_1e3
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -5699,12 +5691,12 @@
 
     invoke-static {v2, v5}, Lcom/google/android/gms/internal/play_billing/zzc;->zzm(Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_1b3
+    :try_start_1b4
     new-instance v2, Lcom/android/billingclient/api/Purchase;
 
     invoke-direct {v2, v12, v13}, Lcom/android/billingclient/api/Purchase;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1b8
-    .catch Lorg/json/JSONException; {:try_start_1b3 .. :try_end_1b8} :catch_1d1
+    :try_end_1b9
+    .catch Lorg/json/JSONException; {:try_start_1b4 .. :try_end_1b9} :catch_1d2
 
     invoke-virtual {v2}, Lcom/android/billingclient/api/Purchase;->getPurchaseToken()Ljava/lang/String;
 
@@ -5714,7 +5706,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_1ca
+    if-eqz v5, :cond_1cb
 
     const-string v5, "BillingClient"
 
@@ -5724,16 +5716,16 @@
 
     const/4 v11, 0x1
 
-    :cond_1ca
+    :cond_1cb
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v9, v9, 0x1
 
     const/4 v5, 0x1
 
-    goto :goto_18c
+    goto :goto_18d
 
-    :catch_1d1
+    :catch_1d2
     move-exception v0
 
     move-object v6, v0
@@ -5754,8 +5746,8 @@
 
     return-object v0
 
-    :cond_1e2
-    if-eqz v11, :cond_1eb
+    :cond_1e3
+    if-eqz v11, :cond_1ec
 
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzz:Lcom/google/android/gms/internal/play_billing/zzie;
 
@@ -5763,7 +5755,7 @@
 
     invoke-direct {v7, v2, v5, v3}, Lcom/android/billingclient/api/BillingClientImpl;->zzbd(Lcom/google/android/gms/internal/play_billing/zzie;ILcom/android/billingclient/api/BillingResult;)V
 
-    :cond_1eb
+    :cond_1ec
     const-string v2, "INAPP_CONTINUATION_TOKEN"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -5788,7 +5780,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_20e
+    if-eqz v1, :cond_20f
 
     new-instance v1, Lcom/android/billingclient/api/zzcw;
 
@@ -5798,26 +5790,26 @@
 
     return-object v1
 
-    :cond_20e
+    :cond_20f
     const/4 v5, 0x1
 
-    goto/16 :goto_4d
+    goto/16 :goto_4e
 
-    :catchall_211
+    :catchall_212
     move-exception v0
 
-    :try_start_212
-    monitor-exit v1
-    :try_end_213
-    .catchall {:try_start_212 .. :try_end_213} :catchall_211
-
     :try_start_213
-    throw v0
+    monitor-exit v1
     :try_end_214
-    .catch Landroid/os/DeadObjectException; {:try_start_213 .. :try_end_214} :catch_225
-    .catch Ljava/lang/Exception; {:try_start_213 .. :try_end_214} :catch_214
+    .catchall {:try_start_213 .. :try_end_214} :catchall_212
 
-    :catch_214
+    :try_start_214
+    throw v0
+    :try_end_215
+    .catch Landroid/os/DeadObjectException; {:try_start_214 .. :try_end_215} :catch_226
+    .catch Ljava/lang/Exception; {:try_start_214 .. :try_end_215} :catch_215
+
+    :catch_215
     move-exception v0
 
     move-object v6, v0
@@ -5838,7 +5830,7 @@
 
     return-object v0
 
-    :catch_225
+    :catch_226
     move-exception v0
 
     move-object v6, v0
@@ -5875,11 +5867,11 @@
 
     const/4 v4, 0x5
 
-    if-eqz v0, :cond_4d
+    if-eqz v0, :cond_4e
 
     sget v0, Lcom/android/billingclient/api/zzcg;->zza:I
 
-    :try_start_e
+    :try_start_f
     invoke-static {}, Lcom/google/android/gms/internal/play_billing/zzhx;->zzc()Lcom/google/android/gms/internal/play_billing/zzhv;
 
     move-result-object v0
@@ -5925,27 +5917,27 @@
     move-result-object p1
 
     check-cast p1, Lcom/google/android/gms/internal/play_billing/zzhx;
-    :try_end_43
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_43} :catch_45
+    :try_end_44
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_44} :catch_46
 
     move-object v1, p1
 
-    goto :goto_49
+    goto :goto_4a
 
-    :catch_45
+    :catch_46
     move-exception p1
 
     invoke-static {v3, v2, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_49
+    :goto_4a
     invoke-direct {p0, v1}, Lcom/android/billingclient/api/BillingClientImpl;->zzaO(Lcom/google/android/gms/internal/play_billing/zzhx;)V
 
     return-void
 
-    :cond_4d
+    :cond_4e
     sget p1, Lcom/android/billingclient/api/zzcg;->zza:I
 
-    :try_start_4f
+    :try_start_50
     invoke-static {}, Lcom/google/android/gms/internal/play_billing/zzib;->zzc()Lcom/google/android/gms/internal/play_billing/zzhz;
 
     move-result-object p1
@@ -5971,19 +5963,19 @@
     move-result-object p1
 
     check-cast p1, Lcom/google/android/gms/internal/play_billing/zzib;
-    :try_end_6c
-    .catch Ljava/lang/Exception; {:try_start_4f .. :try_end_6c} :catch_6e
+    :try_end_6d
+    .catch Ljava/lang/Exception; {:try_start_50 .. :try_end_6d} :catch_6f
 
     move-object v1, p1
 
-    goto :goto_72
+    goto :goto_73
 
-    :catch_6e
+    :catch_6f
     move-exception p1
 
     invoke-static {v3, v2, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_72
+    :goto_73
     invoke-direct {p0, v1}, Lcom/android/billingclient/api/BillingClientImpl;->zzaQ(Lcom/google/android/gms/internal/play_billing/zzib;)V
 
     return-void
@@ -7040,7 +7032,7 @@
 
     const/4 v4, 0x1
 
-    sparse-switch v2, :sswitch_data_216
+    sparse-switch v2, :sswitch_data_214
 
     goto/16 :goto_f1
 
@@ -7270,7 +7262,7 @@
     const/4 v2, -0x1
 
     :goto_f2
-    packed-switch v2, :pswitch_data_25c
+    packed-switch v2, :pswitch_data_25a
 
     invoke-static/range {p1 .. p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -7278,9 +7270,7 @@
 
     const-string v2, "BillingClient"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->TQEtkYKVWTn:Ljava/lang/String;
+    const-string v3, "Unsupported feature: "
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -7296,19 +7286,19 @@
 
     return-object v1
 
-    :pswitch_10d  #0x10
+    :pswitch_10c  #0x10
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzC:Z
 
-    if-eqz v1, :cond_114
+    if-eqz v1, :cond_113
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_116
+    goto :goto_115
 
-    :cond_114
+    :cond_113
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzw:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_116
+    :goto_115
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzbH:Lcom/google/android/gms/internal/play_billing/zzie;
 
     const/16 v3, 0x15
@@ -7317,19 +7307,19 @@
 
     return-object v1
 
-    :pswitch_11e  #0xf
+    :pswitch_11d  #0xf
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzB:Z
 
-    if-eqz v1, :cond_125
+    if-eqz v1, :cond_124
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_127
+    goto :goto_126
 
-    :cond_125
+    :cond_124
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzv:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_127
+    :goto_126
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzbo:Lcom/google/android/gms/internal/play_billing/zzie;
 
     const/16 v3, 0x14
@@ -7338,19 +7328,19 @@
 
     return-object v1
 
-    :pswitch_12f  #0xe
+    :pswitch_12e  #0xe
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzA:Z
 
-    if-eqz v1, :cond_136
+    if-eqz v1, :cond_135
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_138
+    goto :goto_137
 
-    :cond_136
+    :cond_135
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzu:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_138
+    :goto_137
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzaZ:Lcom/google/android/gms/internal/play_billing/zzie;
 
     const/16 v3, 0x13
@@ -7359,19 +7349,19 @@
 
     return-object v1
 
-    :pswitch_140  #0xd
+    :pswitch_13f  #0xd
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzB:Z
 
-    if-eqz v1, :cond_147
+    if-eqz v1, :cond_146
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_149
+    goto :goto_148
 
-    :cond_147
+    :cond_146
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzA:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_149
+    :goto_148
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzbq:Lcom/google/android/gms/internal/play_billing/zzie;
 
     const/16 v3, 0x12
@@ -7380,247 +7370,247 @@
 
     return-object v1
 
-    :pswitch_151  #0xc
+    :pswitch_150  #0xc
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzy:Z
 
-    if-eqz v1, :cond_158
+    if-eqz v1, :cond_157
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_15a
+    goto :goto_159
 
-    :cond_158
+    :cond_157
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzD:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_15a
+    :goto_159
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzan:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v5}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_160  #0xb
+    :pswitch_15f  #0xb
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzx:Z
 
-    if-eqz v1, :cond_167
+    if-eqz v1, :cond_166
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_169
+    goto :goto_168
 
-    :cond_167
+    :cond_166
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzC:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_169
+    :goto_168
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzah:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v6}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_16f  #0xa
+    :pswitch_16e  #0xa
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzv:Z
 
-    if-eqz v1, :cond_176
+    if-eqz v1, :cond_175
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_178
+    goto :goto_177
 
-    :cond_176
+    :cond_175
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzz:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_178
+    :goto_177
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzG:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v7}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_17e  #0x9
+    :pswitch_17d  #0x9
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzv:Z
 
-    if-eqz v1, :cond_185
+    if-eqz v1, :cond_184
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_187
+    goto :goto_186
 
-    :cond_185
+    :cond_184
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzy:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_187
+    :goto_186
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzF:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v8}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_18d  #0x8
+    :pswitch_18c  #0x8
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzu:Z
 
-    if-eqz v1, :cond_194
+    if-eqz v1, :cond_193
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_196
+    goto :goto_195
 
-    :cond_194
+    :cond_193
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzr:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_196
+    :goto_195
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzt:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v9}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_19c  #0x7
+    :pswitch_19b  #0x7
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzt:Z
 
-    if-eqz v1, :cond_1a3
+    if-eqz v1, :cond_1a2
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1a5
+    goto :goto_1a4
 
-    :cond_1a3
+    :cond_1a2
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzp:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1a5
+    :goto_1a4
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzai:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v10}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_1ab  #0x6
+    :pswitch_1aa  #0x6
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzt:Z
 
-    if-eqz v1, :cond_1b2
+    if-eqz v1, :cond_1b1
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1b4
+    goto :goto_1b3
 
-    :cond_1b2
+    :cond_1b1
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzp:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1b4
+    :goto_1b3
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzs:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v11}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_1ba  #0x5
+    :pswitch_1b9  #0x5
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzr:Z
 
-    if-eqz v1, :cond_1c1
+    if-eqz v1, :cond_1c0
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1c3
+    goto :goto_1c2
 
-    :cond_1c1
+    :cond_1c0
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzq:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1c3
+    :goto_1c2
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzu:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v12}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_1c9  #0x4
+    :pswitch_1c8  #0x4
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzs:Z
 
-    if-eqz v1, :cond_1d0
+    if-eqz v1, :cond_1cf
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1d2
+    goto :goto_1d1
 
-    :cond_1d0
+    :cond_1cf
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzo:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1d2
+    :goto_1d1
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzE:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v13}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_1d8  #0x3
+    :pswitch_1d7  #0x3
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzq:Z
 
-    if-eqz v1, :cond_1df
+    if-eqz v1, :cond_1de
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1e1
+    goto :goto_1e0
 
-    :cond_1df
+    :cond_1de
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzs:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1e1
+    :goto_1e0
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzD:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_1e7  #0x2
+    :pswitch_1e6  #0x2
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzo:Z
 
-    if-eqz v1, :cond_1ee
+    if-eqz v1, :cond_1ed
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1f0
+    goto :goto_1ef
 
-    :cond_1ee
+    :cond_1ed
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzn:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1f0
+    :goto_1ef
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzI:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v15}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_1f6  #0x1
+    :pswitch_1f5  #0x1
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzl:Z
 
-    if-eqz v1, :cond_1fd
+    if-eqz v1, :cond_1fc
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_1ff
+    goto :goto_1fe
 
-    :cond_1fd
+    :cond_1fc
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzm:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_1ff
+    :goto_1fe
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzj:Lcom/google/android/gms/internal/play_billing/zzie;
 
     invoke-direct {v0, v1, v2, v14}, Lcom/android/billingclient/api/BillingClientImpl;->zzbc(Lcom/android/billingclient/api/BillingResult;Lcom/google/android/gms/internal/play_billing/zzie;I)V
 
     return-object v1
 
-    :pswitch_205  #0x0
+    :pswitch_204  #0x0
     iget-boolean v1, v0, Lcom/android/billingclient/api/BillingClientImpl;->zzk:Z
 
-    if-eqz v1, :cond_20c
+    if-eqz v1, :cond_20b
 
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
-    goto :goto_20e
+    goto :goto_20d
 
-    :cond_20c
+    :cond_20b
     sget-object v1, Lcom/android/billingclient/api/zzcj;->zzl:Lcom/android/billingclient/api/BillingResult;
 
-    :goto_20e
+    :goto_20d
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzi:Lcom/google/android/gms/internal/play_billing/zzie;
 
     const/4 v3, 0x2
@@ -7629,9 +7619,7 @@
 
     return-object v1
 
-    nop
-
-    :sswitch_data_216
+    :sswitch_data_214
     .sparse-switch
         -0x1928a0a1 -> :sswitch_e7
         0x17841 -> :sswitch_dd
@@ -7652,25 +7640,25 @@
         0x7674caf6 -> :sswitch_3d
     .end sparse-switch
 
-    :pswitch_data_25c
+    :pswitch_data_25a
     .packed-switch 0x0
-        :pswitch_205  #00000000
-        :pswitch_1f6  #00000001
-        :pswitch_1e7  #00000002
-        :pswitch_1d8  #00000003
-        :pswitch_1c9  #00000004
-        :pswitch_1ba  #00000005
-        :pswitch_1ab  #00000006
-        :pswitch_19c  #00000007
-        :pswitch_18d  #00000008
-        :pswitch_17e  #00000009
-        :pswitch_16f  #0000000a
-        :pswitch_160  #0000000b
-        :pswitch_151  #0000000c
-        :pswitch_140  #0000000d
-        :pswitch_12f  #0000000e
-        :pswitch_11e  #0000000f
-        :pswitch_10d  #00000010
+        :pswitch_204  #00000000
+        :pswitch_1f5  #00000001
+        :pswitch_1e6  #00000002
+        :pswitch_1d7  #00000003
+        :pswitch_1c8  #00000004
+        :pswitch_1b9  #00000005
+        :pswitch_1aa  #00000006
+        :pswitch_19b  #00000007
+        :pswitch_18c  #00000008
+        :pswitch_17d  #00000009
+        :pswitch_16e  #0000000a
+        :pswitch_15f  #0000000b
+        :pswitch_150  #0000000c
+        :pswitch_13f  #0000000d
+        :pswitch_12e  #0000000e
+        :pswitch_11d  #0000000f
+        :pswitch_10c  #00000010
     .end packed-switch
 .end method
 
@@ -7710,7 +7698,7 @@
 
     iget-object v1, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzf:Lcom/android/billingclient/api/zzs;
 
-    if-eqz v1, :cond_695
+    if-eqz v1, :cond_69a
 
     iget-object v1, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzf:Lcom/android/billingclient/api/zzs;
 
@@ -7718,7 +7706,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_695
+    if-eqz v1, :cond_69a
 
     const-wide/16 v1, 0xbb8
 
@@ -7772,7 +7760,7 @@
     :goto_41
     monitor-exit v1
     :try_end_42
-    .catchall {:try_start_34 .. :try_end_42} :catchall_692
+    .catchall {:try_start_34 .. :try_end_42} :catchall_697
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/billingclient/api/BillingFlowParams;->zzj()Ljava/util/ArrayList;
 
@@ -8023,7 +8011,7 @@
     :cond_118
     iget-boolean v13, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzn:Z
 
-    if-eqz v13, :cond_52a
+    if-eqz v13, :cond_52d
 
     iget-boolean v13, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzp:Z
 
@@ -8234,9 +8222,9 @@
     invoke-virtual {v4, v0, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1f1
-    if-eqz v13, :cond_1fc
+    if-eqz v13, :cond_1fd
 
-    if-eqz v3, :cond_1fc
+    if-eqz v3, :cond_1fd
 
     const-string v0, "enablePendingPurchases"
 
@@ -8244,28 +8232,28 @@
 
     invoke-virtual {v4, v0, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    goto :goto_1fd
+    goto :goto_1fe
 
-    :cond_1fc
+    :cond_1fd
     const/4 v3, 0x1
 
-    :goto_1fd
-    if-eqz v15, :cond_206
+    :goto_1fe
+    if-eqz v15, :cond_207
 
-    if-eqz v8, :cond_206
+    if-eqz v8, :cond_207
 
     const-string v0, "enablePendingPurchaseForSubscriptions"
 
     invoke-virtual {v4, v0, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    :cond_206
-    if-eqz v14, :cond_20d
+    :cond_207
+    if-eqz v14, :cond_20e
 
     const-string v0, "enableAlternativeBilling"
 
     invoke-virtual {v4, v0, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    :cond_20d
+    :cond_20e
     invoke-virtual/range {p2 .. p2}, Lcom/android/billingclient/api/BillingFlowParams;->zzc()J
 
     invoke-virtual/range {p2 .. p2}, Lcom/android/billingclient/api/BillingFlowParams;->zza()I
@@ -8282,12 +8270,12 @@
 
     move-result-object v3
 
-    :goto_220
+    :goto_221
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
-    if-eqz v5, :cond_22d
+    if-eqz v5, :cond_22e
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -8295,14 +8283,14 @@
 
     check-cast v5, Lcom/android/billingclient/api/BillingFlowParams$ProductDetailsParams;
 
-    goto :goto_220
+    goto :goto_221
 
-    :cond_22d
+    :cond_22e
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_249
+    if-nez v3, :cond_24a
 
     invoke-static {}, Lcom/google/android/gms/internal/play_billing/zzdk;->zza()Lcom/google/android/gms/internal/play_billing/zzdj;
 
@@ -8324,12 +8312,12 @@
 
     invoke-virtual {v4, v3, v0}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    :cond_249
+    :cond_24a
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_355
+    if-nez v0, :cond_356
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -8363,12 +8351,12 @@
 
     const/16 v21, 0x0
 
-    :goto_271
+    :goto_272
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v22
 
-    if-eqz v22, :cond_2dd
+    if-eqz v22, :cond_2de
 
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -8384,7 +8372,7 @@
 
     move-result v23
 
-    if-nez v23, :cond_291
+    if-nez v23, :cond_292
 
     move-object/from16 v23, v8
 
@@ -8394,12 +8382,12 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_293
+    goto :goto_294
 
-    :cond_291
+    :cond_292
     move-object/from16 v23, v8
 
-    :goto_293
+    :goto_294
     invoke-virtual/range {v22 .. v22}, Lcom/android/billingclient/api/SkuDetails;->zzc()Ljava/lang/String;
 
     move-result-object v8
@@ -8448,16 +8436,16 @@
 
     invoke-virtual {v6, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-eqz v25, :cond_2c9
+    if-eqz v25, :cond_2ca
 
     move/from16 v8, v16
 
-    goto :goto_2ca
+    goto :goto_2cb
 
-    :cond_2c9
+    :cond_2ca
     const/4 v8, 0x0
 
-    :goto_2ca
+    :goto_2cb
     or-int/2addr v15, v8
 
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -8476,9 +8464,9 @@
 
     move-wide/from16 v10, v26
 
-    goto :goto_271
+    goto :goto_272
 
-    :cond_2dd
+    :cond_2de
     move-wide/from16 v26, v10
 
     move/from16 v24, v12
@@ -8487,48 +8475,48 @@
 
     move-result v8
 
-    if-nez v8, :cond_2ec
+    if-nez v8, :cond_2ed
 
     const-string v8, "skuDetailsTokens"
 
     invoke-virtual {v4, v8, v0}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_2ec
-    if-eqz v13, :cond_2f3
+    :cond_2ed
+    if-eqz v13, :cond_2f4
 
     const-string v0, "SKU_OFFER_ID_TOKEN_LIST"
 
     invoke-virtual {v4, v0, v3}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_2f3
-    if-eqz v14, :cond_2fa
+    :cond_2f4
+    if-eqz v14, :cond_2fb
 
     const-string v0, "SKU_OFFER_ID_LIST"
 
     invoke-virtual {v4, v0, v5}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_2fa
-    if-eqz v15, :cond_301
+    :cond_2fb
+    if-eqz v15, :cond_302
 
     const-string v0, "SKU_OFFER_TYPE_LIST"
 
     invoke-virtual {v4, v0, v6}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_301
-    if-eqz v21, :cond_308
+    :cond_302
+    if-eqz v21, :cond_309
 
     const-string v0, "SKU_SERIALIZED_DOCID_LIST"
 
     invoke-virtual {v4, v0, v7}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_308
+    :cond_309
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/4 v5, 0x1
 
-    if-le v0, v5, :cond_44a
+    if-le v0, v5, :cond_44d
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -8552,12 +8540,12 @@
 
     move v6, v5
 
-    :goto_326
+    :goto_327
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v7
 
-    if-ge v6, v7, :cond_349
+    if-ge v6, v7, :cond_34a
 
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -8585,9 +8573,9 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_326
+    goto :goto_327
 
-    :cond_349
+    :cond_34a
     const-string v1, "additionalSkus"
 
     invoke-virtual {v4, v1, v0}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
@@ -8596,9 +8584,9 @@
 
     invoke-virtual {v4, v0, v3}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    goto/16 :goto_44a
+    goto/16 :goto_44d
 
-    :cond_355
+    :cond_356
     move-wide/from16 v26, v10
 
     move/from16 v24, v12
@@ -8643,12 +8631,12 @@
 
     const/4 v10, 0x0
 
-    :goto_385
+    :goto_386
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v11
 
-    if-ge v10, v11, :cond_414
+    if-ge v10, v11, :cond_415
 
     invoke-interface {v2, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -8668,7 +8656,7 @@
 
     move-result v13
 
-    if-nez v13, :cond_3a6
+    if-nez v13, :cond_3a7
 
     invoke-virtual {v12}, Lcom/android/billingclient/api/ProductDetails;->zzb()Ljava/lang/String;
 
@@ -8676,7 +8664,7 @@
 
     invoke-virtual {v3, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_3a6
+    :cond_3a7
     invoke-virtual {v11}, Lcom/android/billingclient/api/BillingFlowParams$ProductDetailsParams;->zzb()Ljava/lang/String;
 
     move-result-object v11
@@ -8691,7 +8679,7 @@
 
     move-result-object v13
 
-    if-eqz v13, :cond_3e3
+    if-eqz v13, :cond_3e4
 
     invoke-virtual {v12}, Lcom/android/billingclient/api/ProductDetails;->zzd()Ljava/util/List;
 
@@ -8701,7 +8689,7 @@
 
     move-result v13
 
-    if-nez v13, :cond_3e3
+    if-nez v13, :cond_3e4
 
     invoke-virtual {v12}, Lcom/android/billingclient/api/ProductDetails;->zzd()Ljava/util/List;
 
@@ -8711,12 +8699,12 @@
 
     move-result-object v12
 
-    :cond_3c9
+    :cond_3ca
     invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v13
 
-    if-eqz v13, :cond_3e3
+    if-eqz v13, :cond_3e4
 
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -8732,23 +8720,23 @@
 
     move-result v14
 
-    if-nez v14, :cond_3c9
+    if-nez v14, :cond_3ca
 
     invoke-virtual {v13}, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzb()Ljava/lang/String;
 
     move-result-object v11
 
-    :cond_3e3
+    :cond_3e4
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v12
 
-    if-nez v12, :cond_3ec
+    if-nez v12, :cond_3ed
 
     invoke-virtual {v7, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_3ec
-    if-lez v10, :cond_410
+    :cond_3ed
+    if-lez v10, :cond_411
 
     invoke-interface {v2, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -8782,12 +8770,12 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_410
+    :cond_411
     add-int/lit8 v10, v10, 0x1
 
-    goto/16 :goto_385
+    goto/16 :goto_386
 
-    :cond_414
+    :cond_415
     const-string v10, "SKU_OFFER_ID_TOKEN_LIST"
 
     invoke-virtual {v4, v10, v6}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
@@ -8796,40 +8784,40 @@
 
     move-result v6
 
-    if-nez v6, :cond_424
+    if-nez v6, :cond_426
 
     const-string v6, "autoPayBalanceThresholdList"
 
     invoke-virtual {v4, v6, v8}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_424
+    :cond_426
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v6
 
-    if-nez v6, :cond_42f
+    if-nez v6, :cond_432
 
     const-string v6, "skuDetailsTokens"
 
     invoke-virtual {v4, v6, v3}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_42f
+    :cond_432
     invoke-virtual {v7}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_43a
+    if-nez v3, :cond_43d
 
     const-string v3, "SKU_SERIALIZED_DOCID_LIST"
 
     invoke-virtual {v4, v3, v7}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_43a
+    :cond_43d
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_44a
+    if-nez v3, :cond_44d
 
     const-string v3, "additionalSkus"
 
@@ -8839,23 +8827,23 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_44a
-    :goto_44a
+    :cond_44d
+    :goto_44d
     const-string v0, "SKU_OFFER_ID_TOKEN_LIST"
 
     invoke-virtual {v4, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_46a
+    if-eqz v0, :cond_46d
 
     iget-boolean v0, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzr:Z
 
-    if-eqz v0, :cond_457
+    if-eqz v0, :cond_45a
 
-    goto :goto_46a
+    goto :goto_46d
 
-    :cond_457
+    :cond_45a
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzu:Lcom/google/android/gms/internal/play_billing/zzie;
 
     sget-object v0, Lcom/android/billingclient/api/zzcj;->zzq:Lcom/android/billingclient/api/BillingResult;
@@ -8876,9 +8864,9 @@
 
     return-object v0
 
-    :cond_46a
-    :goto_46a
-    if-eqz v20, :cond_482
+    :cond_46d
+    :goto_46d
+    if-eqz v20, :cond_485
 
     invoke-virtual/range {v20 .. v20}, Lcom/android/billingclient/api/SkuDetails;->zzd()Ljava/lang/String;
 
@@ -8888,7 +8876,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_482
+    if-nez v0, :cond_485
 
     invoke-virtual/range {v20 .. v20}, Lcom/android/billingclient/api/SkuDetails;->zzd()Ljava/lang/String;
 
@@ -8898,15 +8886,15 @@
 
     invoke-virtual {v4, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_47f
+    :goto_482
     move v14, v5
 
     const/4 v8, 0x0
 
-    goto :goto_4a2
+    goto :goto_4a5
 
-    :cond_482
-    if-eqz v19, :cond_4a0
+    :cond_485
+    if-eqz v19, :cond_4a3
 
     invoke-virtual/range {v19 .. v19}, Lcom/android/billingclient/api/BillingFlowParams$ProductDetailsParams;->zza()Lcom/android/billingclient/api/ProductDetails;
 
@@ -8920,7 +8908,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_4a0
+    if-nez v0, :cond_4a3
 
     invoke-virtual/range {v19 .. v19}, Lcom/android/billingclient/api/BillingFlowParams$ProductDetailsParams;->zza()Lcom/android/billingclient/api/ProductDetails;
 
@@ -8934,30 +8922,30 @@
 
     invoke-virtual {v4, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_47f
+    goto :goto_482
 
-    :cond_4a0
+    :cond_4a3
     const/4 v8, 0x0
 
     const/4 v14, 0x0
 
-    :goto_4a2
+    :goto_4a5
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4ad
+    if-nez v0, :cond_4b0
 
     const-string v0, "accountName"
 
     invoke-virtual {v4, v0, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_4ad
+    :cond_4b0
     invoke-virtual/range {p1 .. p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    if-nez v0, :cond_4bb
+    if-nez v0, :cond_4be
 
     const-string v0, "BillingClient"
 
@@ -8965,9 +8953,9 @@
 
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_4ec
+    goto :goto_4ef
 
-    :cond_4bb
+    :cond_4be
     const-string v1, "PROXY_PACKAGE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -8978,7 +8966,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_4ec
+    if-nez v1, :cond_4ef
 
     const-string v1, "PROXY_PACKAGE"
 
@@ -8990,7 +8978,7 @@
 
     invoke-virtual {v4, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_4d2
+    :try_start_4d5
     iget-object v1, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzg:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -9008,63 +8996,63 @@
     const-string v1, "proxyPackageVersion"
 
     invoke-virtual {v4, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_4e4
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4d2 .. :try_end_4e4} :catch_4e5
+    :try_end_4e7
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4d5 .. :try_end_4e7} :catch_4e8
 
-    goto :goto_4ec
+    goto :goto_4ef
 
-    :catch_4e5
+    :catch_4e8
     const-string v0, "proxyPackageVersion"
 
     const-string v1, "package not found"
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_4ec
-    :goto_4ec
+    :cond_4ef
+    :goto_4ef
     iget-boolean v0, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzu:Z
 
-    if-eqz v0, :cond_4fa
+    if-eqz v0, :cond_4fd
 
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_4fa
+    if-nez v0, :cond_4fd
 
     const/16 v0, 0x11
 
-    :goto_4f8
+    :goto_4fb
     move v3, v0
 
-    goto :goto_50c
+    goto :goto_50f
 
-    :cond_4fa
+    :cond_4fd
     iget-boolean v0, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzs:Z
 
-    if-eqz v0, :cond_503
+    if-eqz v0, :cond_506
 
-    if-eqz v14, :cond_503
+    if-eqz v14, :cond_506
 
     const/16 v0, 0xf
 
-    goto :goto_4f8
+    goto :goto_4fb
 
-    :cond_503
+    :cond_506
     iget-boolean v0, v9, Lcom/android/billingclient/api/BillingClientImpl;->zzp:Z
 
-    if-eqz v0, :cond_50a
+    if-eqz v0, :cond_50d
 
     const/16 v0, 0x9
 
-    goto :goto_4f8
+    goto :goto_4fb
 
-    :cond_50a
+    :cond_50d
     const/4 v0, 0x6
 
-    goto :goto_4f8
+    goto :goto_4fb
 
-    :goto_50c
+    :goto_50f
     new-instance v10, Lcom/android/billingclient/api/zzw;
 
     move-object v1, v10
@@ -9097,9 +9085,9 @@
 
     move-result-object v0
 
-    goto :goto_544
+    goto :goto_547
 
-    :cond_52a
+    :cond_52d
     move-object/from16 v18, v6
 
     move-object/from16 v17, v7
@@ -9126,10 +9114,10 @@
 
     move-result-object v0
 
-    :goto_544
-    if-nez v0, :cond_559
+    :goto_547
+    if-nez v0, :cond_55c
 
-    :try_start_546
+    :try_start_549
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzy:Lcom/google/android/gms/internal/play_billing/zzie;
 
     sget-object v0, Lcom/android/billingclient/api/zzcj;->zzc:Lcom/android/billingclient/api/BillingResult;
@@ -9150,7 +9138,7 @@
 
     return-object v0
 
-    :cond_559
+    :cond_55c
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x1388
@@ -9169,15 +9157,13 @@
 
     move-result v0
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->QVA:Ljava/lang/String;
+    const-string v2, "BillingClient"
 
     invoke-static {v1, v2}, Lcom/google/android/gms/internal/play_billing/zzc;->zzj(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v0, :cond_618
+    if-eqz v0, :cond_61b
 
     const-string v3, "BillingClient"
 
@@ -9202,35 +9188,35 @@
     move-result-object v10
 
     const-string v2, "BillingClient"
-    :try_end_58f
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_546 .. :try_end_58f} :catch_673
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_546 .. :try_end_58f} :catch_671
-    .catch Ljava/lang/Exception; {:try_start_546 .. :try_end_58f} :catch_652
+    :try_end_591
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_549 .. :try_end_591} :catch_676
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_549 .. :try_end_591} :catch_674
+    .catch Ljava/lang/Exception; {:try_start_549 .. :try_end_591} :catch_655
 
-    if-nez v1, :cond_594
+    if-nez v1, :cond_596
 
-    :try_start_591
+    :try_start_593
     sget-object v0, Lcom/google/android/gms/internal/play_billing/zzie;->zza:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto :goto_5e1
+    goto :goto_5e3
 
-    :cond_594
+    :cond_596
     const-string v0, "LOG_REASON"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_59f
+    if-nez v0, :cond_5a1
 
     sget-object v0, Lcom/google/android/gms/internal/play_billing/zzie;->zza:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    goto :goto_5e1
+    goto :goto_5e3
 
-    :cond_59f
+    :cond_5a1
     instance-of v3, v0, Ljava/lang/Integer;
 
-    if-eqz v3, :cond_5ae
+    if-eqz v3, :cond_5b0
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -9242,9 +9228,9 @@
 
     move-result-object v0
 
-    goto :goto_5e1
+    goto :goto_5e3
 
-    :cond_5ae
+    :cond_5b0
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -9270,15 +9256,15 @@
     invoke-static {v2, v0}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcom/google/android/gms/internal/play_billing/zzie;->zza:Lcom/google/android/gms/internal/play_billing/zzie;
-    :try_end_5cc
-    .catchall {:try_start_591 .. :try_end_5cc} :catchall_5cd
+    :try_end_5ce
+    .catchall {:try_start_593 .. :try_end_5ce} :catchall_5cf
 
-    goto :goto_5e1
+    goto :goto_5e3
 
-    :catchall_5cd
+    :catchall_5cf
     move-exception v0
 
-    :try_start_5ce
+    :try_start_5d0
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -9297,47 +9283,47 @@
 
     sget-object v0, Lcom/google/android/gms/internal/play_billing/zzie;->zza:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    :goto_5e1
+    :goto_5e3
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zza:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    if-ne v0, v2, :cond_5e7
+    if-ne v0, v2, :cond_5e9
 
     sget-object v0, Lcom/google/android/gms/internal/play_billing/zzie;->zzw:Lcom/google/android/gms/internal/play_billing/zzie;
 
-    :cond_5e7
+    :cond_5e9
     move-object v2, v0
 
     const-string v3, "BillingClient"
-    :try_end_5ea
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_5ce .. :try_end_5ea} :catch_673
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_5ce .. :try_end_5ea} :catch_671
-    .catch Ljava/lang/Exception; {:try_start_5ce .. :try_end_5ea} :catch_652
+    :try_end_5ec
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_5d0 .. :try_end_5ec} :catch_676
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_5d0 .. :try_end_5ec} :catch_674
+    .catch Ljava/lang/Exception; {:try_start_5d0 .. :try_end_5ec} :catch_655
 
-    if-nez v1, :cond_5ee
+    if-nez v1, :cond_5f0
 
-    :goto_5ec
+    :goto_5ee
     move-object v5, v8
 
-    goto :goto_609
+    goto :goto_60c
 
-    :cond_5ee
-    :try_start_5ee
+    :cond_5f0
+    :try_start_5f0
     const-string v0, "ADDITIONAL_LOG_DETAILS"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-    :try_end_5f4
-    .catchall {:try_start_5ee .. :try_end_5f4} :catchall_5f6
+    :try_end_5f6
+    .catchall {:try_start_5f0 .. :try_end_5f6} :catchall_5f8
 
     move-object v5, v0
 
-    goto :goto_609
+    goto :goto_60c
 
-    :catchall_5f6
+    :catchall_5f8
     move-exception v0
 
-    :try_start_5f7
+    :try_start_5f9
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -9354,9 +9340,9 @@
 
     invoke-static {v3, v0}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_5ec
+    goto :goto_5ee
 
-    :goto_609
+    :goto_60c
     const/4 v3, 0x2
 
     move-object/from16 v1, p0
@@ -9373,7 +9359,7 @@
 
     return-object v10
 
-    :cond_618
+    :cond_61b
     new-instance v0, Landroid/content/Intent;
 
     const-class v2, Lcom/android/billingclient/api/ProxyBillingActivity;
@@ -9395,80 +9381,80 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const-string v1, "billingClientTransactionId"
-    :try_end_630
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_5f7 .. :try_end_630} :catch_673
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_5f7 .. :try_end_630} :catch_671
-    .catch Ljava/lang/Exception; {:try_start_5f7 .. :try_end_630} :catch_652
+    :try_end_633
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_5f9 .. :try_end_633} :catch_676
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_5f9 .. :try_end_633} :catch_674
+    .catch Ljava/lang/Exception; {:try_start_5f9 .. :try_end_633} :catch_655
 
     move-wide/from16 v6, v26
 
-    :try_start_632
+    :try_start_635
     invoke-virtual {v0, v1, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string v1, "wasServiceAutoReconnected"
-    :try_end_637
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_632 .. :try_end_637} :catch_64e
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_632 .. :try_end_637} :catch_64c
-    .catch Ljava/lang/Exception; {:try_start_632 .. :try_end_637} :catch_648
+    :try_end_63a
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_635 .. :try_end_63a} :catch_651
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_635 .. :try_end_63a} :catch_64f
+    .catch Ljava/lang/Exception; {:try_start_635 .. :try_end_63a} :catch_64b
 
     move/from16 v8, v24
 
-    :try_start_639
+    :try_start_63c
     invoke-virtual {v0, v1, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     invoke-virtual {v3, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-    :try_end_63f
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_639 .. :try_end_63f} :catch_646
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_639 .. :try_end_63f} :catch_644
-    .catch Ljava/lang/Exception; {:try_start_639 .. :try_end_63f} :catch_642
+    :try_end_642
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_63c .. :try_end_642} :catch_649
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_63c .. :try_end_642} :catch_647
+    .catch Ljava/lang/Exception; {:try_start_63c .. :try_end_642} :catch_645
 
     sget-object v0, Lcom/android/billingclient/api/zzcj;->zzi:Lcom/android/billingclient/api/BillingResult;
 
     return-object v0
 
-    :catch_642
+    :catch_645
     move-exception v0
 
-    goto :goto_657
+    goto :goto_65a
 
-    :catch_644
+    :catch_647
     move-exception v0
 
-    goto :goto_678
+    goto :goto_67b
 
-    :catch_646
+    :catch_649
     move-exception v0
 
-    goto :goto_678
+    goto :goto_67b
 
-    :catch_648
+    :catch_64b
     move-exception v0
 
     move/from16 v8, v24
 
-    goto :goto_657
+    goto :goto_65a
 
-    :catch_64c
+    :catch_64f
     move-exception v0
 
-    goto :goto_64f
+    goto :goto_652
 
-    :catch_64e
+    :catch_651
     move-exception v0
 
-    :goto_64f
+    :goto_652
     move/from16 v8, v24
 
-    goto :goto_678
+    goto :goto_67b
 
-    :catch_652
+    :catch_655
     move-exception v0
 
     move/from16 v8, v24
 
     move-wide/from16 v6, v26
 
-    :goto_657
+    :goto_65a
     const-string v1, "BillingClient"
 
     const-string v2, "Exception while launching billing flow. Try to reconnect"
@@ -9495,20 +9481,20 @@
 
     return-object v10
 
-    :catch_671
+    :catch_674
     move-exception v0
 
-    goto :goto_674
+    goto :goto_677
 
-    :catch_673
+    :catch_676
     move-exception v0
 
-    :goto_674
+    :goto_677
     move/from16 v8, v24
 
     move-wide/from16 v6, v26
 
-    :goto_678
+    :goto_67b
     const-string v1, "BillingClient"
 
     const-string v2, "Time out while launching billing flow. Try to reconnect"
@@ -9535,17 +9521,17 @@
 
     return-object v10
 
-    :catchall_692
+    :catchall_697
     move-exception v0
 
-    :try_start_693
+    :try_start_698
     monitor-exit v1
-    :try_end_694
-    .catchall {:try_start_693 .. :try_end_694} :catchall_692
+    :try_end_699
+    .catchall {:try_start_698 .. :try_end_699} :catchall_697
 
     throw v0
 
-    :cond_695
+    :cond_69a
     move-wide v6, v10
 
     sget-object v2, Lcom/google/android/gms/internal/play_billing/zzie;->zzl:Lcom/google/android/gms/internal/play_billing/zzie;
@@ -9922,9 +9908,7 @@
 
     iget v1, v2, Landroid/graphics/Rect;->left:I
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lkotlin/EDDN/hfnXJuYOaqC;->MRICmU:Ljava/lang/String;
+    const-string v3, "KEY_DIMEN_LEFT"
 
     invoke-virtual {v0, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -9954,13 +9938,13 @@
 
     iget-object v1, p0, Lcom/android/billingclient/api/BillingClientImpl;->zzd:Ljava/lang/String;
 
-    if-eqz v1, :cond_68
+    if-eqz v1, :cond_67
 
     const-string v2, "playBillingLibraryWrapperVersion"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_68
+    :cond_67
     invoke-virtual {p2}, Lcom/android/billingclient/api/InAppMessageParams;->zza()Ljava/util/ArrayList;
 
     move-result-object p2
@@ -10101,7 +10085,7 @@
     const/4 v3, 0x0
 
     :goto_19
-    if-ge v3, v11, :cond_236
+    if-ge v3, v11, :cond_237
 
     add-int/lit8 v13, v3, 0x14
 
@@ -10172,15 +10156,15 @@
 
     monitor-enter v3
     :try_end_5b
-    .catch Landroid/os/DeadObjectException; {:try_start_58 .. :try_end_5b} :catch_22a
-    .catch Ljava/lang/Exception; {:try_start_58 .. :try_end_5b} :catch_21e
+    .catch Landroid/os/DeadObjectException; {:try_start_58 .. :try_end_5b} :catch_22b
+    .catch Ljava/lang/Exception; {:try_start_58 .. :try_end_5b} :catch_21f
 
     :try_start_5b
     iget-object v4, v1, Lcom/android/billingclient/api/BillingClientImpl;->zzi:Lcom/google/android/gms/internal/play_billing/zzam;
 
     monitor-exit v3
     :try_end_5e
-    .catchall {:try_start_5b .. :try_end_5e} :catchall_21b
+    .catchall {:try_start_5b .. :try_end_5e} :catchall_21c
 
     const/4 v6, 0x0
 
@@ -10300,8 +10284,8 @@
 
     move-result-object v3
     :try_end_c5
-    .catch Landroid/os/DeadObjectException; {:try_start_61 .. :try_end_c5} :catch_22a
-    .catch Ljava/lang/Exception; {:try_start_61 .. :try_end_c5} :catch_21e
+    .catch Landroid/os/DeadObjectException; {:try_start_61 .. :try_end_c5} :catch_22b
+    .catch Ljava/lang/Exception; {:try_start_61 .. :try_end_c5} :catch_21f
 
     if-nez v3, :cond_d2
 
@@ -10414,7 +10398,7 @@
     const/4 v8, 0x0
 
     :goto_12c
-    if-ge v8, v7, :cond_15e
+    if-ge v8, v7, :cond_15f
 
     invoke-interface {v4, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -10468,7 +10452,7 @@
 
     return-object v0
 
-    :cond_15e
+    :cond_15f
     const-string v4, "UNFETCHED_PRODUCT_LIST"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -10479,23 +10463,23 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    :try_start_169
+    :try_start_16a
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz v3, :cond_198
+    if-eqz v3, :cond_199
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    :goto_174
+    :goto_175
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v7
 
-    if-eqz v7, :cond_202
+    if-eqz v7, :cond_203
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -10523,19 +10507,19 @@
 
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_174
+    goto :goto_175
 
-    :cond_198
+    :cond_199
     invoke-interface/range {v16 .. v16}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    :goto_19c
+    :goto_19d
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v7
 
-    if-eqz v7, :cond_202
+    if-eqz v7, :cond_203
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -10547,12 +10531,12 @@
 
     move-result-object v8
 
-    :cond_1ac
+    :cond_1ad
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v12
 
-    if-eqz v12, :cond_1d5
+    if-eqz v12, :cond_1d6
 
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -10572,7 +10556,7 @@
 
     move-result v14
 
-    if-eqz v14, :cond_1ac
+    if-eqz v14, :cond_1ad
 
     invoke-virtual {v7}, Lcom/android/billingclient/api/QueryProductDetailsParams$Product;->zzb()Ljava/lang/String;
 
@@ -10586,11 +10570,11 @@
 
     move-result v12
 
-    if-eqz v12, :cond_1ac
+    if-eqz v12, :cond_1ad
 
-    goto :goto_19c
+    goto :goto_19d
 
-    :cond_1d5
+    :cond_1d6
     new-instance v8, Lorg/json/JSONObject;
 
     invoke-direct {v8}, Lorg/json/JSONObject;-><init>()V
@@ -10632,12 +10616,12 @@
     invoke-direct {v8, v7}, Lcom/android/billingclient/api/UnfetchedProduct;-><init>(Ljava/lang/String;)V
 
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_201
-    .catch Lorg/json/JSONException; {:try_start_169 .. :try_end_201} :catch_20b
+    :try_end_202
+    .catch Lorg/json/JSONException; {:try_start_16a .. :try_end_202} :catch_20c
 
-    goto :goto_19c
+    goto :goto_19d
 
-    :cond_202
+    :cond_203
     invoke-interface {v0, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     invoke-interface {v2, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -10646,7 +10630,7 @@
 
     goto/16 :goto_19
 
-    :catch_20b
+    :catch_20c
     move-exception v0
 
     const-string v2, "Error trying to decode SkuDetails."
@@ -10665,21 +10649,21 @@
 
     return-object v0
 
-    :catchall_21b
+    :catchall_21c
     move-exception v0
 
-    :try_start_21c
-    monitor-exit v3
-    :try_end_21d
-    .catchall {:try_start_21c .. :try_end_21d} :catchall_21b
-
     :try_start_21d
-    throw v0
+    monitor-exit v3
     :try_end_21e
-    .catch Landroid/os/DeadObjectException; {:try_start_21d .. :try_end_21e} :catch_22a
-    .catch Ljava/lang/Exception; {:try_start_21d .. :try_end_21e} :catch_21e
+    .catchall {:try_start_21d .. :try_end_21e} :catchall_21c
 
-    :catch_21e
+    :try_start_21e
+    throw v0
+    :try_end_21f
+    .catch Landroid/os/DeadObjectException; {:try_start_21e .. :try_end_21f} :catch_22b
+    .catch Ljava/lang/Exception; {:try_start_21e .. :try_end_21f} :catch_21f
+
+    :catch_21f
     move-exception v0
 
     sget-object v2, Lcom/android/billingclient/api/zzcj;->zzh:Lcom/android/billingclient/api/BillingResult;
@@ -10694,7 +10678,7 @@
 
     return-object v0
 
-    :catch_22a
+    :catch_22b
     move-exception v0
 
     sget-object v2, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
@@ -10709,7 +10693,7 @@
 
     return-object v0
 
-    :cond_236
+    :cond_237
     const-string v3, ""
 
     new-instance v4, Lcom/android/billingclient/api/zzbo;

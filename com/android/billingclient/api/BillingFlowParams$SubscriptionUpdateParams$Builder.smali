@@ -121,13 +121,13 @@
     :goto_28
     iget-boolean v3, p0, Lcom/android/billingclient/api/BillingFlowParams$SubscriptionUpdateParams$Builder;->zzc:Z
 
-    if-nez v3, :cond_39
+    if-nez v3, :cond_3a
 
-    if-nez v0, :cond_39
+    if-nez v0, :cond_3a
 
     if-eqz v2, :cond_31
 
-    goto :goto_39
+    goto :goto_3a
 
     :cond_31
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -138,8 +138,8 @@
 
     throw v0
 
-    :cond_39
-    :goto_39
+    :cond_3a
+    :goto_3a
     new-instance v0, Lcom/android/billingclient/api/BillingFlowParams$SubscriptionUpdateParams;
 
     invoke-direct {v0, v1}, Lcom/android/billingclient/api/BillingFlowParams$SubscriptionUpdateParams;-><init>(Lcom/android/billingclient/api/zzcf;)V

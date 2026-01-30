@@ -161,9 +161,7 @@
 .method public toString()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->eClvUxZMCpyAX:Ljava/lang/String;
+    const-string v0, "Booleans.lexicographicalComparator()"
 
     return-object v0
 .end method

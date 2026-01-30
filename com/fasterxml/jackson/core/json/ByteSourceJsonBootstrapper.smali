@@ -1118,7 +1118,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_85
+    if-eqz v1, :cond_84
 
     goto :goto_5d
 
@@ -1127,7 +1127,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_85
+    if-eqz v1, :cond_84
 
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputBuffer:[B
 
@@ -1151,14 +1151,14 @@
 
     move-result v1
 
-    if-eqz v1, :cond_85
+    if-eqz v1, :cond_84
 
     :goto_5d
     iget v1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bytesPerChar:I
 
-    if-eq v1, v2, :cond_82
+    if-eq v1, v2, :cond_81
 
-    if-eq v1, v3, :cond_78
+    if-eq v1, v3, :cond_77
 
     if-ne v1, v0, :cond_6f
 
@@ -1168,47 +1168,45 @@
 
     sget-object v0, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF32_BE:Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    goto :goto_87
+    goto :goto_86
 
     :cond_6c
     sget-object v0, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF32_LE:Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    goto :goto_87
+    goto :goto_86
 
     :cond_6f
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->mZsvnlT:Ljava/lang/String;
+    const-string v1, "Internal error"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_78
+    :cond_77
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bigEndian:Z
 
-    if-eqz v0, :cond_7f
+    if-eqz v0, :cond_7e
 
     sget-object v0, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF16_BE:Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    goto :goto_87
+    goto :goto_86
 
-    :cond_7f
+    :cond_7e
     sget-object v0, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF16_LE:Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    goto :goto_87
+    goto :goto_86
 
-    :cond_82
+    :cond_81
     sget-object v0, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF8:Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    goto :goto_87
+    goto :goto_86
 
-    :cond_85
+    :cond_84
     sget-object v0, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF8:Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    :goto_87
+    :goto_86
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
 
     invoke-virtual {v1, v0}, Lcom/fasterxml/jackson/core/io/IOContext;->setEncoding(Lcom/fasterxml/jackson/core/JsonEncoding;)V

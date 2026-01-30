@@ -104,9 +104,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->tojuubIXkXxdI:Ljava/lang/String;
+    const-string v0, "GoogleApiClient must not be null"
 
     invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

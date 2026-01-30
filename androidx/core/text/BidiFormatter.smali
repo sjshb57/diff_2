@@ -260,9 +260,7 @@
     return-object p1
 
     :cond_29
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/core/util/LEr/bFMYUr;->dxTIG:Ljava/lang/String;
+    const-string p1, ""
 
     return-object p1
 .end method

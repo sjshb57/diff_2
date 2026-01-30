@@ -37,9 +37,7 @@
 
     new-instance v0, Lcom/google/common/hash/BloomFilterStrategies$1;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->exqyR:Ljava/lang/String;
+    const-string v1, "MURMUR128_MITZ_32"
 
     const/4 v2, 0x0
 

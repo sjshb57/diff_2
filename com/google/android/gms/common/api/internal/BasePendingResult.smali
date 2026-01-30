@@ -625,33 +625,33 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zap:Lcom/google/android/gms/common/api/internal/zada;
 
-    if-nez v0, :cond_13
+    if-nez v0, :cond_14
 
-    goto :goto_14
+    goto :goto_15
 
-    :cond_13
+    :cond_14
     const/4 v1, 0x0
 
-    :goto_14
+    :goto_15
     const-string v0, "Cannot await if then() has been called."
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    :try_start_19
+    :try_start_1a
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zaf:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_1e
-    .catch Ljava/lang/InterruptedException; {:try_start_19 .. :try_end_1e} :catch_1f
+    :try_end_1f
+    .catch Ljava/lang/InterruptedException; {:try_start_1a .. :try_end_1f} :catch_20
 
-    goto :goto_24
+    goto :goto_25
 
-    :catch_1f
+    :catch_20
     sget-object v0, Lcom/google/android/gms/common/api/Status;->RESULT_INTERRUPTED:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->forceFailureUnlessReady(Lcom/google/android/gms/common/api/Status;)V
 
-    :goto_24
+    :goto_25
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->isReady()Z
 
     move-result v0
@@ -715,30 +715,30 @@
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    :try_start_1f
+    :try_start_20
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zaf:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result p1
 
-    if-nez p1, :cond_32
+    if-nez p1, :cond_33
 
     sget-object p1, Lcom/google/android/gms/common/api/Status;->RESULT_TIMEOUT:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->forceFailureUnlessReady(Lcom/google/android/gms/common/api/Status;)V
-    :try_end_2c
-    .catch Ljava/lang/InterruptedException; {:try_start_1f .. :try_end_2c} :catch_2d
+    :try_end_2d
+    .catch Ljava/lang/InterruptedException; {:try_start_20 .. :try_end_2d} :catch_2e
 
-    goto :goto_32
+    goto :goto_33
 
-    :catch_2d
+    :catch_2e
     sget-object p1, Lcom/google/android/gms/common/api/Status;->RESULT_INTERRUPTED:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->forceFailureUnlessReady(Lcom/google/android/gms/common/api/Status;)V
 
-    :cond_32
-    :goto_32
+    :cond_33
+    :goto_33
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->isReady()Z
 
     move-result p1
@@ -963,11 +963,11 @@
     :try_start_3
     iget-boolean v1, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zan:Z
 
-    if-nez v1, :cond_27
+    if-nez v1, :cond_28
 
     iget-boolean v1, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zam:Z
 
-    if-nez v1, :cond_27
+    if-nez v1, :cond_28
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->isReady()Z
 
@@ -995,19 +995,19 @@
 
     return-void
 
-    :cond_27
+    :cond_28
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zal(Lcom/google/android/gms/common/api/Result;)V
 
     monitor-exit v0
 
     return-void
 
-    :catchall_2c
+    :catchall_2d
     move-exception p1
 
     monitor-exit v0
-    :try_end_2e
-    .catchall {:try_start_3 .. :try_end_2e} :catchall_2c
+    :try_end_2f
+    .catchall {:try_start_3 .. :try_end_2f} :catchall_2d
 
     throw p1
 .end method

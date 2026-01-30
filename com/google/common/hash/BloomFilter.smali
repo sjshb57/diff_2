@@ -90,9 +90,7 @@
     move v0, v1
 
     :goto_15
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->IQfRGLxa:Ljava/lang/String;
+    const-string v1, "numHashFunctions (%s) must be <= 255"
 
     invoke-static {v0, v1, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
@@ -337,9 +335,7 @@
     move v1, v2
 
     :goto_2d
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->EJimkMoWz:Ljava/lang/String;
+    const-string v2, "False positive probability (%s) must be < 1.0"
 
     invoke-static {p3, p4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -349,11 +345,11 @@
 
     invoke-static {p5}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_3d
 
     const-wide/16 p1, 0x1
 
-    :cond_3e
+    :cond_3d
     invoke-static {p1, p2, p3, p4}, Lcom/google/common/hash/BloomFilter;->optimalNumOfBits(JD)J
 
     move-result-wide p3
@@ -362,7 +358,7 @@
 
     move-result p1
 
-    :try_start_46
+    :try_start_45
     new-instance p2, Lcom/google/common/hash/BloomFilter;
 
     new-instance v0, Lcom/google/common/hash/BloomFilterStrategies$LockFreeBitArray;
@@ -370,12 +366,12 @@
     invoke-direct {v0, p3, p4}, Lcom/google/common/hash/BloomFilterStrategies$LockFreeBitArray;-><init>(J)V
 
     invoke-direct {p2, v0, p1, p0, p5}, Lcom/google/common/hash/BloomFilter;-><init>(Lcom/google/common/hash/BloomFilterStrategies$LockFreeBitArray;ILcom/google/common/hash/Funnel;Lcom/google/common/hash/BloomFilter$Strategy;)V
-    :try_end_50
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_46 .. :try_end_50} :catch_51
+    :try_end_4f
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_45 .. :try_end_4f} :catch_50
 
     return-object p2
 
-    :catch_51
+    :catch_50
     move-exception p0
 
     new-instance p1, Ljava/lang/IllegalArgumentException;

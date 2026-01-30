@@ -198,9 +198,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->HAiYUFVFwkTS:Ljava/lang/String;
+    const-string v1, "text/plain"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
