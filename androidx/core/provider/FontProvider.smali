@@ -436,9 +436,7 @@
 
     const-string v4, "font_ttc_index"
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->kmQLwBjDoWw:Ljava/lang/String;
+    const-string v5, "file_id"
 
     const-string v6, "_id"
 
@@ -490,7 +488,7 @@
 
     const/16 v17, 0x0
 
-    :try_start_41
+    :try_start_40
     new-array v12, v9, [Ljava/lang/String;
 
     const/4 v9, 0x0
@@ -550,17 +548,17 @@
     invoke-static/range {v10 .. v16}, Landroidx/core/provider/FontProvider$Api16Impl;->query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Landroid/database/Cursor;
 
     move-result-object v10
-    :try_end_74
-    .catchall {:try_start_41 .. :try_end_74} :catchall_f2
+    :try_end_73
+    .catchall {:try_start_40 .. :try_end_73} :catchall_f1
 
-    if-eqz v10, :cond_e3
+    if-eqz v10, :cond_e2
 
-    :try_start_76
+    :try_start_75
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
 
     move-result v11
 
-    if-lez v11, :cond_e3
+    if-lez v11, :cond_e2
 
     invoke-interface {v10, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -590,40 +588,40 @@
 
     move-result v2
 
-    :goto_99
+    :goto_98
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v11
 
-    if-eqz v11, :cond_e3
+    if-eqz v11, :cond_e2
 
     const/4 v11, -0x1
 
-    if-eq v1, v11, :cond_a7
+    if-eq v1, v11, :cond_a6
 
     invoke-interface {v10, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v12
 
-    goto :goto_a8
+    goto :goto_a7
 
-    :cond_a7
+    :cond_a6
     const/4 v12, 0x0
 
-    :goto_a8
-    if-eq v4, v11, :cond_af
+    :goto_a7
+    if-eq v4, v11, :cond_ae
 
     invoke-interface {v10, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v13
 
-    goto :goto_b0
+    goto :goto_af
 
-    :cond_af
+    :cond_ae
     const/4 v13, 0x0
 
-    :goto_b0
-    if-ne v5, v11, :cond_bb
+    :goto_af
+    if-ne v5, v11, :cond_ba
 
     invoke-interface {v10, v6}, Landroid/database/Cursor;->getLong(I)J
 
@@ -633,9 +631,9 @@
 
     move-result-object v14
 
-    goto :goto_c3
+    goto :goto_c2
 
-    :cond_bb
+    :cond_ba
     invoke-interface {v10, v5}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v14
@@ -644,58 +642,58 @@
 
     move-result-object v14
 
-    :goto_c3
-    if-eq v3, v11, :cond_ca
+    :goto_c2
+    if-eq v3, v11, :cond_c9
 
     invoke-interface {v10, v3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v15
 
-    goto :goto_cc
+    goto :goto_cb
 
-    :cond_ca
+    :cond_c9
     const/16 v15, 0x190
 
-    :goto_cc
-    if-eq v2, v11, :cond_d6
+    :goto_cb
+    if-eq v2, v11, :cond_d5
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v11
 
-    if-ne v11, v9, :cond_d6
+    if-ne v11, v9, :cond_d5
 
     move v11, v9
 
-    goto :goto_d7
+    goto :goto_d6
 
-    :cond_d6
+    :cond_d5
     const/4 v11, 0x0
 
-    :goto_d7
+    :goto_d6
     invoke-static {v14, v13, v15, v11, v12}, Landroidx/core/provider/FontsContractCompat$FontInfo;->create(Landroid/net/Uri;IIZI)Landroidx/core/provider/FontsContractCompat$FontInfo;
 
     move-result-object v11
 
     invoke-virtual {v7, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_de
-    .catchall {:try_start_76 .. :try_end_de} :catchall_df
+    :try_end_dd
+    .catchall {:try_start_75 .. :try_end_dd} :catchall_de
 
-    goto :goto_99
+    goto :goto_98
 
-    :catchall_df
+    :catchall_de
     move-exception v0
 
     move-object/from16 v17, v10
 
-    goto :goto_f3
+    goto :goto_f2
 
-    :cond_e3
-    if-eqz v10, :cond_e8
+    :cond_e2
+    if-eqz v10, :cond_e7
 
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    :cond_e8
+    :cond_e7
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroidx/core/provider/FontsContractCompat$FontInfo;
@@ -708,14 +706,14 @@
 
     return-object v0
 
-    :catchall_f2
+    :catchall_f1
     move-exception v0
 
-    :goto_f3
-    if-eqz v17, :cond_f8
+    :goto_f2
+    if-eqz v17, :cond_f7
 
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
 
-    :cond_f8
+    :cond_f7
     throw v0
 .end method

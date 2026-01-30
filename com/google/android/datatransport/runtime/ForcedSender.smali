@@ -54,7 +54,7 @@
 
     invoke-virtual {p1, p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;->logAndUpdateState(Lcom/google/android/datatransport/runtime/TransportContext;I)Lcom/google/android/datatransport/runtime/backends/BackendResponse;
 
-    goto :goto_22
+    goto :goto_23
 
     :cond_1b
     const-string p1, "ForcedSender"
@@ -63,6 +63,6 @@
 
     invoke-static {p1, v0, p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    :goto_22
+    :goto_23
     return-void
 .end method

@@ -768,14 +768,12 @@
 
     invoke-static {v0}, Lcom/google/firebase/FirebaseApp$UserUnlockReceiver;->access$100(Landroid/content/Context;)V
 
-    goto :goto_51
+    goto :goto_50
 
     :cond_27
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->iyiuSWOANs:Ljava/lang/String;
+    const-string v2, "Device unlocked: initializing all Firebase APIs for app "
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -809,7 +807,7 @@
 
     invoke-virtual {v0}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->registerHeartBeat()Lcom/google/android/gms/tasks/Task;
 
-    :goto_51
+    :goto_50
     return-void
 .end method
 

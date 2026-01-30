@@ -48,9 +48,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/print/nh/SlomKQFs;->JNPGvJ:Ljava/lang/String;
+    const-string p0, "name"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -176,9 +174,7 @@
 .method public static final getOptions(Lcom/google/firebase/ktx/Firebase;)Lcom/google/firebase/FirebaseOptions;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/savedstate/xT/fgyAspfzfnhI;->TqtONNmyWvboj:Ljava/lang/String;
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

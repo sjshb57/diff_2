@@ -432,7 +432,7 @@
 
     shr-int/lit8 v0, p1, 0x10
 
-    if-eqz v0, :cond_44
+    if-eqz v0, :cond_45
 
     add-int/lit8 v0, v0, -0x1
 
@@ -450,7 +450,7 @@
 
     const-string v0, "FragmentActivity"
 
-    if-nez v1, :cond_22
+    if-nez v1, :cond_23
 
     const-string p1, "Activity result delivered for unknown Fragment."
 
@@ -458,14 +458,14 @@
 
     return-void
 
-    :cond_22
+    :cond_23
     iget-object v2, p0, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;
 
     invoke-virtual {v2, v1}, Landroidx/fragment/app/FragmentController;->findFragmentByWho(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v2
 
-    if-nez v2, :cond_3c
+    if-nez v2, :cond_3d
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -481,34 +481,34 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_43
+    goto :goto_44
 
-    :cond_3c
+    :cond_3d
     const v0, 0xffff
 
     and-int/2addr p1, v0
 
     invoke-virtual {v2, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
-    :goto_43
+    :goto_44
     return-void
 
-    :cond_44
+    :cond_45
     invoke-static {}, Landroidx/core/app/ActivityCompat;->getPermissionCompatDelegate()Landroidx/core/app/ActivityCompat$PermissionCompatDelegate;
 
     move-result-object v0
 
-    if-eqz v0, :cond_51
+    if-eqz v0, :cond_52
 
     invoke-interface {v0, p0, p1, p2, p3}, Landroidx/core/app/ActivityCompat$PermissionCompatDelegate;->onActivityResult(Landroid/app/Activity;IILandroid/content/Intent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_51
+    if-eqz v0, :cond_52
 
     return-void
 
-    :cond_51
+    :cond_52
     invoke-super {p0, p1, p2, p3}, Landroidx/activity/ComponentActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
@@ -547,7 +547,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_56
+    if-eqz p1, :cond_57
 
     const-string v1, "android:support:fragments"
 
@@ -565,7 +565,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_56
+    if-eqz v2, :cond_57
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -611,7 +611,7 @@
     :goto_40
     array-length v4, v1
 
-    if-ge v3, v4, :cond_56
+    if-ge v3, v4, :cond_57
 
     iget-object v4, p0, Landroidx/fragment/app/FragmentActivity;->mPendingFragmentActivityResults:Landroidx/collection/SparseArrayCompat;
 
@@ -633,10 +633,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_56
+    :cond_57
     iget-object v1, p0, Landroidx/fragment/app/FragmentActivity;->mPendingFragmentActivityResults:Landroidx/collection/SparseArrayCompat;
 
-    if-nez v1, :cond_63
+    if-nez v1, :cond_64
 
     new-instance v1, Landroidx/collection/SparseArrayCompat;
 
@@ -646,7 +646,7 @@
 
     iput v0, p0, Landroidx/fragment/app/FragmentActivity;->mNextCandidateRequestIndex:I
 
-    :cond_63
+    :cond_64
     invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
     iget-object p1, p0, Landroidx/fragment/app/FragmentActivity;->mFragmentLifecycleRegistry:Landroidx/lifecycle/LifecycleRegistry;

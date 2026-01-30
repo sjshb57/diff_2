@@ -354,18 +354,16 @@
 
     const/high16 p0, 0x10000000
 
-    goto :goto_54
+    goto :goto_55
 
     :cond_b
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->Jen:Ljava/lang/String;
+    const-string v0, "w"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_52
+    if-nez v0, :cond_53
 
     const-string v0, "wt"
 
@@ -375,7 +373,7 @@
 
     if-eqz v0, :cond_1d
 
-    goto :goto_52
+    goto :goto_53
 
     :cond_1d
     const-string v0, "wa"
@@ -388,7 +386,7 @@
 
     const/high16 p0, 0x2a000000
 
-    goto :goto_54
+    goto :goto_55
 
     :cond_28
     const-string v0, "rw"
@@ -397,26 +395,26 @@
 
     move-result v0
 
-    if-eqz v0, :cond_33
+    if-eqz v0, :cond_34
 
     const/high16 p0, 0x38000000
 
-    goto :goto_54
+    goto :goto_55
 
-    :cond_33
+    :cond_34
     const-string v0, "rwt"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_3f
 
     const/high16 p0, 0x3c000000  # 0.0078125f
 
-    goto :goto_54
+    goto :goto_55
 
-    :cond_3e
+    :cond_3f
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -435,11 +433,11 @@
 
     throw v0
 
-    :cond_52
-    :goto_52
+    :cond_53
+    :goto_53
     const/high16 p0, 0x2c000000
 
-    :goto_54
+    :goto_55
     return p0
 .end method
 
@@ -651,7 +649,7 @@
 
     iget-boolean v0, p2, Landroid/content/pm/ProviderInfo;->exported:Z
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_31
 
     iget-boolean v0, p2, Landroid/content/pm/ProviderInfo;->grantUriPermissions:Z
 
@@ -703,15 +701,13 @@
     :cond_29
     new-instance p1, Ljava/lang/SecurityException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->QMrRSxcMqqrgsYV:Ljava/lang/String;
+    const-string p2, "Provider must grant uri permissions"
 
     invoke-direct {p1, p2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_32
+    :cond_31
     new-instance p1, Ljava/lang/SecurityException;
 
     const-string p2, "Provider must not be exported"

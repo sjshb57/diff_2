@@ -39,9 +39,7 @@
     :cond_b
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->HudAVhE:Ljava/lang/String;
+    const-string v0, "Animator cannot be null"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

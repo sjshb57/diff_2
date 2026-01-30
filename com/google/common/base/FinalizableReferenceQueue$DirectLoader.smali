@@ -44,12 +44,12 @@
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
-    :try_end_6
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_6} :catch_7
+    :try_end_7
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_7} :catch_8
 
     return-object v0
 
-    :catch_7
+    :catch_8
     move-exception v0
 
     new-instance v1, Ljava/lang/AssertionError;

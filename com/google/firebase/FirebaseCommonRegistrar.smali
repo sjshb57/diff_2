@@ -136,18 +136,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2d
+    if-eqz v0, :cond_2e
 
     const-string p0, "auto"
 
     return-object p0
 
-    :cond_2d
+    :cond_2e
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
-    if-lt v0, v1, :cond_42
+    if-lt v0, v1, :cond_43
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -159,13 +159,13 @@
 
     move-result p0
 
-    if-eqz p0, :cond_42
+    if-eqz p0, :cond_43
 
     const-string p0, "embedded"
 
     return-object p0
 
-    :cond_42
+    :cond_43
     const-string p0, ""
 
     return-object p0
@@ -256,9 +256,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->eVITIiHJNB:Ljava/lang/String;
+    const-string v2, "fire-android"
 
     invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
 
@@ -370,7 +368,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_a2
+    if-eqz v1, :cond_a1
 
     const-string v2, "kotlin"
 
@@ -380,6 +378,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_a2
+    :cond_a1
     return-object v0
 .end method

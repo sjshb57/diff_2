@@ -43,9 +43,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/collections/zgTb/JhPPV;->yIHKWRkjDcXTu:Ljava/lang/String;
+    const-string v0, "Filters may not be null"
 
     invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -260,7 +260,7 @@
 
     move-result-object p1
     :try_end_8
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_8} :catch_11
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_8} :catch_12
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_8} :catch_9
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_8} :catch_9
 
@@ -275,7 +275,7 @@
 
     throw p1
 
-    :catch_11
+    :catch_12
     move-exception p1
 
     invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
@@ -284,7 +284,7 @@
 
     instance-of v1, v0, Ljava/io/IOException;
 
-    if-eqz v1, :cond_2c
+    if-eqz v1, :cond_2d
 
     const-string p1, "INSTANCE_ID_RESET"
 
@@ -296,25 +296,25 @@
 
     move-result p1
 
-    if-eqz p1, :cond_29
+    if-eqz p1, :cond_2a
 
     invoke-virtual {p0}, Lcom/google/firebase/iid/FirebaseInstanceId;->resetStorage()V
 
-    :cond_29
+    :cond_2a
     check-cast v0, Ljava/io/IOException;
 
     throw v0
 
-    :cond_2c
+    :cond_2d
     instance-of v1, v0, Ljava/lang/RuntimeException;
 
-    if-eqz v1, :cond_33
+    if-eqz v1, :cond_34
 
     check-cast v0, Ljava/lang/RuntimeException;
 
     throw v0
 
-    :cond_33
+    :cond_34
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
@@ -610,9 +610,7 @@
     :cond_29
     new-instance p0, Ljava/util/concurrent/CancellationException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->shOFWZoh:Ljava/lang/String;
+    const-string v0, "Task is already canceled"
 
     invoke-direct {p0, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
@@ -634,20 +632,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_12
 
-    const-string v0, ""
+    const/4 v0, 0x0
 
-    goto :goto_17
+    sget-object v0, Landroidx/activity/result/contract/Kr/Zeqt;->TYGRTBSkAlJ:Ljava/lang/String;
 
-    :cond_11
+    goto :goto_18
+
+    :cond_12
     iget-object v0, p0, Lcom/google/firebase/iid/FirebaseInstanceId;->app:Lcom/google/firebase/FirebaseApp;
 
     invoke-virtual {v0}, Lcom/google/firebase/FirebaseApp;->getPersistenceKey()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_17
+    :goto_18
     return-object v0
 .end method
 
@@ -769,9 +769,7 @@
 
     :cond_18
     :goto_18
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/flatbuffers/OSq/msMBb;->jGBUguLeCMActRK:Ljava/lang/String;
+    const-string p0, "*"
 
     return-object p0
 .end method

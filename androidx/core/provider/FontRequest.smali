@@ -339,7 +339,7 @@
     :cond_69
     const/4 v3, 0x0
 
-    sget-object v3, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->JgOiNTVOeOq:Ljava/lang/String;
+    sget-object v3, Lcom/google/android/gms/measurement/sdk/api/Pl/hrhW;->GjAhhxX:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

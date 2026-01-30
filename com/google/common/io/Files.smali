@@ -1096,15 +1096,13 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const-string v1, "."
 
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->YqZBIdOLt:Ljava/lang/String;
-
-    if-nez v0, :cond_d
+    if-nez v0, :cond_c
 
     return-object v1
 
-    :cond_d
+    :cond_c
     const/16 v0, 0x2f
 
     invoke-static {v0}, Lcom/google/common/base/Splitter;->on(C)Lcom/google/common/base/Splitter;
@@ -1127,13 +1125,13 @@
 
     move-result-object v2
 
-    :cond_24
-    :goto_24
+    :cond_23
+    :goto_23
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-eqz v4, :cond_6b
+    if-eqz v4, :cond_6a
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1147,7 +1145,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_24
+    if-nez v5, :cond_23
 
     const-string v5, ".."
 
@@ -1155,18 +1153,18 @@
 
     move-result v6
 
-    if-nez v6, :cond_45
+    if-nez v6, :cond_44
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_24
+    goto :goto_23
 
-    :cond_45
+    :cond_44
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v4
 
-    if-lez v4, :cond_67
+    if-lez v4, :cond_66
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1184,7 +1182,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_67
+    if-nez v4, :cond_66
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1194,14 +1192,14 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    goto :goto_24
+    goto :goto_23
 
-    :cond_67
+    :cond_66
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_24
+    goto :goto_23
 
-    :cond_6b
+    :cond_6a
     invoke-static {v0}, Lcom/google/common/base/Joiner;->on(C)Lcom/google/common/base/Joiner;
 
     move-result-object v2
@@ -1218,7 +1216,7 @@
 
     const-string v3, "/"
 
-    if-ne p0, v0, :cond_88
+    if-ne p0, v0, :cond_87
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1230,15 +1228,15 @@
 
     move-result-object v2
 
-    :cond_88
-    :goto_88
+    :cond_87
+    :goto_87
     const-string p0, "/../"
 
     invoke-virtual {v2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_96
+    if-eqz p0, :cond_95
 
     const/4 p0, 0x3
 
@@ -1246,36 +1244,36 @@
 
     move-result-object v2
 
-    goto :goto_88
+    goto :goto_87
 
-    :cond_96
+    :cond_95
     const-string p0, "/.."
 
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_a0
+    if-eqz p0, :cond_9f
 
     move-object v1, v3
 
-    goto :goto_aa
+    goto :goto_a9
 
-    :cond_a0
+    :cond_9f
     const-string p0, ""
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_a9
+    if-eqz p0, :cond_a8
 
-    goto :goto_aa
+    goto :goto_a9
 
-    :cond_a9
+    :cond_a8
     move-object v1, v2
 
-    :goto_aa
+    :goto_a9
     return-object v1
 .end method
 

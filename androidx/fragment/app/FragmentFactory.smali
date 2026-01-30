@@ -181,13 +181,11 @@
 .method public instantiate(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
     .registers 7
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->EVLliW:Ljava/lang/String;
+    const-string v0, ": make sure class name exists, is public, and has an empty constructor that is public"
 
     const-string v1, "Unable to instantiate fragment "
 
-    :try_start_5
+    :try_start_4
     invoke-static {p1, p2}, Landroidx/fragment/app/FragmentFactory;->loadFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p1
@@ -207,15 +205,15 @@
     move-result-object p1
 
     check-cast p1, Landroidx/fragment/app/Fragment;
-    :try_end_18
-    .catch Ljava/lang/InstantiationException; {:try_start_5 .. :try_end_18} :catch_5f
-    .catch Ljava/lang/IllegalAccessException; {:try_start_5 .. :try_end_18} :catch_49
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_5 .. :try_end_18} :catch_31
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_5 .. :try_end_18} :catch_19
+    :try_end_17
+    .catch Ljava/lang/InstantiationException; {:try_start_4 .. :try_end_17} :catch_5e
+    .catch Ljava/lang/IllegalAccessException; {:try_start_4 .. :try_end_17} :catch_48
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_4 .. :try_end_17} :catch_30
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_4 .. :try_end_17} :catch_18
 
     return-object p1
 
-    :catch_19
+    :catch_18
     move-exception p1
 
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -238,7 +236,7 @@
 
     throw v0
 
-    :catch_31
+    :catch_30
     move-exception p1
 
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -261,7 +259,7 @@
 
     throw v0
 
-    :catch_49
+    :catch_48
     move-exception p1
 
     new-instance v2, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -282,7 +280,7 @@
 
     throw v2
 
-    :catch_5f
+    :catch_5e
     move-exception p1
 
     new-instance v2, Landroidx/fragment/app/Fragment$InstantiationException;

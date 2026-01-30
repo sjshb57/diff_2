@@ -235,9 +235,7 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->BYWTeX:Ljava/lang/String;
+    const-string v1, "sdkVersion"
 
     const-string v2, "a:17.2.0"
 
@@ -250,12 +248,12 @@
     const-string v2, "installation"
 
     invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_17
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_17} :catch_18
+    :try_end_16
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_16} :catch_17
 
     return-object v1
 
-    :catch_18
+    :catch_17
     move-exception v0
 
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -504,7 +502,7 @@
 
     check-cast p1, Ljava/net/HttpURLConnection;
     :try_end_a
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_a} :catch_74
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_a} :catch_75
 
     const/16 v2, 0x2710
 
@@ -612,7 +610,7 @@
 
     return-object p1
 
-    :catch_74
+    :catch_75
     new-instance p1, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
     const-string p2, "Firebase Installations Service is unavailable. Please try again later."

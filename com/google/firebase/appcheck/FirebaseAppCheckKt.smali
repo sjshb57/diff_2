@@ -61,7 +61,7 @@
 
     const/4 v0, 0x0
 
-    sget-object v0, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->ePrcvKIQJUl:Ljava/lang/String;
+    sget-object v0, Landroidx/arch/core/internal/nl/WfPiHVumXD;->pqqhe:Ljava/lang/String;
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -300,7 +300,9 @@
 
     const-string v1, "Unable to instantiate fragment "
 
-    :try_start_4
+    sget-object v1, Lcom/google/android/gms/measurement/sdk/api/Pl/hrhW;->oPbMJaVG:Ljava/lang/String;
+
+    :try_start_5
     invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p0
@@ -325,7 +327,7 @@
 
     check-cast p0, Landroidx/fragment/app/Fragment;
 
-    if-eqz p2, :cond_2b
+    if-eqz p2, :cond_2c
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -338,16 +340,16 @@
     invoke-virtual {p2, v2}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
     invoke-virtual {p0, p2}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
-    :try_end_2b
-    .catch Ljava/lang/InstantiationException; {:try_start_4 .. :try_end_2b} :catch_72
-    .catch Ljava/lang/IllegalAccessException; {:try_start_4 .. :try_end_2b} :catch_5c
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_4 .. :try_end_2b} :catch_44
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_4 .. :try_end_2b} :catch_2c
+    :try_end_2c
+    .catch Ljava/lang/InstantiationException; {:try_start_5 .. :try_end_2c} :catch_73
+    .catch Ljava/lang/IllegalAccessException; {:try_start_5 .. :try_end_2c} :catch_5d
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_5 .. :try_end_2c} :catch_45
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_5 .. :try_end_2c} :catch_2d
 
-    :cond_2b
+    :cond_2c
     return-object p0
 
-    :catch_2c
+    :catch_2d
     move-exception p0
 
     new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -370,7 +372,7 @@
 
     throw p2
 
-    :catch_44
+    :catch_45
     move-exception p0
 
     new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -393,7 +395,7 @@
 
     throw p2
 
-    :catch_5c
+    :catch_5d
     move-exception p0
 
     new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -414,7 +416,7 @@
 
     throw p2
 
-    :catch_72
+    :catch_73
     move-exception p0
 
     new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
@@ -554,9 +556,7 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/savedstate/xT/fgyAspfzfnhI;->IJrmjwBZm:Ljava/lang/String;
+    const-string v0, " mFromLayout="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -758,7 +758,7 @@
     :cond_14e
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mContainer:Landroid/view/ViewGroup;
 
-    if-eqz v0, :cond_15f
+    if-eqz v0, :cond_160
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -770,10 +770,10 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    :cond_15f
+    :cond_160
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
-    if-eqz v0, :cond_170
+    if-eqz v0, :cond_171
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -785,10 +785,10 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    :cond_170
+    :cond_171
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mInnerView:Landroid/view/View;
 
-    if-eqz v0, :cond_181
+    if-eqz v0, :cond_182
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -800,12 +800,12 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    :cond_181
+    :cond_182
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getAnimatingAway()Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1a5
+    if-eqz v0, :cond_1a6
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -831,12 +831,12 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    :cond_1a5
+    :cond_1a6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1b2
+    if-eqz v0, :cond_1b3
 
     invoke-static {p0}, Landroidx/loader/app/LoaderManager;->getInstance(Landroidx/lifecycle/LifecycleOwner;)Landroidx/loader/app/LoaderManager;
 
@@ -844,7 +844,7 @@
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroidx/loader/app/LoaderManager;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    :cond_1b2
+    :cond_1b3
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1065,9 +1065,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/print/nh/SlomKQFs;->HmCgJdQENHAXQbt:Ljava/lang/String;
+    const-string v2, "Fragment "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -2422,7 +2420,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v2, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->RjWhRiuqwerlPl:Ljava/lang/String;
+    sget-object v2, Lbitter/jnibridge/QtR/SjdKIoNPuzgJRR;->BajDqxYQwwk:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -3598,7 +3596,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_44
+    if-nez v0, :cond_43
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -3637,9 +3635,7 @@
 
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->GxsrPFp:Ljava/lang/String;
+    const-string v1, " is not a child Fragment, it is directly attached to "
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3657,7 +3653,7 @@
 
     throw v0
 
-    :cond_44
+    :cond_43
     return-object v0
 .end method
 
