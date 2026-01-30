@@ -120,7 +120,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_d4
+    if-eqz v2, :cond_d6
 
     sget-object v1, Landroidx/core/R$styleable;->GradientColor:[I
 
@@ -254,11 +254,11 @@
 
     const/4 v1, 0x1
 
-    if-eq v5, v1, :cond_af
+    if-eq v5, v1, :cond_b1
 
     const/4 v1, 0x2
 
-    if-eq v5, v1, :cond_a3
+    if-eq v5, v1, :cond_a5
 
     new-instance v1, Landroid/graphics/LinearGradient;
 
@@ -276,7 +276,7 @@
 
     return-object v1
 
-    :cond_a3
+    :cond_a5
     new-instance v1, Landroid/graphics/SweepGradient;
 
     iget-object v2, v0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
@@ -289,14 +289,14 @@
 
     return-object v1
 
-    :cond_af
+    :cond_b1
     move/from16 v3, v17
 
     const/4 v1, 0x0
 
     cmpg-float v1, v8, v1
 
-    if-lez v1, :cond_cc
+    if-lez v1, :cond_ce
 
     new-instance v1, Landroid/graphics/RadialGradient;
 
@@ -322,7 +322,7 @@
 
     return-object v1
 
-    :cond_cc
+    :cond_ce
     new-instance v0, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v1, "<gradient> tag requires \'gradientRadius\' attribute with radial type"
@@ -331,7 +331,7 @@
 
     throw v0
 
-    :cond_d4
+    :cond_d6
     new-instance v2, Lorg/xmlpull/v1/XmlPullParserException;
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -420,9 +420,7 @@
 
     move-result-object p1
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->niSVEj:Ljava/lang/String;
+    const-string p2, "app_ver"
 
     invoke-virtual {p4, p2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -444,7 +442,7 @@
 
     invoke-virtual {p4, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_5f
+    :try_start_5e
     iget-object p1, p0, Lcom/google/firebase/iid/GmsRpc;->firebaseInstallations:Lcom/google/firebase/installations/FirebaseInstallationsApi;
 
     const/4 p2, 0x0
@@ -467,23 +465,23 @@
 
     move-result p2
 
-    if-nez p2, :cond_7c
+    if-nez p2, :cond_7b
 
     const-string p2, "Goog-Firebase-Installations-Auth"
 
     invoke-virtual {p4, p2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_8a
+    goto :goto_8b
 
-    :cond_7c
+    :cond_7b
     const-string p1, "FIS auth token is empty"
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_81
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_5f .. :try_end_81} :catch_84
-    .catch Ljava/lang/InterruptedException; {:try_start_5f .. :try_end_81} :catch_82
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_5e .. :try_end_81} :catch_84
+    .catch Ljava/lang/InterruptedException; {:try_start_5e .. :try_end_81} :catch_82
 
-    goto :goto_8a
+    goto :goto_8b
 
     :catch_82
     move-exception p1
@@ -498,7 +496,7 @@
 
     invoke-static {v0, p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_8a
+    :goto_8b
     const-string p1, "cliv"
 
     const-string p2, "fiid-21.1.0"
@@ -521,9 +519,9 @@
 
     check-cast p2, Lcom/google/firebase/platforminfo/UserAgentPublisher;
 
-    if-eqz p1, :cond_c5
+    if-eqz p1, :cond_c6
 
-    if-eqz p2, :cond_c5
+    if-eqz p2, :cond_c6
 
     const-string p3, "fire-iid"
 
@@ -533,7 +531,7 @@
 
     sget-object p3, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->NONE:Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;
 
-    if-eq p1, p3, :cond_c5
+    if-eq p1, p3, :cond_c6
 
     invoke-virtual {p1}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->getCode()I
 
@@ -555,7 +553,7 @@
 
     invoke-virtual {p4, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_c5
+    :cond_c6
     return-object p4
 .end method
 
@@ -836,9 +834,7 @@
     invoke-direct {v1, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     :goto_1b
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/print/nh/SlomKQFs;->ajXGTnsoVcuq:Ljava/lang/String;
+    const-string v2, "gcm.topic"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -856,20 +852,20 @@
 
     move-result v1
 
-    if-eqz v1, :cond_37
+    if-eqz v1, :cond_36
 
     invoke-virtual {v3, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
-    goto :goto_3c
+    goto :goto_3b
 
-    :cond_37
+    :cond_36
     new-instance p3, Ljava/lang/String;
 
     invoke-direct {p3, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    :goto_3c
+    :goto_3b
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/firebase/iid/GmsRpc;->startRpc(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1

@@ -376,9 +376,7 @@
 
     move-result v10
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->tbSIZcRDZeLTQn:Ljava/lang/String;
+    const-string v2, "serverAuthRequested"
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
@@ -396,7 +394,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_76
+    if-eqz v4, :cond_75
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -404,25 +402,25 @@
 
     move-object v13, v2
 
-    goto :goto_77
+    goto :goto_76
 
-    :cond_76
+    :cond_75
     move-object v13, v1
 
-    :goto_77
+    :goto_76
     const-string v2, "hostedDomain"
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_83
+    if-eqz v4, :cond_82
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    :cond_83
+    :cond_82
     move-object v14, v1
 
     new-instance v15, Ljava/util/HashMap;
@@ -1056,7 +1054,7 @@
 
     iget-object v1, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->zai:Landroid/accounts/Account;
 
-    if-eqz v1, :cond_3b
+    if-eqz v1, :cond_3c
 
     const-string v2, "accountName"
 
@@ -1064,7 +1062,7 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_3b
+    :cond_3c
     const-string v1, "idTokenRequested"
 
     iget-boolean v2, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->zaj:Z
@@ -1089,7 +1087,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_5f
+    if-nez v1, :cond_61
 
     const-string v1, "serverClientId"
 
@@ -1097,33 +1095,31 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_5f
+    :cond_61
     iget-object v1, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->zan:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_6f
+    if-nez v1, :cond_70
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->tpYjYqjdbhWwaQp:Ljava/lang/String;
+    const-string v1, "hostedDomain"
 
     iget-object v2, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->zan:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_6f
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_6f} :catch_74
+    :try_end_70
+    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_70} :catch_75
 
-    :cond_6f
+    :cond_70
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    :catch_74
+    :catch_75
     move-exception v0
 
     new-instance v1, Ljava/lang/RuntimeException;

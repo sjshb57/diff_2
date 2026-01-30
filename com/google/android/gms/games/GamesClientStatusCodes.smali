@@ -67,11 +67,11 @@
 
     const/16 v0, 0x67ac
 
-    if-eq p0, v0, :cond_10e
+    if-eq p0, v0, :cond_10f
 
     const/16 v0, 0x67ad
 
-    if-eq p0, v0, :cond_10b
+    if-eq p0, v0, :cond_10c
 
     sparse-switch p0, :sswitch_data_112
 
@@ -197,374 +197,368 @@
 
     return-object p0
 
-    :pswitch_64  #0x67d8
+    :pswitch_65  #0x67d8
     const-string p0, "MULTIPLAYER_ERROR_INVALID_OPERATION"
 
     return-object p0
 
-    :pswitch_67  #0x67d7
+    :pswitch_68  #0x67d7
     const-string p0, "MULTIPLAYER_DISABLED"
 
     return-object p0
 
-    :pswitch_6a  #0x67d6
+    :pswitch_6b  #0x67d6
     const-string p0, "MULTIPLAYER_ERROR_INVALID_MULTIPLAYER_TYPE"
 
     return-object p0
 
-    :pswitch_6d  #0x67d5
+    :pswitch_6e  #0x67d5
     const-string p0, "MULTIPLAYER_ERROR_NOT_TRUSTED_TESTER"
 
     return-object p0
 
-    :pswitch_70  #0x67d4
+    :pswitch_72  #0x67d4
     const-string p0, "MULTIPLAYER_ERROR_CREATION_NOT_ALLOWED"
 
     return-object p0
 
-    :pswitch_73  #0x67d0
+    :pswitch_76  #0x67d0
     const-string p0, "SNAPSHOT_CONFLICT_MISSING"
 
     return-object p0
 
-    :pswitch_76  #0x67cf
+    :pswitch_79  #0x67cf
     const-string p0, "SNAPSHOT_FOLDER_UNAVAILABLE"
 
     return-object p0
 
-    :pswitch_79  #0x67ce
-    const/4 p0, 0x0
-
-    sget-object p0, Lkotlin/collections/zgTb/JhPPV;->rMQHJmRJFoD:Ljava/lang/String;
+    :pswitch_7c  #0x67ce
+    const-string p0, "SNAPSHOT_CONFLICT"
 
     return-object p0
 
-    :pswitch_7d  #0x67cd
+    :pswitch_7f  #0x67cd
     const-string p0, "SNAPSHOT_COMMIT_FAILED"
 
     return-object p0
 
-    :pswitch_80  #0x67cc
+    :pswitch_82  #0x67cc
     const-string p0, "SNAPSHOT_CONTENTS_UNAVAILABLE"
 
     return-object p0
 
-    :pswitch_83  #0x67cb
+    :pswitch_85  #0x67cb
     const-string p0, "SNAPSHOT_CREATION_FAILED"
 
     return-object p0
 
-    :pswitch_86  #0x67ca
+    :pswitch_88  #0x67ca
     const-string p0, "SNAPSHOT_NOT_FOUND"
 
     return-object p0
 
-    :pswitch_89  #0x67c3
+    :pswitch_8b  #0x67c3
     const-string p0, "ACHIEVEMENT_UNLOCKED"
 
     return-object p0
 
-    :pswitch_8c  #0x67c2
+    :pswitch_8e  #0x67c2
     const-string p0, "ACHIEVEMENT_NOT_INCREMENTAL"
 
     return-object p0
 
-    :pswitch_8f  #0x67c1
+    :pswitch_91  #0x67c1
     const-string p0, "ACHIEVEMENT_UNKNOWN"
 
     return-object p0
 
-    :pswitch_92  #0x67c0
+    :pswitch_94  #0x67c0
     const-string p0, "ACHIEVEMENT_UNLOCK_FAILURE"
 
     return-object p0
 
-    :pswitch_95  #0x67b8
+    :pswitch_97  #0x67b8
     const-string p0, "REQUEST_TOO_MANY_RECIPIENTS"
 
     return-object p0
 
-    :pswitch_98  #0x67b7
+    :pswitch_9a  #0x67b7
     const-string p0, "REQUEST_UPDATE_TOTAL_FAILURE"
 
     return-object p0
 
-    :pswitch_9b  #0x67b6
+    :pswitch_9d  #0x67b6
     const-string p0, "REQUEST_UPDATE_PARTIAL_SUCCESS"
 
     return-object p0
 
-    :pswitch_9e  #0x67a8
+    :pswitch_a0  #0x67a8
     const-string p0, "AUTH_ERROR_SERVICE_CACHE_MISTAKE"
 
     return-object p0
 
-    :pswitch_a1  #0x67a7
+    :pswitch_a3  #0x67a7
     const-string p0, "AUTH_ERROR_ACCOUNT_UNICORN"
 
     return-object p0
 
-    :pswitch_a4  #0x67a6
+    :pswitch_a6  #0x67a6
     const-string p0, "AUTH_ERROR_ACCOUNT_NOT_USABLE"
 
     return-object p0
 
-    :pswitch_a7  #0x67a5
+    :pswitch_a9  #0x67a5
     const-string p0, "AUTH_ERROR_API_ACCESS_DENIED"
 
     return-object p0
 
-    :pswitch_aa  #0x67a4
+    :pswitch_ac  #0x67a4
     const-string p0, "AUTH_ERROR_UNREGISTERED_CLIENT_ID"
 
     return-object p0
 
-    :pswitch_ad  #0x67a3
+    :pswitch_af  #0x67a3
     const-string p0, "AUTH_ERROR_USER_RECOVERABLE"
 
     return-object p0
 
-    :pswitch_b0  #0x67a2
+    :pswitch_b2  #0x67a2
     const-string p0, "AUTH_ERROR_HARD"
 
     return-object p0
 
-    :sswitch_b3
+    :sswitch_b5
     const-string p0, "PLAYER_NOT_FOUND"
 
     return-object p0
 
-    :sswitch_b6
+    :sswitch_b8
     const-string p0, "CONSENT_REQUIRED"
 
     return-object p0
 
-    :sswitch_b9
+    :sswitch_bb
     const-string p0, "CLIENT_HIDDEN"
 
     return-object p0
 
-    :sswitch_bc
+    :sswitch_be
     const-string p0, "CLIENT_EMPTY"
 
     return-object p0
 
-    :sswitch_bf
+    :sswitch_c1
     const-string p0, "CLIENT_LOADING"
 
     return-object p0
 
-    :sswitch_c2
+    :sswitch_c4
     const-string p0, "VIDEO_CAPTURE_OVERLAY_VISIBLE"
 
     return-object p0
 
-    :sswitch_c5
+    :sswitch_c7
     const-string p0, "VIDEO_MISSING_OVERLAY_PERMISSION"
 
     return-object p0
 
-    :sswitch_c8
+    :sswitch_ca
     const-string p0, "CAPTURE_ALREADY_PAUSED"
 
     return-object p0
 
-    :sswitch_cb
+    :sswitch_cd
     const-string p0, "VIDEO_CAPTURE_VIDEO_PERMISSION_REQUIRED"
 
     return-object p0
 
-    :sswitch_ce
+    :sswitch_d0
     const-string p0, "VIDEO_RELEASE_TIMEOUT"
 
     return-object p0
 
-    :sswitch_d1
+    :sswitch_d3
     const-string p0, "VIDEO_SCREEN_OFF"
 
     return-object p0
 
-    :sswitch_d4
+    :sswitch_d6
     const-string p0, "VIDEO_NO_CAMERA"
 
     return-object p0
 
-    :sswitch_d7
+    :sswitch_d9
     const-string p0, "VIDEO_NO_MIC"
 
     return-object p0
 
-    :sswitch_da
+    :sswitch_dc
     const-string p0, "VIDEO_OUT_OF_DISK_SPACE"
 
     return-object p0
 
-    :sswitch_dd
+    :sswitch_df
     const-string p0, "VIDEO_ALREADY_CAPTURING"
 
     return-object p0
 
-    :sswitch_e0
+    :sswitch_e2
     const-string p0, "VIDEO_UNEXPECTED_CAPTURE_ERROR"
 
     return-object p0
 
-    :sswitch_e3
+    :sswitch_e5
     const-string p0, "VIDEO_STORAGE_ERROR"
 
     return-object p0
 
-    :sswitch_e6
+    :sswitch_e8
     const-string p0, "VIDEO_PERMISSION_ERROR"
 
     return-object p0
 
-    :sswitch_e9
+    :sswitch_eb
     const-string p0, "VIDEO_UNSUPPORTED"
 
     return-object p0
 
-    :sswitch_ec
+    :sswitch_ee
     const-string p0, "VIDEO_NOT_ACTIVE"
 
     return-object p0
 
-    :sswitch_ef
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->AXcrrlngDNs:Ljava/lang/String;
+    :sswitch_f1
+    const-string p0, "RESOLVE_STALE_OR_NO_DATA"
 
     return-object p0
 
-    :sswitch_f3
+    :sswitch_f4
     const-string p0, "GAME_NOT_FOUND"
 
     return-object p0
 
-    :sswitch_f6
+    :sswitch_f7
     const-string p0, "APP_MISCONFIGURED"
 
     return-object p0
 
-    :sswitch_f9
+    :sswitch_fa
     const-string p0, "LICENSE_CHECK_FAILED"
 
     return-object p0
 
-    :sswitch_fc
+    :sswitch_fd
     const-string p0, "NETWORK_ERROR_OPERATION_FAILED"
 
     return-object p0
 
-    :sswitch_ff
+    :sswitch_100
     const-string p0, "NETWORK_ERROR_OPERATION_DEFERRED"
 
     return-object p0
 
-    :sswitch_102
+    :sswitch_103
     const-string p0, "NETWORK_ERROR_NO_DATA"
 
     return-object p0
 
-    :sswitch_105
+    :sswitch_106
     const-string p0, "NETWORK_ERROR_STALE_DATA"
 
     return-object p0
 
-    :sswitch_108
+    :sswitch_109
     const-string p0, "CLIENT_RECONNECT_REQUIRED"
 
     return-object p0
 
-    :cond_10b
+    :cond_10c
     const-string p0, "PLAYER_LEVEL_UP"
 
     return-object p0
 
-    :cond_10e
+    :cond_10f
     const-string p0, "PLAYER_OOB_REQUIRED"
 
     return-object p0
 
-    nop
-
     :sswitch_data_112
     .sparse-switch
-        0x6786 -> :sswitch_108
-        0x6787 -> :sswitch_105
-        0x6788 -> :sswitch_102
-        0x6789 -> :sswitch_ff
-        0x678a -> :sswitch_fc
-        0x678b -> :sswitch_f9
-        0x678c -> :sswitch_f6
-        0x678d -> :sswitch_f3
-        0x6798 -> :sswitch_ef
-        0x67fc -> :sswitch_ec
-        0x67fd -> :sswitch_e9
-        0x67fe -> :sswitch_e6
-        0x67ff -> :sswitch_e3
-        0x6800 -> :sswitch_e0
-        0x6801 -> :sswitch_dd
-        0x6802 -> :sswitch_da
-        0x6803 -> :sswitch_d7
-        0x6804 -> :sswitch_d4
-        0x6805 -> :sswitch_d1
-        0x6806 -> :sswitch_ce
-        0x6807 -> :sswitch_cb
-        0x6808 -> :sswitch_c8
-        0x681a -> :sswitch_c5
-        0x681c -> :sswitch_c2
-        0x684c -> :sswitch_bf
-        0x684d -> :sswitch_bc
-        0x684e -> :sswitch_b9
-        0x684f -> :sswitch_b6
-        0x6850 -> :sswitch_b3
+        0x6786 -> :sswitch_109
+        0x6787 -> :sswitch_106
+        0x6788 -> :sswitch_103
+        0x6789 -> :sswitch_100
+        0x678a -> :sswitch_fd
+        0x678b -> :sswitch_fa
+        0x678c -> :sswitch_f7
+        0x678d -> :sswitch_f4
+        0x6798 -> :sswitch_f1
+        0x67fc -> :sswitch_ee
+        0x67fd -> :sswitch_eb
+        0x67fe -> :sswitch_e8
+        0x67ff -> :sswitch_e5
+        0x6800 -> :sswitch_e2
+        0x6801 -> :sswitch_df
+        0x6802 -> :sswitch_dc
+        0x6803 -> :sswitch_d9
+        0x6804 -> :sswitch_d6
+        0x6805 -> :sswitch_d3
+        0x6806 -> :sswitch_d0
+        0x6807 -> :sswitch_cd
+        0x6808 -> :sswitch_ca
+        0x681a -> :sswitch_c7
+        0x681c -> :sswitch_c4
+        0x684c -> :sswitch_c1
+        0x684d -> :sswitch_be
+        0x684e -> :sswitch_bb
+        0x684f -> :sswitch_b8
+        0x6850 -> :sswitch_b5
     .end sparse-switch
 
     :pswitch_data_188
     .packed-switch 0x67a2
-        :pswitch_b0  #000067a2
-        :pswitch_ad  #000067a3
-        :pswitch_aa  #000067a4
-        :pswitch_a7  #000067a5
-        :pswitch_a4  #000067a6
-        :pswitch_a1  #000067a7
-        :pswitch_9e  #000067a8
+        :pswitch_b2  #000067a2
+        :pswitch_af  #000067a3
+        :pswitch_ac  #000067a4
+        :pswitch_a9  #000067a5
+        :pswitch_a6  #000067a6
+        :pswitch_a3  #000067a7
+        :pswitch_a0  #000067a8
     .end packed-switch
 
     :pswitch_data_19a
     .packed-switch 0x67b6
-        :pswitch_9b  #000067b6
-        :pswitch_98  #000067b7
-        :pswitch_95  #000067b8
+        :pswitch_9d  #000067b6
+        :pswitch_9a  #000067b7
+        :pswitch_97  #000067b8
     .end packed-switch
 
     :pswitch_data_1a4
     .packed-switch 0x67c0
-        :pswitch_92  #000067c0
-        :pswitch_8f  #000067c1
-        :pswitch_8c  #000067c2
-        :pswitch_89  #000067c3
+        :pswitch_94  #000067c0
+        :pswitch_91  #000067c1
+        :pswitch_8e  #000067c2
+        :pswitch_8b  #000067c3
     .end packed-switch
 
     :pswitch_data_1b0
     .packed-switch 0x67ca
-        :pswitch_86  #000067ca
-        :pswitch_83  #000067cb
-        :pswitch_80  #000067cc
-        :pswitch_7d  #000067cd
-        :pswitch_79  #000067ce
-        :pswitch_76  #000067cf
-        :pswitch_73  #000067d0
+        :pswitch_88  #000067ca
+        :pswitch_85  #000067cb
+        :pswitch_82  #000067cc
+        :pswitch_7f  #000067cd
+        :pswitch_7c  #000067ce
+        :pswitch_79  #000067cf
+        :pswitch_76  #000067d0
     .end packed-switch
 
     :pswitch_data_1c2
     .packed-switch 0x67d4
-        :pswitch_70  #000067d4
-        :pswitch_6d  #000067d5
-        :pswitch_6a  #000067d6
-        :pswitch_67  #000067d7
-        :pswitch_64  #000067d8
+        :pswitch_72  #000067d4
+        :pswitch_6e  #000067d5
+        :pswitch_6b  #000067d6
+        :pswitch_68  #000067d7
+        :pswitch_65  #000067d8
     .end packed-switch
 
     :pswitch_data_1d0

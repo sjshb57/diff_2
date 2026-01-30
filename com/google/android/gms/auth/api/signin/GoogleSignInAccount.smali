@@ -323,90 +323,90 @@
 
     move-result v5
 
-    if-eqz v5, :cond_5e
+    if-eqz v5, :cond_5f
 
     invoke-virtual {v0, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    goto :goto_5f
+    goto :goto_60
 
-    :cond_5e
+    :cond_5f
     move-object v4, v1
 
-    :goto_5f
+    :goto_60
     const-string v5, "email"
 
     invoke-virtual {v0, v5}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_6c
+    if-eqz v6, :cond_6d
 
     invoke-virtual {v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    goto :goto_6d
+    goto :goto_6e
 
-    :cond_6c
+    :cond_6d
     move-object v5, v1
 
-    :goto_6d
+    :goto_6e
     const-string v6, "displayName"
 
     invoke-virtual {v0, v6}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_7a
+    if-eqz v7, :cond_7b
 
     invoke-virtual {v0, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    goto :goto_7b
+    goto :goto_7c
 
-    :cond_7a
+    :cond_7b
     move-object v6, v1
 
-    :goto_7b
+    :goto_7c
     const-string v7, "givenName"
 
     invoke-virtual {v0, v7}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_88
+    if-eqz v9, :cond_89
 
     invoke-virtual {v0, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    goto :goto_89
+    goto :goto_8a
 
-    :cond_88
+    :cond_89
     move-object v7, v1
 
-    :goto_89
+    :goto_8a
     const-string v9, "familyName"
 
     invoke-virtual {v0, v9}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_96
+    if-eqz v10, :cond_97
 
     invoke-virtual {v0, v9}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    goto :goto_97
+    goto :goto_98
 
-    :cond_96
+    :cond_97
     move-object v9, v1
 
-    :goto_97
+    :goto_98
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v10
@@ -443,13 +443,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_b9
+    if-eqz v3, :cond_ba
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    :cond_b9
+    :cond_ba
     iput-object v1, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->zai:Ljava/lang/String;
 
     return-object p0
@@ -975,22 +975,20 @@
 
     move-result-object v1
     :try_end_72
-    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_72} :catch_c1
+    .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_72} :catch_c2
 
-    const/4 v2, 0x0
+    const-string v2, "serverAuthCode"
 
-    sget-object v2, Landroidx/savedstate/xT/fgyAspfzfnhI;->sDXFoSzorCCWMfh:Ljava/lang/String;
+    if-eqz v1, :cond_7d
 
-    if-eqz v1, :cond_7e
-
-    :try_start_77
+    :try_start_76
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->getServerAuthCode()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_7e
+    :cond_7d
     const-string v1, "expirationTime"
 
     iget-wide v3, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->zaj:J
@@ -1048,8 +1046,8 @@
     const-string v3, "grantedScopes"
 
     invoke-virtual {v0, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_b9
-    .catch Lorg/json/JSONException; {:try_start_77 .. :try_end_b9} :catch_c1
+    :try_end_ba
+    .catch Lorg/json/JSONException; {:try_start_76 .. :try_end_ba} :catch_c2
 
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1059,7 +1057,7 @@
 
     return-object v0
 
-    :catch_c1
+    :catch_c2
     move-exception v0
 
     new-instance v1, Ljava/lang/RuntimeException;

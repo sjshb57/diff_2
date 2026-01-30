@@ -106,7 +106,7 @@
     :goto_33
     const/4 v4, 0x1
 
-    if-eqz v2, :cond_a4
+    if-eqz v2, :cond_a6
 
     :try_start_36
     invoke-virtual {v2}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
@@ -129,7 +129,7 @@
 
     iput v4, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zaa:I
     :try_end_45
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_36 .. :try_end_45} :catch_50
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_36 .. :try_end_45} :catch_51
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_36 .. :try_end_45} :catch_46
 
     return-void
@@ -145,7 +145,7 @@
 
     return-void
 
-    :catch_50
+    :catch_51
     move-exception v3
 
     const-string v5, "notify_manager"
@@ -154,7 +154,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_74
+    if-eqz v0, :cond_76
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zak(Landroid/content/Context;)Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
@@ -182,9 +182,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zax(Lcom/google/android/gms/common/ConnectionResult;I)V
 
-    goto :goto_9e
+    goto :goto_a0
 
-    :cond_74
+    :cond_76
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -213,7 +213,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_9b
+    if-eqz v2, :cond_9d
 
     const-string v2, " This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store."
 
@@ -221,17 +221,17 @@
 
     move-result-object v0
 
-    :cond_9b
+    :cond_9d
     invoke-static {v1, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_9e
+    :goto_a0
     iput v4, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zaa:I
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
 
     return-void
 
-    :cond_a4
+    :cond_a6
     invoke-static {v3}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -359,7 +359,9 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    if-eqz p1, :cond_d
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
+
+    if-eqz p1, :cond_10
 
     const-string v0, "resolution"
 
@@ -369,16 +371,16 @@
 
     iput p1, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zaa:I
 
-    :cond_d
+    :cond_10
     iget p1, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zaa:I
 
     const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_15
+    if-eq p1, v0, :cond_18
 
     invoke-direct {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->zab()V
 
-    :cond_15
+    :cond_18
     return-void
 .end method
 

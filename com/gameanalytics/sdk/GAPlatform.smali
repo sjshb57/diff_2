@@ -936,7 +936,7 @@
 
     move-result-object v1
 
-    goto :goto_6b
+    goto :goto_6a
 
     :cond_43
     sget-object v1, Lcom/gameanalytics/sdk/GAPlatform;->appContext:Landroid/content/Context;
@@ -961,12 +961,10 @@
 
     move-result-object v1
 
-    goto :goto_6b
+    goto :goto_6a
 
     :cond_5b
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->HwytZEf:Ljava/lang/String;
+    const-string v1, "Using getFilesDir()"
 
     invoke-static {v1}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
@@ -980,7 +978,7 @@
 
     move-result-object v1
 
-    :goto_6b
+    :goto_6a
     invoke-static {v1}, Lcom/gameanalytics/sdk/GameAnalytics;->configureWritableFilePath(Ljava/lang/String;)V
 
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->isDeviceRooted()Z
@@ -1005,7 +1003,7 @@
 
     sget-boolean v2, Lcom/gameanalytics/sdk/GAPlatform;->registered:Z
 
-    if-nez v2, :cond_99
+    if-nez v2, :cond_98
 
     sget-object v2, Lcom/gameanalytics/sdk/GAPlatform;->appContext:Landroid/content/Context;
 
@@ -1019,7 +1017,7 @@
 
     sput-boolean v0, Lcom/gameanalytics/sdk/GAPlatform;->registered:Z
 
-    :cond_99
+    :cond_98
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -1052,13 +1050,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c5
+    if-eqz v0, :cond_c4
 
     sget-object v0, Lcom/gameanalytics/sdk/GAPlatform;->appContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/errorreporter/ExceptionReporter;->register(Landroid/content/Context;)Lcom/gameanalytics/sdk/errorreporter/ExceptionReporter;
 
-    :cond_c5
+    :cond_c4
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -1190,18 +1188,18 @@
     const/4 p0, 0x0
 
     :goto_15
-    if-eqz p0, :cond_32
+    if-eqz p0, :cond_33
 
     array-length v1, p0
 
-    if-lez v1, :cond_32
+    if-lez v1, :cond_33
 
     array-length v1, p0
 
     move v2, v0
 
     :goto_1c
-    if-ge v2, v1, :cond_32
+    if-ge v2, v1, :cond_33
 
     aget-object v3, p0, v2
 
@@ -1210,29 +1208,29 @@
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
-    :try_end_26
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_26} :catch_2e
+    :try_end_27
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_27} :catch_2f
 
-    if-eqz v3, :cond_2b
+    if-eqz v3, :cond_2c
 
     const/4 p0, 0x1
 
     move v0, p0
 
-    goto :goto_32
+    goto :goto_33
 
-    :cond_2b
+    :cond_2c
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1c
 
-    :catch_2e
+    :catch_2f
     move-exception p0
 
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    :cond_32
-    :goto_32
+    :cond_33
+    :goto_33
     return v0
 .end method
 

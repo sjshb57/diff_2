@@ -295,7 +295,7 @@
 
     invoke-direct {v1, v2}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_b
-    .catchall {:try_start_1 .. :try_end_b} :catchall_45
+    .catchall {:try_start_1 .. :try_end_b} :catchall_46
 
     :try_start_b
     new-instance p0, Ljava/io/BufferedReader;
@@ -308,17 +308,17 @@
 
     invoke-direct {p0, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_17
-    .catchall {:try_start_b .. :try_end_17} :catchall_40
+    .catchall {:try_start_b .. :try_end_17} :catchall_41
 
     :try_start_17
     const-string v0, ""
 
-    :goto_19
+    :goto_1a
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_2f
+    if-eqz v2, :cond_30
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -332,36 +332,36 @@
 
     move-result-object v0
 
-    goto :goto_19
+    goto :goto_1a
 
-    :cond_2f
+    :cond_30
     invoke-virtual {p0}, Ljava/io/BufferedReader;->close()V
-    :try_end_32
-    .catchall {:try_start_17 .. :try_end_32} :catchall_3e
+    :try_end_33
+    .catchall {:try_start_17 .. :try_end_33} :catchall_3f
 
-    :try_start_32
+    :try_start_33
     invoke-virtual {p0}, Ljava/io/BufferedReader;->close()V
 
     invoke-virtual {v1}, Ljava/util/zip/GZIPInputStream;->close()V
-    :try_end_38
-    .catch Ljava/io/IOException; {:try_start_32 .. :try_end_38} :catch_39
+    :try_end_39
+    .catch Ljava/io/IOException; {:try_start_33 .. :try_end_39} :catch_3a
 
-    goto :goto_3d
+    goto :goto_3e
 
-    :catch_39
+    :catch_3a
     move-exception p0
 
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    :goto_3d
+    :goto_3e
     return-object v0
 
-    :catchall_3e
+    :catchall_3f
     move-exception v0
 
-    goto :goto_49
+    goto :goto_4a
 
-    :catchall_40
+    :catchall_41
     move-exception p0
 
     move-object v4, v0
@@ -370,9 +370,9 @@
 
     move-object p0, v4
 
-    goto :goto_49
+    goto :goto_4a
 
-    :catchall_45
+    :catchall_46
     move-exception p0
 
     move-object v1, v0
@@ -381,34 +381,34 @@
 
     move-object p0, v1
 
-    :goto_49
-    if-eqz p0, :cond_51
+    :goto_4a
+    if-eqz p0, :cond_52
 
-    :try_start_4b
+    :try_start_4c
     invoke-virtual {p0}, Ljava/io/BufferedReader;->close()V
 
-    goto :goto_51
+    goto :goto_52
 
-    :catch_4f
+    :catch_50
     move-exception p0
 
-    goto :goto_57
+    goto :goto_58
 
-    :cond_51
-    :goto_51
-    if-eqz v1, :cond_5a
+    :cond_52
+    :goto_52
+    if-eqz v1, :cond_5b
 
     invoke-virtual {v1}, Ljava/util/zip/GZIPInputStream;->close()V
-    :try_end_56
-    .catch Ljava/io/IOException; {:try_start_4b .. :try_end_56} :catch_4f
+    :try_end_57
+    .catch Ljava/io/IOException; {:try_start_4c .. :try_end_57} :catch_50
 
-    goto :goto_5a
+    goto :goto_5b
 
-    :goto_57
+    :goto_58
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_5a
-    :goto_5a
+    :cond_5b
+    :goto_5b
     throw v0
 .end method
 

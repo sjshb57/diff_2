@@ -859,7 +859,7 @@
 
     const/4 v8, 0x1
 
-    if-eqz v7, :cond_96
+    if-eqz v7, :cond_97
 
     invoke-virtual {v0, v6, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
@@ -867,7 +867,7 @@
 
     iput-boolean v6, v1, Lcom/gameanalytics/sdk/state/GAState;->newInstall:Z
 
-    if-eqz v6, :cond_ad
+    if-eqz v6, :cond_ae
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -885,9 +885,9 @@
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    goto :goto_ad
+    goto :goto_ae
 
-    :cond_96
+    :cond_97
     invoke-static {v2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object v7
@@ -896,7 +896,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_a8
+    if-eqz v6, :cond_a9
 
     iput-boolean v8, v1, Lcom/gameanalytics/sdk/state/GAState;->newInstall:Z
 
@@ -904,22 +904,22 @@
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    goto :goto_ad
+    goto :goto_ae
 
-    :cond_a8
+    :cond_a9
     const-string v6, "Failed to set value for key=\'new_install\' in DB"
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    :cond_ad
-    :goto_ad
+    :cond_ae
+    :goto_ae
     const-string v6, "use_random_id"
 
     invoke-virtual {v0, v6}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_bb
+    if-eqz v7, :cond_bc
 
     invoke-virtual {v0, v6, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
@@ -927,10 +927,10 @@
 
     iput-boolean v7, v1, Lcom/gameanalytics/sdk/state/GAState;->useRandomId:Z
 
-    :cond_bb
+    :cond_bc
     iget-boolean v7, v1, Lcom/gameanalytics/sdk/state/GAState;->newInstall:Z
 
-    if-eqz v7, :cond_d6
+    if-eqz v7, :cond_d8
 
     invoke-static {v8}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
@@ -940,7 +940,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_d1
+    if-eqz v6, :cond_d2
 
     iput-boolean v8, v1, Lcom/gameanalytics/sdk/state/GAState;->useRandomId:Z
 
@@ -948,24 +948,24 @@
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    goto :goto_d6
+    goto :goto_d8
 
-    :cond_d1
+    :cond_d2
     const-string v6, "Failed to set value for key=\'use_random_id\' in DB"
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    :cond_d6
-    :goto_d6
+    :cond_d8
+    :goto_d8
     iget-boolean v6, v1, Lcom/gameanalytics/sdk/state/GAState;->useRandomId:Z
 
-    if-eqz v6, :cond_df
+    if-eqz v6, :cond_e1
 
     const-string v6, "Using random generated id as user_id"
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    :cond_df
+    :cond_e1
     iget-object v6, v1, Lcom/gameanalytics/sdk/state/GAState;->currentCustomDimension01:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -976,15 +976,15 @@
 
     const-string v8, ""
 
-    if-nez v6, :cond_f1
+    if-nez v6, :cond_f3
 
     iget-object v6, v1, Lcom/gameanalytics/sdk/state/GAState;->currentCustomDimension01:Ljava/lang/String;
 
     invoke-static {v7, v6}, Lcom/gameanalytics/sdk/store/GAStore;->setState(Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_110
+    goto :goto_112
 
-    :cond_f1
+    :cond_f3
     invoke-virtual {v0, v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -995,7 +995,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_110
+    if-eqz v6, :cond_112
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1013,8 +1013,8 @@
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    :cond_110
-    :goto_110
+    :cond_112
+    :goto_112
     iget-object v6, v1, Lcom/gameanalytics/sdk/state/GAState;->currentCustomDimension02:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1023,15 +1023,15 @@
 
     const-string v7, "dimension02"
 
-    if-nez v6, :cond_120
+    if-nez v6, :cond_122
 
     iget-object v6, v1, Lcom/gameanalytics/sdk/state/GAState;->currentCustomDimension02:Ljava/lang/String;
 
     invoke-static {v7, v6}, Lcom/gameanalytics/sdk/store/GAStore;->setState(Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_13f
+    goto :goto_142
 
-    :cond_120
+    :cond_122
     invoke-virtual {v0, v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -1042,7 +1042,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_13f
+    if-eqz v6, :cond_142
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1060,8 +1060,8 @@
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    :cond_13f
-    :goto_13f
+    :cond_142
+    :goto_142
     iget-object v6, v1, Lcom/gameanalytics/sdk/state/GAState;->currentCustomDimension03:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1070,15 +1070,15 @@
 
     const-string v7, "dimension03"
 
-    if-nez v6, :cond_14f
+    if-nez v6, :cond_152
 
     iget-object v6, v1, Lcom/gameanalytics/sdk/state/GAState;->currentCustomDimension03:Ljava/lang/String;
 
     invoke-static {v7, v6}, Lcom/gameanalytics/sdk/store/GAStore;->setState(Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_16e
+    goto :goto_171
 
-    :cond_14f
+    :cond_152
     invoke-virtual {v0, v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -1089,7 +1089,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_16e
+    if-eqz v6, :cond_171
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1107,8 +1107,8 @@
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
-    :cond_16e
-    :goto_16e
+    :cond_171
+    :goto_171
     const-string v6, "sdk_config_cached"
 
     invoke-virtual {v0, v6, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1121,7 +1121,7 @@
 
     const-string v7, "configs_hash"
 
-    if-eqz v6, :cond_19e
+    if-eqz v6, :cond_1a1
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/utilities/GAUtilities;->dictionary(Ljava/lang/String;)Lorg/json/JSONObject;
 
@@ -1131,7 +1131,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_19e
+    if-eqz v6, :cond_1a1
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getLastUsedIdentifier()Ljava/lang/String;
 
@@ -1145,7 +1145,7 @@
 
     move-result v6
 
-    if-nez v6, :cond_19c
+    if-nez v6, :cond_19f
 
     const-string v6, "New identifier spotted compared to last one used, clearing cached configs hash!!"
 
@@ -1153,10 +1153,10 @@
 
     invoke-virtual {v0, v7}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
 
-    :cond_19c
+    :cond_19f
     iput-object v0, v1, Lcom/gameanalytics/sdk/state/GAState;->sdkConfigCached:Lorg/json/JSONObject;
 
-    :cond_19e
+    :cond_1a1
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getInstance()Lcom/gameanalytics/sdk/state/GAState;
 
     move-result-object v0
@@ -1207,7 +1207,7 @@
 
     iput-object v6, v0, Lcom/gameanalytics/sdk/state/GAState;->abVariantId:Ljava/lang/String;
 
-    if-eqz v3, :cond_1f3
+    if-eqz v3, :cond_1f6
 
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1219,49 +1219,49 @@
 
     move-result v3
 
-    if-nez v3, :cond_1e3
+    if-nez v3, :cond_1e6
 
     iget-object v3, v1, Lcom/gameanalytics/sdk/state/GAState;->abId:Ljava/lang/String;
 
     invoke-interface {v0, v5, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    :cond_1e3
+    :cond_1e6
     iget-object v3, v1, Lcom/gameanalytics/sdk/state/GAState;->abVariantId:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
-    if-nez v3, :cond_1f0
+    if-nez v3, :cond_1f3
 
     iget-object v3, v1, Lcom/gameanalytics/sdk/state/GAState;->abVariantId:Ljava/lang/String;
 
     invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    :cond_1f0
+    :cond_1f3
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    :cond_1f3
+    :cond_1f6
     const-string v0, "SELECT * FROM ga_progression;"
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
 
-    if-eqz v0, :cond_223
+    if-eqz v0, :cond_226
 
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
-    if-eqz v3, :cond_223
+    if-eqz v3, :cond_226
 
-    :goto_201
+    :goto_204
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
-    if-ge v2, v3, :cond_223
+    if-ge v2, v3, :cond_226
 
     invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -1289,9 +1289,9 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_201
+    goto :goto_204
 
-    :cond_223
+    :cond_226
     return-void
 .end method
 
@@ -1742,13 +1742,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_15d
+    if-eqz v2, :cond_15e
 
     const-string v2, "connection_type"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_15d
+    :cond_15e
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getBundleIdentifier()Ljava/lang/String;
 
     move-result-object v1
@@ -1757,13 +1757,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_16c
+    if-eqz v2, :cond_16d
 
     const-string v2, "android_bundle_id"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_16c
+    :cond_16d
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getAppVersion()Ljava/lang/String;
 
     move-result-object v1
@@ -1772,13 +1772,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_17b
+    if-eqz v2, :cond_17d
 
     const-string v2, "android_app_version"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_17b
+    :cond_17d
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getAppBuild()I
 
     move-result v1
@@ -1791,7 +1791,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_192
+    if-eqz v2, :cond_194
 
     const-string v2, "android_app_build"
 
@@ -1801,7 +1801,7 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_192
+    :cond_194
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getAppSignature()Ljava/lang/String;
 
     move-result-object v1
@@ -1810,13 +1810,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1a1
+    if-eqz v2, :cond_1a3
 
     const-string v2, "android_app_signature"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_1a1
+    :cond_1a3
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getChannelId()Ljava/lang/String;
 
     move-result-object v1
@@ -1825,13 +1825,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1b0
+    if-eqz v2, :cond_1b3
 
     const-string v2, "android_channel_id"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_1b0
+    :cond_1b3
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getGameEngineVersion()Ljava/lang/String;
 
     move-result-object v1
@@ -1840,7 +1840,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1c3
+    if-eqz v1, :cond_1c7
 
     const-string v1, "engine_version"
 
@@ -1850,7 +1850,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_1c3
+    :cond_1c7
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getExternalUserId()Ljava/lang/String;
 
     move-result-object v1
@@ -1859,7 +1859,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_1d6
+    if-nez v1, :cond_1da
 
     const-string v1, "user_id_ext"
 
@@ -1869,31 +1869,31 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_1d6
+    :cond_1da
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getIsHacked()Z
 
     move-result v1
 
     const/4 v2, 0x1
 
-    if-eqz v1, :cond_1e2
+    if-eqz v1, :cond_1e6
 
     const-string v1, "jailbroken"
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    :cond_1e2
+    :cond_1e6
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getIsLimitedAdTracking()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1ed
+    if-eqz v1, :cond_1f1
 
     const-string v1, "limited_ad_tracking"
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    :cond_1ed
+    :cond_1f1
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getBuild()Ljava/lang/String;
 
     move-result-object v1
@@ -1902,7 +1902,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_200
+    if-eqz v1, :cond_204
 
     const-string v1, "build"
 
@@ -1912,7 +1912,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_200
+    :cond_204
     return-object v0
 .end method
 
@@ -2078,27 +2078,27 @@
 
     const-string v6, "ga_random_user_id"
 
-    if-nez v2, :cond_83
+    if-nez v2, :cond_84
 
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getIsLimitedAdTracking()Z
 
     move-result v2
 
-    if-nez v2, :cond_83
+    if-nez v2, :cond_84
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-nez v2, :cond_b0
+    if-nez v2, :cond_b1
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/utilities/GAUtilities;->isZeroId(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b0
+    if-eqz v0, :cond_b1
 
-    :cond_83
+    :cond_84
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2107,7 +2107,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_b0
+    if-eqz v0, :cond_b1
 
     invoke-static {v3}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
@@ -2119,7 +2119,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_ac
+    if-eqz v2, :cond_ad
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -2137,12 +2137,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    :cond_ac
+    :cond_ad
     invoke-static {v1}, Lcom/gameanalytics/sdk/state/GAState;->updateLastUsedIdentifier(Ljava/lang/String;)V
 
     return-object v1
 
-    :cond_b0
+    :cond_b1
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2151,7 +2151,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_dd
+    if-eqz v0, :cond_de
 
     invoke-static {v3}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
@@ -2163,7 +2163,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_d9
+    if-eqz v2, :cond_da
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -2181,12 +2181,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    :cond_d9
+    :cond_da
     invoke-static {v1}, Lcom/gameanalytics/sdk/state/GAState;->updateLastUsedIdentifier(Ljava/lang/String;)V
 
     return-object v1
 
-    :cond_dd
+    :cond_de
     const-string v0, "00000000-0000-0000-0000-000000000000"
 
     return-object v0
@@ -2651,9 +2651,7 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->IErBMn:Ljava/lang/String;
+    const-string v1, "category"
 
     const-string v2, "sdk_error"
 
@@ -2695,9 +2693,7 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->lWaVLHsbFzAXj:Ljava/lang/String;
+    const-string v1, "manufacturer"
 
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getDeviceManufacturer()Ljava/lang/String;
 
@@ -2729,7 +2725,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7f
+    if-eqz v1, :cond_7e
 
     const-string v1, "engine_version"
 
@@ -2739,12 +2735,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_7f
+    :cond_7e
     invoke-static {}, Lcom/gameanalytics/sdk/device/GADevice;->getIsHacked()Z
 
     move-result v1
 
-    if-eqz v1, :cond_8b
+    if-eqz v1, :cond_8a
 
     const-string v1, "jailbroken"
 
@@ -2752,7 +2748,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    :cond_8b
+    :cond_8a
     return-object v0
 .end method
 
@@ -3637,20 +3633,20 @@
 
     iput-boolean p0, v0, Lcom/gameanalytics/sdk/state/GAState;->autoDetectAppVersion:Z
 
-    if-eqz p0, :cond_e
+    if-eqz p0, :cond_f
 
     const-string p0, "Enabled auto detect app version for build field"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
-    goto :goto_13
+    goto :goto_14
 
-    :cond_e
+    :cond_f
     const-string p0, "Disabled auto detect app version for build field"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
 
-    :goto_13
+    :goto_14
     return-void
 .end method
 
@@ -5042,13 +5038,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3b
+    if-eqz v0, :cond_3a
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3b
+    if-nez v1, :cond_3a
 
     invoke-static {}, Lcom/gameanalytics/sdk/state/GAState;->getLastUsedIdentifier()Ljava/lang/String;
 
@@ -5058,13 +5054,11 @@
 
     move-result v1
 
-    if-nez v1, :cond_3b
+    if-nez v1, :cond_3a
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->NjMpOyeGZU:Ljava/lang/String;
+    const-string v2, "updateLastUsedIdentifier: newId="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -5086,7 +5080,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    :cond_3b
+    :cond_3a
     return-void
 .end method
 

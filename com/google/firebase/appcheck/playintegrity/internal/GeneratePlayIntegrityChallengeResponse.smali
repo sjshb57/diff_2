@@ -45,9 +45,7 @@
 
     invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/savedstate/xT/fgyAspfzfnhI;->kMGpYOZARBpIIQ:Ljava/lang/String;
+    const-string p0, "challenge"
 
     invoke-virtual {v0, p0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -67,9 +65,9 @@
 
     move-result-object v0
 
-    if-eqz p0, :cond_24
+    if-eqz p0, :cond_23
 
-    if-eqz v0, :cond_24
+    if-eqz v0, :cond_23
 
     new-instance v1, Lcom/google/firebase/appcheck/playintegrity/internal/GeneratePlayIntegrityChallengeResponse;
 
@@ -77,7 +75,7 @@
 
     return-object v1
 
-    :cond_24
+    :cond_23
     new-instance p0, Lcom/google/firebase/FirebaseException;
 
     const-string v0, "Unexpected server response."

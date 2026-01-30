@@ -201,9 +201,7 @@
 .method public getErrorDialog(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
     .registers 12
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/common/html/ehW/oZEOPkNlS;->bPKSxTmarPBBQ:Ljava/lang/String;
+    const-string v0, "d"
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/gms/common/GoogleApiAvailability;->getErrorResolutionIntent(Landroid/content/Context;ILjava/lang/String;)Landroid/content/Intent;
 

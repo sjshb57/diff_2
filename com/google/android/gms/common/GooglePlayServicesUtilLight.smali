@@ -220,9 +220,7 @@
     return p0
 
     :catch_e
-    const/4 p0, 0x0
-
-    sget-object p0, Lkotlin/EDDN/hfnXJuYOaqC;->aENLFAIVc:Ljava/lang/String;
+    const-string p0, "GooglePlayServicesUtil"
 
     const-string v1, "Google Play services is missing."
 

@@ -34,9 +34,7 @@
 
     new-instance v0, Lcom/google/common/graph/GraphConstants$Presence;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->DOBMjIaeFx:Ljava/lang/String;
+    const-string v1, "EDGE_EXISTS"
 
     const/4 v2, 0x0
 

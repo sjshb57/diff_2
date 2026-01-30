@@ -195,9 +195,7 @@
 .method public getHiResImageUrl()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/common/html/ehW/oZEOPkNlS;->HJVrzT:Ljava/lang/String;
+    const-string v0, "game_hi_res_image_url"
 
     invoke-virtual {p0, v0}, Lcom/google/android/gms/games/GameRef;->getString(Ljava/lang/String;)Ljava/lang/String;
 

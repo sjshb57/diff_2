@@ -79,7 +79,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_29
+    if-nez v1, :cond_2a
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -105,10 +105,10 @@
 
     iput-object v1, v2, Lcom/gameanalytics/sdk/store/GAStore;->dbPath:Ljava/lang/String;
 
-    :cond_29
+    :cond_2a
     const/4 v1, 0x0
 
-    :try_start_2a
+    :try_start_2b
     invoke-static {}, Lcom/gameanalytics/sdk/store/GAStore;->getInstance()Lcom/gameanalytics/sdk/store/GAStore;
 
     move-result-object v2
@@ -152,8 +152,8 @@
     move-result-object v0
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/logging/GALogger;->i(Ljava/lang/String;)V
-    :try_end_57
-    .catch Ljava/lang/Exception; {:try_start_2a .. :try_end_57} :catch_11b
+    :try_end_58
+    .catch Ljava/lang/Exception; {:try_start_2b .. :try_end_58} :catch_11c
 
     const-string v0, "DROP TABLE ga_progression"
 
@@ -163,7 +163,7 @@
 
     const-string v5, "DROP TABLE ga_events"
 
-    if-eqz p0, :cond_77
+    if-eqz p0, :cond_78
 
     const-string p0, "Drop tables"
 
@@ -181,25 +181,25 @@
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    :cond_77
+    :cond_78
     const-string p0, "CREATE TABLE IF NOT EXISTS ga_events(status CHAR(50) NOT NULL, category CHAR(50) NOT NULL, session_id CHAR(50) NOT NULL, client_ts CHAR(50) NOT NULL, event TEXT NOT NULL);"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v6
 
-    if-nez v6, :cond_80
+    if-nez v6, :cond_81
 
     return v1
 
-    :cond_80
+    :cond_81
     const-string v6, "SELECT status FROM ga_events LIMIT 0,1"
 
     invoke-static {v6}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v6
 
-    if-nez v6, :cond_9c
+    if-nez v6, :cond_9d
 
     const-string v6, "ga_events corrupt, recreating."
 
@@ -211,7 +211,7 @@
 
     move-result-object p0
 
-    if-nez p0, :cond_9c
+    if-nez p0, :cond_9d
 
     const-string p0, "ga_events corrupt, could not recreate it."
 
@@ -219,25 +219,25 @@
 
     return v1
 
-    :cond_9c
+    :cond_9d
     const-string p0, "CREATE TABLE IF NOT EXISTS ga_session(session_id CHAR(50) PRIMARY KEY NOT NULL, timestamp CHAR(50) NOT NULL, event TEXT NOT NULL);"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v5
 
-    if-nez v5, :cond_a5
+    if-nez v5, :cond_a6
 
     return v1
 
-    :cond_a5
+    :cond_a6
     const-string v5, "SELECT session_id FROM ga_session LIMIT 0,1"
 
     invoke-static {v5}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v5
 
-    if-nez v5, :cond_c1
+    if-nez v5, :cond_c2
 
     const-string v5, "ga_session corrupt, recreating."
 
@@ -249,7 +249,7 @@
 
     move-result-object p0
 
-    if-nez p0, :cond_c1
+    if-nez p0, :cond_c2
 
     const-string p0, "ga_session corrupt, could not recreate it."
 
@@ -257,18 +257,18 @@
 
     return v1
 
-    :cond_c1
+    :cond_c2
     const-string p0, "CREATE TABLE IF NOT EXISTS ga_state(key CHAR(255) PRIMARY KEY NOT NULL, value TEXT);"
 
     invoke-static {p0}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
-    if-nez v2, :cond_ca
+    if-nez v2, :cond_cb
 
     return v1
 
-    :cond_ca
+    :cond_cb
     const-string v2, "SELECT key FROM ga_state LIMIT 0,1"
 
     invoke-static {v2}, Lcom/gameanalytics/sdk/store/GAStore;->executeQuerySync(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -277,9 +277,7 @@
 
     if-nez v2, :cond_e7
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->pCV:Ljava/lang/String;
+    const-string v2, "ga_state corrupt, recreating."
 
     invoke-static {v2}, Lcom/gameanalytics/sdk/logging/GALogger;->d(Ljava/lang/String;)V
 
@@ -315,7 +313,7 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_10c
+    if-nez v2, :cond_10d
 
     const-string v2, "ga_progression corrupt, recreating."
 
@@ -327,7 +325,7 @@
 
     move-result-object p0
 
-    if-nez p0, :cond_10c
+    if-nez p0, :cond_10d
 
     const-string p0, "ga_progression corrupt, could not recreate it."
 
@@ -335,7 +333,7 @@
 
     return v1
 
-    :cond_10c
+    :cond_10d
     invoke-static {}, Lcom/gameanalytics/sdk/store/GAStore;->trimEventTable()Z
 
     invoke-static {}, Lcom/gameanalytics/sdk/store/GAStore;->getInstance()Lcom/gameanalytics/sdk/store/GAStore;
@@ -350,7 +348,7 @@
 
     return v3
 
-    :catch_11b
+    :catch_11c
     move-exception p0
 
     invoke-static {}, Lcom/gameanalytics/sdk/store/GAStore;->getInstance()Lcom/gameanalytics/sdk/store/GAStore;
@@ -361,9 +359,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lkotlin/EDDN/hfnXJuYOaqC;->XpYWLzjhww:Ljava/lang/String;
+    const-string v2, "Could not open database: "
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -529,7 +525,7 @@
 
     const/4 v4, 0x0
 
-    if-eqz v1, :cond_4d
+    if-eqz v1, :cond_4e
 
     :try_start_24
     const-string v5, "BEGIN;"
@@ -538,7 +534,7 @@
     :try_end_29
     .catch Ljava/lang/Exception; {:try_start_24 .. :try_end_29} :catch_2a
 
-    goto :goto_4d
+    goto :goto_4e
 
     :catch_2a
     move-exception v0
@@ -575,14 +571,14 @@
 
     return-object v4
 
-    :cond_4d
-    :goto_4d
-    :try_start_4d
+    :cond_4e
+    :goto_4e
+    :try_start_4e
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v5
 
-    if-nez v5, :cond_66
+    if-nez v5, :cond_67
 
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
@@ -602,29 +598,29 @@
 
     move-result-object v0
 
-    goto :goto_6a
+    goto :goto_6b
 
-    :cond_66
+    :cond_67
     invoke-virtual {v2, v0, v4}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
-    :try_end_6a
-    .catch Ljava/lang/Exception; {:try_start_4d .. :try_end_6a} :catch_bd
+    :try_end_6b
+    .catch Ljava/lang/Exception; {:try_start_4e .. :try_end_6b} :catch_be
 
-    :goto_6a
+    :goto_6b
     move-object v11, v0
 
-    :try_start_6b
+    :try_start_6c
     invoke-interface {v11}, Landroid/database/Cursor;->getColumnCount()I
 
     move-result v12
 
-    :goto_6f
+    :goto_70
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e1
+    if-eqz v0, :cond_e2
 
     new-instance v13, Lorg/json/JSONObject;
 
@@ -634,21 +630,21 @@
 
     move v14, v0
 
-    :goto_7c
-    if-ge v14, v12, :cond_b7
+    :goto_7d
+    if-ge v14, v12, :cond_b8
 
     invoke-interface {v11, v14}, Landroid/database/Cursor;->getColumnName(I)Ljava/lang/String;
 
     move-result-object v10
-    :try_end_82
-    .catch Ljava/lang/Exception; {:try_start_6b .. :try_end_82} :catch_bb
+    :try_end_83
+    .catch Ljava/lang/Exception; {:try_start_6c .. :try_end_83} :catch_bc
 
-    if-nez v10, :cond_85
+    if-nez v10, :cond_86
 
-    goto :goto_b4
+    goto :goto_b5
 
-    :cond_85
-    :try_start_85
+    :cond_86
+    :try_start_86
     move-object v0, v11
 
     check-cast v0, Landroid/database/sqlite/SQLiteCursor;
@@ -668,15 +664,15 @@
     move-object v9, v13
 
     invoke-static/range {v5 .. v10}, Lcom/gameanalytics/sdk/store/GAStore;->setColumn(Landroid/database/Cursor;Landroid/database/CursorWindow;IILorg/json/JSONObject;Ljava/lang/String;)V
-    :try_end_96
-    .catch Ljava/lang/Exception; {:try_start_85 .. :try_end_96} :catch_97
+    :try_end_97
+    .catch Ljava/lang/Exception; {:try_start_86 .. :try_end_97} :catch_98
 
-    goto :goto_b4
+    goto :goto_b5
 
-    :catch_97
+    :catch_98
     move-exception v0
 
-    :try_start_98
+    :try_start_99
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     invoke-static {}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->getInstance()Lcom/gameanalytics/sdk/http/GAHTTPApi;
@@ -703,29 +699,29 @@
 
     invoke-virtual/range {v15 .. v21}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_b4
+    :goto_b5
     add-int/lit8 v14, v14, 0x1
 
-    goto :goto_7c
+    goto :goto_7d
 
-    :cond_b7
+    :cond_b8
     invoke-virtual {v3, v13}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-    :try_end_ba
-    .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_ba} :catch_bb
+    :try_end_bb
+    .catch Ljava/lang/Exception; {:try_start_99 .. :try_end_bb} :catch_bc
 
-    goto :goto_6f
+    goto :goto_70
 
-    :catch_bb
+    :catch_bc
     move-exception v0
 
-    goto :goto_bf
+    goto :goto_c0
 
-    :catch_bd
+    :catch_be
     move-exception v0
 
     move-object v11, v4
 
-    :goto_bf
+    :goto_c0
     const-string v3, "SQLITE3 PREPARE ERROR: "
 
     invoke-static {v3}, Lcom/gameanalytics/sdk/logging/GALogger;->e(Ljava/lang/String;)V
@@ -758,27 +754,27 @@
 
     move-object v3, v4
 
-    :cond_e1
-    :try_start_e1
+    :cond_e2
+    :try_start_e2
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
-    :try_end_e4
-    .catch Ljava/lang/Exception; {:try_start_e1 .. :try_end_e4} :catch_111
+    :try_end_e5
+    .catch Ljava/lang/Exception; {:try_start_e2 .. :try_end_e5} :catch_112
 
-    if-eqz v1, :cond_10f
+    if-eqz v1, :cond_110
 
-    :try_start_e6
+    :try_start_e7
     const-string v0, "COMMIT"
 
     invoke-virtual {v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-    :try_end_eb
-    .catch Ljava/lang/Exception; {:try_start_e6 .. :try_end_eb} :catch_ec
+    :try_end_ec
+    .catch Ljava/lang/Exception; {:try_start_e7 .. :try_end_ec} :catch_ed
 
-    goto :goto_10f
+    goto :goto_110
 
-    :catch_ec
+    :catch_ed
     move-exception v0
 
-    :try_start_ed
+    :try_start_ee
     const-string v3, "SQLITE3 COMMIT ERROR: "
 
     invoke-static {v3}, Lcom/gameanalytics/sdk/logging/GALogger;->e(Ljava/lang/String;)V
@@ -808,18 +804,18 @@
     move-result-object v11
 
     invoke-virtual/range {v5 .. v11}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_10e
-    .catch Ljava/lang/Exception; {:try_start_ed .. :try_end_10e} :catch_111
+    :try_end_10f
+    .catch Ljava/lang/Exception; {:try_start_ee .. :try_end_10f} :catch_112
 
-    goto :goto_15d
+    goto :goto_15e
 
-    :cond_10f
-    :goto_10f
+    :cond_110
+    :goto_110
     move-object v4, v3
 
-    goto :goto_15d
+    goto :goto_15e
 
-    :catch_111
+    :catch_112
     move-exception v0
 
     const-string v3, "SQLITE3 FINALIZE ERROR: "
@@ -852,18 +848,18 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_15d
+    if-eqz v1, :cond_15e
 
-    :try_start_135
+    :try_start_136
     const-string v0, "ROLLBACK"
 
     invoke-virtual {v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-    :try_end_13a
-    .catch Ljava/lang/Exception; {:try_start_135 .. :try_end_13a} :catch_13b
+    :try_end_13b
+    .catch Ljava/lang/Exception; {:try_start_136 .. :try_end_13b} :catch_13c
 
-    goto :goto_15d
+    goto :goto_15e
 
-    :catch_13b
+    :catch_13c
     move-exception v0
 
     const-string v1, "SQLITE3 ROLLBACK ERROR: "
@@ -896,8 +892,8 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/gameanalytics/sdk/http/GAHTTPApi;->sendSdkErrorEvent(Lcom/gameanalytics/sdk/events/EGASdkErrorCategory;Lcom/gameanalytics/sdk/events/EGASdkErrorArea;Lcom/gameanalytics/sdk/events/EGASdkErrorAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_15d
-    :goto_15d
+    :cond_15e
+    :goto_15e
     return-object v4
 .end method
 

@@ -191,27 +191,25 @@
         }
     .end annotation
 
-    if-eqz p0, :cond_e
+    if-eqz p0, :cond_d
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/collections/zgTb/JhPPV;->nKMDFuzFyfJiCf:Ljava/lang/String;
+    const-string v0, "^[0-9]{0,5}(\\.[0-9]{0,5}){0,3}$"
 
     invoke-static {p0, v0}, Lcom/gameanalytics/sdk/utilities/GAUtilities;->stringMatch(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
-    if-nez p0, :cond_c
+    if-nez p0, :cond_b
 
-    goto :goto_e
+    goto :goto_d
 
-    :cond_c
+    :cond_b
     const/4 p0, 0x1
 
     return p0
 
-    :cond_e
-    :goto_e
+    :cond_d
+    :goto_d
     const/4 p0, 0x0
 
     return p0
@@ -304,9 +302,7 @@
 
     move-result-object p0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/print/nh/SlomKQFs;->YgNSrUxw:Ljava/lang/String;
+    const-string v1, "GameAnalytics"
 
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1424,7 +1420,7 @@
 
     move-result p0
 
-    if-nez p0, :cond_21
+    if-nez p0, :cond_20
 
     const-string p0, "Validation fail - error event - severity: Severity was unsupported value."
 
@@ -1440,9 +1436,7 @@
 
     sget-object v4, Lcom/gameanalytics/sdk/events/EGASdkErrorParameter;->Severity:Lcom/gameanalytics/sdk/events/EGASdkErrorParameter;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/core/content/Whm/HgKojeDw;->UnKSsi:Ljava/lang/String;
+    const-string v5, ""
 
     move-object v0, p0
 
@@ -1450,14 +1444,14 @@
 
     return-object p0
 
-    :cond_21
+    :cond_20
     const/4 p0, 0x1
 
     invoke-static {p1, p0}, Lcom/gameanalytics/sdk/validators/GAValidator;->validateLongString(Ljava/lang/String;Z)Z
 
     move-result p0
 
-    if-nez p0, :cond_3d
+    if-nez p0, :cond_3c
 
     const-string p0, "Validation fail - error event - message: Message cannot be above 8192 characters."
 
@@ -1481,7 +1475,7 @@
 
     return-object p0
 
-    :cond_3d
+    :cond_3c
     const/4 p0, 0x0
 
     return-object p0
@@ -2207,7 +2201,7 @@
 
     move-result p0
 
-    if-nez p0, :cond_119
+    if-nez p0, :cond_11a
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2241,20 +2235,20 @@
 
     return-object p0
 
-    :cond_119
+    :cond_11a
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
     const/4 p1, 0x1
 
-    if-nez p0, :cond_16e
+    if-nez p0, :cond_16f
 
     invoke-static {p2, p1}, Lcom/gameanalytics/sdk/validators/GAValidator;->validateEventPartLength(Ljava/lang/String;Z)Z
 
     move-result p0
 
-    if-nez p0, :cond_147
+    if-nez p0, :cond_148
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2288,12 +2282,12 @@
 
     return-object p0
 
-    :cond_147
+    :cond_148
     invoke-static {p2}, Lcom/gameanalytics/sdk/validators/GAValidator;->validateEventPartCharacters(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-nez p0, :cond_16e
+    if-nez p0, :cond_16f
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2327,18 +2321,18 @@
 
     return-object p0
 
-    :cond_16e
+    :cond_16f
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
-    if-nez p0, :cond_1c2
+    if-nez p0, :cond_1c3
 
     invoke-static {p3, p1}, Lcom/gameanalytics/sdk/validators/GAValidator;->validateEventPartLength(Ljava/lang/String;Z)Z
 
     move-result p0
 
-    if-nez p0, :cond_19b
+    if-nez p0, :cond_19c
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2372,12 +2366,12 @@
 
     return-object p0
 
-    :cond_19b
+    :cond_19c
     invoke-static {p3}, Lcom/gameanalytics/sdk/validators/GAValidator;->validateEventPartCharacters(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-nez p0, :cond_1c2
+    if-nez p0, :cond_1c3
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2411,7 +2405,7 @@
 
     return-object p0
 
-    :cond_1c2
+    :cond_1c3
     const/4 p0, 0x0
 
     return-object p0

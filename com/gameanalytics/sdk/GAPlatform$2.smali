@@ -115,13 +115,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_54
+    if-eqz v0, :cond_56
 
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->access$600()Z
 
     move-result v0
 
-    if-eqz v0, :cond_42
+    if-eqz v0, :cond_44
 
     invoke-static {}, Lcom/gameanalytics/sdk/GAPlatform;->access$700()Landroid/content/Context;
 
@@ -135,7 +135,7 @@
 
     invoke-static {v0}, Lcom/gameanalytics/sdk/GAPlatform;->access$602(Z)Z
 
-    :cond_42
+    :cond_44
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -150,7 +150,7 @@
 
     invoke-static {p1}, Lcom/gameanalytics/sdk/GAPlatform;->access$400(Landroid/app/Activity;)V
 
-    :cond_54
+    :cond_56
     return-void
 .end method
 
@@ -175,9 +175,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/savedstate/xT/fgyAspfzfnhI;->ZPMvrbxYxheU:Ljava/lang/String;
+    const-string v1, "onActivityPaused: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -362,10 +360,10 @@
 
     move-result v0
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_3f
 
     invoke-static {p1}, Lcom/gameanalytics/sdk/GAPlatform;->access$400(Landroid/app/Activity;)V
 
-    :cond_3e
+    :cond_3f
     return-void
 .end method

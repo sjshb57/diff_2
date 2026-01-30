@@ -41,7 +41,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v2, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->imbYrfFG:Ljava/lang/String;
+    sget-object v2, Landroidx/arch/core/internal/nl/WfPiHVumXD;->wXsesEHZhLmbEG:Ljava/lang/String;
 
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 

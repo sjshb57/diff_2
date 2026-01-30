@@ -138,9 +138,9 @@
     invoke-interface {p1, p6, p6}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     :cond_2d
-    if-eqz p2, :cond_54
+    if-eqz p2, :cond_55
 
-    if-eqz p5, :cond_54
+    if-eqz p5, :cond_55
 
     invoke-interface {p1, p3, p6}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
@@ -164,35 +164,35 @@
 
     invoke-static {v0, v1, p3, p6}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    if-nez p1, :cond_54
+    if-nez p1, :cond_55
 
     sget-object p1, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
-    if-eq p4, p1, :cond_49
+    if-eq p4, p1, :cond_4a
 
     move p1, p2
 
-    goto :goto_4a
+    goto :goto_4b
 
-    :cond_49
+    :cond_4a
     move p1, p5
 
-    :goto_4a
+    :goto_4b
     sget-object p3, Lcom/google/common/collect/BoundType;->OPEN:Lcom/google/common/collect/BoundType;
 
-    if-eq p7, p3, :cond_4f
+    if-eq p7, p3, :cond_50
 
-    goto :goto_50
+    goto :goto_51
 
-    :cond_4f
+    :cond_50
     move p2, p5
 
-    :goto_50
+    :goto_51
     or-int/2addr p1, p2
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
-    :cond_54
+    :cond_55
     return-void
 .end method
 
