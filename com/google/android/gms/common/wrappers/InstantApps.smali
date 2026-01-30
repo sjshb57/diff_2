@@ -47,7 +47,7 @@
 
     move-result p0
     :try_end_16
-    .catchall {:try_start_3 .. :try_end_16} :catchall_53
+    .catchall {:try_start_3 .. :try_end_16} :catchall_52
 
     monitor-exit v0
 
@@ -80,9 +80,9 @@
 
     sput-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
     :try_end_2f
-    .catchall {:try_start_19 .. :try_end_2f} :catchall_53
+    .catchall {:try_start_19 .. :try_end_2f} :catchall_52
 
-    goto :goto_49
+    goto :goto_48
 
     :cond_30
     :try_start_30
@@ -90,9 +90,7 @@
 
     move-result-object p0
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->jRLYrgtzf:Ljava/lang/String;
+    const-string v2, "com.google.android.instantapps.supervisor.InstantAppsRuntime"
 
     invoke-virtual {p0, v2}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -103,23 +101,23 @@
     move-result-object p0
 
     sput-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
-    :try_end_41
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_30 .. :try_end_41} :catch_42
-    .catchall {:try_start_30 .. :try_end_41} :catchall_53
+    :try_end_40
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_30 .. :try_end_40} :catch_41
+    .catchall {:try_start_30 .. :try_end_40} :catchall_52
 
-    goto :goto_49
+    goto :goto_48
 
-    :catch_42
+    :catch_41
     const/4 p0, 0x0
 
-    :try_start_43
+    :try_start_42
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
     sput-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
 
-    :goto_49
+    :goto_48
     sput-object v1, Lcom/google/android/gms/common/wrappers/InstantApps;->zza:Landroid/content/Context;
 
     sget-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
@@ -127,14 +125,14 @@
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
-    :try_end_51
-    .catchall {:try_start_43 .. :try_end_51} :catchall_53
+    :try_end_50
+    .catchall {:try_start_42 .. :try_end_50} :catchall_52
 
     monitor-exit v0
 
     return p0
 
-    :catchall_53
+    :catchall_52
     move-exception p0
 
     monitor-exit v0

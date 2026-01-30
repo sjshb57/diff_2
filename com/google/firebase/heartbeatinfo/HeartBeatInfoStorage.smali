@@ -84,9 +84,7 @@
 
     move-result-wide v0
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/core/content/Whm/HgKojeDw;->QKrfuwKl:Ljava/lang/String;
+    const-string v2, ""
 
     iget-object v3, p0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfoStorage;->firebaseSharedPreferences:Landroid/content/SharedPreferences;
 
@@ -628,27 +626,25 @@
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    goto :goto_65
+    goto :goto_64
 
     :cond_5e
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->UwCUTvkWdLnhY:Ljava/lang/String;
+    const-string v1, "fire-count"
 
     int-to-long v2, v2
 
     invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    :goto_65
+    :goto_64
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-    :try_end_68
-    .catchall {:try_start_1 .. :try_end_68} :catchall_6a
+    :try_end_67
+    .catchall {:try_start_1 .. :try_end_67} :catchall_69
 
     monitor-exit p0
 
     return-void
 
-    :catchall_6a
+    :catchall_69
     move-exception v0
 
     monitor-exit p0

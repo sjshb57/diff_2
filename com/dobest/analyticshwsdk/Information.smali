@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v1, Lcom/google/api/client/util/Uhr/zXgie;->jXiGHPnxTBx:Ljava/lang/String;
+    sget-object v1, Lcom/fasterxml/jackson/core/base/zv/knDAArvm;->NLwunPJInNwd:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -230,9 +230,7 @@
 
     iget-object v0, p0, Lcom/dobest/analyticshwsdk/Information;->a:Ljava/util/Map;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/savedstate/xT/fgyAspfzfnhI;->fIYXoiSe:Ljava/lang/String;
+    const-string v1, "deviceVersionCode"
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

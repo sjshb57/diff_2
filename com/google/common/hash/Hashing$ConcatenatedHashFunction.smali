@@ -27,7 +27,7 @@
     move v2, v1
 
     :goto_6
-    if-ge v2, v0, :cond_21
+    if-ge v2, v0, :cond_22
 
     aget-object v3, p1, v2
 
@@ -59,7 +59,7 @@
 
     goto :goto_6
 
-    :cond_21
+    :cond_22
     return-void
 .end method
 

@@ -201,7 +201,7 @@
 
     instance-of v0, p1, Lcom/google/common/collect/Tables$ImmutableCell;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     invoke-interface {p1}, Lcom/google/common/collect/Table$Cell;->getRowKey()Ljava/lang/Object;
 
@@ -215,9 +215,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->IbW:Ljava/lang/String;
+    const-string v1, "column"
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -233,9 +231,9 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_35
+    goto :goto_34
 
-    :cond_26
+    :cond_25
     invoke-interface {p1}, Lcom/google/common/collect/Table$Cell;->getRowKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -250,7 +248,7 @@
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/google/common/collect/ImmutableTable$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableTable$Builder;
 
-    :goto_35
+    :goto_34
     return-object p0
 .end method
 

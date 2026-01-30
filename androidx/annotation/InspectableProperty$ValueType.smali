@@ -164,9 +164,7 @@
 
     new-instance v0, Landroidx/annotation/InspectableProperty$ValueType;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->ofdW:Ljava/lang/String;
+    const-string v1, "COLOR"
 
     const/4 v2, 0x4
 

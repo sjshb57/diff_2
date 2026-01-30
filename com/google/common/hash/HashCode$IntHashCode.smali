@@ -93,9 +93,7 @@
 
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/flatbuffers/OSq/msMBb;->AwWbBkFVhifrI:Ljava/lang/String;
+    const-string v1, "this HashCode only has 32 bits; cannot create a long"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

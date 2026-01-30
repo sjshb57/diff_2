@@ -28,7 +28,7 @@
 
     const/16 v1, 0x18
 
-    if-ge v0, v1, :cond_24
+    if-ge v0, v1, :cond_25
 
     :try_start_6
     const-string v0, "libcore.icu.ICU"
@@ -54,12 +54,12 @@
     move-result-object v0
 
     sput-object v0, Landroidx/core/text/ICUCompat;->sAddLikelySubtagsMethod:Ljava/lang/reflect/Method;
-    :try_end_1c
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_1c} :catch_1d
+    :try_end_1d
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_1d} :catch_1e
 
-    goto :goto_24
+    goto :goto_25
 
-    :catch_1d
+    :catch_1e
     move-exception v0
 
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -68,8 +68,8 @@
 
     throw v1
 
-    :cond_24
-    :goto_24
+    :cond_25
+    :goto_25
     return-void
 .end method
 

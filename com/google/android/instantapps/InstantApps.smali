@@ -79,7 +79,7 @@
         }
     .end annotation
 
-    if-eqz p0, :cond_6f
+    if-eqz p0, :cond_70
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -206,7 +206,7 @@
 
     throw p0
 
-    :cond_6f
+    :cond_70
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Context must be non-null"
@@ -426,13 +426,13 @@
 
     move-result v1
 
-    if-nez v1, :cond_30
+    if-nez v1, :cond_31
 
     const-string v1, "referrer"
 
     invoke-virtual {v0, v1, p3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    :cond_30
+    :cond_31
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.google.android.finsky.action.IA_INSTALL"
@@ -447,9 +447,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->nBgLorgrk:Ljava/lang/String;
+    const-string v1, "com.android.vending"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 

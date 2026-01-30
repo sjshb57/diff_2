@@ -42,9 +42,7 @@
 
     invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->YhKWAH:Ljava/lang/String;
+    const-string p0, "error"
 
     invoke-virtual {v0, p0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 

@@ -265,9 +265,7 @@
 
     move-result-object p0
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/core/util/LEr/bFMYUr;->ZKVWNaAezwbTB:Ljava/lang/String;
+    const-string v0, "\\\""
 
     const-string v1, "\""
 

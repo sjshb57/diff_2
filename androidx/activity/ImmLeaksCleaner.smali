@@ -90,10 +90,10 @@
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     sput v1, Landroidx/activity/ImmLeaksCleaner;->sReflectedFieldsInitialized:I
-    :try_end_2d
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_2d} :catch_2d
+    :try_end_2e
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_2e} :catch_2e
 
-    :catch_2d
+    :catch_2e
     return-void
 .end method
 

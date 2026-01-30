@@ -79,9 +79,7 @@
     const/4 v0, 0x0
 
     :goto_5
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/util/LEr/bFMYUr;->AeyByVxbqNbhnv:Ljava/lang/String;
+    const-string v1, "Not true that %s is non-negative."
 
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
@@ -1069,12 +1067,12 @@
 
     invoke-interface {v1, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    :cond_1d
+    :cond_1e
     invoke-interface {v1}, Ljava/util/Queue;->isEmpty()Z
 
     move-result p1
 
-    if-nez p1, :cond_43
+    if-nez p1, :cond_44
 
     invoke-interface {v1}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
@@ -1088,13 +1086,13 @@
 
     move-result-object p1
 
-    :cond_2f
-    :goto_2f
+    :cond_30
+    :goto_30
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1e
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1104,13 +1102,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2f
+    if-eqz v3, :cond_30
 
     invoke-interface {v1, v2}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    goto :goto_2f
+    goto :goto_30
 
-    :cond_43
+    :cond_44
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p0

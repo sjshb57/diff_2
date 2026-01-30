@@ -427,7 +427,7 @@
         }
     .end annotation
 
-    if-eqz p5, :cond_68
+    if-eqz p5, :cond_69
 
     invoke-static {p5}, Lcom/google/api/client/util/Data;->isNull(Ljava/lang/Object;)Z
 
@@ -435,7 +435,7 @@
 
     if-eqz v0, :cond_9
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_9
     invoke-static {p5}, Lcom/google/api/client/http/HttpHeaders;->toStringValue(Ljava/lang/Object;)Ljava/lang/String;
@@ -496,7 +496,7 @@
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_3e
-    if-eqz p2, :cond_53
+    if-eqz p2, :cond_54
 
     const-string p1, " -H \'"
 
@@ -512,13 +512,13 @@
 
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_53
-    if-eqz p3, :cond_58
+    :cond_54
+    if-eqz p3, :cond_59
 
     invoke-virtual {p3, p4, p5}, Lcom/google/api/client/http/LowLevelHttpRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_58
-    if-eqz p6, :cond_68
+    :cond_59
+    if-eqz p6, :cond_69
 
     invoke-virtual {p6, p4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
@@ -530,8 +530,8 @@
 
     invoke-virtual {p6, p0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    :cond_68
-    :goto_68
+    :cond_69
+    :goto_69
     return-void
 .end method
 

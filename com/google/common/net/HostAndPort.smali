@@ -53,9 +53,7 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->uFAyFPAM:Ljava/lang/String;
+    const-string v2, "Host has a port: %s"
 
     invoke-static {v1, v2, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
@@ -169,7 +167,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_69
+    if-nez v5, :cond_6a
 
     const-string v1, "+"
 
@@ -183,12 +181,12 @@
 
     invoke-static {v1, v2, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    :try_start_47
+    :try_start_48
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
-    :try_end_4b
-    .catch Ljava/lang/NumberFormatException; {:try_start_47 .. :try_end_4b} :catch_55
+    :try_end_4c
+    .catch Ljava/lang/NumberFormatException; {:try_start_48 .. :try_end_4c} :catch_56
 
     invoke-static {v1}, Lcom/google/common/net/HostAndPort;->isValidPort(I)Z
 
@@ -198,9 +196,9 @@
 
     invoke-static {v0, v2, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    goto :goto_69
+    goto :goto_6a
 
-    :catch_55
+    :catch_56
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -219,8 +217,8 @@
 
     throw v0
 
-    :cond_69
-    :goto_69
+    :cond_6a
+    :goto_6a
     new-instance p0, Lcom/google/common/net/HostAndPort;
 
     invoke-direct {p0, v4, v1, v3}, Lcom/google/common/net/HostAndPort;-><init>(Ljava/lang/String;IZ)V
@@ -295,11 +293,9 @@
 
     move-result v6
 
-    if-ne v5, v6, :cond_3f
+    if-ne v5, v6, :cond_3e
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->EROFVrUoifZctji:Ljava/lang/String;
+    const-string p0, ""
 
     filled-new-array {v2, p0}, [Ljava/lang/String;
 
@@ -307,16 +303,16 @@
 
     return-object p0
 
-    :cond_3f
+    :cond_3e
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
-    if-ne v5, v1, :cond_46
+    if-ne v5, v1, :cond_45
 
     move v0, v3
 
-    :cond_46
+    :cond_45
     const-string v1, "Only a colon may follow a close bracket: %s"
 
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
@@ -325,12 +321,12 @@
 
     move v0, v4
 
-    :goto_4e
+    :goto_4d
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    if-ge v0, v1, :cond_64
+    if-ge v0, v1, :cond_63
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -346,9 +342,9 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_4e
+    goto :goto_4d
 
-    :cond_64
+    :cond_63
     invoke-virtual {p0, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0

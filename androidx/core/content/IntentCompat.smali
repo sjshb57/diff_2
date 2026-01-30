@@ -43,7 +43,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4d
+    if-eqz v0, :cond_4c
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -51,11 +51,9 @@
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const-string v3, "package"
 
-    sget-object v3, Lcom/google/api/client/util/Uhr/zXgie;->KlBUdNQuRZTgjaE:Ljava/lang/String;
-
-    if-lt v0, v1, :cond_24
+    if-lt v0, v1, :cond_23
 
     new-instance p0, Landroid/content/Intent;
 
@@ -73,7 +71,7 @@
 
     return-object p0
 
-    :cond_24
+    :cond_23
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.AUTO_REVOKE_PERMISSIONS"
@@ -92,11 +90,11 @@
 
     const/16 v1, 0x1e
 
-    if-lt v0, v1, :cond_3a
+    if-lt v0, v1, :cond_39
 
     return-object p1
 
-    :cond_3a
+    :cond_39
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -117,7 +115,7 @@
 
     return-object p0
 
-    :cond_4d
+    :cond_4c
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Unused App Restriction features are not available on this device"
