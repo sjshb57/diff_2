@@ -1,0 +1,35 @@
+.class final Lcom/google/android/gms/nearby/messages/internal/zzbc;
+.super Lcom/google/android/gms/internal/nearby/zzhr;
+.source "com.google.android.gms:play-services-nearby@@18.0.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/nearby/zzhr<",
+        "Lcom/google/android/gms/nearby/messages/PublishCallback;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/google/android/gms/internal/nearby/zzhr;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic notifyListener(Ljava/lang/Object;)V
+    .registers 2
+
+    check-cast p1, Lcom/google/android/gms/nearby/messages/PublishCallback;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/nearby/messages/PublishCallback;->onExpired()V
+
+    return-void
+.end method

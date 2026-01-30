@@ -1,0 +1,41 @@
+.class final Lcom/google/android/gms/internal/measurement/zzdk;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@22.2.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/measurement/zzdf;
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    .registers 2
+
+    return-object p1
+.end method
+
+.method public final zza(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Callable;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Callable<",
+            "TV;>;)",
+            "Ljava/util/concurrent/Callable<",
+            "TV;>;"
+        }
+    .end annotation
+
+    return-object p1
+.end method

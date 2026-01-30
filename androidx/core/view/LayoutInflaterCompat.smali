@@ -1,0 +1,172 @@
+.class public final Landroidx/core/view/LayoutInflaterCompat;
+.super Ljava/lang/Object;
+.source "LayoutInflaterCompat.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
+    }
+.end annotation
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "LayoutInflaterCompatHC"
+
+.field private static sCheckedField:Z
+
+.field private static sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static forceSetFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
+    .registers 8
+
+    sget-boolean v0, Landroidx/core/view/LayoutInflaterCompat;->sCheckedField:Z
+
+    const-string v1, "; inflation may have unexpected results."
+
+    const-string v2, "LayoutInflaterCompatHC"
+
+    if-nez v0, :cond_35
+
+    const/4 v0, 0x1
+
+    :try_start_9
+    const-class v3, Landroid/view/LayoutInflater;
+
+    const/4 v4, 0x0
+
+    sget-object v4, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->WNh:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v3
+
+    sput-object v3, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
+
+    invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_17
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_9 .. :try_end_17} :catch_18
+
+    goto :goto_33
+
+    :catch_18
+    move-exception v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "forceSetFactory2 Could not find field \'mFactory2\' on class "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-class v5, Landroid/view/LayoutInflater;
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_33
+    sput-boolean v0, Landroidx/core/view/LayoutInflaterCompat;->sCheckedField:Z
+
+    :cond_35
+    sget-object v0, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
+
+    if-eqz v0, :cond_52
+
+    :try_start_39
+    invoke-virtual {v0, p0, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_3c
+    .catch Ljava/lang/IllegalAccessException; {:try_start_39 .. :try_end_3c} :catch_3d
+
+    goto :goto_52
+
+    :catch_3d
+    move-exception p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "forceSetFactory2 could not set the Factory2 on LayoutInflater "
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_52
+    :goto_52
+    return-void
+.end method
+
+.method public static getFactory(Landroid/view/LayoutInflater;)Landroidx/core/view/LayoutInflaterFactory;
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
+
+    move-result-object p0
+
+    instance-of v0, p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
+
+    if-eqz v0, :cond_d
+
+    check-cast p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
+
+    iget-object p0, p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;->mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
+
+    return-object p0
+
+    :cond_d
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static setFactory(Landroid/view/LayoutInflater;Landroidx/core/view/LayoutInflaterFactory;)V
+    .registers 3
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    new-instance v0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
+
+    invoke-direct {v0, p1}, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;-><init>(Landroidx/core/view/LayoutInflaterFactory;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
+
+    return-void
+.end method
+
+.method public static setFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
+    .registers 2
+
+    invoke-virtual {p0, p1}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
+
+    return-void
+.end method

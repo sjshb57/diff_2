@@ -1,0 +1,101 @@
+.class public final Lcom/google/android/gms/internal/measurement/zzoz;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-impl@@22.2.0"
+
+# interfaces
+.implements Lcom/google/common/base/Supplier;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/common/base/Supplier<",
+        "Lcom/google/android/gms/internal/measurement/zzpc;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static zza:Lcom/google/android/gms/internal/measurement/zzoz;
+
+
+# instance fields
+.field private final zzb:Lcom/google/common/base/Supplier;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/base/Supplier<",
+            "Lcom/google/android/gms/internal/measurement/zzpc;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/android/gms/internal/measurement/zzoz;
+
+    invoke-direct {v0}, Lcom/google/android/gms/internal/measurement/zzoz;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/internal/measurement/zzoz;->zza:Lcom/google/android/gms/internal/measurement/zzoz;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/google/android/gms/internal/measurement/zzpb;
+
+    invoke-direct {v0}, Lcom/google/android/gms/internal/measurement/zzpb;-><init>()V
+
+    invoke-static {v0}, Lcom/google/common/base/Suppliers;->ofInstance(Ljava/lang/Object;)Lcom/google/common/base/Supplier;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/measurement/zzoz;->zzb:Lcom/google/common/base/Supplier;
+
+    return-void
+.end method
+
+.method public static zza()Z
+    .registers 1
+    .annotation runtime Lorg/checkerframework/dataflow/qual/SideEffectFree;
+    .end annotation
+
+    sget-object v0, Lcom/google/android/gms/internal/measurement/zzoz;->zza:Lcom/google/android/gms/internal/measurement/zzoz;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzoz;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/measurement/zzpc;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/measurement/zzpc;->zza()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public final synthetic get()Ljava/lang/Object;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzoz;->zzb:Lcom/google/common/base/Supplier;
+
+    invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/measurement/zzpc;
+
+    return-object v0
+.end method

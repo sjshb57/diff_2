@@ -1,0 +1,274 @@
+.class final Lcom/google/android/gms/internal/nearby/zzap;
+.super Lcom/google/android/gms/internal/nearby/zzef;
+.source "com.google.android.gms:play-services-nearby@@18.0.0"
+
+
+# instance fields
+.field private final zza:Lcom/google/android/gms/common/api/internal/ListenerHolder;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/android/gms/common/api/internal/ListenerHolder<",
+            "Lcom/google/android/gms/nearby/connection/EndpointDiscoveryCallback;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final zzb:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/common/api/internal/ListenerHolder<",
+            "Lcom/google/android/gms/nearby/connection/EndpointDiscoveryCallback;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Lcom/google/android/gms/internal/nearby/zzef;-><init>()V
+
+    new-instance v0, Landroidx/collection/ArraySet;
+
+    invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zzb:Ljava/util/Set;
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/nearby/zzap;->zza:Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    return-void
+.end method
+
+.method static synthetic zzf(Lcom/google/android/gms/internal/nearby/zzfi;)Z
+    .registers 1
+
+    invoke-static {p0}, Lcom/google/android/gms/internal/nearby/zzap;->zzg(Lcom/google/android/gms/internal/nearby/zzfi;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private static zzg(Lcom/google/android/gms/internal/nearby/zzfi;)Z
+    .registers 4
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/nearby/zzfi;->zzd()Landroid/bluetooth/BluetoothDevice;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1d
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/nearby/zzfi;->zza()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1c
+
+    const-string v0, "__UNRECOGNIZED_BLUETOOTH_DEVICE__"
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/nearby/zzfi;->zza()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1b
+
+    goto :goto_1d
+
+    :cond_1b
+    return v2
+
+    :cond_1c
+    move v1, v2
+
+    :cond_1d
+    :goto_1d
+    return v1
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized zzb(Lcom/google/android/gms/internal/nearby/zzfg;)V
+    .registers 4
+
+    monitor-enter p0
+
+    :try_start_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zza:Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    new-instance v1, Lcom/google/android/gms/internal/nearby/zzal;
+
+    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/internal/nearby/zzal;-><init>(Lcom/google/android/gms/internal/nearby/zzap;Lcom/google/android/gms/internal/nearby/zzfg;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/common/api/internal/ListenerHolder;->notifyListener(Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
+    :try_end_b
+    .catchall {:try_start_1 .. :try_end_b} :catchall_d
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_d
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized zzc(Lcom/google/android/gms/internal/nearby/zzfi;)V
+    .registers 4
+
+    monitor-enter p0
+
+    :try_start_1
+    invoke-static {p1}, Lcom/google/android/gms/internal/nearby/zzap;->zzg(Lcom/google/android/gms/internal/nearby/zzfi;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_10
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zzb:Ljava/util/Set;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/nearby/zzfi;->zza()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    :cond_10
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zza:Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    new-instance v1, Lcom/google/android/gms/internal/nearby/zzam;
+
+    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/internal/nearby/zzam;-><init>(Lcom/google/android/gms/internal/nearby/zzap;Lcom/google/android/gms/internal/nearby/zzfi;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/common/api/internal/ListenerHolder;->notifyListener(Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
+    :try_end_1a
+    .catchall {:try_start_1 .. :try_end_1a} :catchall_1c
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_1c
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized zzd(Lcom/google/android/gms/internal/nearby/zzfk;)V
+    .registers 4
+
+    monitor-enter p0
+
+    :try_start_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zzb:Ljava/util/Set;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/nearby/zzfk;->zza()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zza:Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    new-instance v1, Lcom/google/android/gms/internal/nearby/zzan;
+
+    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/internal/nearby/zzan;-><init>(Lcom/google/android/gms/internal/nearby/zzap;Lcom/google/android/gms/internal/nearby/zzfk;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/common/api/internal/ListenerHolder;->notifyListener(Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
+    :try_end_14
+    .catchall {:try_start_1 .. :try_end_14} :catchall_16
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_16
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method final declared-synchronized zze()V
+    .registers 5
+
+    monitor-enter p0
+
+    :try_start_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zzb:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_7
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1e
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/nearby/zzap;->zza:Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    new-instance v3, Lcom/google/android/gms/internal/nearby/zzao;
+
+    invoke-direct {v3, p0, v1}, Lcom/google/android/gms/internal/nearby/zzao;-><init>(Lcom/google/android/gms/internal/nearby/zzap;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Lcom/google/android/gms/common/api/internal/ListenerHolder;->notifyListener(Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
+
+    goto :goto_7
+
+    :cond_1e
+    iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzap;->zzb:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
+    :try_end_23
+    .catchall {:try_start_1 .. :try_end_23} :catchall_25
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_25
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
