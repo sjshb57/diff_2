@@ -322,14 +322,14 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_a
+    if-ne v0, v1, :cond_b
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_a
+    :cond_b
     const/4 v1, 0x0
 
-    :goto_b
+    :goto_c
     invoke-static {v1}, Lcom/google/android/gms/common/internal/Asserts;->checkState(Z)V
 
     const-string v0, "total_steps"

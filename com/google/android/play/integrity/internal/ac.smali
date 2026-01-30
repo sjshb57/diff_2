@@ -205,7 +205,7 @@
 
     invoke-interface {v0}, Lcom/google/android/play/integrity/internal/w;->a()V
 
-    goto :goto_4e
+    goto :goto_4f
 
     :cond_21
     iget-object v0, p0, Lcom/google/android/play/integrity/internal/ac;->c:Lcom/google/android/play/integrity/internal/q;
@@ -228,12 +228,12 @@
 
     move-result-object v0
 
-    :goto_35
+    :goto_36
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_49
+    if-eqz v1, :cond_4a
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -247,31 +247,31 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/play/integrity/internal/r;->a(Ljava/lang/Exception;)V
 
-    goto :goto_35
+    goto :goto_36
 
-    :cond_49
+    :cond_4a
     iget-object v0, p0, Lcom/google/android/play/integrity/internal/ac;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    :goto_4e
+    :goto_4f
     iget-object v0, p0, Lcom/google/android/play/integrity/internal/ac;->g:Ljava/lang/Object;
 
     monitor-enter v0
 
-    :try_start_51
+    :try_start_52
     invoke-direct {p0}, Lcom/google/android/play/integrity/internal/ac;->x()V
 
     monitor-exit v0
 
     return-void
 
-    :catchall_56
+    :catchall_57
     move-exception p0
 
     monitor-exit v0
-    :try_end_58
-    .catchall {:try_start_51 .. :try_end_58} :catchall_56
+    :try_end_59
+    .catchall {:try_start_52 .. :try_end_59} :catchall_57
 
     throw p0
 .end method
@@ -427,15 +427,13 @@
     :cond_58
     iget-boolean v0, p0, Lcom/google/android/play/integrity/internal/ac;->h:Z
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6b
 
     iget-object v0, p0, Lcom/google/android/play/integrity/internal/ac;->c:Lcom/google/android/play/integrity/internal/q;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->KZMxJPMu:Ljava/lang/String;
+    const-string v2, "Waiting to bind to the service."
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/play/integrity/internal/q;->c(Ljava/lang/String;[Ljava/lang/Object;)I
 
@@ -445,7 +443,7 @@
 
     return-void
 
-    :cond_6c
+    :cond_6b
     invoke-virtual {p1}, Lcom/google/android/play/integrity/internal/r;->run()V
 
     return-void

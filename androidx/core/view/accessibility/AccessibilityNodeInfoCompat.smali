@@ -351,19 +351,19 @@
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_92
+    if-eq p0, v0, :cond_8e
 
     const/4 v0, 0x2
 
-    if-eq p0, v0, :cond_8e
+    if-eq p0, v0, :cond_8b
 
-    sparse-switch p0, :sswitch_data_96
+    sparse-switch p0, :sswitch_data_92
 
-    packed-switch p0, :pswitch_data_e8
+    packed-switch p0, :pswitch_data_e4
 
-    packed-switch p0, :pswitch_data_fc
+    packed-switch p0, :pswitch_data_f8
 
-    packed-switch p0, :pswitch_data_10e
+    packed-switch p0, :pswitch_data_10a
 
     const-string p0, "ACTION_UNKNOWN"
 
@@ -409,60 +409,58 @@
 
     return-object p0
 
-    :pswitch_2d  #0x1020046
+    :pswitch_2e  #0x1020046
     const-string p0, "ACTION_PAGE_UP"
 
     return-object p0
 
-    :pswitch_30  #0x1020045
+    :pswitch_31  #0x1020045
     const-string p0, "ACTION_HIDE_TOOLTIP"
 
     return-object p0
 
-    :pswitch_33  #0x1020044
+    :pswitch_34  #0x1020044
     const-string p0, "ACTION_SHOW_TOOLTIP"
 
     return-object p0
 
-    :pswitch_36  #0x102003d
+    :pswitch_37  #0x102003d
     const-string p0, "ACTION_SET_PROGRESS"
 
     return-object p0
 
-    :pswitch_39  #0x102003c
+    :pswitch_3a  #0x102003c
     const-string p0, "ACTION_CONTEXT_CLICK"
 
     return-object p0
 
-    :pswitch_3c  #0x102003b
+    :pswitch_3d  #0x102003b
     const-string p0, "ACTION_SCROLL_RIGHT"
 
     return-object p0
 
-    :pswitch_3f  #0x102003a
+    :pswitch_40  #0x102003a
     const-string p0, "ACTION_SCROLL_DOWN"
 
     return-object p0
 
-    :pswitch_42  #0x1020039
+    :pswitch_43  #0x1020039
     const-string p0, "ACTION_SCROLL_LEFT"
 
     return-object p0
 
-    :pswitch_45  #0x1020038
+    :pswitch_46  #0x1020038
     const-string p0, "ACTION_SCROLL_UP"
 
     return-object p0
 
-    :pswitch_48  #0x1020037
+    :pswitch_49  #0x1020037
     const-string p0, "ACTION_SCROLL_TO_POSITION"
 
     return-object p0
 
-    :pswitch_4b  #0x1020036
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->RkflcrdPOSga:Ljava/lang/String;
+    :pswitch_4c  #0x1020036
+    const-string p0, "ACTION_SHOW_ON_SCREEN"
 
     return-object p0
 
@@ -507,98 +505,90 @@
     return-object p0
 
     :sswitch_67
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->udaixFpWGIiKHuO:Ljava/lang/String;
+    const-string p0, "ACTION_SCROLL_BACKWARD"
 
     return-object p0
 
-    :sswitch_6b
+    :sswitch_6a
     const-string p0, "ACTION_SCROLL_FORWARD"
 
     return-object p0
 
-    :sswitch_6e
+    :sswitch_6d
     const-string p0, "ACTION_PREVIOUS_HTML_ELEMENT"
 
     return-object p0
 
-    :sswitch_71
+    :sswitch_70
     const-string p0, "ACTION_NEXT_HTML_ELEMENT"
 
     return-object p0
 
-    :sswitch_74
+    :sswitch_73
     const-string p0, "ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY"
 
     return-object p0
 
-    :sswitch_77
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->NFPB:Ljava/lang/String;
+    :sswitch_76
+    const-string p0, "ACTION_NEXT_AT_MOVEMENT_GRANULARITY"
 
     return-object p0
 
-    :sswitch_7b
+    :sswitch_79
     const-string p0, "ACTION_CLEAR_ACCESSIBILITY_FOCUS"
 
     return-object p0
 
-    :sswitch_7e
+    :sswitch_7c
     const-string p0, "ACTION_ACCESSIBILITY_FOCUS"
 
     return-object p0
 
-    :sswitch_81
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->pYniTsyjVwRXL:Ljava/lang/String;
+    :sswitch_7f
+    const-string p0, "ACTION_LONG_CLICK"
 
     return-object p0
 
-    :sswitch_85
+    :sswitch_82
     const-string p0, "ACTION_CLICK"
 
     return-object p0
 
-    :sswitch_88
+    :sswitch_85
     const-string p0, "ACTION_CLEAR_SELECTION"
 
     return-object p0
 
-    :sswitch_8b
+    :sswitch_88
     const-string p0, "ACTION_SELECT"
 
     return-object p0
 
-    :cond_8e
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->pmPyzXMCtuCnw:Ljava/lang/String;
+    :cond_8b
+    const-string p0, "ACTION_CLEAR_FOCUS"
 
     return-object p0
 
-    :cond_92
+    :cond_8e
     const-string p0, "ACTION_FOCUS"
 
     return-object p0
 
     nop
 
-    :sswitch_data_96
+    :sswitch_data_92
     .sparse-switch
-        0x4 -> :sswitch_8b
-        0x8 -> :sswitch_88
-        0x10 -> :sswitch_85
-        0x20 -> :sswitch_81
-        0x40 -> :sswitch_7e
-        0x80 -> :sswitch_7b
-        0x100 -> :sswitch_77
-        0x200 -> :sswitch_74
-        0x400 -> :sswitch_71
-        0x800 -> :sswitch_6e
-        0x1000 -> :sswitch_6b
+        0x4 -> :sswitch_88
+        0x8 -> :sswitch_85
+        0x10 -> :sswitch_82
+        0x20 -> :sswitch_7f
+        0x40 -> :sswitch_7c
+        0x80 -> :sswitch_79
+        0x100 -> :sswitch_76
+        0x200 -> :sswitch_73
+        0x400 -> :sswitch_70
+        0x800 -> :sswitch_6d
+        0x1000 -> :sswitch_6a
         0x2000 -> :sswitch_67
         0x4000 -> :sswitch_64
         0x8000 -> :sswitch_61
@@ -610,30 +600,30 @@
         0x1020042 -> :sswitch_4f
     .end sparse-switch
 
-    :pswitch_data_e8
+    :pswitch_data_e4
     .packed-switch 0x1020036
-        :pswitch_4b  #01020036
-        :pswitch_48  #01020037
-        :pswitch_45  #01020038
-        :pswitch_42  #01020039
-        :pswitch_3f  #0102003a
-        :pswitch_3c  #0102003b
-        :pswitch_39  #0102003c
-        :pswitch_36  #0102003d
+        :pswitch_4c  #01020036
+        :pswitch_49  #01020037
+        :pswitch_46  #01020038
+        :pswitch_43  #01020039
+        :pswitch_40  #0102003a
+        :pswitch_3d  #0102003b
+        :pswitch_3a  #0102003c
+        :pswitch_37  #0102003d
     .end packed-switch
 
-    :pswitch_data_fc
+    :pswitch_data_f8
     .packed-switch 0x1020044
-        :pswitch_33  #01020044
-        :pswitch_30  #01020045
-        :pswitch_2d  #01020046
+        :pswitch_34  #01020044
+        :pswitch_31  #01020045
+        :pswitch_2e  #01020046
         :pswitch_2a  #01020047
         :pswitch_27  #01020048
         :pswitch_24  #01020049
         :pswitch_21  #0102004a
     .end packed-switch
 
-    :pswitch_data_10e
+    :pswitch_data_10a
     .packed-switch 0x1020054
         :pswitch_1e  #01020054
         :pswitch_1b  #01020055
@@ -1938,7 +1928,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7c
+    if-eqz v0, :cond_7d
 
     const-string v0, "androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_START_KEY"
 
@@ -1995,7 +1985,7 @@
 
     move-result v5
 
-    if-ge v7, v5, :cond_7b
+    if-ge v7, v5, :cond_7c
 
     new-instance v5, Landroidx/core/view/accessibility/AccessibilityClickableSpanCompat;
 
@@ -2057,10 +2047,10 @@
 
     goto :goto_38
 
-    :cond_7b
+    :cond_7c
     return-object v4
 
-    :cond_7c
+    :cond_7d
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;

@@ -37,7 +37,7 @@
 
     move-result-object v1
 
-    if-eq v0, v1, :cond_58
+    if-eq v0, v1, :cond_57
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -122,15 +122,13 @@
     :cond_4f
     new-instance p0, Ljava/io/IOException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/EDDN/hfnXJuYOaqC;->sMkkp:Ljava/lang/String;
+    const-string v0, "Google Play connection failed"
 
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    :cond_58
+    :cond_57
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Cannot be called from the main thread"

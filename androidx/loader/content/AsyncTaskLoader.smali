@@ -212,13 +212,11 @@
     :cond_20
     iget-object p2, p0, Landroidx/loader/content/AsyncTaskLoader;->mCancellingTask:Landroidx/loader/content/AsyncTaskLoader$LoadTask;
 
-    if-eqz p2, :cond_3c
+    if-eqz p2, :cond_3b
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->wbPfHUlbMhTn:Ljava/lang/String;
+    const-string p2, "mCancellingTask="
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -234,14 +232,14 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Z)V
 
-    :cond_3c
+    :cond_3b
     iget-wide v0, p0, Landroidx/loader/content/AsyncTaskLoader;->mUpdateThrottle:J
 
     const-wide/16 v2, 0x0
 
     cmp-long p2, v0, v2
 
-    if-eqz p2, :cond_62
+    if-eqz p2, :cond_61
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -267,7 +265,7 @@
 
     invoke-virtual {p3}, Ljava/io/PrintWriter;->println()V
 
-    :cond_62
+    :cond_61
     return-void
 .end method
 

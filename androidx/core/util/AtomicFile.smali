@@ -110,13 +110,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_3f
+    if-nez v0, :cond_3e
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/nano/privacy/eM/RmZCOXza;->ndsXvKVBFhYNFgU:Ljava/lang/String;
+    const-string v2, "Failed to rename "
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -134,7 +132,7 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3f
+    :cond_3e
     return-void
 .end method
 
@@ -192,39 +190,37 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const-string v1, "AtomicFile"
 
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->KRTpaasZCu:Ljava/lang/String;
-
-    if-nez v0, :cond_11
+    if-nez v0, :cond_10
 
     const-string v0, "Failed to sync file output stream"
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_11
-    :try_start_11
+    :cond_10
+    :try_start_10
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
-    :try_end_14
-    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_14} :catch_15
+    :try_end_13
+    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_13} :catch_14
 
-    goto :goto_1b
+    goto :goto_1a
 
-    :catch_15
+    :catch_14
     move-exception p1
 
     const-string v0, "Failed to close file output stream"
 
     invoke-static {v1, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_1b
+    :goto_1a
     iget-object p1, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result p1
 
-    if-nez p1, :cond_36
+    if-nez p1, :cond_35
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -242,7 +238,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_36
+    :cond_35
     return-void
 .end method
 
@@ -272,7 +268,7 @@
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_10 .. :try_end_13} :catch_14
 
-    goto :goto_1a
+    goto :goto_1b
 
     :catch_14
     move-exception p1
@@ -281,7 +277,7 @@
 
     invoke-static {v1, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_1a
+    :goto_1b
     iget-object p1, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mBaseName:Ljava/io/File;

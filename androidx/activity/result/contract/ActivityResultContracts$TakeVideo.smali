@@ -98,18 +98,16 @@
 .method public final parseResult(ILandroid/content/Intent;)Landroid/graphics/Bitmap;
     .registers 4
 
-    if-eqz p2, :cond_10
+    if-eqz p2, :cond_f
 
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_6
 
-    goto :goto_10
+    goto :goto_f
 
     :cond_6
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->noNQ:Ljava/lang/String;
+    const-string p1, "data"
 
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -119,8 +117,8 @@
 
     return-object p1
 
-    :cond_10
-    :goto_10
+    :cond_f
+    :goto_f
     const/4 p1, 0x0
 
     return-object p1

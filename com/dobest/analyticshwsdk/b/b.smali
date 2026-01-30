@@ -249,7 +249,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     const-string p1, "AnalyticsHWSdk"
 
@@ -259,7 +259,7 @@
 
     return-void
 
-    :cond_10
+    :cond_11
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/dobest/analyticshwsdk/a/b;->a(Landroid/content/Context;I)Ljava/lang/Object;
@@ -593,14 +593,12 @@
 
     iget-object v2, v2, Lcom/dobest/analyticshwsdk/c/a;->b:Ljava/lang/String;
 
-    goto :goto_6b
+    goto :goto_6a
 
     :cond_68
-    const/4 v2, 0x0
+    const-string v2, ""
 
-    sget-object v2, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->wUpjMFixMazE:Ljava/lang/String;
-
-    :goto_6b
+    :goto_6a
     new-instance v3, Lcom/dobest/analyticshwsdk/c/a;
 
     invoke-direct {v3}, Lcom/dobest/analyticshwsdk/c/a;-><init>()V

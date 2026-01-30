@@ -37,20 +37,18 @@
     move v1, v3
 
     :goto_10
-    const/4 v4, 0x0
-
-    sget-object v4, Lkotlin/EDDN/hfnXJuYOaqC;->OLKgBLYj:Ljava/lang/String;
+    const-string v4, "Given byte array longer than 10 bytes, given by AudioBytes.MAX_SIZE."
 
     invoke-static {v1, v4}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    if-lez v0, :cond_19
+    if-lez v0, :cond_18
 
-    goto :goto_1a
+    goto :goto_19
 
-    :cond_19
+    :cond_18
     move v2, v3
 
-    :goto_1a
+    :goto_19
     const-string v0, "Given byte array is of zero length."
 
     invoke-static {v2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V

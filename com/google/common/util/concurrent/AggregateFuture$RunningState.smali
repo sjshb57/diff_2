@@ -258,7 +258,7 @@
 
     invoke-static {v0, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    :try_start_1e
+    :try_start_1f
     invoke-interface {p2}, Ljava/util/concurrent/Future;->isDone()Z
 
     move-result v0
@@ -269,13 +269,13 @@
 
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->allMustSucceed:Z
 
-    if-eqz v0, :cond_4b
+    if-eqz v0, :cond_4c
 
     invoke-interface {p2}, Ljava/util/concurrent/Future;->isCancelled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3d
+    if-eqz v0, :cond_3e
 
     iget-object p1, p0, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
@@ -287,33 +287,33 @@
 
     invoke-virtual {p1, v1}, Lcom/google/common/util/concurrent/AggregateFuture;->cancel(Z)Z
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :cond_3d
+    :cond_3e
     invoke-static {p2}, Lcom/google/common/util/concurrent/Futures;->getDone(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object p2
 
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->collectsValues:Z
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6d
 
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->allMustSucceed:Z
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->collectOneValue(ZILjava/lang/Object;)V
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :cond_4b
+    :cond_4c
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->collectsValues:Z
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6d
 
     invoke-interface {p2}, Ljava/util/concurrent/Future;->isCancelled()Z
 
     move-result v0
 
-    if-nez v0, :cond_6c
+    if-nez v0, :cond_6d
 
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->allMustSucceed:Z
 
@@ -322,20 +322,20 @@
     move-result-object p2
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->collectOneValue(ZILjava/lang/Object;)V
-    :try_end_5e
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1e .. :try_end_5e} :catch_64
-    .catchall {:try_start_1e .. :try_end_5e} :catchall_5f
+    :try_end_5f
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1f .. :try_end_5f} :catch_65
+    .catchall {:try_start_1f .. :try_end_5f} :catchall_60
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :catchall_5f
+    :catchall_60
     move-exception p1
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->handleException(Ljava/lang/Throwable;)V
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :catch_64
+    :catch_65
     move-exception p1
 
     invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
@@ -344,8 +344,8 @@
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/AggregateFuture$RunningState;->handleException(Ljava/lang/Throwable;)V
 
-    :cond_6c
-    :goto_6c
+    :cond_6d
+    :goto_6d
     return-void
 .end method
 

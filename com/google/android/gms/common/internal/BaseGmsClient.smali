@@ -650,38 +650,38 @@
 
     const/4 v7, 0x4
 
-    if-eq v0, v7, :cond_11
+    if-eq v0, v7, :cond_12
 
     move v8, v5
 
-    goto :goto_12
+    goto :goto_13
 
-    :cond_11
+    :cond_12
     move v8, v6
 
-    :goto_12
-    if-nez v2, :cond_16
+    :goto_13
+    if-nez v2, :cond_17
 
     move v9, v5
 
-    goto :goto_17
+    goto :goto_18
 
-    :cond_16
+    :cond_17
     move v9, v6
 
-    :goto_17
-    if-ne v8, v9, :cond_1a
+    :goto_18
+    if-ne v8, v9, :cond_1b
 
     move v5, v6
 
-    :cond_1a
+    :cond_1b
     invoke-static {v5}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(Z)V
 
     iget-object v5, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzp:Ljava/lang/Object;
 
     monitor-enter v5
 
-    :try_start_20
+    :try_start_21
     iput v0, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzv:I
 
     iput-object v2, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzs:Landroid/os/IInterface;
@@ -694,15 +694,15 @@
 
     const/4 v9, 0x3
 
-    if-eq v0, v6, :cond_3c
+    if-eq v0, v6, :cond_3d
 
-    if-eq v0, v9, :cond_3c
+    if-eq v0, v9, :cond_3d
 
-    if-eq v0, v7, :cond_31
+    if-eq v0, v7, :cond_32
 
     goto/16 :goto_1a7
 
-    :cond_31
+    :cond_32
     invoke-static/range {p2 .. p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, v2
@@ -713,7 +713,7 @@
 
     goto/16 :goto_1a7
 
-    :cond_3c
+    :cond_3d
     iget-object v14, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzu:Lcom/google/android/gms/common/internal/zze;
 
     if-eqz v14, :cond_8e
@@ -722,9 +722,7 @@
 
     if-eqz v0, :cond_8e
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/core/content/Whm/HgKojeDw;->HApazTsO:Ljava/lang/String;
+    const-string v2, "GmsClient"
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/zzv;->zzb()Ljava/lang/String;
 
@@ -1087,7 +1085,7 @@
 
     monitor-exit v5
     :try_end_1ab
-    .catchall {:try_start_20 .. :try_end_1ab} :catchall_1a9
+    .catchall {:try_start_21 .. :try_end_1ab} :catchall_1a9
 
     throw v0
 .end method

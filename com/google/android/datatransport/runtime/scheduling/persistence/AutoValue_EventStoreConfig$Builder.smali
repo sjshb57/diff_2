@@ -92,7 +92,7 @@
     :cond_33
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->eventCleanUpAge:Ljava/lang/Long;
 
-    if-nez v1, :cond_48
+    if-nez v1, :cond_49
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -108,10 +108,10 @@
 
     move-result-object v0
 
-    :cond_48
+    :cond_49
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;->maxBlobByteSizePerRow:Ljava/lang/Integer;
 
-    if-nez v1, :cond_5d
+    if-nez v1, :cond_5e
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -127,12 +127,12 @@
 
     move-result-object v0
 
-    :cond_5d
+    :cond_5e
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_89
+    if-eqz v1, :cond_8a
 
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig;
 
@@ -174,7 +174,7 @@
 
     return-object v0
 
-    :cond_89
+    :cond_8a
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -52,9 +52,7 @@
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/print/nh/SlomKQFs;->iZrxHZNFMjQoTCi:Ljava/lang/String;
+    const-string v0, "Consent is only valid for account chip styled account picker"
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 

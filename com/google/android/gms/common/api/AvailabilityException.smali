@@ -236,7 +236,7 @@
 
     const/4 v4, 0x0
 
-    sget-object v4, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->DuvhVMJwmXO:Ljava/lang/String;
+    sget-object v4, Landroidx/arch/core/internal/nl/WfPiHVumXD;->lddEpnENJe:Ljava/lang/String;
 
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

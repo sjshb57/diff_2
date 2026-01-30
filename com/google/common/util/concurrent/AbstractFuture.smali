@@ -102,7 +102,7 @@
 
     move-object v2, v1
 
-    goto :goto_60
+    goto :goto_5f
 
     :catchall_23
     move-exception v2
@@ -140,9 +140,7 @@
 
     const-class v3, Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->iFuBnJOSdoMThz:Ljava/lang/String;
+    const-string v7, "listeners"
 
     invoke-static {v0, v3, v7}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -159,14 +157,14 @@
     move-object v3, v9
 
     invoke-direct/range {v3 .. v8}, Lcom/google/common/util/concurrent/AbstractFuture$SafeAtomicHelper;-><init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
-    :try_end_57
-    .catchall {:try_start_24 .. :try_end_57} :catchall_59
+    :try_end_56
+    .catchall {:try_start_24 .. :try_end_56} :catchall_58
 
     move-object v3, v9
 
-    goto :goto_60
+    goto :goto_5f
 
-    :catchall_59
+    :catchall_58
     move-exception v0
 
     new-instance v3, Lcom/google/common/util/concurrent/AbstractFuture$SynchronizedHelper;
@@ -175,12 +173,12 @@
 
     move-object v1, v0
 
-    :goto_60
+    :goto_5f
     sput-object v3, Lcom/google/common/util/concurrent/AbstractFuture;->ATOMIC_HELPER:Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
 
     const-class v0, Ljava/util/concurrent/locks/LockSupport;
 
-    if-eqz v1, :cond_76
+    if-eqz v1, :cond_75
 
     sget-object v0, Lcom/google/common/util/concurrent/AbstractFuture;->log:Ljava/util/logging/Logger;
 
@@ -196,7 +194,7 @@
 
     invoke-virtual {v0, v2, v3, v1}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_76
+    :cond_75
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -1841,40 +1839,38 @@
 
     move-result v1
 
-    const/4 v2, 0x0
+    const-string v2, "]"
 
-    sget-object v2, Lcom/google/api/client/util/Uhr/zXgie;->bqaOGg:Ljava/lang/String;
-
-    if-eqz v1, :cond_20
+    if-eqz v1, :cond_1f
 
     const-string v1, "CANCELLED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_63
+    goto :goto_62
 
-    :cond_20
+    :cond_1f
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2a
+    if-eqz v1, :cond_29
 
     invoke-direct {p0, v0}, Lcom/google/common/util/concurrent/AbstractFuture;->addDoneString(Ljava/lang/StringBuilder;)V
 
-    goto :goto_63
+    goto :goto_62
 
-    :cond_2a
-    :try_start_2a
+    :cond_29
+    :try_start_29
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->pendingToString()Ljava/lang/String;
 
     move-result-object v1
-    :try_end_2e
-    .catch Ljava/lang/RuntimeException; {:try_start_2a .. :try_end_2e} :catch_2f
+    :try_end_2d
+    .catch Ljava/lang/RuntimeException; {:try_start_29 .. :try_end_2d} :catch_2e
 
-    goto :goto_42
+    goto :goto_41
 
-    :catch_2f
+    :catch_2e
     move-exception v1
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1893,12 +1889,12 @@
 
     move-result-object v1
 
-    :goto_42
+    :goto_41
     invoke-static {v1}, Lcom/google/common/base/Strings;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-nez v3, :cond_54
+    if-nez v3, :cond_53
 
     const-string v3, "PENDING, info=["
 
@@ -1908,25 +1904,25 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_63
+    goto :goto_62
 
-    :cond_54
+    :cond_53
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
 
     move-result v1
 
-    if-eqz v1, :cond_5e
+    if-eqz v1, :cond_5d
 
     invoke-direct {p0, v0}, Lcom/google/common/util/concurrent/AbstractFuture;->addDoneString(Ljava/lang/StringBuilder;)V
 
-    goto :goto_63
+    goto :goto_62
 
-    :cond_5e
+    :cond_5d
     const-string v1, "PENDING"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_63
+    :goto_62
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

@@ -30,9 +30,7 @@
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;La/i0;La/s;)V
     .registers 6
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/EDDN/hfnXJuYOaqC;->WwmVbcUPdM:Ljava/lang/String;
+    const-string v0, "activity"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -174,12 +172,12 @@
 
     move-result-object p4
 
-    :goto_67
+    :goto_68
     invoke-interface {p4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_83
+    if-eqz v0, :cond_84
 
     invoke-interface {p4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -201,9 +199,9 @@
 
     invoke-virtual {p0, v1, v0}, Landroid/app/DownloadManager$Request;->addRequestHeader(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
 
-    goto :goto_67
+    goto :goto_68
 
-    :cond_83
+    :cond_84
     iget-object p4, p2, La/a0;->a:Landroid/app/Activity;
 
     const-string v0, "download"
@@ -214,7 +212,7 @@
 
     instance-of v0, p4, Landroid/app/DownloadManager;
 
-    if-eqz v0, :cond_c9
+    if-eqz v0, :cond_ca
 
     check-cast p4, Landroid/app/DownloadManager;
 
@@ -250,7 +248,7 @@
 
     iget-boolean p0, p1, La/h;->c:Z
 
-    if-eqz p0, :cond_c9
+    if-eqz p0, :cond_ca
 
     new-instance p0, La/f0;
 
@@ -270,7 +268,7 @@
 
     invoke-interface {p1, p2, p3, p0}, La/i0;->a(Ljava/lang/String;La/j0;La/f0;)V
 
-    :cond_c9
+    :cond_ca
     return-void
 .end method
 

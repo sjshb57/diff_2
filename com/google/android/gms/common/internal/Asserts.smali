@@ -133,17 +133,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->WBqjQGualAXSt:Ljava/lang/String;
+    const-string v3, "checkNotMainThread: current thread "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->eNSDSfxhAww:Ljava/lang/String;
+    const-string v0, " IS the main thread "
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

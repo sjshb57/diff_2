@@ -40,7 +40,7 @@
 
     iget-boolean v2, v2, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
-    if-eqz v2, :cond_60
+    if-eqz v2, :cond_61
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -54,7 +54,7 @@
 
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
     :try_end_1b
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_1b} :catch_60
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_1b} :catch_61
 
     if-eqz p0, :cond_57
 
@@ -68,7 +68,7 @@
     move v2, v1
 
     :goto_22
-    if-ge v2, v0, :cond_60
+    if-ge v2, v0, :cond_61
 
     aget-object v3, p0, v2
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/google/android/play/integrity/internal/q;->d(Ljava/lang/String;[Ljava/lang/Object;)I
 
-    :catch_60
-    :cond_60
+    :catch_61
+    :cond_61
     return v1
 .end method

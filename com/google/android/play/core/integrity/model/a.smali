@@ -211,9 +211,7 @@
 
     move-object/from16 v20, v12
 
-    const/4 v12, 0x0
-
-    sget-object v12, Lkotlin/collections/zgTb/JhPPV;->TIkSQlffQDRJw:Ljava/lang/String;
+    const-string v12, "There is a transient error on the calling device.\nRetry with an exponential backoff.\n"
 
     invoke-interface {v0, v14, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

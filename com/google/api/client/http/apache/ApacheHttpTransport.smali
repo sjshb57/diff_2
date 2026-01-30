@@ -209,7 +209,7 @@
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpDelete;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_e
     const-string v0, "GET"
@@ -224,7 +224,7 @@
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_1c
     const-string v0, "HEAD"
@@ -239,7 +239,7 @@
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpHead;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_2a
     const-string v0, "POST"
@@ -254,7 +254,7 @@
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_38
     const-string v0, "PUT"
@@ -269,7 +269,7 @@
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpPut;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_46
     const-string v0, "TRACE"
@@ -284,7 +284,7 @@
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpTrace;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
     :cond_54
     const-string v0, "OPTIONS"
@@ -293,22 +293,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_62
+    if-eqz v0, :cond_63
 
     new-instance p1, Lorg/apache/http/client/methods/HttpOptions;
 
     invoke-direct {p1, p2}, Lorg/apache/http/client/methods/HttpOptions;-><init>(Ljava/lang/String;)V
 
-    goto :goto_68
+    goto :goto_69
 
-    :cond_62
+    :cond_63
     new-instance v0, Lcom/google/api/client/http/apache/HttpExtensionMethod;
 
     invoke-direct {v0, p1, p2}, Lcom/google/api/client/http/apache/HttpExtensionMethod;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object p1, v0
 
-    :goto_68
+    :goto_69
     new-instance p2, Lcom/google/api/client/http/apache/ApacheHttpRequest;
 
     iget-object v0, p0, Lcom/google/api/client/http/apache/ApacheHttpTransport;->httpClient:Lorg/apache/http/client/HttpClient;

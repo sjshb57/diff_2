@@ -51,9 +51,7 @@
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->grdVwhBXZP:Ljava/lang/String;
+    const-string v0, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
 
     invoke-virtual {p1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 

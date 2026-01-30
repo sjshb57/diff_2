@@ -82,7 +82,7 @@
 
     sput-object v1, Landroidx/concurrent/futures/AbstractResolvableFuture;->log:Ljava/util/logging/Logger;
 
-    :try_start_1a
+    :try_start_1b
     new-instance v1, Landroidx/concurrent/futures/AbstractResolvableFuture$SafeAtomicHelper;
 
     const-class v2, Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
@@ -132,21 +132,21 @@
     move-object v2, v1
 
     invoke-direct/range {v2 .. v7}, Landroidx/concurrent/futures/AbstractResolvableFuture$SafeAtomicHelper;-><init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
-    :try_end_4c
-    .catchall {:try_start_1a .. :try_end_4c} :catchall_4e
+    :try_end_4d
+    .catchall {:try_start_1b .. :try_end_4d} :catchall_4f
 
     const/4 v0, 0x0
 
-    goto :goto_54
+    goto :goto_55
 
-    :catchall_4e
+    :catchall_4f
     move-exception v0
 
     new-instance v1, Landroidx/concurrent/futures/AbstractResolvableFuture$SynchronizedHelper;
 
     invoke-direct {v1}, Landroidx/concurrent/futures/AbstractResolvableFuture$SynchronizedHelper;-><init>()V
 
-    :goto_54
+    :goto_55
     sput-object v1, Landroidx/concurrent/futures/AbstractResolvableFuture;->ATOMIC_HELPER:Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;
 
     const-class v1, Ljava/util/concurrent/locks/LockSupport;
@@ -157,9 +157,7 @@
 
     sget-object v2, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->dQKklA:Ljava/lang/String;
+    const-string v3, "SafeAtomicHelper is broken!"
 
     invoke-virtual {v1, v2, v3, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -191,9 +189,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->CIDufpNDwKXDfo:Ljava/lang/String;
+    const-string v2, "SUCCESS, result=["
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -204,14 +200,14 @@
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_16
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_2 .. :try_end_16} :catch_30
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_16} :catch_2a
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_16} :catch_17
+    :try_end_15
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_2 .. :try_end_15} :catch_2f
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_15} :catch_29
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_15} :catch_16
 
-    goto :goto_40
+    goto :goto_3f
 
-    :catch_17
+    :catch_16
     move-exception v0
 
     const-string v1, "UNKNOWN, cause=["
@@ -228,16 +224,16 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_40
+    goto :goto_3f
 
-    :catch_2a
+    :catch_29
     const-string v0, "CANCELLED"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_40
+    goto :goto_3f
 
-    :catch_30
+    :catch_2f
     move-exception v1
 
     const-string v2, "FAILURE, cause=["
@@ -252,7 +248,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_40
+    :goto_3f
     return-void
 .end method
 
@@ -1691,7 +1687,7 @@
 
     instance-of v1, v0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;
 
-    if-eqz v1, :cond_23
+    if-eqz v1, :cond_22
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1709,9 +1705,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->TNySsZCKbJ:Ljava/lang/String;
+    const-string v0, "]"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1721,10 +1715,10 @@
 
     return-object v0
 
-    :cond_23
+    :cond_22
     instance-of v0, p0, Ljava/util/concurrent/ScheduledFuture;
 
-    if-eqz v0, :cond_44
+    if-eqz v0, :cond_43
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1754,7 +1748,7 @@
 
     return-object v0
 
-    :cond_44
+    :cond_43
     const/4 v0, 0x0
 
     return-object v0
@@ -1961,40 +1955,38 @@
 
     move-result v1
 
-    const/4 v2, 0x0
+    const-string v2, "]"
 
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->ImdgvxfhtF:Ljava/lang/String;
-
-    if-eqz v1, :cond_20
+    if-eqz v1, :cond_1f
 
     const-string v1, "CANCELLED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_65
+    goto :goto_64
 
-    :cond_20
+    :cond_1f
     invoke-virtual {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->isDone()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2a
+    if-eqz v1, :cond_29
 
     invoke-direct {p0, v0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->addDoneString(Ljava/lang/StringBuilder;)V
 
-    goto :goto_65
+    goto :goto_64
 
-    :cond_2a
-    :try_start_2a
+    :cond_29
+    :try_start_29
     invoke-virtual {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->pendingToString()Ljava/lang/String;
 
     move-result-object v1
-    :try_end_2e
-    .catch Ljava/lang/RuntimeException; {:try_start_2a .. :try_end_2e} :catch_2f
+    :try_end_2d
+    .catch Ljava/lang/RuntimeException; {:try_start_29 .. :try_end_2d} :catch_2e
 
-    goto :goto_42
+    goto :goto_41
 
-    :catch_2f
+    :catch_2e
     move-exception v1
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2013,14 +2005,14 @@
 
     move-result-object v1
 
-    :goto_42
-    if-eqz v1, :cond_56
+    :goto_41
+    if-eqz v1, :cond_55
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_56
+    if-nez v3, :cond_55
 
     const-string v3, "PENDING, info=["
 
@@ -2030,25 +2022,25 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_65
+    goto :goto_64
 
-    :cond_56
+    :cond_55
     invoke-virtual {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->isDone()Z
 
     move-result v1
 
-    if-eqz v1, :cond_60
+    if-eqz v1, :cond_5f
 
     invoke-direct {p0, v0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->addDoneString(Ljava/lang/StringBuilder;)V
 
-    goto :goto_65
+    goto :goto_64
 
-    :cond_60
+    :cond_5f
     const-string v1, "PENDING"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_65
+    :goto_64
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

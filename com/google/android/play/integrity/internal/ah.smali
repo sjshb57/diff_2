@@ -71,14 +71,14 @@
 
     sget-object v2, Lcom/google/android/play/integrity/internal/ah;->a:Ljava/lang/Object;
 
-    if-ne v1, v2, :cond_44
+    if-ne v1, v2, :cond_43
 
     monitor-enter p0
 
     :try_start_9
     iget-object v1, p0, Lcom/google/android/play/integrity/internal/ah;->c:Ljava/lang/Object;
 
-    if-ne v1, v2, :cond_3f
+    if-ne v1, v2, :cond_3e
 
     iget-object v1, p0, Lcom/google/android/play/integrity/internal/ah;->b:Lcom/google/android/play/integrity/internal/al;
 
@@ -88,11 +88,11 @@
 
     iget-object v3, p0, Lcom/google/android/play/integrity/internal/ah;->c:Ljava/lang/Object;
 
-    if-eq v3, v2, :cond_3a
+    if-eq v3, v2, :cond_39
 
     if-ne v3, v1, :cond_1a
 
-    goto :goto_3a
+    goto :goto_39
 
     :cond_1a
     new-instance v2, Ljava/lang/IllegalStateException;
@@ -103,9 +103,7 @@
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/core/util/LEr/bFMYUr;->NPgbA:Ljava/lang/String;
+    const-string v0, " & "
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -123,29 +121,29 @@
 
     throw v2
 
-    :cond_3a
-    :goto_3a
+    :cond_39
+    :goto_39
     iput-object v1, p0, Lcom/google/android/play/integrity/internal/ah;->c:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/play/integrity/internal/ah;->b:Lcom/google/android/play/integrity/internal/al;
 
-    :cond_3f
+    :cond_3e
     monitor-exit p0
 
-    goto :goto_44
+    goto :goto_43
 
-    :catchall_41
+    :catchall_40
     move-exception v0
 
     monitor-exit p0
-    :try_end_43
-    .catchall {:try_start_9 .. :try_end_43} :catchall_41
+    :try_end_42
+    .catchall {:try_start_9 .. :try_end_42} :catchall_40
 
     throw v0
 
-    :cond_44
-    :goto_44
+    :cond_43
+    :goto_43
     return-object v1
 .end method

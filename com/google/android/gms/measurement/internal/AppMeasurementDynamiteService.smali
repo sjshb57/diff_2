@@ -455,11 +455,11 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/AppMeasurementDynamiteService;->zza()V
 
-    if-eqz p2, :cond_8d
+    if-eqz p2, :cond_8e
 
     const/4 v0, 0x1
 
-    if-eq p2, v0, :cond_75
+    if-eq p2, v0, :cond_76
 
     const/4 v0, 0x2
 
@@ -581,7 +581,7 @@
 
     return-void
 
-    :cond_75
+    :cond_76
     iget-object p2, p0, Lcom/google/android/gms/measurement/internal/AppMeasurementDynamiteService;->zza:Lcom/google/android/gms/measurement/internal/zzic;
 
     invoke-virtual {p2}, Lcom/google/android/gms/measurement/internal/zzic;->zzv()Lcom/google/android/gms/measurement/internal/zzpn;
@@ -606,7 +606,7 @@
 
     return-void
 
-    :cond_8d
+    :cond_8e
     iget-object p2, p0, Lcom/google/android/gms/measurement/internal/AppMeasurementDynamiteService;->zza:Lcom/google/android/gms/measurement/internal/zzic;
 
     invoke-virtual {p2}, Lcom/google/android/gms/measurement/internal/zzic;->zzv()Lcom/google/android/gms/measurement/internal/zzpn;

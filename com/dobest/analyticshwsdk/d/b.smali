@@ -31,9 +31,7 @@
     :try_start_0
     const-string v0, "MD5.algorithm"
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->NlwNJtzdFcpsb:Ljava/lang/String;
+    const-string v1, "MD5"
 
     invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -55,7 +53,7 @@
 
     const/16 v0, 0x10
 
-    if-ne p1, v0, :cond_28
+    if-ne p1, v0, :cond_27
 
     invoke-static {p0}, Lcom/dobest/analyticshwsdk/d/b;->a([B)Ljava/lang/String;
 
@@ -71,16 +69,16 @@
 
     return-object p0
 
-    :cond_28
+    :cond_27
     invoke-static {p0}, Lcom/dobest/analyticshwsdk/d/b;->a([B)Ljava/lang/String;
 
     move-result-object p0
-    :try_end_2c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2c} :catch_2d
+    :try_end_2b
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2b} :catch_2c
 
     return-object p0
 
-    :catch_2d
+    :catch_2c
     move-exception p0
 
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -449,7 +447,7 @@
     const/4 v1, 0x0
 
     :goto_a
-    if-ge v1, v0, :cond_20
+    if-ge v1, v0, :cond_21
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -469,7 +467,7 @@
 
     goto :goto_a
 
-    :cond_20
+    :cond_21
     return-object p0
 .end method
 

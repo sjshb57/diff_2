@@ -122,7 +122,7 @@
     const/4 v2, 0x0
 
     :goto_2b
-    if-ge v2, v0, :cond_66
+    if-ge v2, v0, :cond_67
 
     iget-object v3, p0, Landroidx/fragment/app/BackStackRecord;->mOps:Ljava/util/ArrayList;
 
@@ -134,7 +134,7 @@
 
     iget-object v4, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
 
-    if-eqz v4, :cond_63
+    if-eqz v4, :cond_64
 
     iget-object v4, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
 
@@ -146,7 +146,7 @@
 
     sget-boolean v4, Landroidx/fragment/app/FragmentManagerImpl;->DEBUG:Z
 
-    if-eqz v4, :cond_63
+    if-eqz v4, :cond_64
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -174,12 +174,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_63
+    :cond_64
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2b
 
-    :cond_66
+    :cond_67
     return-void
 .end method
 
@@ -324,7 +324,7 @@
 
     iget-object v0, p1, Landroidx/fragment/app/Fragment;->mFragmentManager:Landroidx/fragment/app/FragmentManagerImpl;
 
-    if-eqz v0, :cond_29
+    if-eqz v0, :cond_28
 
     iget-object v0, p1, Landroidx/fragment/app/Fragment;->mFragmentManager:Landroidx/fragment/app/FragmentManagerImpl;
 
@@ -332,16 +332,14 @@
 
     if-ne v0, v1, :cond_b
 
-    goto :goto_29
+    goto :goto_28
 
     :cond_b
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->QhgaKFBf:Ljava/lang/String;
+    const-string v2, "Cannot detach Fragment attached to a different FragmentManager. Fragment "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -363,8 +361,8 @@
 
     throw v0
 
-    :cond_29
-    :goto_29
+    :cond_28
+    :goto_28
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentTransaction;->detach(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
@@ -598,7 +596,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1a2
+    if-nez v0, :cond_1a3
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -615,7 +613,7 @@
     const/4 v1, 0x0
 
     :goto_f1
-    if-ge v1, v0, :cond_1a2
+    if-ge v1, v0, :cond_1a3
 
     iget-object v2, p0, Landroidx/fragment/app/BackStackRecord;->mOps:Ljava/util/ArrayList;
 
@@ -643,62 +641,62 @@
 
     move-result-object v3
 
-    goto :goto_131
+    goto :goto_132
 
     :pswitch_111  #0xa
     const-string v3, "OP_SET_MAX_LIFECYCLE"
 
-    goto :goto_131
+    goto :goto_132
 
     :pswitch_114  #0x9
     const-string v3, "UNSET_PRIMARY_NAV"
 
-    goto :goto_131
+    goto :goto_132
 
     :pswitch_117  #0x8
     const-string v3, "SET_PRIMARY_NAV"
 
-    goto :goto_131
+    goto :goto_132
 
     :pswitch_11a  #0x7
     const-string v3, "ATTACH"
 
-    goto :goto_131
+    goto :goto_132
 
     :pswitch_11d  #0x6
     const-string v3, "DETACH"
 
-    goto :goto_131
+    goto :goto_132
 
-    :pswitch_120  #0x5
+    :pswitch_121  #0x5
     const-string v3, "SHOW"
 
-    goto :goto_131
+    goto :goto_132
 
-    :pswitch_123  #0x4
+    :pswitch_124  #0x4
     const-string v3, "HIDE"
 
-    goto :goto_131
+    goto :goto_132
 
-    :pswitch_126  #0x3
+    :pswitch_127  #0x3
     const-string v3, "REMOVE"
 
-    goto :goto_131
+    goto :goto_132
 
-    :pswitch_129  #0x2
+    :pswitch_12a  #0x2
     const-string v3, "REPLACE"
 
-    goto :goto_131
+    goto :goto_132
 
-    :pswitch_12c  #0x1
+    :pswitch_12d  #0x1
     const-string v3, "ADD"
 
-    goto :goto_131
+    goto :goto_132
 
-    :pswitch_12f  #0x0
+    :pswitch_130  #0x0
     const-string v3, "NULL"
 
-    :goto_131
+    :goto_132
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v4, "  Op #"
@@ -721,17 +719,17 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    if-eqz p3, :cond_19e
+    if-eqz p3, :cond_19f
 
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mEnterAnim:I
 
-    if-nez v3, :cond_158
+    if-nez v3, :cond_159
 
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mExitAnim:I
 
-    if-eqz v3, :cond_177
+    if-eqz v3, :cond_178
 
-    :cond_158
+    :cond_159
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "enterAnim=#"
@@ -758,16 +756,16 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_177
+    :cond_178
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mPopEnterAnim:I
 
-    if-nez v3, :cond_17f
+    if-nez v3, :cond_180
 
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mPopExitAnim:I
 
-    if-eqz v3, :cond_19e
+    if-eqz v3, :cond_19f
 
-    :cond_17f
+    :cond_180
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "popEnterAnim=#"
@@ -794,24 +792,22 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_19e
+    :cond_19f
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_f1
 
-    :cond_1a2
+    :cond_1a3
     return-void
-
-    nop
 
     :pswitch_data_1a4
     .packed-switch 0x0
-        :pswitch_12f  #00000000
-        :pswitch_12c  #00000001
-        :pswitch_129  #00000002
-        :pswitch_126  #00000003
-        :pswitch_123  #00000004
-        :pswitch_120  #00000005
+        :pswitch_130  #00000000
+        :pswitch_12d  #00000001
+        :pswitch_12a  #00000002
+        :pswitch_127  #00000003
+        :pswitch_124  #00000004
+        :pswitch_121  #00000005
         :pswitch_11d  #00000006
         :pswitch_11a  #00000007
         :pswitch_117  #00000008
@@ -1610,7 +1606,7 @@
 
     iget-object v0, p1, Landroidx/fragment/app/Fragment;->mFragmentManager:Landroidx/fragment/app/FragmentManagerImpl;
 
-    if-eqz v0, :cond_29
+    if-eqz v0, :cond_28
 
     iget-object v0, p1, Landroidx/fragment/app/Fragment;->mFragmentManager:Landroidx/fragment/app/FragmentManagerImpl;
 
@@ -1618,16 +1614,14 @@
 
     if-ne v0, v1, :cond_b
 
-    goto :goto_29
+    goto :goto_28
 
     :cond_b
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/core/util/LEr/bFMYUr;->kjJzZ:Ljava/lang/String;
+    const-string v2, "Cannot hide Fragment attached to a different FragmentManager. Fragment "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1649,8 +1643,8 @@
 
     throw v0
 
-    :cond_29
-    :goto_29
+    :cond_28
+    :goto_28
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentTransaction;->hide(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1

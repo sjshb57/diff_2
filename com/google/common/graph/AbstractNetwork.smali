@@ -525,9 +525,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->upEfVQsD:Ljava/lang/String;
+    const-string v1, ", allowsSelfLoops: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

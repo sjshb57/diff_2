@@ -268,14 +268,14 @@
 
     move-result-object p1
 
-    goto :goto_90
+    goto :goto_92
 
     :cond_26
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/Base64Variant;->usesPaddingChar(C)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4e
+    if-eqz v0, :cond_4f
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -305,26 +305,26 @@
 
     move-result-object p1
 
-    goto :goto_90
+    goto :goto_92
 
-    :cond_4e
+    :cond_4f
     invoke-static {p1}, Ljava/lang/Character;->isDefined(C)Z
 
     move-result p2
 
     const-string v0, ") in base64 content"
 
-    if-eqz p2, :cond_7b
+    if-eqz p2, :cond_7d
 
     invoke-static {p1}, Ljava/lang/Character;->isISOControl(C)Z
 
     move-result p2
 
-    if-eqz p2, :cond_5d
+    if-eqz p2, :cond_5e
 
-    goto :goto_7b
+    goto :goto_7d
 
-    :cond_5d
+    :cond_5e
     new-instance p2, Ljava/lang/StringBuilder;
 
     const-string v1, "Illegal character \'"
@@ -349,10 +349,10 @@
 
     move-result-object p1
 
-    goto :goto_90
+    goto :goto_92
 
-    :cond_7b
-    :goto_7b
+    :cond_7d
+    :goto_7d
     new-instance p2, Ljava/lang/StringBuilder;
 
     const-string v1, "Illegal character (code 0x"
@@ -371,8 +371,8 @@
 
     move-result-object p1
 
-    :goto_90
-    if-eqz p3, :cond_a6
+    :goto_92
+    if-eqz p3, :cond_a8
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -390,7 +390,7 @@
 
     move-result-object p1
 
-    :cond_a6
+    :cond_a8
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V

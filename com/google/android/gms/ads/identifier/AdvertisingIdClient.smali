@@ -755,19 +755,19 @@
 
     monitor-enter p0
 
-    :try_start_6
+    :try_start_7
     iget-boolean v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zzc:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     invoke-virtual {p0}, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zza()V
 
-    :cond_d
+    :cond_e
     iget-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zzg:Landroid/content/Context;
-    :try_end_f
-    .catchall {:try_start_6 .. :try_end_f} :catchall_8d
+    :try_end_10
+    .catchall {:try_start_7 .. :try_end_10} :catchall_8e
 
-    :try_start_f
+    :try_start_10
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -777,11 +777,11 @@
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-    :try_end_19
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_f .. :try_end_19} :catch_85
-    .catchall {:try_start_f .. :try_end_19} :catchall_8d
+    :try_end_1a
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_10 .. :try_end_1a} :catch_86
+    .catchall {:try_start_10 .. :try_end_1a} :catchall_8e
 
-    :try_start_19
+    :try_start_1a
     invoke-static {}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->getInstance()Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
 
     move-result-object v1
@@ -792,15 +792,15 @@
 
     move-result v1
 
-    if-eqz v1, :cond_32
+    if-eqz v1, :cond_33
 
     const/4 v2, 0x2
 
-    if-ne v1, v2, :cond_2a
+    if-ne v1, v2, :cond_2b
 
-    goto :goto_32
+    goto :goto_33
 
-    :cond_2a
+    :cond_2b
     new-instance p1, Ljava/io/IOException;
 
     const-string v0, "Google Play services not available"
@@ -809,8 +809,8 @@
 
     throw p1
 
-    :cond_32
-    :goto_32
+    :cond_33
+    :goto_33
     new-instance v1, Lcom/google/android/gms/common/BlockingServiceConnection;
 
     invoke-direct {v1}, Lcom/google/android/gms/common/BlockingServiceConnection;-><init>()V
@@ -824,10 +824,10 @@
     const-string v3, "com.google.android.gms"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-    :try_end_43
-    .catchall {:try_start_19 .. :try_end_43} :catchall_8d
+    :try_end_44
+    .catchall {:try_start_1a .. :try_end_44} :catchall_8e
 
-    :try_start_43
+    :try_start_44
     invoke-static {}, Lcom/google/android/gms/common/stats/ConnectionTracker;->getInstance()Lcom/google/android/gms/common/stats/ConnectionTracker;
 
     move-result-object v3
@@ -837,17 +837,17 @@
     invoke-virtual {v3, v0, v2, v1, v4}, Lcom/google/android/gms/common/stats/ConnectionTracker;->bindService(Landroid/content/Context;Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v0
-    :try_end_4c
-    .catchall {:try_start_43 .. :try_end_4c} :catchall_7e
+    :try_end_4d
+    .catchall {:try_start_44 .. :try_end_4d} :catchall_7f
 
-    if-eqz v0, :cond_76
+    if-eqz v0, :cond_77
 
-    :try_start_4e
+    :try_start_4f
     iput-object v1, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zza:Lcom/google/android/gms/common/BlockingServiceConnection;
-    :try_end_50
-    .catchall {:try_start_4e .. :try_end_50} :catchall_8d
+    :try_end_51
+    .catchall {:try_start_4f .. :try_end_51} :catchall_8e
 
-    :try_start_50
+    :try_start_51
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x2710
@@ -859,25 +859,25 @@
     invoke-static {v0}, Lcom/google/android/gms/internal/ads_identifier/zze;->zza(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ads_identifier/zzf;
 
     move-result-object v0
-    :try_end_5c
-    .catch Ljava/lang/InterruptedException; {:try_start_50 .. :try_end_5c} :catch_6e
-    .catchall {:try_start_50 .. :try_end_5c} :catchall_67
+    :try_end_5d
+    .catch Ljava/lang/InterruptedException; {:try_start_51 .. :try_end_5d} :catch_6f
+    .catchall {:try_start_51 .. :try_end_5d} :catchall_68
 
-    :try_start_5c
+    :try_start_5d
     iput-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zzb:Lcom/google/android/gms/internal/ads_identifier/zzf;
 
     iput-boolean v4, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zzc:Z
 
-    if-eqz p1, :cond_65
+    if-eqz p1, :cond_66
 
     invoke-direct {p0}, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->zze()V
 
-    :cond_65
+    :cond_66
     monitor-exit p0
 
     return-void
 
-    :catchall_67
+    :catchall_68
     move-exception p1
 
     new-instance v0, Ljava/io/IOException;
@@ -886,7 +886,7 @@
 
     throw v0
 
-    :catch_6e
+    :catch_6f
     new-instance p1, Ljava/io/IOException;
 
     const-string v0, "Interrupted exception"
@@ -895,7 +895,7 @@
 
     throw p1
 
-    :cond_76
+    :cond_77
     new-instance p1, Ljava/io/IOException;
 
     const-string v0, "Connection failure"
@@ -904,7 +904,7 @@
 
     throw p1
 
-    :catchall_7e
+    :catchall_7f
     move-exception p1
 
     new-instance v0, Ljava/io/IOException;
@@ -913,7 +913,7 @@
 
     throw v0
 
-    :catch_85
+    :catch_86
     new-instance p1, Lcom/google/android/gms/common/GooglePlayServicesNotAvailableException;
 
     const/16 v0, 0x9
@@ -922,12 +922,12 @@
 
     throw p1
 
-    :catchall_8d
+    :catchall_8e
     move-exception p1
 
     monitor-exit p0
-    :try_end_8f
-    .catchall {:try_start_5c .. :try_end_8f} :catchall_8d
+    :try_end_90
+    .catchall {:try_start_5d .. :try_end_90} :catchall_8e
 
     throw p1
 .end method

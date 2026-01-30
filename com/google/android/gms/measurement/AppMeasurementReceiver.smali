@@ -66,7 +66,7 @@
 
     aput-object p2, v2, v0
 
-    const-string/jumbo v1, "YrxBmbV1BLdF92gy"
+    const-string/jumbo v1, "zHIyCFxXuDhnkc3I"
 
     invoke-static {v1, v2}, Lcom/pairip/VMRunner;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -41,15 +41,15 @@
 
     const/4 v0, 0x1
 
-    if-eq p0, v0, :cond_19
+    if-eq p0, v0, :cond_1a
 
     const/4 v0, 0x2
 
-    if-eq p0, v0, :cond_16
+    if-eq p0, v0, :cond_17
 
     const/4 v0, 0x4
 
-    if-eq p0, v0, :cond_13
+    if-eq p0, v0, :cond_14
 
     const/16 v0, 0x8
 
@@ -64,17 +64,17 @@
 
     return-object p0
 
-    :cond_13
+    :cond_14
     const-string p0, "CAPABILITY_CAN_REQUEST_ENHANCED_WEB_ACCESSIBILITY"
 
     return-object p0
 
-    :cond_16
+    :cond_17
     const-string p0, "CAPABILITY_CAN_REQUEST_TOUCH_EXPLORATION"
 
     return-object p0
 
-    :cond_19
+    :cond_1a
     const-string p0, "CAPABILITY_CAN_RETRIEVE_WINDOW_CONTENT"
 
     return-object p0

@@ -30,9 +30,7 @@
 
     iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$SetTextArguments;->mBundle:Landroid/os/Bundle;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/savedstate/xT/fgyAspfzfnhI;->kEjKgXUisaL:Ljava/lang/String;
+    const-string v1, "ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 

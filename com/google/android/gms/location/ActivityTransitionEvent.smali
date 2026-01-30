@@ -208,9 +208,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v4, 0x0
-
-    sget-object v4, Landroidx/print/nh/SlomKQFs;->xKhkPrVnFgoF:Ljava/lang/String;
+    const-string v4, "TransitionType "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

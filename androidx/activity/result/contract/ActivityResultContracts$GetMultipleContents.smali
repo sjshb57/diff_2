@@ -141,9 +141,7 @@
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->NhTRTA:Ljava/lang/String;
+    const-string v0, "android.intent.category.OPENABLE"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 

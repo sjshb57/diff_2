@@ -92,9 +92,7 @@
 
     invoke-virtual {p3, p0, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->bzwQSIygT:Ljava/lang/String;
+    const-string p0, "playcore.integrity.version.minor"
 
     const/4 p1, 0x2
 
@@ -106,7 +104,7 @@
 
     invoke-virtual {p3, p0, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    if-eqz p2, :cond_2f
+    if-eqz p2, :cond_2e
 
     const-string p0, "cloud.prj"
 
@@ -116,7 +114,7 @@
 
     invoke-virtual {p3, p0, p1, p2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    :cond_2f
+    :cond_2e
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V

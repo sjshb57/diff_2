@@ -488,9 +488,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->tQvWcxENROiY:Ljava/lang/String;
+    const-string v1, "Name"
 
     invoke-interface {p0}, Lcom/google/android/gms/games/achievement/Achievement;->getName()Ljava/lang/String;
 

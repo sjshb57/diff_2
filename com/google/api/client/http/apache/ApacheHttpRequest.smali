@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3f
+    if-eqz v0, :cond_40
 
     iget-object v0, p0, Lcom/google/api/client/http/apache/ApacheHttpRequest;->request:Lorg/apache/http/client/methods/HttpRequestBase;
 
@@ -102,7 +102,7 @@
 
     invoke-interface {v1, v0}, Lorg/apache/http/HttpEntityEnclosingRequest;->setEntity(Lorg/apache/http/HttpEntity;)V
 
-    :cond_3f
+    :cond_40
     new-instance v0, Lcom/google/api/client/http/apache/ApacheHttpResponse;
 
     iget-object v1, p0, Lcom/google/api/client/http/apache/ApacheHttpRequest;->request:Lorg/apache/http/client/methods/HttpRequestBase;

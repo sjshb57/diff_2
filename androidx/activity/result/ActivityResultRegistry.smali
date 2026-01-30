@@ -436,9 +436,7 @@
     return-void
 
     :cond_3
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/savedstate/xT/fgyAspfzfnhI;->NUsHaypFbw:Ljava/lang/String;
+    const-string v0, "KEY_COMPONENT_ACTIVITY_REGISTERED_RCS"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -450,21 +448,21 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_4f
+    if-eqz v1, :cond_4e
 
-    if-nez v0, :cond_15
+    if-nez v0, :cond_14
 
-    goto :goto_4f
+    goto :goto_4e
 
-    :cond_15
+    :cond_14
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     const/4 v3, 0x0
 
-    :goto_1a
-    if-ge v3, v2, :cond_32
+    :goto_19
+    if-ge v3, v2, :cond_31
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -486,9 +484,9 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_1a
+    goto :goto_19
 
-    :cond_32
+    :cond_31
     const-string v0, "KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -517,8 +515,8 @@
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    :cond_4f
-    :goto_4f
+    :cond_4e
+    :goto_4e
     return-void
 .end method
 

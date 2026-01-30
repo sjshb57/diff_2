@@ -111,9 +111,7 @@
 
     move-result-object v10
 
-    const/4 v11, 0x0
-
-    sget-object v11, Landroidx/core/content/Whm/HgKojeDw;->hREoaAyMnzx:Ljava/lang/String;
+    const-string v11, "Unknown internal Google server error.\nRetry with an exponential backoff. Consider filing a bug if fails consistently.\n"
 
     invoke-interface {v0, v10, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -153,9 +151,7 @@
 
     move-result-object v14
 
-    const/4 v15, 0x0
-
-    sget-object v15, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->UXgX:Ljava/lang/String;
+    const-string v15, "The provided request hash is too long. The request hash length must be less than 500 bytes.\nRetry with a shorter request hash."
 
     invoke-interface {v0, v14, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -203,9 +199,7 @@
 
     invoke-interface {v1, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/collections/zgTb/JhPPV;->Clc:Ljava/lang/String;
+    const-string v0, "TOO_MANY_REQUESTS"
 
     invoke-interface {v1, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

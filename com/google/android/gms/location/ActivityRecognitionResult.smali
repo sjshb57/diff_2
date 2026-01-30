@@ -287,26 +287,26 @@
 
     const/4 v2, 0x1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     return v2
 
-    :cond_e
+    :cond_f
     invoke-static {p0}, Lcom/google/android/gms/location/ActivityRecognitionResult;->zza(Landroid/content/Intent;)Ljava/util/List;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1b
+    if-eqz p0, :cond_1c
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
 
-    if-nez p0, :cond_1b
+    if-nez p0, :cond_1c
 
     return v2
 
-    :cond_1b
+    :cond_1c
     return v0
 .end method
 
@@ -793,9 +793,7 @@
 
     invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->XXRNoZSR:Ljava/lang/String;
+    const-string v0, ", elapsedRealtimeMillis="
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -40,9 +40,7 @@
 
     new-instance v0, Lcom/google/common/collect/AbstractIterator$State;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->YbwXVTd:Ljava/lang/String;
+    const-string v1, "READY"
 
     const/4 v2, 0x0
 
@@ -72,9 +70,7 @@
 
     new-instance v5, Lcom/google/common/collect/AbstractIterator$State;
 
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/google/common/html/ehW/oZEOPkNlS;->zwPeBavrYnDJa:Ljava/lang/String;
+    const-string v7, "FAILED"
 
     const/4 v8, 0x3
 

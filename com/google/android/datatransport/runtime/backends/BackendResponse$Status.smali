@@ -40,9 +40,7 @@
 
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/BackendResponse$Status;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->aamntFVuu:Ljava/lang/String;
+    const-string v1, "OK"
 
     const/4 v2, 0x0
 

@@ -247,17 +247,15 @@
 
     move-result-object v0
 
-    goto :goto_23
+    goto :goto_22
 
     :cond_20
-    const/4 v0, 0x0
+    const-string v0, ""
 
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->jSuxjLOu:Ljava/lang/String;
+    :goto_22
+    if-eqz v1, :cond_48
 
-    :goto_23
-    if-eqz v1, :cond_49
-
-    if-eqz v2, :cond_49
+    if-eqz v2, :cond_48
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -287,8 +285,8 @@
 
     return-object v0
 
-    :cond_49
-    if-eqz v3, :cond_5b
+    :cond_48
+    if-eqz v3, :cond_5a
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -304,7 +302,7 @@
 
     return-object v0
 
-    :cond_5b
+    :cond_5a
     const/4 v0, 0x0
 
     return-object v0

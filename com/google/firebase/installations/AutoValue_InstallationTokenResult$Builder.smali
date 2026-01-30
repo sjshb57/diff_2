@@ -80,19 +80,19 @@
 
     iget-object v0, p0, Lcom/google/firebase/installations/AutoValue_InstallationTokenResult$Builder;->token:Ljava/lang/String;
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     const-string v0, " token"
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_7
+    :cond_8
     const-string v0, ""
 
-    :goto_9
+    :goto_a
     iget-object v1, p0, Lcom/google/firebase/installations/AutoValue_InstallationTokenResult$Builder;->tokenExpirationTimestamp:Ljava/lang/Long;
 
-    if-nez v1, :cond_1e
+    if-nez v1, :cond_1f
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    :cond_1e
+    :cond_1f
     iget-object v1, p0, Lcom/google/firebase/installations/AutoValue_InstallationTokenResult$Builder;->tokenCreationTimestamp:Ljava/lang/Long;
 
     if-nez v1, :cond_34
@@ -119,9 +119,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/common/html/ehW/oZEOPkNlS;->wgBUQcqTztEPLe:Ljava/lang/String;
+    const-string v0, " tokenCreationTimestamp"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

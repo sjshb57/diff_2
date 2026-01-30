@@ -128,7 +128,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v3, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->wBWibToCrM:Ljava/lang/String;
+    sget-object v3, Lcom/google/api/client/http/javanet/iQHD/aWJnqiuODg;->KiHppfWivkqUwC:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

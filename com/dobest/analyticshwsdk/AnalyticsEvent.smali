@@ -370,9 +370,7 @@
 
     iget-object v1, v1, Lcom/dobest/analyticshwsdk/AnalyticsEvent$UserInfo;->vipLev:Ljava/lang/String;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/nano/privacy/eM/RmZCOXza;->Aqn:Ljava/lang/String;
+    const-string v2, "vipLev"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -670,9 +668,7 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->LcYgcuVF:Ljava/lang/String;
+    const-string v1, "itemType"
 
     iget-object v2, p1, Lcom/dobest/analyticshwsdk/AnalyticsEvent$CurrencyInfo;->itemType:Ljava/lang/String;
 
@@ -742,9 +738,7 @@
 
     iget-object v1, v1, Lcom/dobest/analyticshwsdk/AnalyticsEvent$UserInfo;->leaderRank:Ljava/lang/String;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lkotlin/EDDN/hfnXJuYOaqC;->xSNELqb:Ljava/lang/String;
+    const-string v2, "leaderRank"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1562,7 +1556,7 @@
 
     iget-object v1, p3, Lcom/dobest/analyticshwsdk/AnalyticsEvent$CustomInfo;->user:Lcom/dobest/analyticshwsdk/AnalyticsEvent$UserInfo;
 
-    if-eqz v1, :cond_31
+    if-eqz v1, :cond_32
 
     iget-object v1, p3, Lcom/dobest/analyticshwsdk/AnalyticsEvent$CustomInfo;->user:Lcom/dobest/analyticshwsdk/AnalyticsEvent$UserInfo;
 
@@ -1600,23 +1594,23 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_31
+    :cond_32
     iget-object v1, p3, Lcom/dobest/analyticshwsdk/AnalyticsEvent$CustomInfo;->custom:Ljava/util/Map;
 
-    if-eqz v1, :cond_3a
+    if-eqz v1, :cond_3b
 
     iget-object p3, p3, Lcom/dobest/analyticshwsdk/AnalyticsEvent$CustomInfo;->custom:Ljava/util/Map;
 
     invoke-interface {v0, p3}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    :cond_3a
-    if-eqz p4, :cond_41
+    :cond_3b
+    if-eqz p4, :cond_42
 
     const-string p3, "value"
 
     invoke-interface {v0, p3, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_41
+    :cond_42
     invoke-static {p0, p1, p2, v0}, Lcom/dobest/analyticshwsdk/AnalyticsHWSdk;->onEvent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
