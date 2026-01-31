@@ -5853,7 +5853,7 @@
 
     move-result p2
 
-    if-nez p2, :cond_2e
+    if-nez p2, :cond_2f
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -5881,7 +5881,7 @@
 
     return-void
 
-    :cond_2e
+    :cond_2f
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_inputData:Ljava/io/DataInput;
@@ -6012,7 +6012,7 @@
 
     sget-object v1, Lcom/fasterxml/jackson/core/JsonToken;->VALUE_STRING:Lcom/fasterxml/jackson/core/JsonToken;
 
-    if-eq v0, v1, :cond_28
+    if-eq v0, v1, :cond_29
 
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_currToken:Lcom/fasterxml/jackson/core/JsonToken;
 
@@ -6022,7 +6022,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_binaryValue:[B
 
-    if-nez v0, :cond_28
+    if-nez v0, :cond_29
 
     :cond_10
     new-instance v0, Ljava/lang/StringBuilder;
@@ -6045,27 +6045,27 @@
 
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_reportError(Ljava/lang/String;)V
 
-    :cond_28
+    :cond_29
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_tokenIncomplete:Z
 
-    if-eqz v0, :cond_56
+    if-eqz v0, :cond_57
 
-    :try_start_2c
+    :try_start_2d
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_decodeBase64(Lcom/fasterxml/jackson/core/Base64Variant;)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_binaryValue:[B
-    :try_end_32
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2c .. :try_end_32} :catch_36
+    :try_end_33
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_2d .. :try_end_33} :catch_37
 
     const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_tokenIncomplete:Z
 
-    goto :goto_6b
+    goto :goto_6c
 
-    :catch_36
+    :catch_37
     move-exception v0
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6096,10 +6096,10 @@
 
     throw p1
 
-    :cond_56
+    :cond_57
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_binaryValue:[B
 
-    if-nez v0, :cond_6b
+    if-nez v0, :cond_6c
 
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_getByteArrayBuilder()Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;
 
@@ -6117,8 +6117,8 @@
 
     iput-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_binaryValue:[B
 
-    :cond_6b
-    :goto_6b
+    :cond_6c
+    :goto_6c
     iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8DataInputJsonParser;->_binaryValue:[B
 
     return-object p1

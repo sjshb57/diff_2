@@ -79,9 +79,9 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_51
+    if-eqz p0, :cond_52
 
-    :try_start_27
+    :try_start_28
     new-instance p1, Ljava/util/Properties;
 
     invoke-direct {p1}, Ljava/util/Properties;-><init>()V
@@ -109,25 +109,25 @@
     invoke-static {p2, p1, v0}, Lcom/fasterxml/jackson/core/util/VersionUtil;->parseVersion(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/fasterxml/jackson/core/Version;
 
     move-result-object p1
-    :try_end_45
-    .catch Ljava/io/IOException; {:try_start_27 .. :try_end_45} :catch_4e
-    .catchall {:try_start_27 .. :try_end_45} :catchall_49
+    :try_end_46
+    .catch Ljava/io/IOException; {:try_start_28 .. :try_end_46} :catch_4f
+    .catchall {:try_start_28 .. :try_end_46} :catchall_4a
 
     invoke-static {p0}, Lcom/fasterxml/jackson/core/util/VersionUtil;->_close(Ljava/io/Closeable;)V
 
     return-object p1
 
-    :catchall_49
+    :catchall_4a
     move-exception p1
 
     invoke-static {p0}, Lcom/fasterxml/jackson/core/util/VersionUtil;->_close(Ljava/io/Closeable;)V
 
     throw p1
 
-    :catch_4e
+    :catch_4f
     invoke-static {p0}, Lcom/fasterxml/jackson/core/util/VersionUtil;->_close(Ljava/io/Closeable;)V
 
-    :cond_51
+    :cond_52
     invoke-static {}, Lcom/fasterxml/jackson/core/Version;->unknownVersion()Lcom/fasterxml/jackson/core/Version;
 
     move-result-object p0

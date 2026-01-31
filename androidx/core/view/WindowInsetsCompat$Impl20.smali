@@ -272,9 +272,7 @@
 
     sput-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sGetViewRootImplMethod:Ljava/lang/reflect/Method;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->RyRBWzbRmEQMwB:Ljava/lang/String;
+    const-string v1, "android.view.View$AttachInfo"
 
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -311,19 +309,17 @@
     sget-object v1, Landroidx/core/view/WindowInsetsCompat$Impl20;->sAttachInfoField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
-    :try_end_37
-    .catch Ljava/lang/ReflectiveOperationException; {:try_start_1 .. :try_end_37} :catch_38
+    :try_end_36
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_1 .. :try_end_36} :catch_37
 
-    goto :goto_52
+    goto :goto_4f
 
-    :catch_38
+    :catch_37
     move-exception v1
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->KHXipnyL:Ljava/lang/String;
+    const-string v3, "Failed to get visible insets. (Reflection error). "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -337,13 +333,11 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->YsyH:Ljava/lang/String;
+    const-string v3, "WindowInsetsCompat"
 
     invoke-static {v3, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_52
+    :goto_4f
     sput-boolean v0, Landroidx/core/view/WindowInsetsCompat$Impl20;->sVisibleRectReflectionFetched:Z
 
     return-void

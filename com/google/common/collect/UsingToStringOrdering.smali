@@ -75,9 +75,7 @@
 .method public toString()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->UhlOfvSWufIBgx:Ljava/lang/String;
+    const-string v0, "Ordering.usingToString()"
 
     return-object v0
 .end method

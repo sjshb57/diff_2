@@ -1722,11 +1722,11 @@
     move v4, v1
 
     :goto_25
-    if-ge v4, v3, :cond_52
+    if-ge v4, v3, :cond_51
 
     aget-object v5, p1, v4
 
-    if-eqz v5, :cond_4c
+    if-eqz v5, :cond_4b
 
     new-instance v6, Lkotlin/text/Regex;
 
@@ -1738,15 +1738,13 @@
 
     move-result v6
 
-    if-ne v6, v2, :cond_4c
+    if-ne v6, v2, :cond_4b
 
     const/4 v9, 0x4
 
     const/4 v10, 0x0
 
-    const/4 v6, 0x0
-
-    sget-object v6, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->IoDRTqAKorTm:Ljava/lang/String;
+    const-string v6, "."
 
     const-string v7, ""
 
@@ -1764,27 +1762,27 @@
 
     move-result-object v5
 
-    :cond_4c
+    :cond_4b
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_25
 
-    :cond_52
+    :cond_51
     new-array p1, v1, [Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
-    if-eqz p1, :cond_5d
+    if-eqz p1, :cond_5c
 
     check-cast p1, [Ljava/lang/String;
 
     return-object p1
 
-    :cond_5d
+    :cond_5c
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>"

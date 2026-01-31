@@ -76,9 +76,7 @@
 
     const-string v4, ""
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/savedstate/xT/fgyAspfzfnhI;->kuJGNqF:Ljava/lang/String;
+    const-string v5, ","
 
     move-object v0, v8
 

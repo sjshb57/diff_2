@@ -122,9 +122,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->ltAdgXvpilewt:Ljava/lang/String;
+    const-string v0, "action"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -132,13 +130,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_14
 
     invoke-interface {p1, p0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_1f
+    goto :goto_1e
 
-    :cond_15
+    :cond_14
     new-instance v0, Landroidx/core/view/ViewKt$doOnAttach$1;
 
     invoke-direct {v0, p0, p1}, Landroidx/core/view/ViewKt$doOnAttach$1;-><init>(Landroid/view/View;Lkotlin/jvm/functions/Function1;)V
@@ -147,7 +145,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    :goto_1f
+    :goto_1e
     return-void
 .end method
 
@@ -930,7 +928,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_18
 
     invoke-interface {p1, v0}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -938,7 +936,7 @@
 
     return-void
 
-    :cond_17
+    :cond_18
     new-instance p0, Ljava/lang/NullPointerException;
 
     const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"

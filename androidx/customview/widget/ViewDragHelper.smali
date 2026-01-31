@@ -2121,9 +2121,7 @@
     :cond_30
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->jZLYGRlMduqYHR:Ljava/lang/String;
+    const-string p2, "Cannot flingCapturedView outside of a call to Callback#onViewReleased"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

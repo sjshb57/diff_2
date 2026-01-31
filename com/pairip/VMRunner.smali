@@ -20,18 +20,21 @@
 
 .field private static context:Landroid/content/Context; = null
 
+.field private static job:Ljava/util/concurrent/Future; = null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/Future<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
 .field private static loggingEnabled:Ljava/lang/String; = "false"
 
-.field private static versionCode:I = 0xfb8cf
+.field private static versionCode:I = 0xfb8f1
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .registers 1
-
-    return-void
-.end method
-
 .method private constructor <init>()V
     .registers 1
 
@@ -305,6 +308,21 @@
     .registers 1
 
     sget-object v0, Lcom/pairip/VMRunner;->context:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method public static getJob()Ljava/util/concurrent/Future;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/concurrent/Future<",
+            "*>;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/pairip/VMRunner;->job:Ljava/util/concurrent/Future;
 
     return-object v0
 .end method
@@ -804,6 +822,30 @@
     .end annotation
 
     sput-object p0, Lcom/pairip/VMRunner;->context:Landroid/content/Context;
+
+    return-void
+.end method
+
+.method public static setJob(Ljava/util/concurrent/Future;)V
+    .registers 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "job"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Future<",
+            "*>;)V"
+        }
+    .end annotation
+
+    sput-object p0, Lcom/pairip/VMRunner;->job:Ljava/util/concurrent/Future;
 
     return-void
 .end method

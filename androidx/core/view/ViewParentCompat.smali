@@ -307,7 +307,7 @@
 
     invoke-interface/range {v1 .. v8}, Landroidx/core/view/NestedScrollingParent3;->onNestedScroll(Landroid/view/View;IIIII[I)V
 
-    goto :goto_52
+    goto :goto_53
 
     :cond_14
     const/4 v0, 0x0
@@ -348,17 +348,17 @@
 
     invoke-interface/range {v3 .. v9}, Landroidx/core/view/NestedScrollingParent2;->onNestedScroll(Landroid/view/View;IIIII)V
 
-    goto :goto_52
+    goto :goto_53
 
     :cond_32
-    if-nez p6, :cond_52
+    if-nez p6, :cond_53
 
     :try_start_34
     invoke-static/range {p0 .. p5}, Landroidx/core/view/ViewParentCompat$Api21Impl;->onNestedScroll(Landroid/view/ViewParent;Landroid/view/View;IIII)V
     :try_end_37
     .catch Ljava/lang/AbstractMethodError; {:try_start_34 .. :try_end_37} :catch_38
 
-    goto :goto_52
+    goto :goto_53
 
     :catch_38
     move-exception v0
@@ -385,8 +385,8 @@
 
     invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_52
-    :goto_52
+    :cond_53
+    :goto_53
     return-void
 .end method
 
@@ -411,17 +411,17 @@
 
     invoke-interface {p0, p1, p2, p3, p4}, Landroidx/core/view/NestedScrollingParent2;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;II)V
 
-    goto :goto_2a
+    goto :goto_29
 
     :cond_a
-    if-nez p4, :cond_2a
+    if-nez p4, :cond_29
 
     :try_start_c
     invoke-static {p0, p1, p2, p3}, Landroidx/core/view/ViewParentCompat$Api21Impl;->onNestedScrollAccepted(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V
     :try_end_f
     .catch Ljava/lang/AbstractMethodError; {:try_start_c .. :try_end_f} :catch_10
 
-    goto :goto_2a
+    goto :goto_29
 
     :catch_10
     move-exception p1
@@ -442,14 +442,12 @@
 
     move-result-object p0
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->kHZAItIprgHbF:Ljava/lang/String;
+    const-string p2, "ViewParentCompat"
 
     invoke-static {p2, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_2a
-    :goto_2a
+    :cond_29
+    :goto_29
     return-void
 .end method
 

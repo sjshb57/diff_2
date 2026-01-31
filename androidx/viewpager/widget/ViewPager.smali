@@ -2605,41 +2605,39 @@
 
     iget-boolean v1, p0, Landroidx/viewpager/widget/ViewPager;->mInLayout:Z
 
-    if-eqz v1, :cond_31
+    if-eqz v1, :cond_30
 
-    if-eqz v0, :cond_2a
+    if-eqz v0, :cond_29
 
     iget-boolean v1, v0, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
 
     if-nez v1, :cond_21
 
-    goto :goto_2a
+    goto :goto_29
 
     :cond_21
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/print/nh/SlomKQFs;->eKqmOaMdeH:Ljava/lang/String;
+    const-string p2, "Cannot add pager decor view during layout"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_2a
-    :goto_2a
+    :cond_29
+    :goto_29
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroidx/viewpager/widget/ViewPager$LayoutParams;->needsMeasure:Z
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/viewpager/widget/ViewPager;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z
 
-    goto :goto_34
+    goto :goto_33
 
-    :cond_31
+    :cond_30
     invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    :goto_34
+    :goto_33
     return-void
 .end method
 
@@ -7278,9 +7276,7 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lkotlin/EDDN/hfnXJuYOaqC;->YEYcTheIwcup:Ljava/lang/String;
+    const-string v4, " Pager id: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -1680,9 +1680,9 @@
 
     check-cast p1, Landroidx/versionedparcelable/VersionedParcelable;
     :try_end_11
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_11} :catch_3c
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_11} :catch_24
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_11} :catch_1b
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_11} :catch_3d
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_11} :catch_25
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_11} :catch_1c
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_11} :catch_12
 
     return-object p1
@@ -1698,7 +1698,7 @@
 
     throw p2
 
-    :catch_1b
+    :catch_1c
     move-exception p1
 
     new-instance p2, Ljava/lang/RuntimeException;
@@ -1709,7 +1709,7 @@
 
     throw p2
 
-    :catch_24
+    :catch_25
     move-exception p1
 
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
@@ -1718,7 +1718,7 @@
 
     instance-of p2, p2, Ljava/lang/RuntimeException;
 
-    if-eqz p2, :cond_34
+    if-eqz p2, :cond_35
 
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
@@ -1728,7 +1728,7 @@
 
     throw p1
 
-    :cond_34
+    :cond_35
     new-instance p2, Ljava/lang/RuntimeException;
 
     const-string v0, "VersionedParcel encountered InvocationTargetException"
@@ -1737,7 +1737,7 @@
 
     throw p2
 
-    :catch_3c
+    :catch_3d
     move-exception p1
 
     new-instance p2, Ljava/lang/RuntimeException;

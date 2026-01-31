@@ -478,9 +478,7 @@
 
     instance-of v0, p2, Ljava/lang/Class;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->CqOTl:Ljava/lang/String;
+    const-string v1, "dataType has to be of type Class<?>"
 
     invoke-static {v0, v1}, Lcom/google/api/client/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 

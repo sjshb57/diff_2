@@ -323,13 +323,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3e
+    if-eqz v1, :cond_3f
 
     const-string v1, "BLE_SIGNAL"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_3e
+    :cond_3f
     iget v1, p0, Lcom/google/android/gms/nearby/messages/internal/Update;->zzb:I
 
     const/16 v2, 0x10
@@ -338,13 +338,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4d
+    if-eqz v1, :cond_4e
 
     const-string v1, "DEVICE"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_4d
+    :cond_4e
     iget v1, p0, Lcom/google/android/gms/nearby/messages/internal/Update;->zzb:I
 
     const/16 v2, 0x20
@@ -353,13 +353,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5c
+    if-eqz v1, :cond_5d
 
     const-string v1, "BLE_RECORD"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_5c
+    :cond_5d
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

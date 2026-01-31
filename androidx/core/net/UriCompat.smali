@@ -86,17 +86,15 @@
 
     move-result v4
 
-    if-nez v4, :cond_60
+    if-nez v4, :cond_5f
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->BhWAxvvBON:Ljava/lang/String;
+    const-string v4, "https"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-nez v4, :cond_60
+    if-nez v4, :cond_5f
 
     const-string v4, "ftp"
 
@@ -104,7 +102,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_60
+    if-nez v4, :cond_5f
 
     const-string v4, "rtsp"
 
@@ -114,7 +112,7 @@
 
     if-eqz v4, :cond_d2
 
-    :cond_60
+    :cond_5f
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v4, "//"
@@ -127,18 +125,18 @@
 
     const-string v5, ""
 
-    if-eqz v4, :cond_74
+    if-eqz v4, :cond_73
 
     invoke-virtual {p0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v4
 
-    goto :goto_75
+    goto :goto_74
 
-    :cond_74
+    :cond_73
     move-object v4, v5
 
-    :goto_75
+    :goto_74
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/net/Uri;->getPort()I

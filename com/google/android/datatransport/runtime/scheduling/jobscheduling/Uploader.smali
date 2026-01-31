@@ -111,9 +111,7 @@
 
     new-instance v2, Lcom/google/android/datatransport/runtime/EncodedPayload;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->LpkG:Ljava/lang/String;
+    const-string v3, "proto"
 
     invoke-static {v3}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
 

@@ -292,9 +292,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/core/util/LEr/bFMYUr;->EBiPBN:Ljava/lang/String;
+    const-string v3, "Invalid UTF-32 character 0x"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -378,9 +376,7 @@
 
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->WcWrVTkivsUXhFT:Ljava/lang/String;
+    const-string p1, ", at char #"
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

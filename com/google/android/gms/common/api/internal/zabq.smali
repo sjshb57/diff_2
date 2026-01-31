@@ -2188,7 +2188,7 @@
 
     iget-boolean v0, p0, Lcom/google/android/gms/common/api/internal/zabq;->zaj:Z
 
-    if-eqz v0, :cond_40
+    if-eqz v0, :cond_3f
 
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zabq;->zaL()V
 
@@ -2218,20 +2218,18 @@
 
     invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;)V
 
-    goto :goto_36
+    goto :goto_35
 
     :cond_2c
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
     const/16 v1, 0x16
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->EphfuwUPHG:Ljava/lang/String;
+    const-string v2, "API failed to connect while resuming due to an unknown error."
 
     invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;)V
 
-    :goto_36
+    :goto_35
     invoke-direct {p0, v0}, Lcom/google/android/gms/common/api/internal/zabq;->zaE(Lcom/google/android/gms/common/api/Status;)V
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabq;->zac:Lcom/google/android/gms/common/api/Api$Client;
@@ -2240,7 +2238,7 @@
 
     invoke-interface {v0, v1}, Lcom/google/android/gms/common/api/Api$Client;->disconnect(Ljava/lang/String;)V
 
-    :cond_40
+    :cond_3f
     return-void
 .end method
 

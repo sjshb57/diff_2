@@ -439,12 +439,12 @@
 
     return-void
 
-    :catchall_23
+    :catchall_24
     move-exception p1
 
     monitor-exit v0
-    :try_end_25
-    .catchall {:try_start_3 .. :try_end_25} :catchall_23
+    :try_end_26
+    .catchall {:try_start_3 .. :try_end_26} :catchall_24
 
     throw p1
 .end method
@@ -596,12 +596,12 @@
 
     return-object p1
 
-    :catchall_2c
+    :catchall_2d
     move-exception p1
 
     monitor-exit v0
-    :try_end_2e
-    .catchall {:try_start_3 .. :try_end_2e} :catchall_2c
+    :try_end_2f
+    .catchall {:try_start_3 .. :try_end_2f} :catchall_2d
 
     throw p1
 .end method

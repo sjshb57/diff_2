@@ -1075,7 +1075,7 @@
 
     const/4 v4, 0x1
 
-    if-ltz v1, :cond_1c
+    if-ltz v1, :cond_1b
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaw:Ljava/lang/Integer;
 
@@ -1089,18 +1089,16 @@
     move v1, v3
 
     :goto_15
-    const/4 v5, 0x0
-
-    sget-object v5, Lkotlin/EDDN/hfnXJuYOaqC;->UROOByXtUyrrLj:Ljava/lang/String;
+    const-string v5, "Sign-in mode should have been set explicitly by auto-manage."
 
     invoke-static {v1, v5}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    goto :goto_37
+    goto :goto_36
 
-    :cond_1c
+    :cond_1b
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaw:Ljava/lang/Integer;
 
-    if-nez v1, :cond_31
+    if-nez v1, :cond_30
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zac:Ljava/util/Map;
 
@@ -1118,16 +1116,16 @@
 
     iput-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaw:Ljava/lang/Integer;
 
-    goto :goto_37
+    goto :goto_36
 
-    :cond_31
+    :cond_30
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    if-eq v1, v2, :cond_7b
+    if-eq v1, v2, :cond_7a
 
-    :goto_37
+    :goto_36
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaw:Ljava/lang/Integer;
 
     invoke-static {v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1143,32 +1141,32 @@
     iget-object v5, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v5}, Ljava/util/concurrent/locks/Lock;->lock()V
-    :try_end_48
-    .catchall {:try_start_7 .. :try_end_48} :catchall_83
+    :try_end_47
+    .catchall {:try_start_7 .. :try_end_47} :catchall_82
 
     const/4 v5, 0x3
 
-    if-eq v1, v5, :cond_52
+    if-eq v1, v5, :cond_51
 
-    if-eq v1, v4, :cond_52
+    if-eq v1, v4, :cond_51
 
-    if-ne v1, v2, :cond_50
+    if-ne v1, v2, :cond_4f
+
+    goto :goto_52
+
+    :cond_4f
+    move v2, v1
 
     goto :goto_53
 
-    :cond_50
+    :cond_51
     move v2, v1
 
-    goto :goto_54
-
-    :cond_52
-    move v2, v1
-
-    :goto_53
+    :goto_52
     move v3, v4
 
-    :goto_54
-    :try_start_54
+    :goto_53
+    :try_start_53
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -1184,15 +1182,15 @@
     invoke-direct {p0, v2}, Lcom/google/android/gms/common/api/internal/zabe;->zal(I)V
 
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zabe;->zan()V
-    :try_end_69
-    .catchall {:try_start_54 .. :try_end_69} :catchall_74
+    :try_end_68
+    .catchall {:try_start_53 .. :try_end_68} :catchall_73
 
-    :try_start_69
+    :try_start_68
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-    :try_end_6e
-    .catchall {:try_start_69 .. :try_end_6e} :catchall_83
+    :try_end_6d
+    .catchall {:try_start_68 .. :try_end_6d} :catchall_82
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
@@ -1200,17 +1198,17 @@
 
     return-void
 
-    :catchall_74
+    :catchall_73
     move-exception v0
 
-    :try_start_75
+    :try_start_74
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 
-    :cond_7b
+    :cond_7a
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot call connect() when SignInMode is set to SIGN_IN_MODE_OPTIONAL. Call connect(SIGN_IN_MODE_OPTIONAL) instead."
@@ -1218,10 +1216,10 @@
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
-    :try_end_83
-    .catchall {:try_start_75 .. :try_end_83} :catchall_83
+    :try_end_82
+    .catchall {:try_start_74 .. :try_end_82} :catchall_82
 
-    :catchall_83
+    :catchall_82
     move-exception v0
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
@@ -1443,11 +1441,11 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zal:Lcom/google/android/gms/common/api/internal/zaca;
 
-    if-eqz v0, :cond_45
+    if-eqz v0, :cond_46
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/google/android/gms/common/api/internal/zaca;->zas(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    :cond_45
+    :cond_46
     return-void
 .end method
 
@@ -1488,14 +1486,12 @@
 
     move-result-object v0
 
-    goto :goto_18
+    goto :goto_17
 
     :cond_15
-    const/4 v0, 0x0
+    const-string v0, "the API"
 
-    sget-object v0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->GGqLpXfLrynBmAV:Ljava/lang/String;
-
-    :goto_18
+    :goto_17
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "GoogleApiClient is not configured to use "
@@ -1518,32 +1514,32 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    :try_start_33
+    :try_start_32
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zal:Lcom/google/android/gms/common/api/internal/zaca;
 
-    if-nez v0, :cond_3d
+    if-nez v0, :cond_3c
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaa:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    goto :goto_41
+    goto :goto_40
 
-    :cond_3d
+    :cond_3c
     invoke-interface {v0, p1}, Lcom/google/android/gms/common/api/internal/zaca;->zae(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
 
     move-result-object p1
-    :try_end_41
-    .catchall {:try_start_33 .. :try_end_41} :catchall_47
+    :try_end_40
+    .catchall {:try_start_32 .. :try_end_40} :catchall_46
 
-    :goto_41
+    :goto_40
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object p1
 
-    :catchall_47
+    :catchall_46
     move-exception p1
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
@@ -1743,13 +1739,13 @@
 
     move-result v1
 
-    if-nez v1, :cond_1a
+    if-nez v1, :cond_1b
 
     iget-boolean v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zap:Z
 
     if-eqz v1, :cond_12
 
-    goto :goto_1a
+    goto :goto_1b
 
     :cond_12
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -1760,8 +1756,8 @@
 
     throw p1
 
-    :cond_1a
-    :goto_1a
+    :cond_1b
+    :goto_1b
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zac:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Api;->zab()Lcom/google/android/gms/common/api/Api$AnyClientKey;
@@ -1772,7 +1768,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_73
+    if-eqz v1, :cond_74
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zal:Lcom/google/android/gms/common/api/internal/zaca;
 
@@ -1786,17 +1782,17 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_6d
+    if-nez v1, :cond_6e
 
     iget-boolean v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zap:Z
 
-    if-eqz v1, :cond_3b
+    if-eqz v1, :cond_3c
 
     sget-object p1, Lcom/google/android/gms/common/ConnectionResult;->RESULT_SUCCESS:Lcom/google/android/gms/common/ConnectionResult;
 
-    goto :goto_67
+    goto :goto_68
 
-    :cond_3b
+    :cond_3c
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabe;->zaf()Ljava/lang/String;
 
     move-result-object v1
@@ -1834,25 +1830,25 @@
     const/4 v1, 0x0
 
     invoke-direct {p1, v0, v1}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
-    :try_end_67
-    .catchall {:try_start_7 .. :try_end_67} :catchall_8e
+    :try_end_68
+    .catchall {:try_start_7 .. :try_end_68} :catchall_8f
 
-    :goto_67
+    :goto_68
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object p1
 
-    :cond_6d
+    :cond_6e
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-object v1
 
-    :cond_73
-    :try_start_73
+    :cond_74
+    :try_start_74
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Api;->zad()Ljava/lang/String;
@@ -1876,10 +1872,10 @@
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
-    :try_end_8e
-    .catchall {:try_start_73 .. :try_end_8e} :catchall_8e
+    :try_end_8f
+    .catchall {:try_start_74 .. :try_end_8f} :catchall_8f
 
-    :catchall_8e
+    :catchall_8f
     move-exception p1
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaj:Ljava/util/concurrent/locks/Lock;

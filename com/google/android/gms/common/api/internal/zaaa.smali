@@ -226,11 +226,11 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_1a
+    if-eq v0, v1, :cond_1b
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_15
+    if-eq v0, v1, :cond_16
 
     new-instance p1, Ljava/lang/Exception;
 
@@ -242,17 +242,17 @@
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_1d
+    goto :goto_1e
 
-    :cond_15
+    :cond_16
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaaa;->zab:Lcom/google/android/gms/common/api/internal/zabe;
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/zabe;->zaa(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    :cond_1a
+    :cond_1b
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zaaa;->zaB()V
 
-    :goto_1d
+    :goto_1e
     const/4 p1, 0x0
 
     iput p1, p0, Lcom/google/android/gms/common/api/internal/zaaa;->zan:I
@@ -560,7 +560,7 @@
     const/4 v1, 0x0
 
     :goto_ad
-    if-ge v1, v0, :cond_da
+    if-ge v1, v0, :cond_d9
 
     move-object/from16 v2, p9
 
@@ -601,15 +601,13 @@
     :cond_d1
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->ZBFOdm:Ljava/lang/String;
+    const-string v1, "Each ClientCallbacks must have a corresponding API in the isOptionalMap"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_da
+    :cond_d9
     new-instance v15, Lcom/google/android/gms/common/api/internal/zaaa;
 
     move-object v0, v15

@@ -561,9 +561,7 @@
     iget p4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     :cond_1c
-    const/4 p5, 0x0
-
-    sget-object p5, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->MOmYB:Ljava/lang/String;
+    const-string p5, "<this>"
 
     invoke-static {p0, p5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

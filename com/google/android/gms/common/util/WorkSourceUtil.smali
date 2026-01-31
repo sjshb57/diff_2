@@ -443,21 +443,21 @@
 
     const/4 v1, 0x0
 
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->PUQEoDWCks:Ljava/lang/String;
+    sget-object v1, Lcom/saucesdk/android/HGf/BqwBVtsr;->aClmnuoyAX:Ljava/lang/String;
 
-    if-eqz p0, :cond_77
+    if-eqz p0, :cond_76
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    if-eqz v2, :cond_77
+    if-eqz v2, :cond_76
 
-    if-eqz p2, :cond_77
+    if-eqz p2, :cond_76
 
     if-nez p1, :cond_11
 
-    goto :goto_77
+    goto :goto_76
 
     :cond_11
     const/4 v2, -0x1
@@ -485,17 +485,15 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_34
+    goto :goto_33
 
     :cond_27
     iget v2, p0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    goto :goto_34
+    goto :goto_33
 
     :catch_2a
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/common/html/ehW/oZEOPkNlS;->PuBlmEavgsoF:Ljava/lang/String;
+    const-string p0, "Could not find package: "
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -503,28 +501,28 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_34
-    if-gez v2, :cond_37
+    :goto_33
+    if-gez v2, :cond_36
 
     return-object v0
 
-    :cond_37
+    :cond_36
     new-instance p0, Landroid/os/WorkSource;
 
     invoke-direct {p0}, Landroid/os/WorkSource;-><init>()V
 
     sget-object v0, Lcom/google/android/gms/common/util/WorkSourceUtil;->zzg:Ljava/lang/reflect/Method;
 
-    if-eqz v0, :cond_73
+    if-eqz v0, :cond_72
 
     sget-object v4, Lcom/google/android/gms/common/util/WorkSourceUtil;->zzh:Ljava/lang/reflect/Method;
 
-    if-nez v4, :cond_45
+    if-nez v4, :cond_44
 
-    goto :goto_73
+    goto :goto_72
 
-    :cond_45
-    :try_start_45
+    :cond_44
+    :try_start_44
     new-array v5, v3, [Ljava/lang/Object;
 
     invoke-virtual {v0, p0, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -537,7 +535,7 @@
 
     const/4 v7, 0x2
 
-    if-eq v2, v5, :cond_5e
+    if-eq v2, v5, :cond_5d
 
     new-array v8, v7, [Ljava/lang/Object;
 
@@ -551,7 +549,7 @@
 
     invoke-virtual {v4, v0, v8}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_5e
+    :cond_5d
     new-array p1, v7, [Ljava/lang/Object;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -563,29 +561,29 @@
     aput-object p2, p1, v6
 
     invoke-virtual {v4, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_6b
-    .catch Ljava/lang/Exception; {:try_start_45 .. :try_end_6b} :catch_6c
+    :try_end_6a
+    .catch Ljava/lang/Exception; {:try_start_44 .. :try_end_6a} :catch_6b
 
-    goto :goto_76
+    goto :goto_75
 
-    :catch_6c
+    :catch_6b
     move-exception p1
 
     const-string p2, "Unable to assign chained blame through WorkSource"
 
     invoke-static {v1, p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_76
+    goto :goto_75
 
-    :cond_73
-    :goto_73
+    :cond_72
+    :goto_72
     invoke-static {p0, v2, p1}, Lcom/google/android/gms/common/util/WorkSourceUtil;->add(Landroid/os/WorkSource;ILjava/lang/String;)V
 
-    :goto_76
+    :goto_75
     return-object p0
 
-    :cond_77
-    :goto_77
+    :cond_76
+    :goto_76
     const-string p0, "Unexpected null arguments"
 
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
@@ -600,7 +598,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_24
+    if-eqz v0, :cond_26
 
     const/4 v2, 0x1
 
@@ -638,7 +636,7 @@
 
     invoke-static {p1, v0, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_24
+    :cond_26
     return v1
 .end method
 

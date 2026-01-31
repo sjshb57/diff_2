@@ -64,7 +64,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v2, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->gEy:Ljava/lang/String;
+    sget-object v2, Lcom/saucesdk/android/getgaid/shYz/ocQSSK;->LmJaTeJ:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lcom/google/common/escape/Escapers$Builder;->addEscape(CLjava/lang/String;)Lcom/google/common/escape/Escapers$Builder;
 

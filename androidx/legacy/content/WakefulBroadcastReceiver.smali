@@ -52,9 +52,7 @@
 .method public static completeWakefulIntent(Landroid/content/Intent;)Z
     .registers 6
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/nano/privacy/eM/RmZCOXza;->clSYzk:Ljava/lang/String;
+    const-string v0, "No active wake lock id #"
 
     const-string v1, "androidx.contentpager.content.wakelockid"
 
@@ -64,16 +62,16 @@
 
     move-result p0
 
-    if-nez p0, :cond_d
+    if-nez p0, :cond_c
 
     return v2
 
-    :cond_d
+    :cond_c
     sget-object v1, Landroidx/legacy/content/WakefulBroadcastReceiver;->sActiveWakeLocks:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    :try_start_10
+    :try_start_f
     invoke-virtual {v1, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -82,7 +80,7 @@
 
     const/4 v3, 0x1
 
-    if-eqz v2, :cond_21
+    if-eqz v2, :cond_20
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
 
@@ -92,7 +90,7 @@
 
     return v3
 
-    :cond_21
+    :cond_20
     const-string v2, "WakefulBroadcastReceiv."
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -111,12 +109,12 @@
 
     return v3
 
-    :catchall_34
+    :catchall_33
     move-exception p0
 
     monitor-exit v1
-    :try_end_36
-    .catchall {:try_start_10 .. :try_end_36} :catchall_34
+    :try_end_35
+    .catchall {:try_start_f .. :try_end_35} :catchall_33
 
     throw p0
 .end method

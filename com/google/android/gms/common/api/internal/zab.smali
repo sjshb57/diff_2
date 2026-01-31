@@ -44,9 +44,7 @@
     :cond_e
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->LJKNwHVZwYtllB:Ljava/lang/String;
+    const-string v0, "The target activity has already been GC\'d"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
