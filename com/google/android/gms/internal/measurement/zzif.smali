@@ -252,7 +252,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_2a
 
     iget-object v10, p0, Lcom/google/android/gms/internal/measurement/zzif;->zzh:Lcom/google/common/base/Function;
 
@@ -285,15 +285,13 @@
     :cond_22
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->TRPjHGKC:Ljava/lang/String;
+    const-string v1, "Cannot skip gservices both always and conditionally"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_2b
+    :cond_2a
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot set GServices prefix and skip GServices"

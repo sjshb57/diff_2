@@ -72,7 +72,7 @@
 
     const/4 p2, 0x1
 
-    if-eqz p1, :cond_3f
+    if-eqz p1, :cond_3e
 
     const/4 p3, 0x4
 
@@ -116,9 +116,7 @@
     :cond_22
     new-array p1, p3, [Ljava/lang/Object;
 
-    const/4 p3, 0x0
-
-    sget-object p3, Landroidx/core/util/LEr/bFMYUr;->ZcDgFBqGOdfyvy:Ljava/lang/String;
+    const-string p3, "zzd"
 
     const/4 v2, 0x0
 
@@ -146,7 +144,7 @@
 
     return-object p1
 
-    :cond_3f
+    :cond_3e
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1

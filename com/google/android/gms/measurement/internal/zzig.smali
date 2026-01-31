@@ -1138,9 +1138,7 @@
 
     move-result-object p2
 
-    const/4 p3, 0x0
-
-    sget-object p3, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->PxyEpXJvYH:Ljava/lang/String;
+    const-string p3, "Failed to get conditional user properties as"
 
     invoke-virtual {p2, p3, p1}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -1397,9 +1395,7 @@
 
     move-result-object p3
 
-    const/4 p4, 0x0
-
-    sget-object p4, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->CpT:Ljava/lang/String;
+    const-string p4, "Failed to query user properties. appId"
 
     invoke-virtual {p2, p4, p3, p1}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -2127,18 +2123,18 @@
 
     move-result v1
     :try_end_78
-    .catch Lcom/google/android/gms/internal/measurement/zzc; {:try_start_52 .. :try_end_78} :catch_ed
+    .catch Lcom/google/android/gms/internal/measurement/zzc; {:try_start_52 .. :try_end_78} :catch_ec
 
     if-nez v1, :cond_7c
 
-    goto/16 :goto_100
+    goto/16 :goto_ff
 
     :cond_7c
     invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzb;->zzc()Z
 
     move-result v1
 
-    if-eqz v1, :cond_aa
+    if-eqz v1, :cond_a9
 
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzig;->zza:Lcom/google/android/gms/measurement/internal/zzou;
 
@@ -2150,9 +2146,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/core/util/LEr/bFMYUr;->XPZUbLW:Ljava/lang/String;
+    const-string v2, "EES edited event"
 
     iget-object p1, p1, Lcom/google/android/gms/measurement/internal/zzbl;->zza:Ljava/lang/String;
 
@@ -2178,17 +2172,17 @@
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/gms/measurement/internal/zzig;->zzd(Lcom/google/android/gms/measurement/internal/zzbl;Lcom/google/android/gms/measurement/internal/zzp;)V
 
-    goto :goto_ad
+    goto :goto_ac
 
-    :cond_aa
+    :cond_a9
     invoke-direct {p0, p1, p2}, Lcom/google/android/gms/measurement/internal/zzig;->zzd(Lcom/google/android/gms/measurement/internal/zzbl;Lcom/google/android/gms/measurement/internal/zzp;)V
 
-    :goto_ad
+    :goto_ac
     invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzb;->zzb()Z
 
     move-result p1
 
-    if-eqz p1, :cond_ec
+    if-eqz p1, :cond_eb
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzb;->zza()Lcom/google/android/gms/internal/measurement/zzac;
 
@@ -2202,12 +2196,12 @@
 
     move-result-object p1
 
-    :goto_bf
+    :goto_be
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_ec
+    if-eqz v0, :cond_eb
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2245,12 +2239,12 @@
 
     invoke-direct {p0, v0, p2}, Lcom/google/android/gms/measurement/internal/zzig;->zzd(Lcom/google/android/gms/measurement/internal/zzbl;Lcom/google/android/gms/measurement/internal/zzp;)V
 
-    goto :goto_bf
+    goto :goto_be
 
-    :cond_ec
+    :cond_eb
     return-void
 
-    :catch_ed
+    :catch_ec
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzig;->zza:Lcom/google/android/gms/measurement/internal/zzou;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzou;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -2269,7 +2263,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :goto_100
+    :goto_ff
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzig;->zza:Lcom/google/android/gms/measurement/internal/zzou;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzou;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;

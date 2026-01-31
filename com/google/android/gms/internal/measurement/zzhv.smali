@@ -160,9 +160,7 @@
     return p0
 
     :cond_52
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->BaAZhpDTtw:Ljava/lang/String;
+    const-string v0, "com.google.android.gms"
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -172,11 +170,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_60
+    if-eqz v0, :cond_5f
 
-    goto :goto_80
+    goto :goto_7f
 
-    :cond_60
+    :cond_5f
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -187,21 +185,21 @@
 
     const/16 v4, 0x1d
 
-    if-ge v3, v4, :cond_6e
+    if-ge v3, v4, :cond_6d
 
     move v3, v1
 
-    goto :goto_70
+    goto :goto_6f
 
-    :cond_6e
+    :cond_6d
     const/high16 v3, 0x10000000
 
-    :goto_70
+    :goto_6f
     invoke-virtual {v0, v2, v3}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
-    if-eqz v0, :cond_87
+    if-eqz v0, :cond_86
 
     const-string v2, "com.google.android.gms"
 
@@ -211,18 +209,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_87
+    if-eqz v0, :cond_86
 
-    :goto_80
+    :goto_7f
     invoke-static {p0}, Lcom/google/android/gms/internal/measurement/zzhv;->zza(Landroid/content/Context;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_87
+    if-eqz p0, :cond_86
 
     const/4 v1, 0x1
 
-    :cond_87
+    :cond_86
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -234,8 +232,8 @@
     sput-object p0, Lcom/google/android/gms/internal/measurement/zzhv;->zza:Lcom/google/common/base/Optional;
 
     monitor-exit p1
-    :try_end_92
-    .catchall {:try_start_3c .. :try_end_92} :catchall_9f
+    :try_end_91
+    .catchall {:try_start_3c .. :try_end_91} :catchall_9e
 
     sget-object p0, Lcom/google/android/gms/internal/measurement/zzhv;->zza:Lcom/google/common/base/Optional;
 
@@ -251,13 +249,13 @@
 
     return p0
 
-    :catchall_9f
+    :catchall_9e
     move-exception p0
 
-    :try_start_a0
+    :try_start_9f
     monitor-exit p1
-    :try_end_a1
-    .catchall {:try_start_a0 .. :try_end_a1} :catchall_9f
+    :try_end_a0
+    .catchall {:try_start_9f .. :try_end_a0} :catchall_9e
 
     throw p0
 .end method

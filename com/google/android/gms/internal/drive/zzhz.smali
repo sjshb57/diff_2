@@ -16,9 +16,7 @@
 .method public constructor <init>(I)V
     .registers 5
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->ecnnzOLICGus:Ljava/lang/String;
+    const-string p1, "isAppData"
 
     const-string v0, "inGooglePhotosSpace"
 

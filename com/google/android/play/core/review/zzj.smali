@@ -41,9 +41,7 @@
 
     new-instance v0, Lcom/google/android/play/core/review/internal/zzi;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->WteghgvrCiDBhd:Ljava/lang/String;
+    const-string v1, "PlayCoreVersion"
 
     invoke-direct {v0, v1}, Lcom/google/android/play/core/review/internal/zzi;-><init>(Ljava/lang/String;)V
 
@@ -85,7 +83,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_31
+    if-eqz v3, :cond_32
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -101,14 +99,14 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_31
+    :cond_32
     const-string v2, "unity"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_48
+    if-eqz v3, :cond_49
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -124,7 +122,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_48
+    :cond_49
     return-object v0
 .end method
 

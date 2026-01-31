@@ -496,7 +496,7 @@
 
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/measurement/zzjk;->zzb(I)V
     :try_end_b
-    .catch Lcom/google/android/gms/internal/measurement/zzkp; {:try_start_1 .. :try_end_b} :catch_1a
+    .catch Lcom/google/android/gms/internal/measurement/zzkp; {:try_start_1 .. :try_end_b} :catch_19
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_b} :catch_c
 
     return-object p0
@@ -506,9 +506,7 @@
 
     new-instance p2, Ljava/lang/RuntimeException;
 
-    const/4 p3, 0x0
-
-    sget-object p3, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->MQjffia:Ljava/lang/String;
+    const-string p3, "byte array"
 
     invoke-direct {p0, p3}, Lcom/google/android/gms/internal/measurement/zzin;->zza(Ljava/lang/String;)Ljava/lang/String;
 
@@ -518,7 +516,7 @@
 
     throw p2
 
-    :catch_1a
+    :catch_19
     move-exception p1
 
     throw p1

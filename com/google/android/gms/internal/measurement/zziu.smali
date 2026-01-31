@@ -1113,19 +1113,17 @@
 
     iget v0, p2, Lcom/google/android/gms/internal/measurement/zzit;->zza:I
 
-    if-ltz v0, :cond_18
+    if-ltz v0, :cond_17
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_f
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->PBWzoPPnQdSqh:Ljava/lang/String;
+    const-string p0, ""
 
     iput-object p0, p2, Lcom/google/android/gms/internal/measurement/zzit;->zzc:Ljava/lang/Object;
 
     return p1
 
-    :cond_10
+    :cond_f
     invoke-static {p0, p1, v0}, Lcom/google/android/gms/internal/measurement/zzna;->zzb([BII)Ljava/lang/String;
 
     move-result-object p0
@@ -1136,7 +1134,7 @@
 
     return p1
 
-    :cond_18
+    :cond_17
     invoke-static {}, Lcom/google/android/gms/internal/measurement/zzkp;->zzf()Lcom/google/android/gms/internal/measurement/zzkp;
 
     move-result-object p0

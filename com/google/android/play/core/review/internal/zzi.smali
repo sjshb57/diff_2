@@ -35,9 +35,7 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->jyGKdlPLsE:Ljava/lang/String;
+    const-string v0, "] "
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

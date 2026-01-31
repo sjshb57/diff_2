@@ -88,7 +88,7 @@
 
     check-cast v1, Lcom/google/android/gms/common/data/DataHolder;
 
-    if-eqz v1, :cond_1a
+    if-eqz v1, :cond_1b
 
     invoke-virtual {v1}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
@@ -96,17 +96,17 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    :cond_1a
+    :cond_1b
     monitor-exit p0
 
     return-void
 
-    :catchall_1c
+    :catchall_1d
     move-exception v0
 
     monitor-exit p0
-    :try_end_1e
-    .catchall {:try_start_8 .. :try_end_1e} :catchall_1c
+    :try_end_1f
+    .catchall {:try_start_8 .. :try_end_1f} :catchall_1d
 
     throw v0
 .end method
@@ -134,7 +134,7 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_e0
+    if-nez v2, :cond_e1
 
     const-string v3, "customPropertiesExtraHolder"
 
@@ -142,7 +142,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_db
+    if-eqz v3, :cond_dc
 
     monitor-enter p0
 
@@ -163,9 +163,9 @@
 
     monitor-exit p0
     :try_end_26
-    .catchall {:try_start_17 .. :try_end_26} :catchall_d8
+    .catchall {:try_start_17 .. :try_end_26} :catchall_d9
 
-    goto/16 :goto_c2
+    goto/16 :goto_c3
 
     :cond_28
     :try_start_28
@@ -203,12 +203,12 @@
 
     const/4 v9, 0x0
 
-    :goto_4a
+    :goto_4b
     invoke-virtual {v2}, Lcom/google/android/gms/common/data/DataHolder;->getCount()I
 
     move-result v10
 
-    if-ge v9, v10, :cond_84
+    if-ge v9, v10, :cond_85
 
     invoke-virtual {v2, v9}, Lcom/google/android/gms/common/data/DataHolder;->getWindowIndex(I)I
 
@@ -244,7 +244,7 @@
 
     check-cast v8, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties$zza;
 
-    if-nez v8, :cond_7e
+    if-nez v8, :cond_7f
 
     new-instance v8, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties$zza;
 
@@ -252,26 +252,26 @@
 
     invoke-virtual {v7, v11, v12, v8}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    :cond_7e
+    :cond_7f
     invoke-virtual {v8, v15}, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties$zza;->zza(Lcom/google/android/gms/drive/metadata/internal/zzc;)Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties$zza;
 
     add-int/lit8 v9, v9, 0x1
 
-    goto :goto_4a
+    goto :goto_4b
 
-    :cond_84
+    :cond_85
     new-instance v3, Landroid/util/SparseArray;
 
     invoke-direct {v3}, Landroid/util/SparseArray;-><init>()V
 
     const/4 v8, 0x0
 
-    :goto_8a
+    :goto_8b
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/data/DataHolder;->getCount()I
 
     move-result v4
 
-    if-ge v8, v4, :cond_ac
+    if-ge v8, v4, :cond_ad
 
     const-string v4, "sqlId"
 
@@ -289,7 +289,7 @@
 
     check-cast v4, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties$zza;
 
-    if-eqz v4, :cond_a9
+    if-eqz v4, :cond_aa
 
     invoke-virtual {v4}, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties$zza;->zzbb()Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties;
 
@@ -297,12 +297,12 @@
 
     invoke-virtual {v3, v8, v4}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    :cond_a9
+    :cond_aa
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_8a
+    goto :goto_8b
 
-    :cond_ac
+    :cond_ad
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/data/DataHolder;->getMetadata()Landroid/os/Bundle;
 
     move-result-object v4
@@ -310,10 +310,10 @@
     const-string v5, "customPropertiesExtra"
 
     invoke-virtual {v4, v5, v3}, Landroid/os/Bundle;->putSparseParcelableArray(Ljava/lang/String;Landroid/util/SparseArray;)V
-    :try_end_b5
-    .catchall {:try_start_28 .. :try_end_b5} :catchall_ca
+    :try_end_b6
+    .catchall {:try_start_28 .. :try_end_b6} :catchall_cb
 
-    :try_start_b5
+    :try_start_b6
     invoke-virtual {v2}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/data/DataHolder;->getMetadata()Landroid/os/Bundle;
@@ -325,10 +325,10 @@
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     monitor-exit p0
-    :try_end_c2
-    .catchall {:try_start_b5 .. :try_end_c2} :catchall_d8
+    :try_end_c3
+    .catchall {:try_start_b6 .. :try_end_c3} :catchall_d9
 
-    :goto_c2
+    :goto_c3
     const-string v1, "customPropertiesExtra"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSparseParcelableArray(Ljava/lang/String;)Landroid/util/SparseArray;
@@ -337,12 +337,12 @@
 
     move-object v2, v0
 
-    goto :goto_db
+    goto :goto_dc
 
-    :catchall_ca
+    :catchall_cb
     move-exception v0
 
-    :try_start_cb
+    :try_start_cc
     invoke-virtual {v2}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/data/DataHolder;->getMetadata()Landroid/os/Bundle;
@@ -355,24 +355,24 @@
 
     throw v0
 
-    :catchall_d8
+    :catchall_d9
     move-exception v0
 
     monitor-exit p0
-    :try_end_da
-    .catchall {:try_start_cb .. :try_end_da} :catchall_d8
+    :try_end_db
+    .catchall {:try_start_cc .. :try_end_db} :catchall_d9
 
     throw v0
 
-    :cond_db
-    :goto_db
-    if-nez v2, :cond_e0
+    :cond_dc
+    :goto_dc
+    if-nez v2, :cond_e1
 
     sget-object v0, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties;->zzjb:Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties;
 
     return-object v0
 
-    :cond_e0
+    :cond_e1
     sget-object v0, Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties;->zzjb:Lcom/google/android/gms/drive/metadata/internal/AppVisibleCustomProperties;
 
     move/from16 v1, p1

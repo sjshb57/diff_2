@@ -183,7 +183,7 @@
 
     move-result p2
 
-    if-gt p3, p2, :cond_61
+    if-gt p3, p2, :cond_62
 
     invoke-virtual {p1}, Lcom/google/android/gms/internal/measurement/zziy;->zzb()I
 
@@ -284,7 +284,7 @@
 
     throw p2
 
-    :cond_61
+    :cond_62
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/measurement/zziy;->zzb()I

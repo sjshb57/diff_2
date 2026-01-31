@@ -246,9 +246,7 @@
 
     aput-object p2, p1, p3
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/api/client/util/Uhr/zXgie;->hEtwoj:Ljava/lang/String;
+    const-string p2, "zzh"
 
     const/16 p3, 0x8
 

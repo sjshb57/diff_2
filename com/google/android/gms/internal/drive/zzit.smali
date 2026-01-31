@@ -93,9 +93,7 @@
 
     add-int/lit8 v3, v3, 0x3e
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->rRVtUmLNtMhP:Ljava/lang/String;
+    const-string v4, "byte array"
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -175,9 +173,7 @@
 
     add-int/lit8 v3, v3, 0x3e
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/nano/privacy/eM/RmZCOXza;->fMPrL:Ljava/lang/String;
+    const-string v4, "ByteString"
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 

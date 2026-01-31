@@ -58,9 +58,9 @@
 
     or-int/2addr v1, p1
 
-    if-gez v1, :cond_49
+    if-gez v1, :cond_47
 
-    if-gez p1, :cond_27
+    if-gez p1, :cond_26
 
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -70,9 +70,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/nano/privacy/eM/RmZCOXza;->vdOGxyQSmEYHwQM:Ljava/lang/String;
+    const-string v2, "Index < 0: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -86,7 +84,7 @@
 
     throw v0
 
-    :cond_27
+    :cond_26
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -95,9 +93,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lkotlin/EDDN/hfnXJuYOaqC;->zPxLd:Ljava/lang/String;
+    const-string v3, "Index > length: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -117,7 +113,7 @@
 
     throw v1
 
-    :cond_49
+    :cond_47
     iget-object v0, p0, Lcom/google/android/gms/internal/drive/zzjh;->zzny:[B
 
     iget v1, p0, Lcom/google/android/gms/internal/drive/zzjh;->zznv:I

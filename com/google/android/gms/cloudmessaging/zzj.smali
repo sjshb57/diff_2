@@ -90,7 +90,7 @@
 
     monitor-exit v0
     :try_end_39
-    .catchall {:try_start_3 .. :try_end_39} :catchall_9d
+    .catchall {:try_start_3 .. :try_end_39} :catchall_9f
 
     const-string v3, "MessengerIpcClient"
 
@@ -100,7 +100,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_55
+    if-eqz v3, :cond_57
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -120,7 +120,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_55
+    :cond_57
     iget-object v3, v0, Lcom/google/android/gms/cloudmessaging/zzp;->zzf:Lcom/google/android/gms/cloudmessaging/zzv;
 
     iget-object v4, v0, Lcom/google/android/gms/cloudmessaging/zzp;->zzb:Landroid/os/Messenger;
@@ -171,16 +171,16 @@
 
     invoke-virtual {v6, v4}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    :try_start_8c
+    :try_start_8e
     iget-object v1, v0, Lcom/google/android/gms/cloudmessaging/zzp;->zzc:Lcom/google/android/gms/cloudmessaging/zzq;
 
     invoke-virtual {v1, v6}, Lcom/google/android/gms/cloudmessaging/zzq;->zza(Landroid/os/Message;)V
-    :try_end_91
-    .catch Landroid/os/RemoteException; {:try_start_8c .. :try_end_91} :catch_93
+    :try_end_93
+    .catch Landroid/os/RemoteException; {:try_start_8e .. :try_end_93} :catch_95
 
     goto/16 :goto_0
 
-    :catch_93
+    :catch_95
     move-exception v1
 
     invoke-virtual {v1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
@@ -191,13 +191,13 @@
 
     goto/16 :goto_0
 
-    :catchall_9d
+    :catchall_9f
     move-exception v1
 
-    :try_start_9e
+    :try_start_a0
     monitor-exit v0
-    :try_end_9f
-    .catchall {:try_start_9e .. :try_end_9f} :catchall_9d
+    :try_end_a1
+    .catchall {:try_start_a0 .. :try_end_a1} :catchall_9f
 
     throw v1
 .end method

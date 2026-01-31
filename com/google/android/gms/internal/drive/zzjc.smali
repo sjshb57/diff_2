@@ -124,7 +124,7 @@
 
     or-int/2addr v1, v2
 
-    if-gez v1, :cond_6e
+    if-gez v1, :cond_6f
 
     if-ltz p0, :cond_50
 
@@ -214,7 +214,7 @@
 
     throw p1
 
-    :cond_6e
+    :cond_6f
     return v0
 .end method
 

@@ -81,9 +81,7 @@
     :cond_15
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/core/util/LEr/bFMYUr;->FrqxR:Ljava/lang/String;
+    const-string v0, "mergeFrom(MessageLite) can only merge messages of the same type."
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

@@ -86,7 +86,7 @@
 
     const/4 p2, 0x1
 
-    if-eqz p1, :cond_64
+    if-eqz p1, :cond_65
 
     const/4 p3, 0x5
 
@@ -198,7 +198,7 @@
 
     return-object p1
 
-    :cond_64
+    :cond_65
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1

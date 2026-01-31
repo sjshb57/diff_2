@@ -244,7 +244,7 @@
 
     const/4 p2, 0x1
 
-    if-eqz p1, :cond_65
+    if-eqz p1, :cond_64
 
     const/4 p3, 0x5
 
@@ -300,9 +300,7 @@
 
     aput-object v3, p1, p2
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->Ujp:Ljava/lang/String;
+    const-string p2, "zzg"
 
     aput-object p2, p1, v2
 
@@ -358,7 +356,7 @@
 
     return-object p1
 
-    :cond_65
+    :cond_64
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1

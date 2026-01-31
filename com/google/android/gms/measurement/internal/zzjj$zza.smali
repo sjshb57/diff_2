@@ -46,9 +46,7 @@
 
     const-string v1, "ad_storage"
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->DPAMxXSKKEYOupz:Ljava/lang/String;
+    const-string v2, "AD_STORAGE"
 
     const/4 v3, 0x0
 
@@ -74,7 +72,7 @@
 
     const/4 v6, 0x0
 
-    sget-object v6, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->XWocAgfp:Ljava/lang/String;
+    sget-object v6, Lcom/saucesdk/android/getgaid/shYz/ocQSSK;->rZR:Ljava/lang/String;
 
     const/4 v7, 0x2
 
