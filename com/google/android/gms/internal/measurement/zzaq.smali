@@ -55,9 +55,7 @@
 
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzaj;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->VPxsIePFbG:Ljava/lang/String;
+    const-string v1, "return"
 
     invoke-direct {v0, v1}, Lcom/google/android/gms/internal/measurement/zzaj;-><init>(Ljava/lang/String;)V
 

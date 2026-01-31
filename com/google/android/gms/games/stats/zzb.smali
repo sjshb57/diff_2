@@ -159,21 +159,19 @@
 .method public final getSpendProbability()F
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->yQfNbSkrkd:Ljava/lang/String;
+    const-string v0, "spend_probability"
 
     invoke-virtual {p0, v0}, Lcom/google/android/gms/games/stats/zzb;->hasColumn(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_b
 
     const/high16 v0, -0x40800000  # -1.0f
 
     return v0
 
-    :cond_c
+    :cond_b
     invoke-virtual {p0, v0}, Lcom/google/android/gms/games/stats/zzb;->getFloat(Ljava/lang/String;)F
 
     move-result v0

@@ -440,13 +440,13 @@
 
     iget-boolean v0, p0, Lcom/google/android/gms/internal/base/zak;->zah:Z
 
-    if-nez v0, :cond_26
+    if-nez v0, :cond_27
 
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    if-ne v0, p0, :cond_26
+    if-ne v0, p0, :cond_27
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/base/zak;->zac()Z
 
@@ -466,7 +466,7 @@
 
     iput-boolean v0, p0, Lcom/google/android/gms/internal/base/zak;->zah:Z
 
-    goto :goto_26
+    goto :goto_27
 
     :cond_1e
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -477,8 +477,8 @@
 
     throw v0
 
-    :cond_26
-    :goto_26
+    :cond_27
+    :goto_27
     return-object p0
 .end method
 

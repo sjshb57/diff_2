@@ -928,7 +928,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_29
+    if-nez v0, :cond_28
 
     const-string v0, "friends_all"
 
@@ -936,7 +936,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_29
+    if-nez v0, :cond_28
 
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -944,30 +944,28 @@
 
     move-result p3
 
-    const/4 p4, 0x0
+    const-string p4, "Invalid player collection: "
 
-    sget-object p4, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->peaBthrIWIKUoVY:Ljava/lang/String;
-
-    if-eqz p3, :cond_20
+    if-eqz p3, :cond_1f
 
     invoke-virtual {p4, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    goto :goto_25
+    goto :goto_24
 
-    :cond_20
+    :cond_1f
     new-instance p2, Ljava/lang/String;
 
     invoke-direct {p2, p4}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    :goto_25
+    :goto_24
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_29
-    :try_start_29
+    :cond_28
+    :try_start_28
     invoke-virtual {p0}, Lcom/google/android/gms/games/internal/zzak;->getService()Landroid/os/IInterface;
 
     move-result-object v0
@@ -989,12 +987,12 @@
     move v6, p5
 
     invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/games/internal/zzap;->zzG(Lcom/google/android/gms/games/internal/zzam;Ljava/lang/String;IZZ)V
-    :try_end_3c
-    .catch Ljava/lang/SecurityException; {:try_start_29 .. :try_end_3c} :catch_3d
+    :try_end_3b
+    .catch Ljava/lang/SecurityException; {:try_start_28 .. :try_end_3b} :catch_3c
 
     return-void
 
-    :catch_3d
+    :catch_3c
     move-exception p2
 
     invoke-static {p1, p2}, Lcom/google/android/gms/games/GamesStatusUtils;->zzb(Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/lang/SecurityException;)V

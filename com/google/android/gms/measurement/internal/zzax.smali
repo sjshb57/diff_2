@@ -168,8 +168,8 @@
 
     move-result-object v3
     :try_end_51
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_15 .. :try_end_51} :catch_e5
-    .catchall {:try_start_15 .. :try_end_51} :catchall_e2
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_15 .. :try_end_51} :catch_e4
+    .catchall {:try_start_15 .. :try_end_51} :catchall_e1
 
     :try_start_51
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
@@ -182,8 +182,8 @@
 
     move-result-object v0
     :try_end_5b
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_51 .. :try_end_5b} :catch_df
-    .catchall {:try_start_51 .. :try_end_5b} :catchall_dc
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_51 .. :try_end_5b} :catch_de
+    .catchall {:try_start_51 .. :try_end_5b} :catchall_db
 
     if-eqz v3, :cond_60
 
@@ -233,8 +233,8 @@
 
     iput-wide v5, v1, Lcom/google/android/gms/measurement/internal/zzax;->zzb:J
     :try_end_82
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_61 .. :try_end_82} :catch_df
-    .catchall {:try_start_61 .. :try_end_82} :catchall_dc
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_61 .. :try_end_82} :catch_de
+    .catchall {:try_start_61 .. :try_end_82} :catchall_db
 
     :cond_82
     :try_start_82
@@ -249,8 +249,8 @@
     check-cast v0, Lcom/google/android/gms/internal/measurement/zzgf$zzf$zza;
     :try_end_8c
     .catch Ljava/io/IOException; {:try_start_82 .. :try_end_8c} :catch_b6
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_82 .. :try_end_8c} :catch_df
-    .catchall {:try_start_82 .. :try_end_8c} :catchall_dc
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_82 .. :try_end_8c} :catch_de
+    .catchall {:try_start_82 .. :try_end_8c} :catchall_db
 
     const/4 v11, 0x1
 
@@ -299,7 +299,7 @@
 
     invoke-interface {v2, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_ce
+    goto :goto_cd
 
     :catch_b6
     move-exception v0
@@ -316,9 +316,7 @@
 
     move-result-object v4
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->QkGLVGQzyUu:Ljava/lang/String;
+    const-string v5, "Data loss. Failed to merge raw event. appId"
 
     iget-object v6, v1, Lcom/google/android/gms/measurement/internal/zzax;->zza:Ljava/lang/String;
 
@@ -328,55 +326,55 @@
 
     invoke-virtual {v4, v5, v6, v0}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :goto_ce
+    :goto_cd
     invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
-    :try_end_d2
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_8d .. :try_end_d2} :catch_df
-    .catchall {:try_start_8d .. :try_end_d2} :catchall_dc
+    :try_end_d1
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_8d .. :try_end_d1} :catch_de
+    .catchall {:try_start_8d .. :try_end_d1} :catchall_db
 
-    if-nez v0, :cond_da
+    if-nez v0, :cond_d9
 
-    if-eqz v3, :cond_101
+    if-eqz v3, :cond_100
 
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    goto :goto_101
+    goto :goto_100
 
-    :cond_da
+    :cond_d9
     const/4 v12, 0x5
 
     goto :goto_61
 
-    :catchall_dc
+    :catchall_db
     move-exception v0
 
     move-object v12, v3
 
-    goto :goto_103
+    goto :goto_102
 
-    :catch_df
+    :catch_de
     move-exception v0
 
     move-object v12, v3
 
-    goto :goto_e7
+    goto :goto_e6
 
-    :catchall_e2
+    :catchall_e1
     move-exception v0
 
     const/4 v12, 0x0
 
-    goto :goto_103
+    goto :goto_102
 
-    :catch_e5
+    :catch_e4
     move-exception v0
 
     const/4 v12, 0x0
 
-    :goto_e7
-    :try_start_e7
+    :goto_e6
+    :try_start_e6
     iget-object v3, v1, Lcom/google/android/gms/measurement/internal/zzax;->zzc:Lcom/google/android/gms/measurement/internal/zzar;
 
     invoke-virtual {v3}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -396,25 +394,25 @@
     move-result-object v5
 
     invoke-virtual {v3, v4, v5, v0}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_fc
-    .catchall {:try_start_e7 .. :try_end_fc} :catchall_102
+    :try_end_fb
+    .catchall {:try_start_e6 .. :try_end_fb} :catchall_101
 
-    if-eqz v12, :cond_101
+    if-eqz v12, :cond_100
 
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
-    :cond_101
-    :goto_101
+    :cond_100
+    :goto_100
     return-object v2
 
-    :catchall_102
+    :catchall_101
     move-exception v0
 
-    :goto_103
-    if-eqz v12, :cond_108
+    :goto_102
+    if-eqz v12, :cond_107
 
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
-    :cond_108
+    :cond_107
     throw v0
 .end method

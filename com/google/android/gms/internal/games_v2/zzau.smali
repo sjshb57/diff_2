@@ -117,13 +117,9 @@
 .method public final zzc()V
     .registers 3
 
-    const/4 v0, 0x0
+    const-string v0, "AutomaticGamesAuthenticator"
 
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->qqQSAKAh:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->lyNxoyq:Ljava/lang/String;
+    const-string v1, "startWatching()"
 
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/games_v2/zzez;->zza(Ljava/lang/String;Ljava/lang/String;)V
 

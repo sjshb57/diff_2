@@ -34,9 +34,7 @@
 
     new-instance v2, Lcom/google/android/gms/common/api/Api;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->IeFOfFTbAccH:Ljava/lang/String;
+    const-string v3, "ModuleInstall.API"
 
     invoke-direct {v2, v3, v1, v0}, Lcom/google/android/gms/common/api/Api;-><init>(Ljava/lang/String;Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;Lcom/google/android/gms/common/api/Api$ClientKey;)V
 

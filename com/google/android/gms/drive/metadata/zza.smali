@@ -222,9 +222,7 @@
 .method public final zza(Lcom/google/android/gms/common/data/DataHolder;Lcom/google/android/gms/drive/metadata/internal/MetadataBundle;II)V
     .registers 6
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->nARBtZaHwAXIwh:Ljava/lang/String;
+    const-string v0, "dataHolder"
 
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -236,7 +234,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_17
 
     invoke-virtual {p0, p1, p3, p4}, Lcom/google/android/gms/drive/metadata/zza;->zzc(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
 
@@ -244,7 +242,7 @@
 
     invoke-virtual {p2, p0, p1}, Lcom/google/android/gms/drive/metadata/internal/MetadataBundle;->zzb(Lcom/google/android/gms/drive/metadata/MetadataField;Ljava/lang/Object;)V
 
-    :cond_18
+    :cond_17
     return-void
 .end method
 

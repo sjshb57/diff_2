@@ -99,9 +99,7 @@
 
     move-result v2
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/core/content/Whm/HgKojeDw;->izHBn:Ljava/lang/String;
+    const-string v3, "pi"
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->getErrorResolutionIntent(Landroid/content/Context;ILjava/lang/String;)Landroid/content/Intent;
 

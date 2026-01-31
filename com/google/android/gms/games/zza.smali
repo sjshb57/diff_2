@@ -100,9 +100,7 @@
 
     move-result-object p0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->eAeO:Ljava/lang/String;
+    const-string v1, "FriendsListVisibilityStatus"
 
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 

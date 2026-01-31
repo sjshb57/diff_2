@@ -267,7 +267,7 @@
 
     move-result v4
 
-    if-eq v4, v1, :cond_9b
+    if-eq v4, v1, :cond_9a
 
     invoke-virtual {v0, p2, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
@@ -314,9 +314,7 @@
 
     :cond_91
     :goto_91
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/api/client/util/Uhr/zXgie;->Eqfq:Ljava/lang/String;
+    const-string v5, "\\"
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -324,7 +322,7 @@
 
     goto :goto_63
 
-    :cond_9b
+    :cond_9a
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v1

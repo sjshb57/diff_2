@@ -622,7 +622,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2c
+    if-eqz v2, :cond_2b
 
     const-string v2, "GmsClientEvents"
 
@@ -636,9 +636,7 @@
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->konXbQrOwH:Ljava/lang/String;
+    const-string p1, " is already registered"
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -648,24 +646,24 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_31
+    goto :goto_30
 
-    :cond_2c
+    :cond_2b
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zak;->zad:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_31
+    :goto_30
     monitor-exit v1
 
     return-void
 
-    :catchall_33
+    :catchall_32
     move-exception p1
 
     monitor-exit v1
-    :try_end_35
-    .catchall {:try_start_8 .. :try_end_35} :catchall_33
+    :try_end_34
+    .catchall {:try_start_8 .. :try_end_34} :catchall_32
 
     throw p1
 .end method

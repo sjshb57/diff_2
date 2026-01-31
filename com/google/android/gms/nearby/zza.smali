@@ -111,9 +111,7 @@
 
     new-instance v9, Lcom/google/android/gms/common/Feature;
 
-    const/4 v10, 0x0
-
-    sget-object v10, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->HPgyJzjjhIgztEn:Ljava/lang/String;
+    const-string v10, "nearby_exposure_notification_1p"
 
     invoke-direct {v9, v10, v3, v4}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
@@ -129,9 +127,7 @@
 
     new-instance v12, Lcom/google/android/gms/common/Feature;
 
-    const/4 v13, 0x0
-
-    sget-object v13, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->zQBb:Ljava/lang/String;
+    const-string v13, "nearby_exposure_notification_get_calibration_confidence"
 
     invoke-direct {v12, v13, v3, v4}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
@@ -139,9 +135,7 @@
 
     new-instance v13, Lcom/google/android/gms/common/Feature;
 
-    const/4 v14, 0x0
-
-    sget-object v14, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->boTwFpLvAzYNhef:Ljava/lang/String;
+    const-string v14, "nearby_exposure_notification_get_day_summaries"
 
     invoke-direct {v13, v14, v3, v4}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 

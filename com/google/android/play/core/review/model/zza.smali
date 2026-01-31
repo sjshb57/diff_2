@@ -55,9 +55,7 @@
 
     invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->etUnrvGAMusmsN:Ljava/lang/String;
+    const-string v0, "PLAY_STORE_NOT_FOUND"
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

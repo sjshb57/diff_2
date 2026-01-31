@@ -364,11 +364,11 @@
 
     const-string v1, "PopupManager"
 
-    if-nez p1, :cond_64
+    if-nez p1, :cond_65
 
     instance-of v2, v0, Landroid/app/Activity;
 
-    if-eqz v2, :cond_64
+    if-eqz v2, :cond_65
 
     check-cast v0, Landroid/app/Activity;
 
@@ -397,8 +397,8 @@
 
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/games_v2/zzez;->zzg(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_64
-    if-eqz p1, :cond_7b
+    :cond_65
+    if-eqz p1, :cond_7c
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/games/internal/zzaq;->zzh(Landroid/view/View;)V
 
@@ -418,7 +418,7 @@
 
     return-void
 
-    :cond_7b
+    :cond_7c
     const-string p1, "No content view usable to display popups. Popups will not be displayed in response to this client\'s calls. Use setViewForPopups() to set your content view."
 
     invoke-static {v1, p1}, Lcom/google/android/gms/internal/games_v2/zzez;->zzc(Ljava/lang/String;Ljava/lang/String;)V

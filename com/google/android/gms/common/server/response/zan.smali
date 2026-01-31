@@ -182,7 +182,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_56
+    if-eqz v2, :cond_54
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -192,9 +192,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->QUSIaOz:Ljava/lang/String;
+    const-string v3, ":\n"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -214,7 +212,7 @@
 
     move-result-object v3
 
-    :goto_34
+    :goto_33
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
@@ -227,9 +225,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->amhLtthOE:Ljava/lang/String;
+    const-string v5, "  "
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -245,9 +241,9 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_34
+    goto :goto_33
 
-    :cond_56
+    :cond_54
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

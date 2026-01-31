@@ -10,9 +10,7 @@
 .method public constructor <init>()V
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->wXhBhvQEOZoC:Ljava/lang/String;
+    const-string v0, "com.android.vending.billing.IInAppBillingGetBillingConfigCallback"
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/play_billing/zzaq;-><init>(Ljava/lang/String;)V
 

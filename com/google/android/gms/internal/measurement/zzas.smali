@@ -171,9 +171,7 @@
 
     const-string v7, "indexOf"
 
-    const/4 v8, 0x0
-
-    sget-object v8, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->wYbQds:Ljava/lang/String;
+    const-string v8, "replace"
 
     const-string v9, "substring"
 
@@ -1436,15 +1434,13 @@
 
     move-result v1
 
-    if-gtz v1, :cond_469
+    if-gtz v1, :cond_468
 
-    const/4 v1, 0x0
+    const-string v1, ""
 
-    sget-object v1, Lcom/google/api/client/util/Uhr/zXgie;->gxQQe:Ljava/lang/String;
+    goto :goto_477
 
-    goto :goto_478
-
-    :cond_469
+    :cond_468
     const/4 v1, 0x0
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1461,7 +1457,7 @@
 
     move-result-object v1
 
-    :goto_478
+    :goto_477
     invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
@@ -1474,7 +1470,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_49b
+    if-eqz v1, :cond_49a
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzaf;
 
@@ -1498,12 +1494,12 @@
 
     return-object v1
 
-    :cond_49b
+    :cond_49a
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzaq;->zzd:Lcom/google/android/gms/internal/measurement/zzaq;
 
     return-object v0
 
-    :pswitch_49e  #0xa
+    :pswitch_49d  #0xa
     const/4 v0, 0x0
 
     move-object/from16 v6, p0
@@ -1524,7 +1520,7 @@
 
     return-object v1
 
-    :pswitch_4b2  #0x9
+    :pswitch_4b1  #0x9
     const/4 v0, 0x0
 
     move-object/from16 v6, p0
@@ -1547,7 +1543,7 @@
 
     return-object v1
 
-    :pswitch_4c8  #0x8
+    :pswitch_4c7  #0x8
     move-object/from16 v6, p0
 
     move-object/from16 v5, p2
@@ -1564,7 +1560,7 @@
 
     move-result v1
 
-    if-gtz v1, :cond_4e1
+    if-gtz v1, :cond_4e0
 
     sget-object v1, Lcom/google/android/gms/internal/measurement/zzaq;->zzc:Lcom/google/android/gms/internal/measurement/zzaq;
 
@@ -1572,9 +1568,9 @@
 
     move-result-object v1
 
-    goto :goto_4f0
+    goto :goto_4ef
 
-    :cond_4e1
+    :cond_4e0
     const/4 v1, 0x0
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1591,20 +1587,20 @@
 
     move-result-object v1
 
-    :goto_4f0
+    :goto_4ef
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->size()I
 
     move-result v3
 
     const/4 v4, 0x2
 
-    if-ge v3, v4, :cond_4fa
+    if-ge v3, v4, :cond_4f9
 
     const-wide/high16 v2, 0x7ff8000000000000L  # Double.NaN
 
-    goto :goto_50d
+    goto :goto_50c
 
-    :cond_4fa
+    :cond_4f9
     const/4 v3, 0x1
 
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1625,23 +1621,23 @@
 
     move-result-wide v2
 
-    :goto_50d
+    :goto_50c
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v4
 
-    if-eqz v4, :cond_516
+    if-eqz v4, :cond_515
 
     const-wide/high16 v2, 0x7ff0000000000000L  # Double.POSITIVE_INFINITY
 
-    goto :goto_51a
+    goto :goto_519
 
-    :cond_516
+    :cond_515
     invoke-static {v2, v3}, Lcom/google/android/gms/internal/measurement/zzg;->zza(D)D
 
     move-result-wide v2
 
-    :goto_51a
+    :goto_519
     new-instance v4, Lcom/google/android/gms/internal/measurement/zzai;
 
     double-to-int v2, v2
@@ -1660,7 +1656,7 @@
 
     return-object v4
 
-    :pswitch_52a  #0x7
+    :pswitch_529  #0x7
     const/4 v0, 0x0
 
     move-object/from16 v6, p0
@@ -1681,7 +1677,7 @@
 
     return-object v1
 
-    :pswitch_53e  #0x6
+    :pswitch_53d  #0x6
     move-object/from16 v6, p0
 
     move-object/from16 v5, p2
@@ -1698,7 +1694,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_55e
+    if-nez v1, :cond_55d
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1714,16 +1710,16 @@
 
     move-result-object v0
 
-    goto :goto_564
+    goto :goto_563
 
-    :cond_55e
+    :cond_55d
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzaq;->zzc:Lcom/google/android/gms/internal/measurement/zzaq;
 
     invoke-interface {v0}, Lcom/google/android/gms/internal/measurement/zzaq;->zzf()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_564
+    :goto_563
     iget-object v1, v6, Lcom/google/android/gms/internal/measurement/zzas;->zza:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -1738,7 +1734,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_583
+    if-eqz v1, :cond_582
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzai;
 
@@ -1756,7 +1752,7 @@
 
     return-object v1
 
-    :cond_583
+    :cond_582
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzai;
 
     const-wide/high16 v1, -0x4010000000000000L  # -1.0
@@ -1769,7 +1765,7 @@
 
     return-object v0
 
-    :pswitch_58f  #0x5
+    :pswitch_58e  #0x5
     const/4 v1, 0x0
 
     move-object/from16 v6, p0
@@ -1794,7 +1790,7 @@
 
     return-object v1
 
-    :pswitch_5a6  #0x4
+    :pswitch_5a5  #0x4
     move-object/from16 v6, p0
 
     move-object/from16 v5, p2
@@ -1805,11 +1801,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5b3
+    if-eqz v0, :cond_5b2
 
     return-object v6
 
-    :cond_5b3
+    :cond_5b2
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v1, v6, Lcom/google/android/gms/internal/measurement/zzas;->zza:Ljava/lang/String;
@@ -1818,12 +1814,12 @@
 
     const/4 v14, 0x0
 
-    :goto_5bb
+    :goto_5ba
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-ge v14, v1, :cond_5d5
+    if-ge v14, v1, :cond_5d4
 
     invoke-interface {v2, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1843,9 +1839,9 @@
 
     add-int/lit8 v14, v14, 0x1
 
-    goto :goto_5bb
+    goto :goto_5ba
 
-    :cond_5d5
+    :cond_5d4
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzas;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1856,7 +1852,7 @@
 
     return-object v1
 
-    :pswitch_5df  #0x3
+    :pswitch_5de  #0x3
     move-object/from16 v6, p0
 
     move-object/from16 v5, p2
@@ -1871,7 +1867,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_608
+    if-nez v0, :cond_607
 
     const/4 v0, 0x0
 
@@ -1899,25 +1895,25 @@
 
     double-to-int v14, v0
 
-    goto :goto_609
+    goto :goto_608
 
-    :cond_608
+    :cond_607
     const/4 v14, 0x0
 
-    :goto_609
+    :goto_608
     iget-object v0, v6, Lcom/google/android/gms/internal/measurement/zzas;->zza:Ljava/lang/String;
 
-    if-ltz v14, :cond_622
+    if-ltz v14, :cond_621
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    if-lt v14, v1, :cond_614
+    if-lt v14, v1, :cond_613
 
-    goto :goto_622
+    goto :goto_621
 
-    :cond_614
+    :cond_613
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzas;
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->charAt(I)C
@@ -1932,13 +1928,13 @@
 
     return-object v1
 
-    :cond_622
-    :goto_622
+    :cond_621
+    :goto_621
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzaq;->zzj:Lcom/google/android/gms/internal/measurement/zzaq;
 
     return-object v0
 
-    :pswitch_625  #0x2
+    :pswitch_624  #0x2
     const/4 v1, 0x0
 
     move-object/from16 v6, p0
@@ -1961,7 +1957,7 @@
 
     return-object v1
 
-    :pswitch_63b  #0x1
+    :pswitch_63a  #0x1
     const/4 v1, 0x0
 
     move-object/from16 v2, p3
@@ -1974,7 +1970,7 @@
 
     return-object v6
 
-    :pswitch_645  #0x0
+    :pswitch_644  #0x0
     move-object/from16 v6, p0
 
     move-object/from16 v5, p2
@@ -2009,13 +2005,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_66b
+    if-eqz v2, :cond_66a
 
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzag;->zzh:Lcom/google/android/gms/internal/measurement/zzaq;
 
     return-object v0
 
-    :cond_66b
+    :cond_66a
     invoke-interface {v1}, Lcom/google/android/gms/internal/measurement/zzaq;->zze()Ljava/lang/Double;
 
     move-result-object v1
@@ -2030,26 +2026,28 @@
 
     cmpl-double v3, v1, v3
 
-    if-nez v3, :cond_687
+    if-nez v3, :cond_686
 
     double-to-int v1, v1
 
-    if-ltz v1, :cond_687
+    if-ltz v1, :cond_686
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-ge v1, v0, :cond_687
+    if-ge v1, v0, :cond_686
 
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzag;->zzh:Lcom/google/android/gms/internal/measurement/zzaq;
 
     return-object v0
 
-    :cond_687
+    :cond_686
     sget-object v0, Lcom/google/android/gms/internal/measurement/zzag;->zzi:Lcom/google/android/gms/internal/measurement/zzaq;
 
     return-object v0
+
+    nop
 
     :sswitch_data_68a
     .sparse-switch
@@ -2074,17 +2072,17 @@
 
     :pswitch_data_6d0
     .packed-switch 0x0
-        :pswitch_645  #00000000
-        :pswitch_63b  #00000001
-        :pswitch_625  #00000002
-        :pswitch_5df  #00000003
-        :pswitch_5a6  #00000004
-        :pswitch_58f  #00000005
-        :pswitch_53e  #00000006
-        :pswitch_52a  #00000007
-        :pswitch_4c8  #00000008
-        :pswitch_4b2  #00000009
-        :pswitch_49e  #0000000a
+        :pswitch_644  #00000000
+        :pswitch_63a  #00000001
+        :pswitch_624  #00000002
+        :pswitch_5de  #00000003
+        :pswitch_5a5  #00000004
+        :pswitch_58e  #00000005
+        :pswitch_53d  #00000006
+        :pswitch_529  #00000007
+        :pswitch_4c7  #00000008
+        :pswitch_4b1  #00000009
+        :pswitch_49d  #0000000a
         :pswitch_453  #0000000b
         :pswitch_3c2  #0000000c
         :pswitch_311  #0000000d

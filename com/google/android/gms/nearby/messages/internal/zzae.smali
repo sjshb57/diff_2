@@ -141,9 +141,7 @@
 
     invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/flatbuffers/OSq/msMBb;->yBzffUwCZxD:Ljava/lang/String;
+    const-string v1, "MessageWrapper{message="
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

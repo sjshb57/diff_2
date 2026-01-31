@@ -579,9 +579,7 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/location/zzaz;->checkConnected()V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->ZtLRJjdkMRcAv:Ljava/lang/String;
+    const-string v0, "PendingIntent must be specified."
 
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

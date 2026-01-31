@@ -63,9 +63,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->EDYAvCsLluzDdhJ:Ljava/lang/String;
+    const-string v1, "popupLocationInfo.displayId"
 
     iget v2, p0, Lcom/google/android/gms/internal/games_v2/zzam;->zzc:I
 

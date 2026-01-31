@@ -413,9 +413,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->YyZO:Ljava/lang/String;
+    const-string v2, "AutoManageHelper"
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -431,9 +429,9 @@
 
     iget-boolean p1, p0, Lcom/google/android/gms/common/api/internal/zak;->zaa:Z
 
-    if-eqz p1, :cond_74
+    if-eqz p1, :cond_73
 
-    if-nez v0, :cond_74
+    if-nez v0, :cond_73
 
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -449,7 +447,7 @@
 
     invoke-virtual {p2}, Lcom/google/android/gms/common/api/GoogleApiClient;->connect()V
 
-    :cond_74
+    :cond_73
     return-void
 .end method
 

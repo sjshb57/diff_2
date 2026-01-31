@@ -91,9 +91,7 @@
 
     move-result-object p1
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->qfILsEabhIW:Ljava/lang/String;
+    const-string v1, "SERVICE_NOT_AVAILABLE"
 
     invoke-direct {v0, v1, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 

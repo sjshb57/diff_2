@@ -20,9 +20,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/internal/ads_identifier/zza;->zza:Landroid/os/IBinder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lkotlin/EDDN/hfnXJuYOaqC;->JisnVcXeJfv:Ljava/lang/String;
+    const-string p1, "com.google.android.gms.ads.identifier.internal.IAdvertisingIdService"
 
     iput-object p1, p0, Lcom/google/android/gms/internal/ads_identifier/zza;->zzb:Ljava/lang/String;
 

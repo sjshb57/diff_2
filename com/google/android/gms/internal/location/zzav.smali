@@ -540,9 +540,7 @@
 
     invoke-static {v0}, Lcom/google/android/gms/internal/location/zzi;->zzp(Lcom/google/android/gms/internal/location/zzi;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->vwVONvdCp:Ljava/lang/String;
+    const-string v0, "Invalid null listener key"
 
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -550,7 +548,7 @@
 
     monitor-enter v0
 
-    :try_start_12
+    :try_start_11
     iget-object v1, p0, Lcom/google/android/gms/internal/location/zzav;->zzd:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -559,7 +557,7 @@
 
     check-cast p1, Lcom/google/android/gms/internal/location/zzau;
 
-    if-eqz p1, :cond_2e
+    if-eqz p1, :cond_2d
 
     invoke-virtual {p1}, Lcom/google/android/gms/internal/location/zzau;->zzc()V
 
@@ -577,17 +575,17 @@
 
     invoke-interface {v1, p1}, Lcom/google/android/gms/internal/location/zzam;->zzo(Lcom/google/android/gms/internal/location/zzbc;)V
 
-    :cond_2e
+    :cond_2d
     monitor-exit v0
 
     return-void
 
-    :catchall_30
+    :catchall_2f
     move-exception p1
 
     monitor-exit v0
-    :try_end_32
-    .catchall {:try_start_12 .. :try_end_32} :catchall_30
+    :try_end_31
+    .catchall {:try_start_11 .. :try_end_31} :catchall_2f
 
     throw p1
 .end method

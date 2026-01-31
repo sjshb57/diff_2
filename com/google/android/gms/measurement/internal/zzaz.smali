@@ -285,9 +285,7 @@
 
     move-result-object v1
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->vdgUOgXS:Ljava/lang/String;
+    const-string v5, "app_id,metadata_fingerprint,metadata"
 
     const/4 v6, 0x0
 

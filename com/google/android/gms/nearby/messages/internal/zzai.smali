@@ -517,15 +517,13 @@
 
     move-result p1
 
-    if-eqz p1, :cond_49
+    if-eqz p1, :cond_48
 
     new-array p1, v0, [Ljava/lang/Object;
 
     aput-object v1, p1, v3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->HlWfTgVtqeVE:Ljava/lang/String;
+    const-string v0, "Failed to emit client lifecycle event %s due to GmsClient being disconnected"
 
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -533,7 +531,7 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_49
+    :cond_48
     return-void
 .end method
 

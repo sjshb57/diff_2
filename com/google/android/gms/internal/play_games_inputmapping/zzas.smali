@@ -154,9 +154,7 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->AbVSOUx:Ljava/lang/String;
+    const-string v0, "\' }"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -103,9 +103,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->xykMEcbcl:Ljava/lang/String;
+    const-string v1, "gameRunToken"
 
     iget-object v2, p0, Lcom/google/android/gms/internal/games_v2/zzaa;->zza:Ljava/lang/String;
 

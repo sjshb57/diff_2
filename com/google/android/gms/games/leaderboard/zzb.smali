@@ -76,21 +76,19 @@
 .method public final getNumScores()J
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->vcbrTbpTSsQ:Ljava/lang/String;
+    const-string v0, "total_scores"
 
     invoke-virtual {p0, v0}, Lcom/google/android/gms/games/leaderboard/zzb;->hasNull(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_b
 
     const-wide/16 v0, -0x1
 
     return-wide v0
 
-    :cond_c
+    :cond_b
     invoke-virtual {p0, v0}, Lcom/google/android/gms/games/leaderboard/zzb;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
