@@ -75,21 +75,21 @@
     move-result-object p1
 
     check-cast p1, Landroid/graphics/Typeface;
-    :try_end_2c
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_2c} :catch_2f
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_2c} :catch_2d
+    :try_end_2d
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_2d} :catch_30
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_2d} :catch_2e
 
     return-object p1
 
-    :catch_2d
+    :catch_2e
     move-exception p1
 
-    goto :goto_30
+    goto :goto_31
 
-    :catch_2f
+    :catch_30
     move-exception p1
 
-    :goto_30
+    :goto_31
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

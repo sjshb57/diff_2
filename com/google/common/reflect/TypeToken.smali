@@ -2319,9 +2319,7 @@
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/savedstate/xT/fgyAspfzfnhI;->NYlmix:Ljava/lang/String;
+    const-string v1, "%s not declared by %s"
 
     invoke-static {v0, v1, p1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 

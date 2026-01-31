@@ -31,9 +31,7 @@
 
     aput-object p2, v0, v1
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->UUJ:Ljava/lang/String;
+    const-string p2, "com.google.firebase.appcheck.debug.store.%s"
 
     invoke-static {p2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

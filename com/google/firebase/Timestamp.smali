@@ -422,9 +422,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .registers 5
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lkotlin/collections/zgTb/JhPPV;->hzjXRrcFfkpLM:Ljava/lang/String;
+    const-string p2, "dest"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

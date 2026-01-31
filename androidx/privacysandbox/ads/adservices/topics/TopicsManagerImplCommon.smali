@@ -303,12 +303,12 @@
 
     move-result-object p1
 
-    :goto_14
+    :goto_15
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_36
+    if-eqz v1, :cond_37
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -336,9 +336,9 @@
 
     invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_14
+    goto :goto_15
 
-    :cond_36
+    :cond_37
     new-instance p1, Landroidx/privacysandbox/ads/adservices/topics/GetTopicsResponse;
 
     invoke-direct {p1, v0}, Landroidx/privacysandbox/ads/adservices/topics/GetTopicsResponse;-><init>(Ljava/util/List;)V

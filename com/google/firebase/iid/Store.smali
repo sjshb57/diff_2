@@ -80,35 +80,35 @@
 
     move-result v0
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
     return-void
 
-    :cond_16
-    :try_start_16
+    :cond_17
+    :try_start_17
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
     move-result v0
 
-    if-eqz v0, :cond_50
+    if-eqz v0, :cond_51
 
     invoke-virtual {p0}, Lcom/google/firebase/iid/Store;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_50
+    if-nez v0, :cond_51
 
     const-string v0, "App restored, clearing state"
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Lcom/google/firebase/iid/Store;->deleteAll()V
-    :try_end_2a
-    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_2a} :catch_2b
+    :try_end_2b
+    .catch Ljava/io/IOException; {:try_start_17 .. :try_end_2b} :catch_2c
 
     return-void
 
-    :catch_2b
+    :catch_2c
     move-exception v0
 
     const/4 v1, 0x3
@@ -117,7 +117,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_50
+    if-eqz v1, :cond_51
 
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
@@ -133,23 +133,23 @@
 
     const-string v2, "Error creating file in no backup dir: "
 
-    if-eqz v1, :cond_48
+    if-eqz v1, :cond_49
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_4d
+    goto :goto_4e
 
-    :cond_48
+    :cond_49
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    :goto_4d
+    :goto_4e
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_50
+    :cond_51
     return-void
 .end method
 

@@ -43,7 +43,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->zza(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
 
@@ -51,7 +51,7 @@
 
     return-object p0
 
-    :cond_16
+    :cond_17
     new-instance v0, Lcom/google/android/gms/tasks/zzad;
 
     const/4 v1, 0x0

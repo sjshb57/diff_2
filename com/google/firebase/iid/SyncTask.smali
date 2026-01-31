@@ -44,9 +44,7 @@
 
     move-result-object p1
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->HYXv:Ljava/lang/String;
+    const-string p2, "power"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -195,26 +193,26 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2d
+    if-eqz v3, :cond_2e
 
     const-string v3, "Token successfully retrieved"
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2d
-    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_2d} :catch_34
-    .catch Ljava/lang/SecurityException; {:try_start_13 .. :try_end_2d} :catch_2e
+    :try_end_2e
+    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_2e} :catch_35
+    .catch Ljava/lang/SecurityException; {:try_start_13 .. :try_end_2e} :catch_2f
 
-    :cond_2d
+    :cond_2e
     return v2
 
-    :catch_2e
+    :catch_2f
     const-string v2, "Token retrieval failed with SecurityException. Will retry token retrieval"
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    :catch_34
+    :catch_35
     move-exception v2
 
     invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -225,7 +223,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_67
+    if-eqz v3, :cond_68
 
     invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
@@ -263,12 +261,12 @@
 
     return v1
 
-    :cond_67
+    :cond_68
     invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    if-nez v3, :cond_73
+    if-nez v3, :cond_74
 
     const-string v2, "Token retrieval failed without exception message. Will retry token retrieval"
 
@@ -276,7 +274,7 @@
 
     return v1
 
-    :cond_73
+    :cond_74
     throw v2
 .end method
 
@@ -435,14 +433,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_cb
+    if-eqz v0, :cond_ca
 
     goto :goto_35
 
     :catchall_89
     move-exception v0
 
-    goto :goto_cc
+    goto :goto_cb
 
     :catch_8b
     move-exception v1
@@ -474,9 +472,7 @@
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->mgUH:Ljava/lang/String;
+    const-string v1, ". Won\'t retry the operation."
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -489,8 +485,8 @@
     iget-object v1, p0, Lcom/google/firebase/iid/SyncTask;->iid:Lcom/google/firebase/iid/FirebaseInstanceId;
 
     invoke-virtual {v1, v0}, Lcom/google/firebase/iid/FirebaseInstanceId;->setSyncScheduledOrRunning(Z)V
-    :try_end_bb
-    .catchall {:try_start_8c .. :try_end_bb} :catchall_89
+    :try_end_ba
+    .catchall {:try_start_8c .. :try_end_ba} :catchall_89
 
     invoke-static {}, Lcom/google/firebase/iid/ServiceStarter;->getInstance()Lcom/google/firebase/iid/ServiceStarter;
 
@@ -504,14 +500,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_cb
+    if-eqz v0, :cond_ca
 
     goto/16 :goto_35
 
-    :cond_cb
+    :cond_ca
     return-void
 
-    :goto_cc
+    :goto_cb
     invoke-static {}, Lcom/google/firebase/iid/ServiceStarter;->getInstance()Lcom/google/firebase/iid/ServiceStarter;
 
     move-result-object v1
@@ -524,15 +520,15 @@
 
     move-result v1
 
-    if-nez v1, :cond_db
+    if-nez v1, :cond_da
 
-    goto :goto_e0
+    goto :goto_df
 
-    :cond_db
+    :cond_da
     iget-object v1, p0, Lcom/google/firebase/iid/SyncTask;->syncWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    :goto_e0
+    :goto_df
     throw v0
 .end method

@@ -181,9 +181,7 @@
 
     const-string v15, "java.vm.vendor"
 
-    const/4 v13, 0x0
-
-    sget-object v13, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->VXyGjQooV:Ljava/lang/String;
+    const-string v13, "JAVA_VM_VENDOR"
 
     const/16 v11, 0x8
 
@@ -397,9 +395,7 @@
 
     const/16 v7, 0x18
 
-    const/4 v15, 0x0
-
-    sget-object v15, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->EBYDZ:Ljava/lang/String;
+    const-string v15, "line.separator"
 
     move-object/from16 v27, v3
 
@@ -445,9 +441,7 @@
 
     move-object/from16 v30, v5
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->EHM:Ljava/lang/String;
+    const-string v5, "USER_DIR"
 
     invoke-direct {v3, v5, v7, v15}, Lcom/google/common/base/StandardSystemProperty;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 

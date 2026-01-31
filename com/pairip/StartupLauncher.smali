@@ -6,7 +6,7 @@
 # static fields
 .field private static launchCalled:Z = false
 
-.field private static startupProgramName:Ljava/lang/String; = "OT7DXlkM2brrIqkU"
+.field private static startupProgramName:Ljava/lang/String; = "vRU968i8sXTbtQ9b"
 
 
 # direct methods

@@ -102,7 +102,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_5a
+    if-eqz v2, :cond_5b
 
     new-instance v0, Lcom/google/common/reflect/Types$JavaVersion$5;
 
@@ -122,18 +122,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_57
+    if-eqz v0, :cond_58
 
     sput-object v3, Lcom/google/common/reflect/Types$JavaVersion;->CURRENT:Lcom/google/common/reflect/Types$JavaVersion;
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :cond_57
+    :cond_58
     sput-object v5, Lcom/google/common/reflect/Types$JavaVersion;->CURRENT:Lcom/google/common/reflect/Types$JavaVersion;
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :cond_5a
+    :cond_5b
     new-instance v2, Lcom/google/common/reflect/Types$JavaVersion$6;
 
     invoke-direct {v2}, Lcom/google/common/reflect/Types$JavaVersion$6;-><init>()V
@@ -144,16 +144,16 @@
 
     instance-of v2, v2, Ljava/lang/Class;
 
-    if-eqz v2, :cond_6a
+    if-eqz v2, :cond_6b
 
     sput-object v1, Lcom/google/common/reflect/Types$JavaVersion;->CURRENT:Lcom/google/common/reflect/Types$JavaVersion;
 
-    goto :goto_6c
+    goto :goto_6d
 
-    :cond_6a
+    :cond_6b
     sput-object v0, Lcom/google/common/reflect/Types$JavaVersion;->CURRENT:Lcom/google/common/reflect/Types$JavaVersion;
 
-    :goto_6c
+    :goto_6d
     return-void
 .end method
 

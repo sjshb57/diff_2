@@ -36,9 +36,7 @@
 
     new-instance v0, Lcom/google/common/collect/TreeMultiset$Aggregate$1;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->fookPf:Ljava/lang/String;
+    const-string v1, "SIZE"
 
     const/4 v2, 0x0
 

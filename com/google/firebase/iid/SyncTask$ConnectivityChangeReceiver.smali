@@ -89,7 +89,7 @@
 
     aput-object p2, v2, v0
 
-    const-string/jumbo v1, "WsnF2DrLBHxZEaH9"
+    const-string/jumbo v1, "ez58ZfuURTXgTmrC"
 
     invoke-static {v1, v2}, Lcom/pairip/VMRunner;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -105,17 +105,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_d
 
     const-string v0, "FirebaseInstanceId"
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->IedrWtkylJOqWyh:Ljava/lang/String;
+    const-string v1, "Connectivity change received registered"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_d
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"

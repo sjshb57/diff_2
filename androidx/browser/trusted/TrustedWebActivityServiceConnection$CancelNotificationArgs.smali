@@ -40,9 +40,7 @@
 
     invoke-static {p0, v0}, Landroidx/browser/trusted/TrustedWebActivityServiceConnection;->ensureBundleContains(Landroid/os/Bundle;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->QVlRfzlUie:Ljava/lang/String;
+    const-string v1, "android.support.customtabs.trusted.PLATFORM_ID"
 
     invoke-static {p0, v1}, Landroidx/browser/trusted/TrustedWebActivityServiceConnection;->ensureBundleContains(Landroid/os/Bundle;Ljava/lang/String;)V
 

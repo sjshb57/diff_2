@@ -38,9 +38,7 @@
 
     new-instance v0, Lcom/google/common/reflect/Types$ClassOwnership$1;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->yBemqKhXqHoccZ:Ljava/lang/String;
+    const-string v1, "OWNED_BY_ENCLOSING_CLASS"
 
     const/4 v2, 0x0
 

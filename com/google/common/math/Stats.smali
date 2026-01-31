@@ -1023,7 +1023,7 @@
 
     const-string v1, "count"
 
-    if-lez v0, :cond_3d
+    if-lez v0, :cond_3e
 
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
@@ -1075,7 +1075,7 @@
 
     return-object v0
 
-    :cond_3d
+    :cond_3e
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0

@@ -158,9 +158,7 @@
 .method public onTransitionCancel(Landroid/transition/Transition;)V
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->SuLfKQnRsR:Ljava/lang/String;
+    const-string v0, "transition"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -188,9 +186,7 @@
 .method public onTransitionPause(Landroid/transition/Transition;)V
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/print/nh/SlomKQFs;->rzEhOA:Ljava/lang/String;
+    const-string v0, "transition"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

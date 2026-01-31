@@ -67,7 +67,7 @@
 .method public build(Landroidx/browser/customtabs/CustomTabsSession;)Landroidx/browser/trusted/TrustedWebActivityIntent;
     .registers 5
 
-    if-eqz p1, :cond_6f
+    if-eqz p1, :cond_6e
 
     iget-object v0, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mIntentBuilder:Landroidx/browser/customtabs/CustomTabsIntent$Builder;
 
@@ -85,9 +85,7 @@
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/flatbuffers/OSq/msMBb;->LKIeCKuCNVcaP:Ljava/lang/String;
+    const-string v0, "android.support.customtabs.extra.LAUNCH_AS_TRUSTED_WEB_ACTIVITY"
 
     const/4 v1, 0x1
 
@@ -95,7 +93,7 @@
 
     iget-object v0, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mAdditionalTrustedOrigins:Ljava/util/List;
 
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_2a
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -107,27 +105,27 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    :cond_2b
+    :cond_2a
     iget-object v0, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mSplashScreenParams:Landroid/os/Bundle;
 
-    if-eqz v0, :cond_34
+    if-eqz v0, :cond_33
 
     const-string v1, "androidx.browser.trusted.EXTRA_SPLASH_SCREEN_PARAMS"
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    :cond_34
+    :cond_33
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mShareTarget:Landroidx/browser/trusted/sharing/ShareTarget;
 
-    if-eqz v1, :cond_5e
+    if-eqz v1, :cond_5d
 
     iget-object v2, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mShareData:Landroidx/browser/trusted/sharing/ShareData;
 
-    if-eqz v2, :cond_5e
+    if-eqz v2, :cond_5d
 
     const-string v2, "androidx.browser.trusted.extra.SHARE_TARGET"
 
@@ -151,13 +149,13 @@
 
     iget-object v1, v1, Landroidx/browser/trusted/sharing/ShareData;->uris:Ljava/util/List;
 
-    if-eqz v1, :cond_5e
+    if-eqz v1, :cond_5d
 
     iget-object v0, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mShareData:Landroidx/browser/trusted/sharing/ShareData;
 
     iget-object v0, v0, Landroidx/browser/trusted/sharing/ShareData;->uris:Ljava/util/List;
 
-    :cond_5e
+    :cond_5d
     iget-object v1, p0, Landroidx/browser/trusted/TrustedWebActivityIntentBuilder;->mDisplayMode:Landroidx/browser/trusted/TrustedWebActivityDisplayMode;
 
     invoke-interface {v1}, Landroidx/browser/trusted/TrustedWebActivityDisplayMode;->toBundle()Landroid/os/Bundle;
@@ -174,7 +172,7 @@
 
     return-object v1
 
-    :cond_6f
+    :cond_6e
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "CustomTabsSession is required for launching a TWA"

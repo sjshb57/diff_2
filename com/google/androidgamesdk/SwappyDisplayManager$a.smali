@@ -61,9 +61,7 @@
 
     const-string v0, "Starting looper thread"
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->AQh:Ljava/lang/String;
+    const-string v1, "SwappyDisplayManager"
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

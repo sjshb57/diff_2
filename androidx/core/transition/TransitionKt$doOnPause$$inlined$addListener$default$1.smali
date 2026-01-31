@@ -101,9 +101,7 @@
 .method public onTransitionResume(Landroid/transition/Transition;)V
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->vccDMYABIiA:Ljava/lang/String;
+    const-string v0, "transition"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

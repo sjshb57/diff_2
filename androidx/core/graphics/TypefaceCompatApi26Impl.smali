@@ -89,7 +89,7 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_3 .. :try_end_1f} :catch_22
     .catch Ljava/lang/NoSuchMethodException; {:try_start_3 .. :try_end_1f} :catch_20
 
-    goto :goto_45
+    goto :goto_46
 
     :catch_20
     move-exception v0
@@ -138,7 +138,7 @@
 
     move-object v6, v5
 
-    :goto_45
+    :goto_46
     iput-object v0, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamily:Ljava/lang/Class;
 
     iput-object v1, p0, Landroidx/core/graphics/TypefaceCompatApi26Impl;->mFontFamilyCtor:Ljava/lang/reflect/Constructor;
@@ -1041,9 +1041,7 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->CUVwIbzrzOsfHSk:Ljava/lang/String;
+    const-string v1, "addFontFromBuffer"
 
     invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 

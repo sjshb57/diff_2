@@ -508,9 +508,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->DhNPs:Ljava/lang/String;
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -518,7 +516,7 @@
 
     move-result p1
 
-    if-ltz p1, :cond_1b
+    if-ltz p1, :cond_1a
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -528,7 +526,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_1b
+    if-eqz p2, :cond_1a
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->removeAt(I)V
 
@@ -536,7 +534,7 @@
 
     return p0
 
-    :cond_1b
+    :cond_1a
     const/4 p0, 0x0
 
     return p0

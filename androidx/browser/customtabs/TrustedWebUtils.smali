@@ -135,9 +135,7 @@
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/savedstate/xT/fgyAspfzfnhI;->vfdqOG:Ljava/lang/String;
+    const-string v1, "android.support.customtabs.extra.SESSION"
 
     invoke-virtual {p1}, Landroidx/browser/customtabs/CustomTabsSession;->getBinder()Landroid/os/IBinder;
 

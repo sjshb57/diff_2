@@ -80,7 +80,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_39
+    if-nez p1, :cond_3a
 
     const-string p1, "serializedDocid"
 
@@ -92,12 +92,10 @@
 
     return-void
 
-    :cond_39
+    :cond_3a
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->jfHEEe:Ljava/lang/String;
+    const-string v0, "Product type cannot be empty."
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

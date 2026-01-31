@@ -95,9 +95,7 @@
 .method public final invoke(Landroid/transition/Transition;)V
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->fjfDVVLUbVsqPXA:Ljava/lang/String;
+    const-string v0, "it"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

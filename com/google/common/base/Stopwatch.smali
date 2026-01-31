@@ -57,7 +57,7 @@
 
     aget p0, v0, p0
 
-    packed-switch p0, :pswitch_data_26
+    packed-switch p0, :pswitch_data_28
 
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -85,26 +85,28 @@
 
     return-object p0
 
-    :pswitch_1d  #0x3
+    :pswitch_1e  #0x3
     const-string p0, "ms"
 
     return-object p0
 
-    :pswitch_20  #0x2
+    :pswitch_21  #0x2
     const-string p0, "μs"
 
     return-object p0
 
-    :pswitch_23  #0x1
+    :pswitch_24  #0x1
     const-string p0, "ns"
 
     return-object p0
 
-    :pswitch_data_26
+    nop
+
+    :pswitch_data_28
     .packed-switch 0x1
-        :pswitch_23  #00000001
-        :pswitch_20  #00000002
-        :pswitch_1d  #00000003
+        :pswitch_24  #00000001
+        :pswitch_21  #00000002
+        :pswitch_1e  #00000003
         :pswitch_1a  #00000004
         :pswitch_17  #00000005
         :pswitch_14  #00000006

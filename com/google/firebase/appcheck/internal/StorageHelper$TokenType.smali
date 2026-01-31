@@ -68,9 +68,7 @@
 
     new-instance v0, Lcom/google/firebase/appcheck/internal/StorageHelper$TokenType;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/common/html/ehW/oZEOPkNlS;->mfEEYgM:Ljava/lang/String;
+    const-string v1, "UNKNOWN_APP_CHECK_TOKEN"
 
     const/4 v2, 0x1
 

@@ -237,27 +237,25 @@
 
     const/4 v0, 0x0
 
-    if-nez p1, :cond_10
+    if-nez p1, :cond_f
 
     const/4 p1, 0x1
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->Stp:Ljava/lang/String;
+    const-string v1, "(Object[])null"
 
     aput-object v1, p1, v0
 
-    goto :goto_1f
+    goto :goto_1e
 
-    :cond_10
+    :cond_f
     move v1, v0
 
-    :goto_11
+    :goto_10
     array-length v2, p1
 
-    if-ge v1, v2, :cond_1f
+    if-ge v1, v2, :cond_1e
 
     aget-object v2, p1, v1
 
@@ -269,10 +267,10 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_11
+    goto :goto_10
 
-    :cond_1f
-    :goto_1f
+    :cond_1e
+    :goto_1e
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -289,10 +287,10 @@
 
     move v2, v0
 
-    :goto_2d
+    :goto_2c
     array-length v3, p1
 
-    if-ge v0, v3, :cond_4a
+    if-ge v0, v3, :cond_49
 
     const-string v3, "%s"
 
@@ -302,11 +300,11 @@
 
     const/4 v4, -0x1
 
-    if-ne v3, v4, :cond_3a
+    if-ne v3, v4, :cond_39
 
-    goto :goto_4a
+    goto :goto_49
 
-    :cond_3a
+    :cond_39
     invoke-virtual {v1, p0, v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v0, 0x1
@@ -323,10 +321,10 @@
 
     move v0, v5
 
-    goto :goto_2d
+    goto :goto_2c
 
-    :cond_4a
-    :goto_4a
+    :cond_49
+    :goto_49
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -335,7 +333,7 @@
 
     array-length p0, p1
 
-    if-ge v0, p0, :cond_76
+    if-ge v0, p0, :cond_75
 
     const-string p0, " ["
 
@@ -347,10 +345,10 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_60
+    :goto_5f
     array-length v0, p1
 
-    if-ge p0, v0, :cond_71
+    if-ge p0, v0, :cond_70
 
     const-string v0, ", "
 
@@ -364,14 +362,14 @@
 
     move p0, v0
 
-    goto :goto_60
+    goto :goto_5f
 
-    :cond_71
+    :cond_70
     const/16 p0, 0x5d
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_76
+    :cond_75
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

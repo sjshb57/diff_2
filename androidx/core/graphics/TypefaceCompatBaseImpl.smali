@@ -243,9 +243,7 @@
     :try_start_9
     const-class v4, Landroid/graphics/Typeface;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->jEMVUIbNIMlKHXb:Ljava/lang/String;
+    const-string v5, "native_instance"
 
     invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -264,20 +262,20 @@
     invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
 
     move-result-wide v0
-    :try_end_20
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_9 .. :try_end_20} :catch_26
-    .catch Ljava/lang/IllegalAccessException; {:try_start_9 .. :try_end_20} :catch_21
+    :try_end_1f
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_9 .. :try_end_1f} :catch_25
+    .catch Ljava/lang/IllegalAccessException; {:try_start_9 .. :try_end_1f} :catch_20
 
     return-wide v0
 
-    :catch_21
+    :catch_20
     move-exception p0
 
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-wide v2
 
-    :catch_26
+    :catch_25
     move-exception p0
 
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I

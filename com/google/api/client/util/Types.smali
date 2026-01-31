@@ -431,7 +431,7 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_86
+    goto :goto_85
 
     :cond_20
     invoke-virtual {p1}, Ljava/lang/Class;->isPrimitive()Z
@@ -444,22 +444,20 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_86
+    goto :goto_85
 
     :cond_2c
     const-class v2, Ljava/lang/Void;
 
-    if-ne p1, v2, :cond_37
+    if-ne p1, v2, :cond_36
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->iMMIKDhgjgc:Ljava/lang/String;
+    const-string p1, "because it is void"
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_86
+    goto :goto_85
 
-    :cond_37
+    :cond_36
     invoke-virtual {p1}, Ljava/lang/Class;->getModifiers()I
 
     move-result v2
@@ -468,15 +466,15 @@
 
     move-result v2
 
-    if-eqz v2, :cond_47
+    if-eqz v2, :cond_46
 
     const-string v2, "because it is an interface"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_56
+    goto :goto_55
 
-    :cond_47
+    :cond_46
     invoke-virtual {p1}, Ljava/lang/Class;->getModifiers()I
 
     move-result v2
@@ -485,19 +483,19 @@
 
     move-result v2
 
-    if-eqz v2, :cond_56
+    if-eqz v2, :cond_55
 
     const-string v2, "because it is abstract"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_56
-    :goto_56
+    :cond_55
+    :goto_55
     invoke-virtual {p1}, Ljava/lang/Class;->getEnclosingClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    if-eqz v2, :cond_6b
+    if-eqz v2, :cond_6a
 
     invoke-virtual {p1}, Ljava/lang/Class;->getModifiers()I
 
@@ -507,13 +505,13 @@
 
     move-result v2
 
-    if-nez v2, :cond_6b
+    if-nez v2, :cond_6a
 
     const-string v2, "because it is not static"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_6b
+    :cond_6a
     invoke-virtual {p1}, Ljava/lang/Class;->getModifiers()I
 
     move-result v2
@@ -522,40 +520,40 @@
 
     move-result v2
 
-    if-nez v2, :cond_7b
+    if-nez v2, :cond_7a
 
     const-string p1, "possibly because it is not public"
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_86
+    goto :goto_85
 
-    :cond_7b
-    :try_start_7b
+    :cond_7a
+    :try_start_7a
     new-array v2, v3, [Ljava/lang/Class;
 
     invoke-virtual {p1, v2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-    :try_end_80
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_7b .. :try_end_80} :catch_81
+    :try_end_7f
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_7a .. :try_end_7f} :catch_80
 
-    goto :goto_86
+    goto :goto_85
 
-    :catch_81
+    :catch_80
     const-string p1, "because it has no accessible default constructor"
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_86
+    :goto_85
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :goto_8a
+    :goto_89
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_a9
+    if-eqz v1, :cond_a8
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -563,29 +561,29 @@
 
     check-cast v1, Ljava/lang/String;
 
-    if-eqz v3, :cond_9e
+    if-eqz v3, :cond_9d
 
     const-string v2, " and"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_a0
+    goto :goto_9f
 
-    :cond_9e
+    :cond_9d
     const/4 v2, 0x1
 
     move v3, v2
 
-    :goto_a0
+    :goto_9f
     const-string v2, " "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_8a
+    goto :goto_89
 
-    :cond_a9
+    :cond_a8
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

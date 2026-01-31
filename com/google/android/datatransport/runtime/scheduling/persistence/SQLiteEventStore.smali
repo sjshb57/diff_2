@@ -462,11 +462,9 @@
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_3d
+    if-eqz v2, :cond_3c
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lkotlin/EDDN/hfnXJuYOaqC;->nKFDTFGGcMs:Ljava/lang/String;
+    const-string v2, " and extras = ?"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -480,14 +478,14 @@
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_42
+    goto :goto_41
 
-    :cond_3d
+    :cond_3c
     const-string p2, " and extras is null"
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_42
+    :goto_41
     const-string p2, "_id"
 
     filled-new-array {p2}, [Ljava/lang/String;
@@ -818,9 +816,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->LbcEUAGUmxux:Ljava/lang/String;
+    const-string v1, "SELECT last_metrics_upload_ms FROM global_log_event_state LIMIT 1"
 
     invoke-virtual {p2, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -1270,7 +1266,7 @@
 
     const/4 v2, 0x0
 
-    if-ge p0, v1, :cond_4b
+    if-ge p0, v1, :cond_4c
 
     const-string p0, "backend_name"
 
@@ -1298,7 +1294,7 @@
 
     invoke-virtual {p3, p1, v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    :cond_4b
+    :cond_4c
     return-object v2
 .end method
 
@@ -2577,9 +2573,7 @@
 
     invoke-virtual {v6, v7, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->PVjFHNRkUFZm:Ljava/lang/String;
+    const-string v0, "transport_name"
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
 
@@ -2651,16 +2645,16 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    if-eqz v3, :cond_94
+    if-eqz v3, :cond_93
 
     move-object v0, v2
 
-    goto :goto_96
+    goto :goto_95
 
-    :cond_94
+    :cond_93
     new-array v0, v4, [B
 
-    :goto_96
+    :goto_95
     const-string v1, "payload"
 
     invoke-virtual {v6, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
@@ -2675,7 +2669,7 @@
 
     const-string v0, "event_id"
 
-    if-nez v3, :cond_e2
+    if-nez v3, :cond_e0
 
     array-length v3, v2
 
@@ -2691,8 +2685,8 @@
 
     double-to-int v3, v3
 
-    :goto_af
-    if-gt v5, v3, :cond_e2
+    :goto_ae
+    if-gt v5, v3, :cond_e0
 
     add-int/lit8 v4, v5, -0x1
 
@@ -2728,9 +2722,7 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const/4 v9, 0x0
-
-    sget-object v9, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->RJXfoOcBUOtU:Ljava/lang/String;
+    const-string v9, "bytes"
 
     invoke-virtual {v8, v9, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
@@ -2740,9 +2732,9 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_af
+    goto :goto_ae
 
-    :cond_e2
+    :cond_e0
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getMetadata()Ljava/util/Map;
 
     move-result-object p1
@@ -2755,12 +2747,12 @@
 
     move-result-object p1
 
-    :goto_ee
+    :goto_ec
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p2
 
-    if-eqz p2, :cond_122
+    if-eqz p2, :cond_120
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2802,9 +2794,9 @@
 
     invoke-virtual {p3, p2, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    goto :goto_ee
+    goto :goto_ec
 
-    :cond_122
+    :cond_120
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

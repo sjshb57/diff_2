@@ -56,7 +56,7 @@
 
     move-result v1
 
-    if-lez v1, :cond_28
+    if-lez v1, :cond_29
 
     iget-object v1, p0, Lcom/google/android/play/integrity/internal/u;->c:Lcom/google/android/play/integrity/internal/ac;
 
@@ -72,7 +72,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/google/android/play/integrity/internal/q;->c(Ljava/lang/String;[Ljava/lang/Object;)I
 
-    :cond_28
+    :cond_29
     iget-object v1, p0, Lcom/google/android/play/integrity/internal/u;->c:Lcom/google/android/play/integrity/internal/ac;
 
     iget-object v2, p0, Lcom/google/android/play/integrity/internal/u;->b:Lcom/google/android/play/integrity/internal/r;
@@ -83,12 +83,12 @@
 
     return-void
 
-    :catchall_31
+    :catchall_32
     move-exception v1
 
     monitor-exit v0
-    :try_end_33
-    .catchall {:try_start_7 .. :try_end_33} :catchall_31
+    :try_end_34
+    .catchall {:try_start_7 .. :try_end_34} :catchall_32
 
     throw v1
 .end method

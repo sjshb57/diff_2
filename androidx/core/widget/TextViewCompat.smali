@@ -668,7 +668,7 @@
     :try_end_b
     .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_b} :catch_c
 
-    goto :goto_25
+    goto :goto_24
 
     :catch_c
     new-instance v1, Ljava/lang/StringBuilder;
@@ -687,13 +687,11 @@
 
     move-result-object p0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->ZAPTpyBthZFmdW:Ljava/lang/String;
+    const-string v1, "TextViewCompat"
 
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_25
+    :goto_24
     return-object v0
 .end method
 

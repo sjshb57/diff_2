@@ -86,7 +86,7 @@
 
     move-result-object p0
 
-    goto :goto_31
+    goto :goto_30
 
     :cond_18
     new-instance v0, Ljava/lang/StringBuilder;
@@ -101,9 +101,7 @@
 
     invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->lxoIiIp:Ljava/lang/String;
+    const-string p0, " s"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -111,7 +109,7 @@
 
     move-result-object p0
 
-    :goto_31
+    :goto_30
     return-object p0
 .end method
 
