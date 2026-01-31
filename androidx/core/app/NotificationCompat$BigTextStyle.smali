@@ -113,9 +113,7 @@
 .method protected getClassName()Ljava/lang/String;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->xphCnnyYr:Ljava/lang/String;
+    const-string v0, "androidx.core.app.NotificationCompat$BigTextStyle"
 
     return-object v0
 .end method

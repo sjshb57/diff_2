@@ -149,9 +149,7 @@
 
     const-string v2, "NaN"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/common/html/ehW/oZEOPkNlS;->jGUDzoG:Ljava/lang/String;
+    const-string v3, "Infinity"
 
     filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
@@ -168,6 +166,8 @@
     sput-object v0, Lcom/fasterxml/jackson/core/json/async/NonBlockingJsonParserBase;->NON_STD_TOKEN_VALUES:[D
 
     return-void
+
+    nop
 
     :array_18
     .array-data 8
@@ -1270,15 +1270,13 @@
 
     move-result v1
 
-    if-nez v1, :cond_17
+    if-nez v1, :cond_16
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->BxQXPPiDttFSH:Ljava/lang/String;
+    const-string v1, "Non-standard token \'%s\': enable JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS to allow"
 
     invoke-virtual {p0, v1, v0}, Lcom/fasterxml/jackson/core/json/async/NonBlockingJsonParserBase;->_reportError(Ljava/lang/String;Ljava/lang/Object;)V
 
-    :cond_17
+    :cond_16
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/fasterxml/jackson/core/json/async/NonBlockingJsonParserBase;->_intLength:I

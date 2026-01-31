@@ -216,9 +216,7 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->lCA:Ljava/lang/String;
+    const-string v1, "a"
 
     invoke-static {p2}, Landroidx/versionedparcelable/ParcelUtils;->toParcelable(Landroidx/versionedparcelable/VersionedParcelable;)Landroid/os/Parcelable;
 

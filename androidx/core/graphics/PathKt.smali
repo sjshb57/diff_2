@@ -41,9 +41,7 @@
 .method public static final and(Landroid/graphics/Path;Landroid/graphics/Path;)Landroid/graphics/Path;
     .registers 4
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->PzjFMLJcfbBZgt:Ljava/lang/String;
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -112,9 +110,7 @@
 .method public static final minus(Landroid/graphics/Path;Landroid/graphics/Path;)Landroid/graphics/Path;
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/print/nh/SlomKQFs;->WrQoXKYAZuKG:Ljava/lang/String;
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

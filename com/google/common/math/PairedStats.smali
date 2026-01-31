@@ -622,7 +622,7 @@
 
     const-string v2, "xStats"
 
-    if-lez v0, :cond_2d
+    if-lez v0, :cond_2e
 
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
@@ -656,7 +656,7 @@
 
     return-object v0
 
-    :cond_2d
+    :cond_2e
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0

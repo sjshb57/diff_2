@@ -99,9 +99,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->pieypfW:Ljava/lang/String;
+    const-string v1, "package"
 
     const-string v2, "com.example"
 
@@ -125,12 +123,12 @@
 
     move-result-object v0
 
-    :goto_1e
+    :goto_1d
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3c
+    if-eqz v1, :cond_3b
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -148,21 +146,21 @@
 
     move-result v2
 
-    if-eqz v2, :cond_37
+    if-eqz v2, :cond_36
 
-    goto :goto_1e
+    goto :goto_1d
 
-    :cond_37
-    if-eqz v3, :cond_3a
+    :cond_36
+    if-eqz v3, :cond_39
 
     return-object v3
 
-    :cond_3a
+    :cond_39
     move-object v3, v1
 
-    goto :goto_1e
+    goto :goto_1d
 
-    :cond_3c
+    :cond_3b
     return-object v3
 .end method
 

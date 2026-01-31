@@ -315,16 +315,14 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     const-string v1, "X-Firebase-Client"
 
     invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1e
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/flatbuffers/OSq/msMBb;->hWBSAANxUmoC:Ljava/lang/String;
+    :cond_1f
+    const-string v0, "X-Android-Package"
 
     iget-object v1, p0, Lcom/google/firebase/appcheck/internal/NetworkClient;->context:Landroid/content/Context;
 

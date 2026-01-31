@@ -428,11 +428,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     goto :goto_5d
 
-    :cond_1e
+    :cond_1f
     const-string v0, "android.picture"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -441,9 +441,7 @@
 
     if-nez v0, :cond_57
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/collections/zgTb/JhPPV;->bZfYpWXFQQz:Ljava/lang/String;
+    const-string v0, "android.pictureIcon"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -729,7 +727,7 @@
 
     iget-boolean v0, p0, Landroidx/core/app/NotificationCompat$Style;->mSummaryTextSet:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     const-string v0, "android.summaryText"
 
@@ -737,27 +735,27 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    :cond_b
+    :cond_c
     iget-object v0, p0, Landroidx/core/app/NotificationCompat$Style;->mBigContentTitle:Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     const-string v1, "android.title.big"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    :cond_14
+    :cond_15
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Style;->getClassName()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_20
 
     const-string v1, "androidx.core.app.extra.COMPAT_TEMPLATE"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1f
+    :cond_20
     return-void
 .end method
 

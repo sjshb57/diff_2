@@ -778,7 +778,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_d7
+    if-eqz v1, :cond_d8
 
     invoke-interface {p0}, Lcom/google/android/gms/games/Player;->zzg()Z
 
@@ -792,12 +792,12 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
-    :cond_d7
+    :cond_d8
     invoke-interface {p0}, Lcom/google/android/gms/games/Player;->getRelationshipInfo()Lcom/google/android/gms/games/PlayerRelationshipInfo;
 
     move-result-object v1
 
-    if-eqz v1, :cond_e6
+    if-eqz v1, :cond_e7
 
     const-string v1, "RelationshipInfo"
 
@@ -807,7 +807,7 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
-    :cond_e6
+    :cond_e7
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->toString()Ljava/lang/String;
 
     move-result-object p0

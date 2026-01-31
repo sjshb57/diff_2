@@ -313,9 +313,7 @@
     const/4 v1, 0x0
 
     :goto_16
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->nETxvdRkLp:Ljava/lang/String;
+    const-string v2, "icon"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
@@ -331,9 +329,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->OivoHPFBrl:Ljava/lang/String;
+    const-string v1, "isBot"
 
     iget-boolean v2, p0, Landroidx/core/app/Person;->mIsBot:Z
 

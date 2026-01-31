@@ -272,9 +272,7 @@
 
     new-instance v2, Lcom/google/android/datatransport/cct/internal/NetworkConnectionInfo$NetworkType;
 
-    const/4 v6, 0x0
-
-    sget-object v6, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->lfWEchowIbsRZjn:Ljava/lang/String;
+    const-string v6, "NONE"
 
     move-object/from16 v38, v4
 

@@ -90,9 +90,7 @@
 
     new-instance v6, Lcom/google/android/gms/nearby/connection/Payload$File;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->EQuEnVZamNmI:Ljava/lang/String;
+    const-string v0, "Cannot create Payload.File from null ParcelFileDescriptor."
 
     invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

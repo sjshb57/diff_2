@@ -345,17 +345,15 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
+    const-string v3, ""
 
-    sget-object v3, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->eqj:Ljava/lang/String;
-
-    if-nez v2, :cond_14
+    if-nez v2, :cond_13
 
     move-object v2, v3
 
-    goto :goto_1c
+    goto :goto_1b
 
-    :cond_14
+    :cond_13
     invoke-virtual {p1}, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;->getPerson()Landroidx/core/app/Person;
 
     move-result-object v2
@@ -364,14 +362,14 @@
 
     move-result-object v2
 
-    :goto_1c
+    :goto_1b
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     const/high16 v5, -0x1000000
 
-    if-eqz v4, :cond_39
+    if-eqz v4, :cond_38
 
     iget-object v2, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mUser:Landroidx/core/app/Person;
 
@@ -385,7 +383,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_39
+    if-eqz v4, :cond_38
 
     iget-object v4, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mBuilder:Landroidx/core/app/NotificationCompat$Builder;
 
@@ -395,7 +393,7 @@
 
     move v5, v4
 
-    :cond_39
+    :cond_38
     invoke-virtual {v0, v2}, Landroidx/core/text/BidiFormatter;->unicodeWrap(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
@@ -428,16 +426,16 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_5d
+    if-nez v2, :cond_5c
 
-    goto :goto_61
+    goto :goto_60
 
-    :cond_5d
+    :cond_5c
     invoke-virtual {p1}, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;->getText()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    :goto_61
+    :goto_60
     const-string p1, "  "
 
     invoke-virtual {v1, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;

@@ -42,9 +42,7 @@
 
     new-instance v0, Lcom/google/firebase/installations/local/PersistedInstallation$RegistrationStatus;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->ZXycRgqKjwPXrz:Ljava/lang/String;
+    const-string v1, "ATTEMPT_MIGRATION"
 
     const/4 v2, 0x0
 

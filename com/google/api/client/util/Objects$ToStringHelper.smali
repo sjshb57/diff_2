@@ -134,25 +134,23 @@
 
     iget-object v2, v2, Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;->next:Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;
 
-    const/4 v3, 0x0
+    const-string v3, ""
 
-    sget-object v3, Lcom/google/common/html/ehW/oZEOPkNlS;->EmVgSTA:Ljava/lang/String;
+    :goto_19
+    if-eqz v2, :cond_3c
 
-    :goto_1a
-    if-eqz v2, :cond_3d
-
-    if-eqz v0, :cond_22
+    if-eqz v0, :cond_21
 
     iget-object v4, v2, Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;->value:Ljava/lang/Object;
 
-    if-eqz v4, :cond_3a
+    if-eqz v4, :cond_39
 
-    :cond_22
+    :cond_21
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v3, v2, Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;->name:Ljava/lang/String;
 
-    if-eqz v3, :cond_33
+    if-eqz v3, :cond_32
 
     iget-object v3, v2, Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;->name:Ljava/lang/String;
 
@@ -162,19 +160,19 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_33
+    :cond_32
     iget-object v3, v2, Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;->value:Ljava/lang/Object;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v3, ", "
 
-    :cond_3a
+    :cond_39
     iget-object v2, v2, Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;->next:Lcom/google/api/client/util/Objects$ToStringHelper$ValueHolder;
 
-    goto :goto_1a
+    goto :goto_19
 
-    :cond_3d
+    :cond_3c
     const/16 v0, 0x7d
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;

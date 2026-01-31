@@ -173,9 +173,7 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->knmlMHQQwceT:Ljava/lang/String;
+    const-string v4, "((?:\\b|$|^)(?:(?:(?i:http|https|rtsp)://(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)(?:"
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

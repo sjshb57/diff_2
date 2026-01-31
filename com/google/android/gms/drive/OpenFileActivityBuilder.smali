@@ -216,27 +216,25 @@
 
     array-length v0, v0
 
-    if-lez v0, :cond_1c
+    if-lez v0, :cond_1b
 
     iget-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->zzbc:Lcom/google/android/gms/drive/query/Filter;
 
     if-nez v0, :cond_13
 
-    goto :goto_1c
+    goto :goto_1b
 
     :cond_13
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->yOJVSJdsCf:Ljava/lang/String;
+    const-string v1, "Cannot use a selection filter and set mimetypes simultaneously"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_1c
-    :goto_1c
+    :cond_1b
+    :goto_1b
     return-void
 .end method
 

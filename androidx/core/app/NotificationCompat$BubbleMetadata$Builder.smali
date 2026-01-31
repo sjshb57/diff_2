@@ -301,9 +301,7 @@
     :cond_11
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->htgSchxmx:Ljava/lang/String;
+    const-string v0, "Created as a shortcut bubble, cannot set a PendingIntent. Consider using BubbleMetadata.Builder(PendingIntent,Icon) instead."
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

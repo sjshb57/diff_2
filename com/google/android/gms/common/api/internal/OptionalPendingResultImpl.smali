@@ -121,9 +121,7 @@
     :cond_13
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->RVePLhnNkxj:Ljava/lang/String;
+    const-string v1, "Result is not available. Check that isDone() returns true before calling get()."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

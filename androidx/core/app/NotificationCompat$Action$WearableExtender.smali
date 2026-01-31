@@ -79,7 +79,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_34
+    if-eqz p1, :cond_32
 
     const-string v1, "flags"
 
@@ -89,9 +89,7 @@
 
     iput v0, p0, Landroidx/core/app/NotificationCompat$Action$WearableExtender;->mFlags:I
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->VKv:Ljava/lang/String;
+    const-string v0, "inProgressLabel"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
@@ -99,9 +97,7 @@
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$Action$WearableExtender;->mInProgressLabel:Ljava/lang/CharSequence;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->CkLyIpUCKz:Ljava/lang/String;
+    const-string v0, "confirmLabel"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
@@ -117,7 +113,7 @@
 
     iput-object p1, p0, Landroidx/core/app/NotificationCompat$Action$WearableExtender;->mCancelLabel:Ljava/lang/CharSequence;
 
-    :cond_34
+    :cond_32
     return-void
 .end method
 

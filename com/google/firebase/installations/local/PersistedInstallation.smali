@@ -362,9 +362,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->aYjhdqcEyTu:Ljava/lang/String;
+    const-string v1, "Fid"
 
     const/4 v2, 0x0
 

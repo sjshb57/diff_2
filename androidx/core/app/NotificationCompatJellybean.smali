@@ -154,7 +154,7 @@
     :try_start_b
     sget-object v3, Landroidx/core/app/NotificationCompatJellybean;->sActionsField:Ljava/lang/reflect/Field;
 
-    if-nez v3, :cond_48
+    if-nez v3, :cond_49
 
     const-string v3, "android.app.Notification$Action"
 
@@ -197,30 +197,30 @@
     sput-object v3, Landroidx/core/app/NotificationCompatJellybean;->sActionsField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v3, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
-    :try_end_3a
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_b .. :try_end_3a} :catch_42
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_b .. :try_end_3a} :catch_3b
+    :try_end_3b
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_b .. :try_end_3b} :catch_43
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_b .. :try_end_3b} :catch_3c
 
-    goto :goto_48
+    goto :goto_49
 
-    :catch_3b
+    :catch_3c
     move-exception v3
 
     invoke-static {v1, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     sput-boolean v2, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
-    goto :goto_48
+    goto :goto_49
 
-    :catch_42
+    :catch_43
     move-exception v3
 
     invoke-static {v1, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     sput-boolean v2, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
-    :cond_48
-    :goto_48
+    :cond_49
+    :goto_49
     sget-boolean v0, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
     xor-int/2addr v0, v2
@@ -291,9 +291,7 @@
 
     move-result v5
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/util/LEr/bFMYUr;->jEKJVfjp:Ljava/lang/String;
+    const-string v1, "extras"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -359,7 +357,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_4b
+    if-eqz v2, :cond_4c
 
     aget-object v2, v2, p1
 
@@ -426,7 +424,7 @@
     :catchall_3e
     move-exception p0
 
-    goto :goto_4d
+    goto :goto_4e
 
     :catch_40
     move-exception p0
@@ -441,15 +439,15 @@
 
     sput-boolean p0, Landroidx/core/app/NotificationCompatJellybean;->sActionsAccessFailed:Z
 
-    :cond_4b
+    :cond_4c
     monitor-exit v0
 
     return-object v1
 
-    :goto_4d
+    :goto_4e
     monitor-exit v0
-    :try_end_4e
-    .catchall {:try_start_3c .. :try_end_4e} :catchall_3e
+    :try_end_4f
+    .catchall {:try_start_3c .. :try_end_4f} :catchall_3e
 
     throw p0
 .end method
@@ -752,9 +750,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     :goto_3d
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->kunyJrNGuzDbN:Ljava/lang/String;
+    const-string v2, "android.support.allowGeneratedReplies"
 
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->getAllowGeneratedReplies()Z
 
@@ -1065,13 +1061,13 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_60
+    if-eqz p0, :cond_61
 
     invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v1
 
-    if-nez v1, :cond_60
+    if-nez v1, :cond_61
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1085,12 +1081,12 @@
 
     move-result-object p0
 
-    :goto_4b
+    :goto_4c
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_5b
+    if-eqz v2, :cond_5c
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1100,14 +1096,14 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_4b
+    goto :goto_4c
 
-    :cond_5b
+    :cond_5c
     const-string p0, "allowedDataTypes"
 
     invoke-virtual {v0, p0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_60
+    :cond_61
     return-object v0
 .end method
 

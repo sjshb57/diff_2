@@ -276,9 +276,7 @@
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->ILDYL:Ljava/lang/String;
+    const-string v1, "Shutting down is not allowed."
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 

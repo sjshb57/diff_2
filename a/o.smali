@@ -131,9 +131,7 @@
 .method public static final a(La/o;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
     .registers 7
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->rmmH:Ljava/lang/String;
+    const-string p2, "this$0"
 
     invoke-static {p0, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -907,9 +905,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->bHkOtEuqePO:Ljava/lang/String;
+    const-string v2, "Evaluating JavaScript string within web view. Requesting string: "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1328,7 +1324,7 @@
 
     const-string v2, "message"
 
-    if-nez v0, :cond_25
+    if-nez v0, :cond_26
 
     sget-object v0, La/i;->c:La/i$a;
 
@@ -1344,12 +1340,12 @@
 
     return-void
 
-    :cond_25
+    :cond_26
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v3
 
-    if-nez v3, :cond_3b
+    if-nez v3, :cond_3c
 
     sget-object v0, La/i;->c:La/i$a;
 
@@ -1365,7 +1361,7 @@
 
     return-void
 
-    :cond_3b
+    :cond_3c
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->createPrintDocumentAdapter(Ljava/lang/String;)Landroid/print/PrintDocumentAdapter;
 
     move-result-object v1
@@ -1494,7 +1490,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6b
 
     sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
@@ -1512,12 +1508,10 @@
 
     if-nez v0, :cond_38
 
-    goto :goto_6c
+    goto :goto_6b
 
     :cond_38
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/flatbuffers/OSq/msMBb;->jAqrfH:Ljava/lang/String;
+    const-string v1, "http://"
 
     const/4 v2, 0x0
 
@@ -1529,7 +1523,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_4d
+    if-nez v1, :cond_4c
 
     const-string v1, "https://"
 
@@ -1537,11 +1531,11 @@
 
     move-result v1
 
-    if-nez v1, :cond_4d
+    if-nez v1, :cond_4c
 
     return-void
 
-    :cond_4d
+    :cond_4c
     invoke-interface {p1, v0}, Landroid/view/ContextMenu;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
 
     move-result-object p1
@@ -1572,8 +1566,8 @@
 
     invoke-interface {p1, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
-    :cond_6c
-    :goto_6c
+    :cond_6b
+    :goto_6b
     return-void
 .end method
 

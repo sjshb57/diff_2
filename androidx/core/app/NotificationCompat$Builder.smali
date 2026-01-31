@@ -663,17 +663,15 @@
 
     const/16 v0, 0x18
 
-    if-lt p2, v0, :cond_1ee
+    if-lt p2, v0, :cond_1ed
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/print/nh/SlomKQFs;->XsDDRiXQfu:Ljava/lang/String;
+    const-string p2, "android.chronometerCountDown"
 
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1ee
+    if-eqz v0, :cond_1ed
 
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -681,12 +679,12 @@
 
     invoke-virtual {p0, p2}, Landroidx/core/app/NotificationCompat$Builder;->setChronometerCountDown(Z)Landroidx/core/app/NotificationCompat$Builder;
 
-    :cond_1ee
+    :cond_1ed
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1a
 
-    if-lt p2, v0, :cond_203
+    if-lt p2, v0, :cond_202
 
     const-string p2, "android.colorized"
 
@@ -694,7 +692,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_203
+    if-eqz v0, :cond_202
 
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -702,7 +700,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/core/app/NotificationCompat$Builder;->setColorized(Z)Landroidx/core/app/NotificationCompat$Builder;
 
-    :cond_203
+    :cond_202
     return-void
 .end method
 
@@ -1654,9 +1652,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->hFn:Ljava/lang/String;
+    const-string v1, "android.chronometerCountDown"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 

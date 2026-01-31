@@ -287,9 +287,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->ZLpC:Ljava/lang/String;
+    const-string v1, "participants"
 
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;->getParticipants()[Ljava/lang/String;
 
@@ -299,7 +297,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v1, Landroidx/core/util/LEr/bFMYUr;->RGjYj:Ljava/lang/String;
+    sget-object v1, Lcom/google/android/gms/security/sW/SFkL;->wjdYgV:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;->getLatestTimestamp()J
 
@@ -498,25 +496,25 @@
 
     iget-object v1, p0, Landroidx/core/app/NotificationCompat$CarExtender;->mLargeIcon:Landroid/graphics/Bitmap;
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     const-string v2, "large_icon"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    :cond_e
+    :cond_f
     iget v1, p0, Landroidx/core/app/NotificationCompat$CarExtender;->mColor:I
 
-    if-eqz v1, :cond_17
+    if-eqz v1, :cond_18
 
     const-string v2, "app_color"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_17
+    :cond_18
     iget-object v1, p0, Landroidx/core/app/NotificationCompat$CarExtender;->mUnreadConversation:Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_25
 
     invoke-static {v1}, Landroidx/core/app/NotificationCompat$CarExtender;->getBundleForUnreadConversation(Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;)Landroid/os/Bundle;
 
@@ -526,7 +524,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    :cond_24
+    :cond_25
     invoke-virtual {p1}, Landroidx/core/app/NotificationCompat$Builder;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1

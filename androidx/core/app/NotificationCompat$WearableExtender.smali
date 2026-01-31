@@ -253,7 +253,7 @@
     const/4 p1, 0x0
 
     :goto_31
-    if-eqz p1, :cond_c9
+    if-eqz p1, :cond_ca
 
     const-string v5, "actions"
 
@@ -261,7 +261,7 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_58
+    if-eqz v5, :cond_59
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -271,8 +271,8 @@
 
     move v8, v3
 
-    :goto_42
-    if-ge v8, v6, :cond_53
+    :goto_43
+    if-ge v8, v6, :cond_54
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -288,14 +288,14 @@
 
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_42
+    goto :goto_43
 
-    :cond_53
+    :cond_54
     iget-object v5, p0, Landroidx/core/app/NotificationCompat$WearableExtender;->mActions:Ljava/util/ArrayList;
 
     invoke-static {v5, v7}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    :cond_58
+    :cond_59
     const-string v5, "flags"
 
     invoke-virtual {p1, v5, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
@@ -320,13 +320,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_77
+    if-eqz v0, :cond_78
 
     iget-object v5, p0, Landroidx/core/app/NotificationCompat$WearableExtender;->mPages:Ljava/util/ArrayList;
 
     invoke-static {v5, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    :cond_77
+    :cond_78
     const-string v0, "background"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -409,7 +409,7 @@
 
     iput-object p1, p0, Landroidx/core/app/NotificationCompat$WearableExtender;->mBridgeTag:Ljava/lang/String;
 
-    :cond_c9
+    :cond_ca
     return-void
 .end method
 
@@ -904,42 +904,40 @@
 
     const/16 v2, 0x50
 
-    if-eq v1, v2, :cond_ab
+    if-eq v1, v2, :cond_aa
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/api/client/util/Uhr/zXgie;->evMRDRNIrJXsSi:Ljava/lang/String;
+    const-string v2, "gravity"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_ab
+    :cond_aa
     iget v1, p0, Landroidx/core/app/NotificationCompat$WearableExtender;->mHintScreenTimeout:I
 
-    if-eqz v1, :cond_b4
+    if-eqz v1, :cond_b3
 
     const-string v2, "hintScreenTimeout"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_b4
+    :cond_b3
     iget-object v1, p0, Landroidx/core/app/NotificationCompat$WearableExtender;->mDismissalId:Ljava/lang/String;
 
-    if-eqz v1, :cond_bd
+    if-eqz v1, :cond_bc
 
     const-string v2, "dismissalId"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_bd
+    :cond_bc
     iget-object v1, p0, Landroidx/core/app/NotificationCompat$WearableExtender;->mBridgeTag:Ljava/lang/String;
 
-    if-eqz v1, :cond_c6
+    if-eqz v1, :cond_c5
 
     const-string v2, "bridgeTag"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_c6
+    :cond_c5
     invoke-virtual {p1}, Landroidx/core/app/NotificationCompat$Builder;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1

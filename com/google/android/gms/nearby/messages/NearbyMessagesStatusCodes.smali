@@ -52,68 +52,66 @@
 
     return-object p0
 
-    :pswitch_e  #0xb05
+    :pswitch_f  #0xb05
     const-string p0, "BLE_ADVERTISING_UNSUPPORTED"
 
     return-object p0
 
-    :pswitch_11  #0xb04
+    :pswitch_12  #0xb04
     const-string p0, "BLUETOOTH_OFF"
 
     return-object p0
 
-    :pswitch_14  #0xaf7
+    :pswitch_15  #0xaf7
     const-string p0, "MISSING_PERMISSIONS"
 
     return-object p0
 
-    :pswitch_17  #0xaf6
+    :pswitch_18  #0xaf6
     const-string p0, "FORBIDDEN"
 
     return-object p0
 
-    :pswitch_1a  #0xaf5
+    :pswitch_1b  #0xaf5
     const-string p0, "NOT_AUTHORIZED"
 
     return-object p0
 
-    :pswitch_1d  #0xaf4
+    :pswitch_1e  #0xaf4
     const-string p0, "APP_QUOTA_LIMIT_REACHED"
 
     return-object p0
 
-    :pswitch_20  #0xaf3
+    :pswitch_21  #0xaf3
     const-string p0, "DISALLOWED_CALLING_CONTEXT"
 
     return-object p0
 
-    :pswitch_23  #0xaf2
+    :pswitch_24  #0xaf2
     const-string p0, "APP_NOT_OPTED_IN"
 
     return-object p0
 
-    :pswitch_26  #0xaf1
+    :pswitch_27  #0xaf1
     const-string p0, "TOO_MANY_PENDING_INTENTS"
 
     return-object p0
 
-    nop
-
     :pswitch_data_2a
     .packed-switch 0xaf1
-        :pswitch_26  #00000af1
-        :pswitch_23  #00000af2
-        :pswitch_20  #00000af3
-        :pswitch_1d  #00000af4
-        :pswitch_1a  #00000af5
-        :pswitch_17  #00000af6
-        :pswitch_14  #00000af7
+        :pswitch_27  #00000af1
+        :pswitch_24  #00000af2
+        :pswitch_21  #00000af3
+        :pswitch_1e  #00000af4
+        :pswitch_1b  #00000af5
+        :pswitch_18  #00000af6
+        :pswitch_15  #00000af7
     .end packed-switch
 
     :pswitch_data_3c
     .packed-switch 0xb04
-        :pswitch_11  #00000b04
-        :pswitch_e  #00000b05
+        :pswitch_12  #00000b04
+        :pswitch_f  #00000b05
         :pswitch_b  #00000b06
     .end packed-switch
 .end method

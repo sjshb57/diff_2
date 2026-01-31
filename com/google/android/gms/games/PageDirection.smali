@@ -27,9 +27,7 @@
 
     new-instance v0, Ljava/lang/AssertionError;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->geZtxbbDSAjrda:Ljava/lang/String;
+    const-string v1, "Uninstantiable"
 
     invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
