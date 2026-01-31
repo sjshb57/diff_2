@@ -46,7 +46,7 @@
 
     move-result v4
     :try_end_15
-    .catch Ljava/lang/RuntimeException; {:try_start_b .. :try_end_15} :catch_167
+    .catch Ljava/lang/RuntimeException; {:try_start_b .. :try_end_15} :catch_164
 
     const-string v5, "Activity created with data \'referrer\' without required params"
 
@@ -67,7 +67,7 @@
     :goto_24
     move-object v3, v10
 
-    goto :goto_90
+    goto :goto_8f
 
     :cond_26
     :try_start_26
@@ -150,9 +150,7 @@
     :cond_72
     new-instance v4, Ljava/lang/StringBuilder;
 
-    const/4 v12, 0x0
-
-    sget-object v12, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->vbMIcOLKulvt:Ljava/lang/String;
+    const-string v12, "https://google.com/search?"
 
     invoke-direct {v4, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -170,23 +168,23 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_90
+    if-eqz v3, :cond_8f
 
     const-string v4, "referrer"
 
     invoke-virtual {v3, v8, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_90
-    .catch Ljava/lang/RuntimeException; {:try_start_26 .. :try_end_90} :catch_167
+    :try_end_8f
+    .catch Ljava/lang/RuntimeException; {:try_start_26 .. :try_end_8f} :catch_164
 
-    :cond_90
-    :goto_90
+    :cond_8f
+    :goto_8f
     const-string v4, "_cmp"
 
     const/4 v12, 0x1
 
-    if-eqz p1, :cond_d8
+    if-eqz p1, :cond_d6
 
-    :try_start_95
+    :try_start_94
     iget-object v13, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v13}, Lcom/google/android/gms/measurement/internal/zzjf;->zzs()Lcom/google/android/gms/measurement/internal/zzpn;
@@ -199,11 +197,9 @@
 
     move-result-object v13
 
-    if-eqz v13, :cond_d8
+    if-eqz v13, :cond_d6
 
-    const/4 v14, 0x0
-
-    sget-object v14, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->EGLuM:Ljava/lang/String;
+    const-string v14, "intent"
 
     invoke-virtual {v13, v8, v14}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -211,15 +207,15 @@
 
     move-result v8
 
-    if-nez v8, :cond_cc
+    if-nez v8, :cond_ca
 
-    if-eqz v3, :cond_cc
+    if-eqz v3, :cond_ca
 
     invoke-virtual {v3, v11}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_cc
+    if-eqz v8, :cond_ca
 
     const-string v8, "_cer"
 
@@ -241,7 +237,7 @@
 
     invoke-virtual {v13, v8, v14}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_cc
+    :cond_ca
     iget-object v8, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v8, v0, v4, v13}, Lcom/google/android/gms/measurement/internal/zzju;->zzc(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
@@ -252,16 +248,16 @@
 
     invoke-virtual {v8, v0, v13}, Lcom/google/android/gms/measurement/internal/zzu;->zza(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    :cond_d8
+    :cond_d6
     invoke-static/range {p4 .. p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_df
+    if-eqz v8, :cond_dd
 
     return-void
 
-    :cond_df
+    :cond_dd
     iget-object v8, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v8}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -272,9 +268,7 @@
 
     move-result-object v8
 
-    const/4 v13, 0x0
-
-    sget-object v13, Lkotlin/collections/zgTb/JhPPV;->DgAgKAxioDm:Ljava/lang/String;
+    const-string v13, "Activity created with referrer"
 
     invoke-virtual {v8, v13, v2}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -289,18 +283,18 @@
     invoke-virtual {v8, v13}, Lcom/google/android/gms/measurement/internal/zzai;->zza(Lcom/google/android/gms/measurement/internal/zzfx;)Z
 
     move-result v8
-    :try_end_fb
-    .catch Ljava/lang/RuntimeException; {:try_start_95 .. :try_end_fb} :catch_167
+    :try_end_f8
+    .catch Ljava/lang/RuntimeException; {:try_start_94 .. :try_end_f8} :catch_164
 
     const-string v13, "_ldl"
 
     const-string v14, "auto"
 
-    if-eqz v8, :cond_125
+    if-eqz v8, :cond_122
 
-    if-eqz v3, :cond_110
+    if-eqz v3, :cond_10d
 
-    :try_start_103
+    :try_start_100
     iget-object v2, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v2, v0, v4, v3}, Lcom/google/android/gms/measurement/internal/zzju;->zzc(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
@@ -311,9 +305,9 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/google/android/gms/measurement/internal/zzu;->zza(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    goto :goto_11f
+    goto :goto_11c
 
-    :cond_110
+    :cond_10d
     iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -328,37 +322,37 @@
 
     invoke-virtual {v0, v3, v2}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
-    :goto_11f
+    :goto_11c
     iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v0, v14, v13, v10, v12}, Lcom/google/android/gms/measurement/internal/zzju;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Z)V
 
     return-void
 
-    :cond_125
+    :cond_122
     invoke-virtual {v2, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_159
+    if-eqz v0, :cond_156
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_14d
+    if-nez v0, :cond_14a
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_14d
+    if-nez v0, :cond_14a
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_14d
+    if-nez v0, :cond_14a
 
     const-string v0, "utm_term"
 
@@ -366,7 +360,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_14d
+    if-nez v0, :cond_14a
 
     const-string v0, "utm_content"
 
@@ -374,23 +368,23 @@
 
     move-result v0
 
-    if-eqz v0, :cond_159
+    if-eqz v0, :cond_156
 
-    :cond_14d
+    :cond_14a
     invoke-static/range {p4 .. p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_158
+    if-nez v0, :cond_155
 
     iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v0, v14, v13, v2, v12}, Lcom/google/android/gms/measurement/internal/zzju;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Z)V
 
-    :cond_158
+    :cond_155
     return-void
 
-    :cond_159
+    :cond_156
     iget-object v0, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -402,12 +396,12 @@
     move-result-object v0
 
     invoke-virtual {v0, v5}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;)V
-    :try_end_166
-    .catch Ljava/lang/RuntimeException; {:try_start_103 .. :try_end_166} :catch_167
+    :try_end_163
+    .catch Ljava/lang/RuntimeException; {:try_start_100 .. :try_end_163} :catch_164
 
     return-void
 
-    :catch_167
+    :catch_164
     move-exception v0
 
     iget-object v1, v1, Lcom/google/android/gms/measurement/internal/zzlk;->zza:Lcom/google/android/gms/measurement/internal/zzju;

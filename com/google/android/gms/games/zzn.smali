@@ -369,9 +369,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->PvkfVBL:Ljava/lang/String;
+    const-string v1, "com.google.android.gms.games.key.proxyApis"
 
     iget-object v4, p0, Lcom/google/android/gms/games/zzn;->zzg:Ljava/util/ArrayList;
 
@@ -395,9 +393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->RhwdtiWBZQxYY:Ljava/lang/String;
+    const-string v1, "com.google.android.gms.games.key.realClientPackageName"
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 

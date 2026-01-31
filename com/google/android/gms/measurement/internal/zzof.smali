@@ -68,9 +68,7 @@
 
     move-result-object p3
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->fKPyxCbNcKkqsM:Ljava/lang/String;
+    const-string v2, "Session started, time"
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -166,7 +164,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_af
+    if-nez v0, :cond_ae
 
     new-instance v6, Landroid/os/Bundle;
 
@@ -190,7 +188,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/measurement/internal/zzju;->zza(Ljava/lang/String;Ljava/lang/String;JLandroid/os/Bundle;)V
 
-    :cond_af
+    :cond_ae
     return-void
 .end method
 

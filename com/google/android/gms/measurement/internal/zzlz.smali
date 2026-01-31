@@ -443,9 +443,7 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->oDYrDaO:Ljava/lang/String;
+    const-string v2, "screen_view"
 
     move-object v3, p1
 
@@ -625,13 +623,11 @@
 
     check-cast v0, Lcom/google/android/gms/measurement/internal/zzlw;
 
-    if-nez v0, :cond_36
+    if-nez v0, :cond_35
 
     iget-object v0, p1, Lcom/google/android/gms/internal/measurement/zzeb;->zzb:Ljava/lang/String;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->iXvDUqdsWmFK:Ljava/lang/String;
+    const-string v1, "Activity"
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/gms/measurement/internal/zzlz;->zza(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -663,16 +659,16 @@
 
     move-object v0, v1
 
-    :cond_36
+    :cond_35
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzlz;->zzg:Lcom/google/android/gms/measurement/internal/zzlw;
 
-    if-eqz p1, :cond_3d
+    if-eqz p1, :cond_3c
 
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzlz;->zzg:Lcom/google/android/gms/measurement/internal/zzlw;
 
     return-object p1
 
-    :cond_3d
+    :cond_3c
     return-object v0
 .end method
 
@@ -753,7 +749,7 @@
 
     const/4 v3, 0x0
 
-    if-eqz v0, :cond_87
+    if-eqz v0, :cond_88
 
     const-string v4, "screen_name"
 
@@ -761,7 +757,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_51
+    if-eqz v4, :cond_52
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -781,7 +777,7 @@
 
     move-result v6
 
-    if-le v5, v6, :cond_51
+    if-le v5, v6, :cond_52
 
     :cond_3a
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -808,20 +804,20 @@
 
     return-void
 
-    :cond_51
+    :cond_52
     const-string v5, "screen_class"
 
     invoke-virtual {v0, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    if-eqz v5, :cond_84
+    if-eqz v5, :cond_85
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
 
-    if-lez v6, :cond_6d
+    if-lez v6, :cond_6e
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -835,9 +831,9 @@
 
     move-result v3
 
-    if-le v6, v3, :cond_84
+    if-le v6, v3, :cond_85
 
-    :cond_6d
+    :cond_6e
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
     move-result-object v0
@@ -862,22 +858,22 @@
 
     return-void
 
-    :cond_84
+    :cond_85
     move-object v10, v4
 
     move-object v3, v5
 
-    goto :goto_88
+    goto :goto_89
 
-    :cond_87
+    :cond_88
     move-object v10, v3
 
-    :goto_88
-    if-nez v3, :cond_99
+    :goto_89
+    if-nez v3, :cond_9a
 
     iget-object v3, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zze:Lcom/google/android/gms/internal/measurement/zzeb;
 
-    if-eqz v3, :cond_97
+    if-eqz v3, :cond_98
 
     iget-object v3, v3, Lcom/google/android/gms/internal/measurement/zzeb;->zzb:Ljava/lang/String;
 
@@ -887,22 +883,22 @@
 
     move-result-object v3
 
-    goto :goto_99
+    goto :goto_9a
 
-    :cond_97
+    :cond_98
     const-string v3, "Activity"
 
-    :cond_99
-    :goto_99
+    :cond_9a
+    :goto_9a
     move-object v11, v3
 
     iget-object v3, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zzb:Lcom/google/android/gms/measurement/internal/zzlw;
 
     iget-boolean v4, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zzf:Z
 
-    if-eqz v4, :cond_c3
+    if-eqz v4, :cond_c4
 
-    if-eqz v3, :cond_c3
+    if-eqz v3, :cond_c4
 
     iput-boolean v2, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zzf:Z
 
@@ -918,9 +914,9 @@
 
     move-result v3
 
-    if-eqz v2, :cond_c3
+    if-eqz v2, :cond_c4
 
-    if-eqz v3, :cond_c3
+    if-eqz v3, :cond_c4
 
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
@@ -938,10 +934,10 @@
 
     return-void
 
-    :cond_c3
+    :cond_c4
     monitor-exit v1
-    :try_end_c4
-    .catchall {:try_start_7 .. :try_end_c4} :catchall_118
+    :try_end_c5
+    .catchall {:try_start_7 .. :try_end_c5} :catchall_11a
 
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
@@ -953,40 +949,40 @@
 
     const-string v2, "Logging screen view with name, class"
 
-    if-nez v10, :cond_d3
+    if-nez v10, :cond_d4
 
     const-string v3, "null"
 
-    goto :goto_d4
+    goto :goto_d5
 
-    :cond_d3
+    :cond_d4
     move-object v3, v10
 
-    :goto_d4
-    if-nez v11, :cond_d9
+    :goto_d5
+    if-nez v11, :cond_db
 
     const-string v4, "null"
 
-    goto :goto_da
+    goto :goto_dc
 
-    :cond_d9
+    :cond_db
     move-object v4, v11
 
-    :goto_da
+    :goto_dc
     invoke-virtual {v1, v2, v3, v4}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     iget-object v1, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zzb:Lcom/google/android/gms/measurement/internal/zzlw;
 
-    if-nez v1, :cond_e4
+    if-nez v1, :cond_e6
 
     iget-object v1, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zzc:Lcom/google/android/gms/measurement/internal/zzlw;
 
-    goto :goto_e6
+    goto :goto_e8
 
-    :cond_e4
+    :cond_e6
     iget-object v1, v8, Lcom/google/android/gms/measurement/internal/zzlz;->zzb:Lcom/google/android/gms/measurement/internal/zzlw;
 
-    :goto_e6
+    :goto_e8
     move-object v5, v1
 
     new-instance v4, Lcom/google/android/gms/measurement/internal/zzlw;
@@ -1039,13 +1035,13 @@
 
     return-void
 
-    :catchall_118
+    :catchall_11a
     move-exception v0
 
-    :try_start_119
+    :try_start_11b
     monitor-exit v1
-    :try_end_11a
-    .catchall {:try_start_119 .. :try_end_11a} :catchall_118
+    :try_end_11c
+    .catchall {:try_start_11b .. :try_end_11c} :catchall_11a
 
     throw v0
 .end method
@@ -1256,7 +1252,7 @@
     return-void
 
     :cond_46
-    if-nez p3, :cond_50
+    if-nez p3, :cond_51
 
     iget-object p3, p1, Lcom/google/android/gms/internal/measurement/zzeb;->zzb:Ljava/lang/String;
 
@@ -1266,7 +1262,7 @@
 
     move-result-object p3
 
-    :cond_50
+    :cond_51
     iget-object v1, v0, Lcom/google/android/gms/measurement/internal/zzlw;->zzb:Ljava/lang/String;
 
     invoke-static {v1, p3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1279,9 +1275,9 @@
 
     move-result v0
 
-    if-eqz v1, :cond_6e
+    if-eqz v1, :cond_6f
 
-    if-eqz v0, :cond_6e
+    if-eqz v0, :cond_6f
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
@@ -1297,18 +1293,18 @@
 
     return-void
 
-    :cond_6e
+    :cond_6f
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    if-eqz p2, :cond_9c
+    if-eqz p2, :cond_9d
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    if-lez v2, :cond_86
+    if-lez v2, :cond_87
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -1322,9 +1318,9 @@
 
     move-result v3
 
-    if-le v2, v3, :cond_9c
+    if-le v2, v3, :cond_9d
 
-    :cond_86
+    :cond_87
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
     move-result-object p1
@@ -1347,14 +1343,14 @@
 
     return-void
 
-    :cond_9c
-    if-eqz p3, :cond_c8
+    :cond_9d
+    if-eqz p3, :cond_c9
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    if-lez v2, :cond_b2
+    if-lez v2, :cond_b3
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
@@ -1368,9 +1364,9 @@
 
     move-result v0
 
-    if-le v2, v0, :cond_c8
+    if-le v2, v0, :cond_c9
 
-    :cond_b2
+    :cond_b3
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
     move-result-object p1
@@ -1393,7 +1389,7 @@
 
     return-void
 
-    :cond_c8
+    :cond_c9
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
     move-result-object v0
@@ -1402,16 +1398,16 @@
 
     move-result-object v0
 
-    if-nez p2, :cond_d5
+    if-nez p2, :cond_d6
 
     const-string v1, "null"
 
-    goto :goto_d6
+    goto :goto_d7
 
-    :cond_d5
+    :cond_d6
     move-object v1, p2
 
-    :goto_d6
+    :goto_d7
     const-string v2, "Setting current screen to name, class"
 
     invoke-virtual {v0, v2, v1, p3}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V

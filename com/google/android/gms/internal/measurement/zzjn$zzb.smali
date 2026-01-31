@@ -30,7 +30,7 @@
 
     invoke-direct {p0, p2}, Lcom/google/android/gms/internal/measurement/zzjn;-><init>(Lcom/google/android/gms/internal/measurement/zzjq;)V
 
-    if-eqz p1, :cond_39
+    if-eqz p1, :cond_3a
 
     array-length p2, p1
 
@@ -93,7 +93,7 @@
 
     throw p2
 
-    :cond_39
+    :cond_3a
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string p2, "buffer"

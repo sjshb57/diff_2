@@ -41,9 +41,7 @@
 
     const-string v11, "ga_session_id"
 
-    const/4 v12, 0x0
-
-    sget-object v12, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->SFVsjgTdt:Ljava/lang/String;
+    const-string v12, "last_gclid"
 
     filled-new-array/range {v0 .. v14}, [Ljava/lang/String;
 

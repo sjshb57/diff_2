@@ -157,20 +157,20 @@
 
     const-string v3, "Unable to get message info for "
 
-    if-eqz v2, :cond_54
+    if-eqz v2, :cond_55
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_59
+    goto :goto_5a
 
-    :cond_54
+    :cond_55
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    :goto_59
+    :goto_5a
     invoke-direct {v1, p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1

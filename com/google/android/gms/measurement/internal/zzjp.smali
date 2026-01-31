@@ -113,19 +113,15 @@
 
     const-string v6, "_xu"
 
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/google/api/client/util/Uhr/zXgie;->StuTj:Ljava/lang/String;
+    const-string v7, "_cd"
 
     const-string v8, "_ae"
 
-    const/4 v9, 0x0
-
-    sget-object v9, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->mQpqexYlalZHRuM:Ljava/lang/String;
+    const-string v9, "_ui"
 
     const/4 v10, 0x0
 
-    sget-object v10, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->lrnUgMxoNxreV:Ljava/lang/String;
+    sget-object v10, Landroidx/privacysandbox/ads/adservices/adselection/oJ/LFBAEOAct;->HcyQ:Ljava/lang/String;
 
     const-string v11, "app_store_subscription_cancel"
 

@@ -26,7 +26,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_95
+    if-ge v1, v2, :cond_94
 
     invoke-interface {v0, v1}, Lcom/google/android/gms/internal/measurement/zzms;->zza(I)B
 
@@ -34,15 +34,15 @@
 
     const/16 v3, 0x22
 
-    if-eq v2, v3, :cond_8c
+    if-eq v2, v3, :cond_8b
 
     const/16 v3, 0x27
 
-    if-eq v2, v3, :cond_86
+    if-eq v2, v3, :cond_85
 
     const/16 v3, 0x5c
 
-    if-eq v2, v3, :cond_80
+    if-eq v2, v3, :cond_7f
 
     packed-switch v2, :pswitch_data_9a
 
@@ -58,7 +58,7 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :cond_35
     invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -91,93 +91,93 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :pswitch_55  #0xd
     const-string v2, "\\r"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :pswitch_5b  #0xc
     const-string v2, "\\f"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :pswitch_61  #0xb
     const-string v2, "\\v"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :pswitch_67  #0xa
     const-string v2, "\\n"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :pswitch_6d  #0x9
     const-string v2, "\\t"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
     :pswitch_73  #0x8
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->iVIrvRht:Ljava/lang/String;
+    const-string v2, "\\b"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
-    :pswitch_7a  #0x7
+    :pswitch_79  #0x7
     const-string v2, "\\a"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
-    :cond_80
+    :cond_7f
     const-string v2, "\\\\"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
-    :cond_86
+    :cond_85
     const-string v2, "\\\'"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_91
+    goto :goto_90
 
-    :cond_8c
+    :cond_8b
     const-string v2, "\\\""
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_91
+    :goto_90
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_f
 
-    :cond_95
+    :cond_94
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    nop
+
     :pswitch_data_9a
     .packed-switch 0x7
-        :pswitch_7a  #00000007
+        :pswitch_79  #00000007
         :pswitch_73  #00000008
         :pswitch_6d  #00000009
         :pswitch_67  #0000000a

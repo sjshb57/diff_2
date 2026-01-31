@@ -204,9 +204,7 @@
 
     sget-object v13, Lcom/google/android/gms/internal/measurement/zziy;->zza:Lcom/google/android/gms/internal/measurement/zziy;
 
-    const/4 v9, 0x0
-
-    sget-object v9, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->ZDtrFfncG:Ljava/lang/String;
+    const-string v9, "BYTE_STRING"
 
     const/4 v10, 0x7
 

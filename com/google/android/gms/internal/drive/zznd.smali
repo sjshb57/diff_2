@@ -779,9 +779,7 @@
 
     invoke-virtual {v0, v2, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/flatbuffers/OSq/msMBb;->eYL:Ljava/lang/String;
+    const-string v2, "putObject"
 
     new-array v6, v5, [Ljava/lang/Class;
 
@@ -803,11 +801,11 @@
 
     move-result v2
 
-    if-eqz v2, :cond_9c
+    if-eqz v2, :cond_9b
 
     return v3
 
-    :cond_9c
+    :cond_9b
     const-string v2, "getByte"
 
     new-array v6, v4, [Ljava/lang/Class;
@@ -935,12 +933,12 @@
     aput-object v6, v5, v4
 
     invoke-virtual {v0, v2, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_124
-    .catchall {:try_start_6 .. :try_end_124} :catchall_125
+    :try_end_123
+    .catchall {:try_start_6 .. :try_end_123} :catchall_124
 
     return v3
 
-    :catchall_125
+    :catchall_124
     move-exception v0
 
     sget-object v2, Lcom/google/android/gms/internal/drive/zznd;->logger:Ljava/util/logging/Logger;
@@ -975,9 +973,7 @@
 
     move-result-object v0
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->JDENn:Ljava/lang/String;
+    const-string v4, "com.google.protobuf.UnsafeUtil"
 
     const-string v5, "supportsUnsafeArrayOperations"
 
@@ -1051,9 +1047,7 @@
     return v5
 
     :cond_36
-    const/4 v6, 0x0
-
-    sget-object v6, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->rFHGtgMuZNZqcl:Ljava/lang/String;
+    const-string v6, "getByte"
 
     new-array v7, v5, [Ljava/lang/Class;
 
@@ -1168,12 +1162,12 @@
     aput-object v1, v6, v4
 
     invoke-virtual {v2, v0, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_b0
-    .catchall {:try_start_a .. :try_end_b0} :catchall_b1
+    :try_end_af
+    .catchall {:try_start_a .. :try_end_af} :catchall_b0
 
     return v5
 
-    :catchall_b1
+    :catchall_b0
     move-exception v0
 
     sget-object v1, Lcom/google/android/gms/internal/drive/zznd;->logger:Ljava/util/logging/Logger;
@@ -1470,9 +1464,7 @@
 
     invoke-virtual {v1, v3, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/common/html/ehW/oZEOPkNlS;->yPGAywGQhyGZS:Ljava/lang/String;
+    const-string v3, "pokeByte"
 
     new-array v6, v4, [Ljava/lang/Class;
 
@@ -1529,12 +1521,12 @@
     aput-object p0, v6, v5
 
     invoke-virtual {v1, v3, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_89
-    .catchall {:try_start_a .. :try_end_89} :catchall_8a
+    :try_end_88
+    .catchall {:try_start_a .. :try_end_88} :catchall_89
 
     return v7
 
-    :catchall_8a
+    :catchall_89
     return v2
 .end method
 

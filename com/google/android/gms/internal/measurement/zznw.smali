@@ -828,9 +828,7 @@
 
     sput-object v1, Lcom/google/android/gms/internal/measurement/zznw;->zzk:Lcom/google/android/gms/internal/measurement/zzhx;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->ZetNWlZnRYuwv:Ljava/lang/String;
+    const-string v1, "measurement.sgtm.google_signal.url"
 
     const-string v7, "https://app-measurement.com/s/d"
 
@@ -1286,9 +1284,7 @@
 
     sput-object v1, Lcom/google/android/gms/internal/measurement/zznw;->zzbf:Lcom/google/android/gms/internal/measurement/zzhx;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->tBcYuVMzYrbgg:Ljava/lang/String;
+    const-string v1, "measurement.upload.max_public_events_per_day"
 
     const-wide/32 v6, 0xc350
 
@@ -1336,9 +1332,7 @@
 
     sput-object v1, Lcom/google/android/gms/internal/measurement/zznw;->zzbk:Lcom/google/android/gms/internal/measurement/zzhx;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->kNIytjMS:Ljava/lang/String;
+    const-string v1, "measurement.upload.retry_time"
 
     invoke-virtual {v0, v1, v4, v5}, Lcom/google/android/gms/internal/measurement/zzif;->zza(Ljava/lang/String;J)Lcom/google/android/gms/internal/measurement/zzhx;
 

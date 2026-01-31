@@ -216,7 +216,7 @@
 
     move-result p2
 
-    if-gt p3, p2, :cond_66
+    if-gt p3, p2, :cond_67
 
     invoke-virtual {p1}, Lcom/google/android/gms/internal/drive/zzjc;->size()I
 
@@ -321,7 +321,7 @@
 
     throw p2
 
-    :cond_66
+    :cond_67
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/drive/zzjc;->size()I

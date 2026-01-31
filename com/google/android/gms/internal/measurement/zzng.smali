@@ -81,9 +81,7 @@
 
     sget-object v2, Lcom/google/android/gms/internal/measurement/zznj;->zzc:Lcom/google/android/gms/internal/measurement/zznj;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/savedstate/xT/fgyAspfzfnhI;->uvrJ:Ljava/lang/String;
+    const-string v5, "FLOAT"
 
     const/4 v6, 0x5
 

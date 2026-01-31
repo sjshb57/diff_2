@@ -206,11 +206,9 @@
 
     move-result p0
 
-    if-eq p0, v3, :cond_7f
+    if-eq p0, v3, :cond_7e
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->gyL:Ljava/lang/String;
+    const-string v1, "CmpSdkID"
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -218,7 +216,7 @@
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_7f
+    :cond_7e
     new-instance p0, Lcom/google/android/gms/measurement/internal/zzoe;
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/measurement/internal/zzoe;-><init>(Ljava/util/Map;)V
@@ -449,7 +447,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a8
+    if-eqz v0, :cond_a9
 
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzoe;->zzb:Ljava/util/Map;
 
@@ -463,7 +461,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a8
+    if-eqz v0, :cond_a9
 
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzoe;->zzb:Ljava/util/Map;
 
@@ -477,7 +475,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a8
+    if-eqz v0, :cond_a9
 
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzoe;->zze()I
 
@@ -527,7 +525,7 @@
 
     const/16 v7, 0x31
 
-    if-lez v3, :cond_6a
+    if-lez v3, :cond_6b
 
     sget-object v3, Lcom/google/android/gms/measurement/internal/zzjj$zza;->zza:Lcom/google/android/gms/measurement/internal/zzjj$zza;
 
@@ -537,26 +535,26 @@
 
     move-result v8
 
-    if-ne v8, v7, :cond_66
+    if-ne v8, v7, :cond_67
 
     move-object v8, v5
 
-    goto :goto_67
+    goto :goto_68
 
-    :cond_66
+    :cond_67
     move-object v8, v6
 
-    :goto_67
+    :goto_68
     invoke-virtual {v2, v3, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_6a
+    :cond_6b
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
 
     const/4 v8, 0x3
 
-    if-le v3, v8, :cond_88
+    if-le v3, v8, :cond_89
 
     sget-object v3, Lcom/google/android/gms/measurement/internal/zzjj$zza;->zzd:Lcom/google/android/gms/measurement/internal/zzjj$zza;
 
@@ -568,36 +566,36 @@
 
     move-result v9
 
-    if-ne v9, v7, :cond_84
+    if-ne v9, v7, :cond_85
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
 
-    if-ne v8, v7, :cond_84
+    if-ne v8, v7, :cond_85
 
     move-object v8, v5
 
-    goto :goto_85
+    goto :goto_86
 
-    :cond_84
+    :cond_85
     move-object v8, v6
 
-    :goto_85
+    :goto_86
     invoke-virtual {v2, v3, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_88
+    :cond_89
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
 
     const/4 v8, 0x6
 
-    if-le v3, v8, :cond_a7
+    if-le v3, v8, :cond_a8
 
     const/4 v3, 0x4
 
-    if-lt v0, v3, :cond_a7
+    if-lt v0, v3, :cond_a8
 
     sget-object v0, Lcom/google/android/gms/measurement/internal/zzjj$zza;->zzc:Lcom/google/android/gms/measurement/internal/zzjj$zza;
 
@@ -607,26 +605,26 @@
 
     move-result v3
 
-    if-ne v3, v7, :cond_a3
+    if-ne v3, v7, :cond_a4
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    if-ne v1, v7, :cond_a3
+    if-ne v1, v7, :cond_a4
 
-    goto :goto_a4
+    goto :goto_a5
 
-    :cond_a3
+    :cond_a4
     move-object v5, v6
 
-    :goto_a4
+    :goto_a5
     invoke-virtual {v2, v0, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_a7
+    :cond_a8
     return-object v2
 
-    :cond_a8
+    :cond_a9
     sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     return-object v0

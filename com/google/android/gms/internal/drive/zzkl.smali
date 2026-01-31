@@ -192,9 +192,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/api/client/util/Uhr/zXgie;->qUnmbRP:Ljava/lang/String;
+    const-string v2, "Index:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

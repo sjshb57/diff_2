@@ -75,9 +75,7 @@
 
     const-string v26, "previous_first_open_count"
 
-    const/16 v27, 0x0
-
-    sget-object v27, Landroidx/savedstate/xT/fgyAspfzfnhI;->GCWizShqoqa:Ljava/lang/String;
+    const-string v27, "system_app"
 
     const-string v28, "system_app_update"
 
@@ -133,9 +131,7 @@
 
     const-string v54, "firebase_previous_class"
 
-    const/16 v55, 0x0
-
-    sget-object v55, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->LtbNSmwDfqsXvVb:Ljava/lang/String;
+    const-string v55, "firebase_previous_id"
 
     filled-new-array/range {v0 .. v57}, [Ljava/lang/String;
 
@@ -219,9 +215,7 @@
 
     const-string v36, "_en"
 
-    const/16 v37, 0x0
-
-    sget-object v37, Landroidx/savedstate/xT/fgyAspfzfnhI;->CWWOxfcqpcMkDuB:Ljava/lang/String;
+    const-string v37, "_cis"
 
     const-string v38, "_cc"
 
@@ -237,9 +231,7 @@
 
     const-string v44, "_ffr"
 
-    const/16 v45, 0x0
-
-    sget-object v45, Landroidx/print/nh/SlomKQFs;->ZKTOG:Ljava/lang/String;
+    const-string v45, "_cbs"
 
     const-string v46, "_c"
 
@@ -255,9 +247,7 @@
 
     const-string v52, "_sc"
 
-    const/16 v53, 0x0
-
-    sget-object v53, Lcom/google/api/client/util/Uhr/zXgie;->HpuHy:Ljava/lang/String;
+    const-string v53, "_si"
 
     const-string v54, "_pn"
 
@@ -311,9 +301,7 @@
 
     const-string v14, "item_category4"
 
-    const/4 v15, 0x0
-
-    sget-object v15, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->PYCcJTwPmpGwgt:Ljava/lang/String;
+    const-string v15, "item_category5"
 
     const-string v16, "item_list_name"
 

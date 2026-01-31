@@ -123,7 +123,7 @@
 
     sput-object v2, Lcom/google/android/gms/internal/play_billing/zzo;->zzb:Lcom/google/android/gms/internal/play_billing/zzd;
 
-    if-eqz v8, :cond_65
+    if-eqz v8, :cond_64
 
     sget-object v3, Lcom/google/android/gms/internal/play_billing/zzo;->zzg:Ljava/util/logging/Logger;
 
@@ -131,15 +131,13 @@
 
     const-string v6, "<clinit>"
 
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/google/api/client/util/Uhr/zXgie;->nFVROzKye:Ljava/lang/String;
+    const-string v7, "SafeAtomicHelper is broken!"
 
     const-string v5, "com.android.billingclient.util.concurrent.AbstractResolvableFuture"
 
     invoke-virtual/range {v3 .. v8}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_65
+    :cond_64
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -262,7 +260,7 @@
 
     move-result-object v2
     :try_end_7
-    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_7} :catch_5c
+    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_7} :catch_5d
     .catchall {:try_start_3 .. :try_end_7} :catchall_29
 
     if-eqz v1, :cond_10
@@ -305,7 +303,7 @@
     :catch_27
     move-exception v1
 
-    goto :goto_4c
+    goto :goto_4d
 
     :catchall_29
     move-exception v2
@@ -349,7 +347,7 @@
 
     return-void
 
-    :goto_4c
+    :goto_4d
     const-string v2, "FAILURE, cause=["
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -364,7 +362,7 @@
 
     return-void
 
-    :catch_5c
+    :catch_5d
     const/4 v1, 0x1
 
     goto :goto_3
@@ -415,9 +413,7 @@
 
     const-string v2, "com.android.billingclient.util.concurrent.AbstractResolvableFuture"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->fvDsnqrn:Ljava/lang/String;
+    const-string v3, "executeListener"
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -788,7 +784,7 @@
 
     move-result v6
 
-    if-nez v6, :cond_173
+    if-nez v6, :cond_174
 
     iget-object v6, v0, Lcom/google/android/gms/internal/play_billing/zzo;->zzc:Ljava/lang/Object;
 
@@ -1045,7 +1041,7 @@
 
     cmp-long v9, v9, v11
 
-    if-gez v9, :cond_147
+    if-gez v9, :cond_148
 
     const-string v9, " (plus "
 
@@ -1069,20 +1065,20 @@
 
     cmp-long v3, v9, v11
 
-    if-eqz v3, :cond_108
+    if-eqz v3, :cond_109
 
     cmp-long v11, v4, v13
 
-    if-lez v11, :cond_107
+    if-lez v11, :cond_108
 
-    goto :goto_108
-
-    :cond_107
-    const/4 v8, 0x0
+    goto :goto_109
 
     :cond_108
-    :goto_108
-    if-lez v3, :cond_12b
+    const/4 v8, 0x0
+
+    :cond_109
+    :goto_109
+    if-lez v3, :cond_12c
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1100,7 +1096,7 @@
 
     move-result-object v2
 
-    if-eqz v8, :cond_127
+    if-eqz v8, :cond_128
 
     const-string v3, ","
 
@@ -1108,13 +1104,13 @@
 
     move-result-object v2
 
-    :cond_127
+    :cond_128
     invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    :cond_12b
-    if-eqz v8, :cond_141
+    :cond_12c
+    if-eqz v8, :cond_142
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1132,19 +1128,19 @@
 
     move-result-object v2
 
-    :cond_141
+    :cond_142
     const-string v1, "delay)"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    :cond_147
+    :cond_148
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/internal/play_billing/zzo;->isDone()Z
 
     move-result v1
 
-    if-eqz v1, :cond_159
+    if-eqz v1, :cond_15a
 
     const-string v1, " but future completed as timeout expired"
 
@@ -1158,7 +1154,7 @@
 
     throw v2
 
-    :cond_159
+    :cond_15a
     new-instance v1, Ljava/util/concurrent/TimeoutException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1181,7 +1177,7 @@
 
     throw v1
 
-    :cond_173
+    :cond_174
     new-instance v1, Ljava/lang/InterruptedException;
 
     invoke-direct {v1}, Ljava/lang/InterruptedException;-><init>()V
@@ -1350,7 +1346,7 @@
 
     instance-of v1, v0, Lcom/google/android/gms/internal/play_billing/zzk;
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_e
 
     check-cast v0, Lcom/google/android/gms/internal/play_billing/zzk;
 
@@ -1360,10 +1356,10 @@
 
     return-object v0
 
-    :cond_d
+    :cond_e
     instance-of v0, p0, Ljava/util/concurrent/ScheduledFuture;
 
-    if-eqz v0, :cond_2e
+    if-eqz v0, :cond_2f
 
     move-object v0, p0
 
@@ -1393,7 +1389,7 @@
 
     return-object v0
 
-    :cond_2e
+    :cond_2f
     const/4 v0, 0x0
 
     return-object v0

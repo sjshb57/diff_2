@@ -10,9 +10,7 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/EDDN/hfnXJuYOaqC;->pHEeami:Ljava/lang/String;
+    const-string v0, "com.google.android.gms.nearby.messages.internal.IMessageListener"
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/nearby/zza;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 

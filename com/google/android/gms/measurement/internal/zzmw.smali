@@ -92,7 +92,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v2, Lcom/google/common/html/ehW/oZEOPkNlS;->xrKcsW:Ljava/lang/String;
+    sget-object v2, Landroidx/activity/result/contract/Kr/Zeqt;->gQWACa:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 

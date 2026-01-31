@@ -285,7 +285,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_43
+    if-nez v0, :cond_44
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -327,7 +327,7 @@
 
     throw p0
 
-    :cond_43
+    :cond_44
     return-void
 .end method
 

@@ -107,9 +107,7 @@
 
     move-result-object v8
 
-    const/4 v10, 0x0
-
-    sget-object v10, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->HZTror:Ljava/lang/String;
+    const-string v10, "BOOLEAN"
 
     const/4 v11, 0x4
 
@@ -121,9 +119,7 @@
 
     const-string v10, ""
 
-    const/4 v12, 0x0
-
-    sget-object v12, Lcom/google/flatbuffers/OSq/msMBb;->BTGo:Ljava/lang/String;
+    const-string v12, "STRING"
 
     const/4 v13, 0x5
 

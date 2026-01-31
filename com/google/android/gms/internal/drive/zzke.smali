@@ -691,9 +691,7 @@
 
     sget-object v46, Lcom/google/android/gms/internal/drive/zzks;->zzsz:Lcom/google/android/gms/internal/drive/zzks;
 
-    const/16 v42, 0x0
-
-    sget-object v42, Lkotlin/EDDN/hfnXJuYOaqC;->nZfAeOuhYWc:Ljava/lang/String;
+    const-string v42, "ENUM_LIST"
 
     const/16 v43, 0x1e
 
@@ -927,9 +925,7 @@
 
     sget-object v54, Lcom/google/android/gms/internal/drive/zzks;->zzss:Lcom/google/android/gms/internal/drive/zzks;
 
-    const/16 v50, 0x0
-
-    sget-object v50, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->XnnLeIzpRFUa:Ljava/lang/String;
+    const-string v50, "UINT32_LIST_PACKED"
 
     const/16 v51, 0x2b
 
@@ -1297,8 +1293,8 @@
 
     array-length v1, v0
 
-    :goto_491
-    if-ge v14, v1, :cond_49e
+    :goto_48d
+    if-ge v14, v1, :cond_49a
 
     aget-object v2, v0, v14
 
@@ -1310,9 +1306,9 @@
 
     add-int/lit8 v14, v14, 0x1
 
-    goto :goto_491
+    goto :goto_48d
 
-    :cond_49e
+    :cond_49a
     return-void
 .end method
 

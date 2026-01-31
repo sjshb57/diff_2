@@ -213,7 +213,7 @@
     add-int/2addr p3, v1
 
     :goto_1f
-    if-ge v1, v0, :cond_fa
+    if-ge v1, v0, :cond_fb
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
@@ -457,7 +457,7 @@
 
     throw p1
 
-    :cond_fa
+    :cond_fb
     return p3
 .end method
 

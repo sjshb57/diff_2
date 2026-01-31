@@ -811,12 +811,12 @@
     aput-object p0, v6, v5
 
     invoke-virtual {v2, v3, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_81
-    .catchall {:try_start_3 .. :try_end_81} :catchall_82
+    :try_end_82
+    .catchall {:try_start_3 .. :try_end_82} :catchall_83
 
     return v7
 
-    :catchall_82
+    :catchall_83
     return v1
 .end method
 
@@ -852,15 +852,13 @@
     :cond_b
     const-class v0, Ljava/nio/Buffer;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->wmPpjJroty:Ljava/lang/String;
+    const-string v1, "address"
 
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/measurement/zzmz;->zza(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_1e
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
@@ -868,11 +866,11 @@
 
     sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
-    if-ne v1, v2, :cond_1f
+    if-ne v1, v2, :cond_1e
 
     return-object v0
 
-    :cond_1f
+    :cond_1e
     const/4 v0, 0x0
 
     return-object v0
