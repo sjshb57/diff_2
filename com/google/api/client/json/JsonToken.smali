@@ -87,9 +87,7 @@
 
     new-instance v7, Lcom/google/api/client/json/JsonToken;
 
-    const/4 v9, 0x0
-
-    sget-object v9, Lkotlin/EDDN/hfnXJuYOaqC;->yQuSVbeLQNQBYlq:Ljava/lang/String;
+    const-string v9, "FIELD_NAME"
 
     const/4 v10, 0x4
 

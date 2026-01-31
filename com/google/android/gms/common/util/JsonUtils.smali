@@ -225,7 +225,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_75
+    if-nez v0, :cond_76
 
     sget-object v0, Lcom/google/android/gms/common/util/JsonUtils;->zzb:Ljava/util/regex/Pattern;
 
@@ -240,7 +240,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6b
+    if-eqz v2, :cond_6c
 
     if-nez v1, :cond_1a
 
@@ -261,7 +261,7 @@
 
     const/16 v3, 0xc
 
-    if-eq v2, v3, :cond_65
+    if-eq v2, v3, :cond_66
 
     const/16 v3, 0xd
 
@@ -279,7 +279,7 @@
 
     if-eq v2, v3, :cond_4d
 
-    packed-switch v2, :pswitch_data_76
+    packed-switch v2, :pswitch_data_78
 
     goto :goto_d
 
@@ -332,30 +332,32 @@
 
     goto :goto_d
 
-    :cond_65
+    :cond_66
     const-string v2, "\\\\f"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/regex/Matcher;->appendReplacement(Ljava/lang/StringBuffer;Ljava/lang/String;)Ljava/util/regex/Matcher;
 
     goto :goto_d
 
-    :cond_6b
-    if-nez v1, :cond_6e
+    :cond_6c
+    if-nez v1, :cond_6f
 
-    goto :goto_75
+    goto :goto_76
 
-    :cond_6e
+    :cond_6f
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->appendTail(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    :cond_75
-    :goto_75
+    :cond_76
+    :goto_76
     return-object p0
 
-    :pswitch_data_76
+    nop
+
+    :pswitch_data_78
     .packed-switch 0x8
         :pswitch_47  #00000008
         :pswitch_41  #00000009

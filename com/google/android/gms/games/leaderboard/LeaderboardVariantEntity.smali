@@ -266,29 +266,29 @@
 
     const/4 v2, -0x1
 
-    if-eq v1, v2, :cond_4d
+    if-eq v1, v2, :cond_4c
 
-    if-eqz v1, :cond_4a
+    if-eqz v1, :cond_49
 
     const/4 v2, 0x1
 
-    if-eq v1, v2, :cond_47
+    if-eq v1, v2, :cond_46
 
     const/4 v2, 0x2
 
     const-string v3, "SOCIAL_1P"
 
-    if-eq v1, v2, :cond_4f
+    if-eq v1, v2, :cond_4e
 
     const/4 v2, 0x3
 
-    if-eq v1, v2, :cond_44
+    if-eq v1, v2, :cond_43
 
     const/4 v2, 0x4
 
     if-ne v1, v2, :cond_2a
 
-    goto :goto_4f
+    goto :goto_4e
 
     :cond_2a
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -299,9 +299,7 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->eeopMlYicjKweQA:Ljava/lang/String;
+    const-string v2, "Unknown leaderboard collection: "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -315,26 +313,26 @@
 
     throw p0
 
-    :cond_44
+    :cond_43
     const-string v3, "FRIENDS"
 
-    goto :goto_4f
+    goto :goto_4e
 
-    :cond_47
+    :cond_46
     const-string v3, "SOCIAL"
 
-    goto :goto_4f
+    goto :goto_4e
 
-    :cond_4a
+    :cond_49
     const-string v3, "PUBLIC"
 
-    goto :goto_4f
+    goto :goto_4e
 
-    :cond_4d
+    :cond_4c
     const-string v3, "UNKNOWN"
 
-    :cond_4f
-    :goto_4f
+    :cond_4e
+    :goto_4e
     const-string v1, "Collection"
 
     invoke-virtual {v0, v1, v3}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
@@ -347,7 +345,7 @@
 
     const-string v2, "none"
 
-    if-eqz v1, :cond_66
+    if-eqz v1, :cond_65
 
     invoke-interface {p0}, Lcom/google/android/gms/games/leaderboard/LeaderboardVariant;->getRawPlayerScore()J
 
@@ -357,12 +355,12 @@
 
     move-result-object v1
 
-    goto :goto_67
+    goto :goto_66
 
-    :cond_66
+    :cond_65
     move-object v1, v2
 
-    :goto_67
+    :goto_66
     const-string v3, "RawPlayerScore"
 
     invoke-virtual {v0, v3, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
@@ -373,18 +371,18 @@
 
     move-result v1
 
-    if-eqz v1, :cond_78
+    if-eqz v1, :cond_77
 
     invoke-interface {p0}, Lcom/google/android/gms/games/leaderboard/LeaderboardVariant;->getDisplayPlayerScore()Ljava/lang/String;
 
     move-result-object v1
 
-    goto :goto_79
+    goto :goto_78
 
-    :cond_78
+    :cond_77
     move-object v1, v2
 
-    :goto_79
+    :goto_78
     const-string v3, "DisplayPlayerScore"
 
     invoke-virtual {v0, v3, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;

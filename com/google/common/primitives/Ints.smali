@@ -266,15 +266,13 @@
     move v0, v1
 
     :goto_10
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->Ypkra:Ljava/lang/String;
+    const-string v1, "Invalid padding: %s"
 
     invoke-static {v0, v1, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     array-length v0, p0
 
-    if-ge v0, p1, :cond_1e
+    if-ge v0, p1, :cond_1d
 
     add-int/2addr p1, p2
 
@@ -282,7 +280,7 @@
 
     move-result-object p0
 
-    :cond_1e
+    :cond_1d
     return-object p0
 .end method
 

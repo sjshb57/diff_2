@@ -64,9 +64,7 @@
 
     new-instance v3, Lcom/fasterxml/jackson/core/JsonParser$NumberType;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->TxzUO:Ljava/lang/String;
+    const-string v5, "BIG_INTEGER"
 
     const/4 v6, 0x2
 

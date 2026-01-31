@@ -284,7 +284,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_30
+    if-eqz v0, :cond_2f
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -292,7 +292,7 @@
 
     if-eqz v2, :cond_12
 
-    goto :goto_30
+    goto :goto_2f
 
     :cond_12
     invoke-virtual {p0}, Lcom/google/api/client/json/webtoken/JsonWebSignature;->getHeader()Lcom/google/api/client/json/webtoken/JsonWebSignature$Header;
@@ -303,15 +303,13 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->kDvsLsWMeiYLW:Ljava/lang/String;
+    const-string v3, "RS256"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_30
+    if-eqz v2, :cond_2f
 
     invoke-static {}, Lcom/google/api/client/util/SecurityUtils;->getSha256WithRsaSignatureAlgorithm()Ljava/security/Signature;
 
@@ -327,8 +325,8 @@
 
     return-object p1
 
-    :cond_30
-    :goto_30
+    :cond_2f
+    :goto_2f
     return-object v1
 .end method
 

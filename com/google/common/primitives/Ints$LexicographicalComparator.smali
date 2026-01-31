@@ -39,9 +39,7 @@
 
     new-instance v0, Lcom/google/common/primitives/Ints$LexicographicalComparator;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->uqoUChKjLU:Ljava/lang/String;
+    const-string v1, "INSTANCE"
 
     const/4 v2, 0x0
 

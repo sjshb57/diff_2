@@ -60,6 +60,8 @@
 
 .field protected static packageName:Ljava/lang/String; = "com.brotato.shooting.survivors.games.paid.android"
 
+.field protected static repeatedCheckEnabled:Z = true
+
 .field private static responsePayload:Landroid/os/Bundle;
 
 
@@ -256,7 +258,7 @@
 
     move-result-object v3
 
-    :try_start_1e
+    :try_start_1f
     invoke-direct {p0, v1, p1}, Lcom/pairip/licensecheck/LicenseClient;->populateInputDataForLicenseCheckV2(Landroid/os/Parcel;Landroid/os/IBinder;)V
 
     const/4 v4, 0x2
@@ -267,7 +269,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_33
+    if-nez p1, :cond_35
 
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;
 
@@ -276,12 +278,12 @@
     invoke-direct {p1, v4}, Lcom/pairip/licensecheck/LicenseCheckException;-><init>(Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/pairip/licensecheck/LicenseClient;->handleError(Lcom/pairip/licensecheck/LicenseCheckException;)V
-    :try_end_33
-    .catch Landroid/os/DeadObjectException; {:try_start_1e .. :try_end_33} :catch_4b
-    .catch Landroid/os/RemoteException; {:try_start_1e .. :try_end_33} :catch_3f
-    .catchall {:try_start_1e .. :try_end_33} :catchall_3d
+    :try_end_35
+    .catch Landroid/os/DeadObjectException; {:try_start_1f .. :try_end_35} :catch_4d
+    .catch Landroid/os/RemoteException; {:try_start_1f .. :try_end_35} :catch_41
+    .catchall {:try_start_1f .. :try_end_35} :catchall_3f
 
-    :cond_33
+    :cond_35
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
@@ -290,15 +292,15 @@
 
     return-void
 
-    :catchall_3d
+    :catchall_3f
     move-exception p1
 
-    goto :goto_61
+    goto :goto_62
 
-    :catch_3f
+    :catch_41
     move-exception p1
 
-    :try_start_40
+    :try_start_42
     new-instance v4, Lcom/pairip/licensecheck/LicenseCheckException;
 
     const-string v5, "Error when calling licensing service."
@@ -307,24 +309,22 @@
 
     invoke-direct {p0, v4}, Lcom/pairip/licensecheck/LicenseClient;->handleError(Lcom/pairip/licensecheck/LicenseCheckException;)V
 
-    goto :goto_57
+    goto :goto_58
 
-    :catch_4b
+    :catch_4d
     move-exception p1
 
     new-instance v4, Lcom/pairip/licensecheck/LicenseCheckException;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/flatbuffers/OSq/msMBb;->kWNmbce:Ljava/lang/String;
+    const-string v5, "Licensing service process died."
 
     invoke-direct {v4, v5, p1}, Lcom/pairip/licensecheck/LicenseCheckException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-direct {p0, v4}, Lcom/pairip/licensecheck/LicenseClient;->retryOrThrow(Lcom/pairip/licensecheck/LicenseCheckException;)V
-    :try_end_57
-    .catchall {:try_start_40 .. :try_end_57} :catchall_3d
+    :try_end_58
+    .catchall {:try_start_42 .. :try_end_58} :catchall_3f
 
-    :goto_57
+    :goto_58
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
@@ -333,7 +333,7 @@
 
     return-void
 
-    :goto_61
+    :goto_62
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
@@ -808,17 +808,15 @@
 
     :cond_62
     :goto_62
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->ajjaHfkJcC:Ljava/lang/String;
+    const-string v2, "Local install check bypassed due to app package info not found."
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_68
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_68} :catch_69
+    :try_end_67
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_67} :catch_68
 
     return v1
 
-    :catch_69
+    :catch_68
     move-exception v2
 
     const-string v3, "Could not obtain package info for local installer check."
@@ -923,15 +921,13 @@
         }
     .end annotation
 
-    return-void
-
     const/4 v0, 0x3
 
-    if-eq p1, v0, :cond_46
+    if-eq p1, v0, :cond_4c
 
-    if-nez p1, :cond_21
+    if-nez p1, :cond_27
 
-    :try_start_6
+    :try_start_5
     sget-object p1, Lcom/pairip/licensecheck/LicenseClient;->packageName:Ljava/lang/String;
 
     invoke-static {p2, p1}, Lcom/pairip/licensecheck/LicenseResponseHelper;->validateResponse(Landroid/os/Bundle;Ljava/lang/String;)V
@@ -942,10 +938,20 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    sget-boolean p1, Lcom/pairip/licensecheck/LicenseClient;->repeatedCheckEnabled:Z
+
+    if-eqz p1, :cond_1b
+
     invoke-static {p2}, Lcom/pairip/licensecheck/LicenseResponseHelper;->getRepeatedCheckMetadata(Landroid/os/Bundle;)Lcom/pairip/licensecheck/RepeatedCheckMetadata;
 
     move-result-object p1
 
+    goto :goto_1c
+
+    :cond_1b
+    const/4 p1, 0x0
+
+    :goto_1c
     sget-object v0, Lcom/pairip/licensecheck/LicenseClient;->mainThreadRunner:Lcom/pairip/licensecheck/LicenseClient$ImmediateTaskExecutor;
 
     new-instance v1, Lcom/pairip/licensecheck/LicenseClient$$ExternalSyntheticLambda7;
@@ -956,10 +962,10 @@
 
     return-void
 
-    :cond_21
+    :cond_27
     const/4 v0, 0x2
 
-    if-ne p1, v0, :cond_30
+    if-ne p1, v0, :cond_36
 
     const-string p1, "PAYWALL_INTENT"
 
@@ -973,7 +979,7 @@
 
     return-void
 
-    :cond_30
+    :cond_36
     new-instance p2, Lcom/pairip/licensecheck/LicenseCheckException;
 
     const-string v0, "Unexpected response code %d received."
@@ -998,7 +1004,7 @@
 
     throw p2
 
-    :cond_46
+    :cond_4c
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;
 
     const-string p2, "Request package name invalid."
@@ -1006,10 +1012,10 @@
     invoke-direct {p1, p2}, Lcom/pairip/licensecheck/LicenseCheckException;-><init>(Ljava/lang/String;)V
 
     throw p1
-    :try_end_4e
-    .catch Lcom/pairip/licensecheck/LicenseCheckException; {:try_start_6 .. :try_end_4e} :catch_4e
+    :try_end_54
+    .catch Lcom/pairip/licensecheck/LicenseCheckException; {:try_start_5 .. :try_end_54} :catch_54
 
-    :catch_4e
+    :catch_54
     move-exception p1
 
     invoke-direct {p0, p1}, Lcom/pairip/licensecheck/LicenseClient;->handleError(Lcom/pairip/licensecheck/LicenseCheckException;)V
@@ -1054,7 +1060,7 @@
 
     const/4 v2, 0x3
 
-    if-ge v0, v2, :cond_41
+    if-ge v0, v2, :cond_40
 
     const/4 p2, 0x1
 
@@ -1078,20 +1084,18 @@
 
     move-result-object v0
 
-    if-nez p1, :cond_23
+    if-nez p1, :cond_22
 
-    const/4 p1, 0x0
+    const-string p1, "null"
 
-    sget-object p1, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->aoSZ:Ljava/lang/String;
+    goto :goto_26
 
-    goto :goto_27
-
-    :cond_23
+    :cond_22
     invoke-virtual {p1}, Lcom/pairip/licensecheck/LicenseCheckException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    :goto_27
+    :goto_26
     const-wide/16 v3, 0x1
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1120,8 +1124,8 @@
 
     return-void
 
-    :cond_41
-    if-eqz p2, :cond_59
+    :cond_40
+    if-eqz p2, :cond_58
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1143,7 +1147,7 @@
 
     return-void
 
-    :cond_59
+    :cond_58
     invoke-direct {p0, p1}, Lcom/pairip/licensecheck/LicenseClient;->handleError(Lcom/pairip/licensecheck/LicenseCheckException;)V
 
     return-void
@@ -1303,52 +1307,54 @@
 .method public initializeLicenseCheck()V
     .registers 3
 
+    return-void
+
     sget-object v0, Lcom/pairip/licensecheck/LicenseClient;->licenseCheckState:Lcom/pairip/licensecheck/LicenseClient$LicenseCheckState;
 
     invoke-virtual {v0}, Lcom/pairip/licensecheck/LicenseClient$LicenseCheckState;->ordinal()I
 
     move-result v0
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_21
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_13
+    if-eq v0, v1, :cond_14
 
     const/4 v1, 0x4
 
-    if-eq v0, v1, :cond_f
+    if-eq v0, v1, :cond_10
 
     return-void
 
-    :cond_f
+    :cond_10
     invoke-direct {p0}, Lcom/pairip/licensecheck/LicenseClient;->connectToLicensingService()V
 
     return-void
 
-    :cond_13
-    :try_start_13
+    :cond_14
+    :try_start_14
     sget-object v0, Lcom/pairip/licensecheck/LicenseClient;->responsePayload:Landroid/os/Bundle;
 
     sget-object v1, Lcom/pairip/licensecheck/LicenseClient;->packageName:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/pairip/licensecheck/LicenseResponseHelper;->validateResponse(Landroid/os/Bundle;Ljava/lang/String;)V
-    :try_end_1a
-    .catch Lcom/pairip/licensecheck/LicenseCheckException; {:try_start_13 .. :try_end_1a} :catch_1b
+    :try_end_1b
+    .catch Lcom/pairip/licensecheck/LicenseCheckException; {:try_start_14 .. :try_end_1b} :catch_1c
 
     return-void
 
-    :catch_1b
+    :catch_1c
     move-exception v0
 
     invoke-direct {p0, v0}, Lcom/pairip/licensecheck/LicenseClient;->handleError(Lcom/pairip/licensecheck/LicenseCheckException;)V
 
     return-void
 
-    :cond_20
+    :cond_21
     sget-boolean v0, Lcom/pairip/licensecheck/LicenseClient;->localCheckEnabled:Z
 
-    if-eqz v0, :cond_2f
+    if-eqz v0, :cond_30
 
     sget-object v0, Lcom/pairip/licensecheck/LicenseClient;->backgroundRunner:Lcom/pairip/licensecheck/LicenseClient$ImmediateTaskExecutor;
 
@@ -1360,7 +1366,7 @@
 
     return-void
 
-    :cond_2f
+    :cond_30
     invoke-direct {p0}, Lcom/pairip/licensecheck/LicenseClient;->connectToLicensingService()V
 
     return-void
@@ -1460,9 +1466,7 @@
     return-void
 
     :cond_16
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->edTLeXhThX:Ljava/lang/String;
+    const-string p1, "Unexpectedly disconnected from the licensing service."
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

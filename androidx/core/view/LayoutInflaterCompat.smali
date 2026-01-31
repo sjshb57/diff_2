@@ -37,16 +37,14 @@
 
     const-string v2, "LayoutInflaterCompatHC"
 
-    if-nez v0, :cond_35
+    if-nez v0, :cond_34
 
     const/4 v0, 0x1
 
     :try_start_9
     const-class v3, Landroid/view/LayoutInflater;
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->WNh:Ljava/lang/String;
+    const-string v4, "mFactory2"
 
     invoke-virtual {v3, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -55,12 +53,12 @@
     sput-object v3, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
-    :try_end_17
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_9 .. :try_end_17} :catch_18
+    :try_end_16
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_9 .. :try_end_16} :catch_17
 
-    goto :goto_33
+    goto :goto_32
 
-    :catch_18
+    :catch_17
     move-exception v3
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -85,22 +83,22 @@
 
     invoke-static {v2, v4, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_33
+    :goto_32
     sput-boolean v0, Landroidx/core/view/LayoutInflaterCompat;->sCheckedField:Z
 
-    :cond_35
+    :cond_34
     sget-object v0, Landroidx/core/view/LayoutInflaterCompat;->sLayoutInflaterFactory2Field:Ljava/lang/reflect/Field;
 
-    if-eqz v0, :cond_52
+    if-eqz v0, :cond_51
 
-    :try_start_39
+    :try_start_38
     invoke-virtual {v0, p0, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_3c
-    .catch Ljava/lang/IllegalAccessException; {:try_start_39 .. :try_end_3c} :catch_3d
+    :try_end_3b
+    .catch Ljava/lang/IllegalAccessException; {:try_start_38 .. :try_end_3b} :catch_3c
 
-    goto :goto_52
+    goto :goto_51
 
-    :catch_3d
+    :catch_3c
     move-exception p1
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -119,8 +117,8 @@
 
     invoke-static {v2, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_52
-    :goto_52
+    :cond_51
+    :goto_51
     return-void
 .end method
 

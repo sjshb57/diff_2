@@ -181,9 +181,7 @@
 
     new-instance v8, La/j0;
 
-    const/4 v6, 0x0
-
-    sget-object v6, Landroidx/core/util/LEr/bFMYUr;->YXlZyFqdVC:Ljava/lang/String;
+    const-string v6, "HideTransitionFinished"
 
     const/16 v4, 0xc
 

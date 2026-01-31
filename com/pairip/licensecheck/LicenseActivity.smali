@@ -89,12 +89,12 @@
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
-    :try_end_24
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_24} :catch_25
+    :try_end_25
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_25} :catch_26
 
     return-void
 
-    :catch_25
+    :catch_26
     move-exception v0
 
     invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
@@ -187,9 +187,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->fiVPbIauHqwqKc:Ljava/lang/String;
+    const-string v0, "LicenseActivity"
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

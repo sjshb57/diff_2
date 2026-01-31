@@ -716,9 +716,7 @@
 .method public static factorial(I)I
     .registers 3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/core/util/LEr/bFMYUr;->zcIBHLThiVCkaXq:Ljava/lang/String;
+    const-string v0, "n"
 
     invoke-static {v0, p0}, Lcom/google/common/math/MathPreconditions;->checkNonNegative(Ljava/lang/String;I)I
 
@@ -726,16 +724,16 @@
 
     array-length v1, v0
 
-    if-ge p0, v1, :cond_e
+    if-ge p0, v1, :cond_d
 
     aget p0, v0, p0
 
-    goto :goto_11
+    goto :goto_10
 
-    :cond_e
+    :cond_d
     const p0, 0x7fffffff
 
-    :goto_11
+    :goto_10
     return p0
 .end method
 

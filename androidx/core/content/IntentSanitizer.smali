@@ -391,7 +391,7 @@
     :cond_17
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    goto :goto_39
+    goto :goto_38
 
     :cond_1b
     new-instance v1, Ljava/lang/StringBuilder;
@@ -410,9 +410,7 @@
 
     new-instance v0, Landroid/content/ComponentName;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->xZRDaF:Ljava/lang/String;
+    const-string v1, "android"
 
     const-string v2, "java.lang.Void"
 
@@ -420,12 +418,12 @@
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    :goto_39
+    :goto_38
     invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5a
+    if-eqz v0, :cond_59
 
     iget-object v1, p0, Landroidx/core/content/IntentSanitizer;->mAllowedPackages:Landroidx/core/util/Predicate;
 
@@ -433,11 +431,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_48
+    if-eqz v1, :cond_47
 
-    goto :goto_5a
+    goto :goto_59
 
-    :cond_48
+    :cond_47
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Package is not allowed: "
@@ -452,13 +450,13 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_5d
+    goto :goto_5c
 
-    :cond_5a
-    :goto_5a
+    :cond_59
+    :goto_59
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    :goto_5d
+    :goto_5c
     iget v0, p0, Landroidx/core/content/IntentSanitizer;->mAllowedFlags:I
 
     invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
@@ -469,7 +467,7 @@
 
     iget v1, p0, Landroidx/core/content/IntentSanitizer;->mAllowedFlags:I
 
-    if-ne v0, v1, :cond_70
+    if-ne v0, v1, :cond_6f
 
     invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
 
@@ -477,9 +475,9 @@
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    goto :goto_95
+    goto :goto_94
 
-    :cond_70
+    :cond_6f
     invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
 
     move-result v0
@@ -516,12 +514,12 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    :goto_95
+    :goto_94
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_b6
+    if-eqz v0, :cond_b5
 
     iget-object v1, p0, Landroidx/core/content/IntentSanitizer;->mAllowedActions:Landroidx/core/util/Predicate;
 
@@ -529,11 +527,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a4
+    if-eqz v1, :cond_a3
 
-    goto :goto_b6
+    goto :goto_b5
 
-    :cond_a4
+    :cond_a3
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Action is not allowed: "
@@ -548,18 +546,18 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_b9
+    goto :goto_b8
 
-    :cond_b6
-    :goto_b6
+    :cond_b5
+    :goto_b5
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    :goto_b9
+    :goto_b8
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    if-eqz v0, :cond_da
+    if-eqz v0, :cond_d9
 
     iget-object v1, p0, Landroidx/core/content/IntentSanitizer;->mAllowedData:Landroidx/core/util/Predicate;
 
@@ -567,11 +565,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_c8
+    if-eqz v1, :cond_c7
 
-    goto :goto_da
+    goto :goto_d9
 
-    :cond_c8
+    :cond_c7
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Data is not allowed: "
@@ -586,18 +584,18 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_dd
+    goto :goto_dc
 
-    :cond_da
-    :goto_da
+    :cond_d9
+    :goto_d9
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    :goto_dd
+    :goto_dc
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_fe
+    if-eqz v0, :cond_fd
 
     iget-object v1, p0, Landroidx/core/content/IntentSanitizer;->mAllowedTypes:Landroidx/core/util/Predicate;
 
@@ -605,11 +603,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_ec
+    if-eqz v1, :cond_eb
 
-    goto :goto_fe
+    goto :goto_fd
 
-    :cond_ec
+    :cond_eb
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Type is not allowed: "
@@ -624,33 +622,33 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_105
+    goto :goto_104
 
-    :cond_fe
-    :goto_fe
+    :cond_fd
+    :goto_fd
     invoke-virtual {v6}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
     invoke-virtual {v6, v1, v0}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    :goto_105
+    :goto_104
     invoke-virtual {p1}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v0
 
-    if-eqz v0, :cond_139
+    if-eqz v0, :cond_138
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :goto_10f
+    :goto_10e
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_139
+    if-eqz v1, :cond_138
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -664,13 +662,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_127
+    if-eqz v2, :cond_126
 
     invoke-virtual {v6, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    goto :goto_10f
+    goto :goto_10e
 
-    :cond_127
+    :cond_126
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Category is not allowed: "
@@ -685,14 +683,14 @@
 
     invoke-interface {p2, v1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_10f
+    goto :goto_10e
 
-    :cond_139
+    :cond_138
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1ae
+    if-eqz v0, :cond_1ad
 
     invoke-virtual {v0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -702,12 +700,12 @@
 
     move-result-object v1
 
-    :goto_147
+    :goto_146
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1ae
+    if-eqz v2, :cond_1ad
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -721,28 +719,28 @@
 
     move-result v3
 
-    if-eqz v3, :cond_167
+    if-eqz v3, :cond_166
 
     iget v3, p0, Landroidx/core/content/IntentSanitizer;->mAllowedFlags:I
 
     and-int/lit8 v3, v3, 0x1
 
-    if-nez v3, :cond_167
+    if-nez v3, :cond_166
 
     const-string v2, "Allowing Extra Stream requires also allowing at least  FLAG_GRANT_READ_URI_PERMISSION Flag."
 
     invoke-interface {p2, v2}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_147
+    goto :goto_146
 
-    :cond_167
+    :cond_166
     const-string v3, "output"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_17c
+    if-eqz v3, :cond_17b
 
     iget v3, p0, Landroidx/core/content/IntentSanitizer;->mAllowedFlags:I
 
@@ -750,15 +748,15 @@
 
     and-int/lit8 v3, v3, 0x3
 
-    if-eqz v3, :cond_17c
+    if-eqz v3, :cond_17b
 
     const-string v2, "Allowing Extra Output requires also allowing FLAG_GRANT_READ_URI_PERMISSION and FLAG_GRANT_WRITE_URI_PERMISSION Flags."
 
     invoke-interface {p2, v2}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_147
+    goto :goto_146
 
-    :cond_17c
+    :cond_17b
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -771,19 +769,19 @@
 
     check-cast v4, Landroidx/core/util/Predicate;
 
-    if-eqz v4, :cond_194
+    if-eqz v4, :cond_193
 
     invoke-interface {v4, v3}, Landroidx/core/util/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_194
+    if-eqz v4, :cond_193
 
     invoke-direct {p0, v6, v2, v3}, Landroidx/core/content/IntentSanitizer;->putExtra(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Object;)V
 
-    goto :goto_147
+    goto :goto_146
 
-    :cond_194
+    :cond_193
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "Extra is not allowed. Key: "
@@ -804,9 +802,9 @@
 
     invoke-interface {p2, v2}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_147
+    goto :goto_146
 
-    :cond_1ae
+    :cond_1ad
     iget-object v2, p0, Landroidx/core/content/IntentSanitizer;->mAllowedClipData:Landroidx/core/util/Predicate;
 
     iget-boolean v3, p0, Landroidx/core/content/IntentSanitizer;->mAllowClipDataText:Z
@@ -825,11 +823,11 @@
 
     const/16 v1, 0x1d
 
-    if-lt v0, v1, :cond_1e7
+    if-lt v0, v1, :cond_1e6
 
     iget-boolean v0, p0, Landroidx/core/content/IntentSanitizer;->mAllowIdentifier:Z
 
-    if-eqz v0, :cond_1cc
+    if-eqz v0, :cond_1cb
 
     invoke-static {p1}, Landroidx/core/content/IntentSanitizer$Api29Impl;->getIdentifier(Landroid/content/Intent;)Ljava/lang/String;
 
@@ -837,14 +835,14 @@
 
     invoke-static {v6, v0}, Landroidx/core/content/IntentSanitizer$Api29Impl;->setIdentifier(Landroid/content/Intent;Ljava/lang/String;)Landroid/content/Intent;
 
-    goto :goto_1e7
+    goto :goto_1e6
 
-    :cond_1cc
+    :cond_1cb
     invoke-static {p1}, Landroidx/core/content/IntentSanitizer$Api29Impl;->getIdentifier(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1e7
+    if-eqz v0, :cond_1e6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -864,11 +862,11 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    :cond_1e7
-    :goto_1e7
+    :cond_1e6
+    :goto_1e6
     iget-boolean v0, p0, Landroidx/core/content/IntentSanitizer;->mAllowSelector:Z
 
-    if-eqz v0, :cond_1f3
+    if-eqz v0, :cond_1f2
 
     invoke-static {p1}, Landroidx/core/content/IntentSanitizer$Api15Impl;->getSelector(Landroid/content/Intent;)Landroid/content/Intent;
 
@@ -876,14 +874,14 @@
 
     invoke-static {v6, v0}, Landroidx/core/content/IntentSanitizer$Api15Impl;->setSelector(Landroid/content/Intent;Landroid/content/Intent;)V
 
-    goto :goto_20e
+    goto :goto_20d
 
-    :cond_1f3
+    :cond_1f2
     invoke-static {p1}, Landroidx/core/content/IntentSanitizer$Api15Impl;->getSelector(Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v0
 
-    if-eqz v0, :cond_20e
+    if-eqz v0, :cond_20d
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -903,11 +901,11 @@
 
     invoke-interface {p2, v0}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    :cond_20e
-    :goto_20e
+    :cond_20d
+    :goto_20d
     iget-boolean v0, p0, Landroidx/core/content/IntentSanitizer;->mAllowSourceBounds:Z
 
-    if-eqz v0, :cond_21a
+    if-eqz v0, :cond_219
 
     invoke-virtual {p1}, Landroid/content/Intent;->getSourceBounds()Landroid/graphics/Rect;
 
@@ -915,14 +913,14 @@
 
     invoke-virtual {v6, p1}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    goto :goto_235
+    goto :goto_234
 
-    :cond_21a
+    :cond_219
     invoke-virtual {p1}, Landroid/content/Intent;->getSourceBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    if-eqz v0, :cond_235
+    if-eqz v0, :cond_234
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -942,8 +940,8 @@
 
     invoke-interface {p2, p1}, Landroidx/core/util/Consumer;->accept(Ljava/lang/Object;)V
 
-    :cond_235
-    :goto_235
+    :cond_234
+    :goto_234
     return-object v6
 .end method
 

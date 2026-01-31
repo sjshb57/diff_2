@@ -116,9 +116,7 @@
 
     new-instance v9, Lcom/fasterxml/jackson/core/JsonParser$Feature;
 
-    const/4 v11, 0x0
-
-    sget-object v11, Lkotlin/EDDN/hfnXJuYOaqC;->ymaiFtDv:Ljava/lang/String;
+    const-string v11, "ALLOW_UNQUOTED_CONTROL_CHARS"
 
     const/4 v12, 0x5
 

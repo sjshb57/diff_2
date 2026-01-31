@@ -133,7 +133,7 @@
     const/4 v1, 0x0
 
     :goto_5
-    if-ge v1, v0, :cond_25
+    if-ge v1, v0, :cond_26
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
@@ -141,34 +141,34 @@
 
     const/16 v3, 0x2f
 
-    if-ne v2, v3, :cond_15
+    if-ne v2, v3, :cond_16
 
     const-string v2, "~1"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_22
+    goto :goto_23
 
-    :cond_15
+    :cond_16
     const/16 v3, 0x7e
 
-    if-ne v2, v3, :cond_1f
+    if-ne v2, v3, :cond_20
 
     const-string v2, "~0"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_22
+    goto :goto_23
 
-    :cond_1f
+    :cond_20
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :goto_22
+    :goto_23
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_5
 
-    :cond_25
+    :cond_26
     return-void
 .end method
 

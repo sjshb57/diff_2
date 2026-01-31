@@ -120,21 +120,19 @@
 .method public final getScoreHolder()Lcom/google/android/gms/games/Player;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/core/util/LEr/bFMYUr;->HtxcdEYvksygv:Ljava/lang/String;
+    const-string v0, "external_player_id"
 
     invoke-virtual {p0, v0}, Lcom/google/android/gms/games/leaderboard/LeaderboardScoreRef;->hasNull(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     const/4 v0, 0x0
 
     return-object v0
 
-    :cond_b
+    :cond_a
     iget-object v0, p0, Lcom/google/android/gms/games/leaderboard/LeaderboardScoreRef;->zza:Lcom/google/android/gms/games/PlayerRef;
 
     return-object v0
@@ -228,13 +226,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     const/4 v0, 0x0
 
     return-object v0
 
-    :cond_a
+    :cond_b
     iget-object v0, p0, Lcom/google/android/gms/games/leaderboard/LeaderboardScoreRef;->zza:Lcom/google/android/gms/games/PlayerRef;
 
     invoke-virtual {v0}, Lcom/google/android/gms/games/PlayerRef;->getHiResImageUrl()Ljava/lang/String;

@@ -203,14 +203,14 @@
     move-result v0
 
     array-length p0, p0
-    :try_end_c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_c} :catch_e
+    :try_end_d
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_d} :catch_f
 
     add-int/2addr v0, p0
 
     return v0
 
-    :catch_e
+    :catch_f
     const/4 p0, 0x0
 
     return p0

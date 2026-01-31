@@ -52,9 +52,7 @@
 
     new-instance v1, Landroidx/lifecycle/Lifecycle$State;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->VeNI:Ljava/lang/String;
+    const-string v3, "INITIALIZED"
 
     const/4 v4, 0x1
 

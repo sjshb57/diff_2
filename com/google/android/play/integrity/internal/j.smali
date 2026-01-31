@@ -10,9 +10,7 @@
 .method public constructor <init>()V
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->Qufu:Ljava/lang/String;
+    const-string v0, "com.google.android.play.core.integrity.protocol.IExpressIntegrityServiceCallback"
 
     invoke-direct {p0, v0}, Lcom/google/android/play/integrity/internal/b;-><init>(Ljava/lang/String;)V
 

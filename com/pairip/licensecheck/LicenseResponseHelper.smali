@@ -405,7 +405,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_59
+    if-eqz v0, :cond_5a
 
     const-string v0, "SHA256withRSA"
 
@@ -425,11 +425,11 @@
 
     move-result p0
 
-    if-eqz p0, :cond_51
+    if-eqz p0, :cond_52
 
     return-void
 
-    :cond_51
+    :cond_52
     new-instance p0, Lcom/pairip/licensecheck/LicenseCheckException;
 
     const-string p1, "Package name doesn\'t match."
@@ -438,7 +438,7 @@
 
     throw p0
 
-    :cond_59
+    :cond_5a
     new-instance p0, Lcom/pairip/licensecheck/LicenseCheckException;
 
     const-string p1, "Response must be signed with RS256 algorithm."
@@ -446,10 +446,10 @@
     invoke-direct {p0, p1}, Lcom/pairip/licensecheck/LicenseCheckException;-><init>(Ljava/lang/String;)V
 
     throw p0
-    :try_end_61
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_61} :catch_61
+    :try_end_62
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_62} :catch_62
 
-    :catch_61
+    :catch_62
     move-exception p0
 
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;
@@ -521,13 +521,13 @@
     invoke-direct {p0, p1}, Lcom/pairip/licensecheck/LicenseCheckException;-><init>(Ljava/lang/String;)V
 
     throw p0
-    :try_end_25
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_25} :catch_40
-    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_25} :catch_37
-    .catch Ljava/security/SignatureException; {:try_start_0 .. :try_end_25} :catch_2e
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_25} :catch_25
+    :try_end_26
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_26} :catch_41
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_26} :catch_38
+    .catch Ljava/security/SignatureException; {:try_start_0 .. :try_end_26} :catch_2f
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_26} :catch_26
 
-    :catch_25
+    :catch_26
     move-exception p0
 
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;
@@ -538,7 +538,7 @@
 
     throw p1
 
-    :catch_2e
+    :catch_2f
     move-exception p0
 
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;
@@ -549,7 +549,7 @@
 
     throw p1
 
-    :catch_37
+    :catch_38
     move-exception p0
 
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;
@@ -560,7 +560,7 @@
 
     throw p1
 
-    :catch_40
+    :catch_41
     move-exception p0
 
     new-instance p1, Lcom/pairip/licensecheck/LicenseCheckException;

@@ -276,9 +276,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->eCQCc:Ljava/lang/String;
+    const-string v2, "Score"
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
@@ -318,9 +316,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->pWPLLSjFWY:Ljava/lang/String;
+    const-string v1, "IconImageUri"
 
     invoke-interface {p0}, Lcom/google/android/gms/games/leaderboard/LeaderboardScore;->getScoreHolderIconImageUri()Landroid/net/Uri;
 
@@ -364,18 +360,18 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_7e
+    if-nez v1, :cond_7c
 
     const/4 v1, 0x0
 
-    goto :goto_82
+    goto :goto_80
 
-    :cond_7e
+    :cond_7c
     invoke-interface {p0}, Lcom/google/android/gms/games/leaderboard/LeaderboardScore;->getScoreHolder()Lcom/google/android/gms/games/Player;
 
     move-result-object v1
 
-    :goto_82
+    :goto_80
     const-string v2, "Player"
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;

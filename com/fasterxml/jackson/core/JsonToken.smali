@@ -183,9 +183,7 @@
 
     new-instance v4, Lcom/fasterxml/jackson/core/JsonToken;
 
-    const/4 v10, 0x0
-
-    sget-object v10, Lcom/google/flatbuffers/OSq/msMBb;->agWwy:Ljava/lang/String;
+    const-string v10, "true"
 
     const-string v8, "VALUE_TRUE"
 

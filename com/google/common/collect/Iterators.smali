@@ -1914,20 +1914,20 @@
 
     const/4 v1, 0x1
 
-    :goto_8
+    :goto_9
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1e
+    if-eqz v2, :cond_1f
 
-    if-nez v1, :cond_15
+    if-nez v1, :cond_16
 
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_15
+    :cond_16
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1936,9 +1936,9 @@
 
     const/4 v1, 0x0
 
-    goto :goto_8
+    goto :goto_9
 
-    :cond_1e
+    :cond_1f
     const/16 p0, 0x5d
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;

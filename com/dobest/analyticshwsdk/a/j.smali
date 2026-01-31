@@ -234,9 +234,7 @@
 
     move-result p1
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->JUYdwapYCqXHlsg:Ljava/lang/String;
+    const-string p2, "AnalyticsHWSdk"
 
     if-eqz p1, :cond_2b
 
@@ -266,13 +264,13 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_30
+    goto :goto_31
 
     :cond_2b
     const-string p1, "report init data success"
 
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_30
+    :goto_31
     return-void
 .end method
