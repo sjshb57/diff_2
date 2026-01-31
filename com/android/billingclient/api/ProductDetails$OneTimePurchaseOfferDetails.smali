@@ -64,9 +64,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/savedstate/xT/fgyAspfzfnhI;->fTohUpADuh:Ljava/lang/String;
+    const-string v0, "formattedPrice"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -104,11 +102,11 @@
 
     const/4 v3, 0x1
 
-    if-ne v3, v1, :cond_2b
+    if-ne v3, v1, :cond_2a
 
     move-object v0, v2
 
-    :cond_2b
+    :cond_2a
     iput-object v0, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzd:Ljava/lang/String;
 
     const-string v0, "offerId"
@@ -121,11 +119,11 @@
 
     move-result v1
 
-    if-ne v3, v1, :cond_3a
+    if-ne v3, v1, :cond_39
 
     move-object v0, v2
 
-    :cond_3a
+    :cond_39
     iput-object v0, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zze:Ljava/lang/String;
 
     const-string v0, "purchaseOptionId"
@@ -138,11 +136,11 @@
 
     move-result v1
 
-    if-ne v3, v1, :cond_49
+    if-ne v3, v1, :cond_48
 
     move-object v0, v2
 
-    :cond_49
+    :cond_48
     iput-object v0, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzf:Ljava/lang/String;
 
     const-string v0, "offerType"
@@ -161,16 +159,16 @@
 
     iput-object v1, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzg:Ljava/util/List;
 
-    if-eqz v0, :cond_72
+    if-eqz v0, :cond_71
 
     const/4 v1, 0x0
 
-    :goto_60
+    :goto_5f
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
-    if-ge v1, v3, :cond_72
+    if-ge v1, v3, :cond_71
 
     iget-object v3, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzg:Ljava/util/List;
 
@@ -182,16 +180,16 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_60
+    goto :goto_5f
 
-    :cond_72
+    :cond_71
     const-string v0, "fullPriceMicros"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_83
+    if-eqz v1, :cond_82
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
@@ -201,12 +199,12 @@
 
     move-result-object v0
 
-    goto :goto_84
+    goto :goto_83
 
-    :cond_83
+    :cond_82
     move-object v0, v2
 
-    :goto_84
+    :goto_83
     iput-object v0, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzh:Ljava/lang/Long;
 
     const-string v0, "discountDisplayInfo"
@@ -215,18 +213,18 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_90
+    if-nez v0, :cond_8f
 
     move-object v1, v2
 
-    goto :goto_95
+    goto :goto_94
 
-    :cond_90
+    :cond_8f
     new-instance v1, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$DiscountDisplayInfo;
 
     invoke-direct {v1, v0}, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$DiscountDisplayInfo;-><init>(Lorg/json/JSONObject;)V
 
-    :goto_95
+    :goto_94
     iput-object v1, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzi:Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$DiscountDisplayInfo;
 
     const-string v0, "validTimeWindow"
@@ -235,18 +233,18 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_a1
+    if-nez v0, :cond_a0
 
     move-object v1, v2
 
-    goto :goto_a6
+    goto :goto_a5
 
-    :cond_a1
+    :cond_a0
     new-instance v1, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$ValidTimeWindow;
 
     invoke-direct {v1, v0}, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$ValidTimeWindow;-><init>(Lorg/json/JSONObject;)V
 
-    :goto_a6
+    :goto_a5
     iput-object v1, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzj:Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$ValidTimeWindow;
 
     const-string v0, "limitedQuantityInfo"
@@ -283,7 +281,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_d3
+    if-eqz v0, :cond_d4
 
     const-string v1, "preorderReleaseTimeMillis"
 
@@ -293,25 +291,25 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    :cond_d3
+    :cond_d4
     const-string v0, "rentalDetails"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    if-nez v0, :cond_dd
+    if-nez v0, :cond_de
 
     move-object v1, v2
 
-    goto :goto_e2
+    goto :goto_e3
 
-    :cond_dd
+    :cond_de
     new-instance v1, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$RentalDetails;
 
     invoke-direct {v1, v0}, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$RentalDetails;-><init>(Lorg/json/JSONObject;)V
 
-    :goto_e2
+    :goto_e3
     iput-object v1, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzm:Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails$RentalDetails;
 
     const-string v0, "autoPayDetails"
@@ -320,16 +318,16 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_ed
+    if-nez v0, :cond_ee
 
-    goto :goto_f2
+    goto :goto_f3
 
-    :cond_ed
+    :cond_ee
     new-instance v2, Lcom/android/billingclient/api/zzcs;
 
     invoke-direct {v2, v0}, Lcom/android/billingclient/api/zzcs;-><init>(Lorg/json/JSONObject;)V
 
-    :goto_f2
+    :goto_f3
     iput-object v2, p0, Lcom/android/billingclient/api/ProductDetails$OneTimePurchaseOfferDetails;->zzn:Lcom/android/billingclient/api/zzcs;
 
     const-string v0, "pricingPhases"
@@ -338,11 +336,11 @@
 
     move-result-object p1
 
-    if-nez p1, :cond_fd
+    if-nez p1, :cond_fe
 
     return-void
 
-    :cond_fd
+    :cond_fe
     new-instance v0, Lcom/android/billingclient/api/ProductDetails$PricingPhases;
 
     invoke-direct {v0, p1}, Lcom/android/billingclient/api/ProductDetails$PricingPhases;-><init>(Lorg/json/JSONArray;)V

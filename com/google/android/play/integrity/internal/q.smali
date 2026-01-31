@@ -137,15 +137,13 @@
 
     const/4 p1, 0x6
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->OybTDtaNmGEMTYG:Ljava/lang/String;
+    const-string v0, "PlayCore"
 
     invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_17
+    if-eqz p1, :cond_16
 
     iget-object p1, p0, Lcom/google/android/play/integrity/internal/q;->a:Ljava/lang/String;
 
@@ -161,7 +159,7 @@
 
     return p1
 
-    :cond_17
+    :cond_16
     const/4 p1, 0x0
 
     return p1

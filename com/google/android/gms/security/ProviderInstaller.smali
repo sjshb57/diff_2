@@ -92,7 +92,7 @@
 
     const/4 v4, 0x0
 
-    if-nez v3, :cond_44
+    if-nez v3, :cond_45
 
     :try_start_19
     sget-object v3, Lcom/google/android/gms/dynamite/DynamiteModule;->PREFER_HIGHEST_OR_LOCAL_VERSION_NO_FORCE_STAGING:Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;
@@ -110,7 +110,7 @@
     .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_19 .. :try_end_25} :catch_26
     .catchall {:try_start_19 .. :try_end_25} :catchall_a6
 
-    goto :goto_3b
+    goto :goto_3c
 
     :catch_26
     move-exception v3
@@ -136,8 +136,8 @@
 
     move-object v3, v4
 
-    :goto_3b
-    if-eqz v3, :cond_44
+    :goto_3c
+    if-eqz v3, :cond_45
 
     const-string v0, "com.google.android.gms.providerinstaller.ProviderInstallerImpl"
 
@@ -147,7 +147,7 @@
 
     return-void
 
-    :cond_44
+    :cond_45
     sget-boolean v3, Lcom/google/android/gms/security/ProviderInstaller;->zzd:Z
 
     const/4 v5, 0x1
@@ -158,18 +158,18 @@
 
     move-result-object v6
 
-    if-nez v6, :cond_4f
+    if-nez v6, :cond_50
 
     goto :goto_8e
 
-    :cond_4f
+    :cond_50
     sput-boolean v5, Lcom/google/android/gms/security/ProviderInstaller;->zzd:Z
-    :try_end_51
-    .catchall {:try_start_27 .. :try_end_51} :catchall_a6
+    :try_end_52
+    .catchall {:try_start_27 .. :try_end_52} :catchall_a6
 
     if-eqz v3, :cond_8d
 
-    :try_start_53
+    :try_start_54
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
@@ -211,25 +211,23 @@
     aput-object v0, v10, v1
 
     invoke-static {v7, v8, v9, v10}, Lcom/google/android/gms/internal/common/zzl;->zzb(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;[Lcom/google/android/gms/internal/common/zzj;)Ljava/lang/Object;
-    :try_end_7b
-    .catch Ljava/lang/Exception; {:try_start_53 .. :try_end_7b} :catch_7c
-    .catchall {:try_start_53 .. :try_end_7b} :catchall_a6
+    :try_end_7c
+    .catch Ljava/lang/Exception; {:try_start_54 .. :try_end_7c} :catch_7d
+    .catchall {:try_start_54 .. :try_end_7c} :catchall_a6
 
     goto :goto_8d
 
-    :catch_7c
+    :catch_7d
     move-exception v0
 
-    :try_start_7d
+    :try_start_7e
     const-string v1, "ProviderInstaller"
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->OJKMWEoCRprO:Ljava/lang/String;
+    const-string v3, "Failed to report request stats: "
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -272,7 +270,7 @@
 
     monitor-exit v2
     :try_end_a8
-    .catchall {:try_start_7d .. :try_end_a8} :catchall_a6
+    .catchall {:try_start_7e .. :try_end_a8} :catchall_a6
 
     throw p0
 .end method

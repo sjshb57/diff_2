@@ -109,9 +109,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->UtThgfXHyeyYWo:Ljava/lang/String;
+    const-string v2, "name"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -178,7 +176,7 @@
 
     iget-boolean v0, p0, La/q;->j:Z
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_1b
 
     sget-object v0, La/i;->c:La/i$a;
 
@@ -200,14 +198,14 @@
 
     return-void
 
-    :cond_1a
+    :cond_1b
     const/4 v0, 0x1
 
     iput-boolean v0, p0, La/q;->j:Z
 
     const-string v0, ""
 
-    if-nez p1, :cond_46
+    if-nez p1, :cond_47
 
     sget-object p1, La/i;->c:La/i$a;
 
@@ -243,16 +241,14 @@
 
     return-void
 
-    :cond_46
+    :cond_47
     sget-object v1, La/i;->c:La/i$a;
 
     sget-object v1, La/i;->d:La/i;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->QnY:Ljava/lang/String;
+    const-string v3, "Auth session receives intent: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -291,7 +287,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_b5
+    if-nez v3, :cond_b6
 
     invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -303,7 +299,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_b5
+    if-nez v3, :cond_b6
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -347,7 +343,7 @@
 
     return-void
 
-    :cond_b5
+    :cond_b6
     const-string v0, "Auth session got result from service provider. "
 
     invoke-static {v0}, La/g;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -376,13 +372,13 @@
 
     move-result-object p1
 
-    if-nez p1, :cond_d9
+    if-nez p1, :cond_da
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    :cond_d9
+    :cond_da
     const-string v2, "intent.dataString ?: \"$uri\""
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
@@ -434,17 +430,15 @@
 
     iget-object v0, p0, La/q;->h:Lcom/onevcat/uniwebview/UniWebViewProxyActivity;
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_31
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->GYo:Ljava/lang/String;
+    const-string v0, "proxyActivity"
 
     invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    :cond_32
+    :cond_31
     iget-object p1, p1, Landroidx/browser/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
     const v1, 0xc59131

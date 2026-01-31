@@ -159,16 +159,16 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_8c
+    if-eqz p1, :cond_8d
 
     const/4 v1, 0x0
 
-    :goto_7c
+    :goto_7d
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
     move-result v2
 
-    if-ge v1, v2, :cond_8c
+    if-ge v1, v2, :cond_8d
 
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -178,9 +178,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_7c
+    goto :goto_7d
 
-    :cond_8c
+    :cond_8d
     iput-object v0, p0, Lcom/android/billingclient/api/ProductDetails$SubscriptionOfferDetails;->zze:Ljava/util/List;
 
     return-void

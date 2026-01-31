@@ -181,7 +181,7 @@
     const/4 v3, 0x0
 
     :goto_17
-    if-ge v3, p1, :cond_75
+    if-ge v3, p1, :cond_74
 
     mul-int/lit8 v4, v3, 0x2
 
@@ -248,9 +248,7 @@
 
     invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->FAjzHoCtCfnUGI:Ljava/lang/String;
+    const-string v1, " and "
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -274,7 +272,7 @@
 
     throw p1
 
-    :cond_75
+    :cond_74
     return-object p2
 .end method
 

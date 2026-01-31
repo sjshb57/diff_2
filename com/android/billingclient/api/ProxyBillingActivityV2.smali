@@ -77,13 +77,11 @@
 
     const-string v0, "external_offer_flow_result_receiver"
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->AfoJqUXbjW:Ljava/lang/String;
+    const-string v1, "external_payment_dialog_result_receiver"
 
     const-string v2, "alternative_billing_only_dialog_result_receiver"
 
-    if-nez p1, :cond_d6
+    if-nez p1, :cond_d5
 
     const-string p1, "ProxyBillingActivityV2"
 
@@ -101,7 +99,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_74
+    if-eqz p1, :cond_73
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivityV2;->getIntent()Landroid/content/Intent;
 
@@ -139,7 +137,7 @@
 
     return-void
 
-    :cond_74
+    :cond_73
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivityV2;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -150,7 +148,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_a5
+    if-eqz p1, :cond_a4
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivityV2;->getIntent()Landroid/content/Intent;
 
@@ -188,7 +186,7 @@
 
     return-void
 
-    :cond_a5
+    :cond_a4
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivityV2;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -199,7 +197,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_100
+    if-eqz p1, :cond_ff
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivityV2;->getIntent()Landroid/content/Intent;
 
@@ -237,12 +235,12 @@
 
     return-void
 
-    :cond_d6
+    :cond_d5
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_e4
+    if-eqz v3, :cond_e3
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -252,12 +250,12 @@
 
     iput-object v2, p0, Lcom/android/billingclient/api/ProxyBillingActivityV2;->zzd:Landroid/os/ResultReceiver;
 
-    :cond_e4
+    :cond_e3
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_f2
+    if-eqz v2, :cond_f1
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -267,12 +265,12 @@
 
     iput-object v1, p0, Lcom/android/billingclient/api/ProxyBillingActivityV2;->zze:Landroid/os/ResultReceiver;
 
-    :cond_f2
+    :cond_f1
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_100
+    if-eqz v1, :cond_ff
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -282,7 +280,7 @@
 
     iput-object p1, p0, Lcom/android/billingclient/api/ProxyBillingActivityV2;->zzf:Landroid/os/ResultReceiver;
 
-    :cond_100
+    :cond_ff
     return-void
 .end method
 

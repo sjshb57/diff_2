@@ -174,7 +174,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_1c
+    if-nez p1, :cond_1d
 
     const-string p2, "PostMessageServConn"
 
@@ -182,7 +182,7 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1c
+    :cond_1d
     return p1
 .end method
 

@@ -134,9 +134,7 @@
 .method public static final component2(Landroid/graphics/Rect;)I
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->RBZlw:Ljava/lang/String;
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -172,9 +170,7 @@
 .method public static final component4(Landroid/graphics/RectF;)F
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->OirQAxSHdn:Ljava/lang/String;
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 

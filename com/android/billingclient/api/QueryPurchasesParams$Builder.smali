@@ -63,9 +63,7 @@
     :cond_b
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->byCJI:Ljava/lang/String;
+    const-string v1, "Product type must be set"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

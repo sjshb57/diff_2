@@ -241,9 +241,7 @@
     :cond_3f
     new-instance p1, Ljava/lang/AssertionError;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->LHdR:Ljava/lang/String;
+    const-string p2, "Next event must be ON_CREATE"
 
     invoke-direct {p1, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 

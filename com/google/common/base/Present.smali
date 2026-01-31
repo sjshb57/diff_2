@@ -174,9 +174,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->WYDalohRwEY:Ljava/lang/String;
+    const-string v0, "use Optional.orNull() instead of Optional.or(null)"
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

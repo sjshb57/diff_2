@@ -6,6 +6,7 @@
 # direct methods
 .method public static $default$and(Landroidx/core/util/Predicate;Landroidx/core/util/Predicate;)Landroidx/core/util/Predicate;
     .registers 3
+    .param p0, "_this"  # Landroidx/core/util/Predicate;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -18,6 +19,7 @@
 
 .method public static $default$negate(Landroidx/core/util/Predicate;)Landroidx/core/util/Predicate;
     .registers 2
+    .param p0, "_this"  # Landroidx/core/util/Predicate;
 
     new-instance v0, Landroidx/core/util/Predicate$$ExternalSyntheticLambda5;
 
@@ -28,6 +30,7 @@
 
 .method public static $default$or(Landroidx/core/util/Predicate;Landroidx/core/util/Predicate;)Landroidx/core/util/Predicate;
     .registers 3
+    .param p0, "_this"  # Landroidx/core/util/Predicate;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -40,6 +43,7 @@
 
 .method public static synthetic $private$lambda$and$0(Landroidx/core/util/Predicate;Landroidx/core/util/Predicate;Ljava/lang/Object;)Z
     .registers 4
+    .param p0, "_this"  # Landroidx/core/util/Predicate;
 
     invoke-interface {p0, p2}, Landroidx/core/util/Predicate;->test(Ljava/lang/Object;)Z
 
@@ -66,6 +70,7 @@
 
 .method public static synthetic $private$lambda$negate$1(Landroidx/core/util/Predicate;Ljava/lang/Object;)Z
     .registers 2
+    .param p0, "_this"  # Landroidx/core/util/Predicate;
 
     invoke-interface {p0, p1}, Landroidx/core/util/Predicate;->test(Ljava/lang/Object;)Z
 
@@ -78,6 +83,7 @@
 
 .method public static synthetic $private$lambda$or$2(Landroidx/core/util/Predicate;Landroidx/core/util/Predicate;Ljava/lang/Object;)Z
     .registers 4
+    .param p0, "_this"  # Landroidx/core/util/Predicate;
 
     invoke-interface {p0, p2}, Landroidx/core/util/Predicate;->test(Ljava/lang/Object;)Z
 

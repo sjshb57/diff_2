@@ -72,7 +72,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_25
+    if-nez v0, :cond_24
 
     invoke-static {p0}, Ljava/lang/Float;->isInfinite(F)Z
 
@@ -91,9 +91,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->fNV:Ljava/lang/String;
+    const-string p1, " must not be infinite"
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,7 +103,7 @@
 
     throw p0
 
-    :cond_25
+    :cond_24
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;

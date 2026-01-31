@@ -131,9 +131,7 @@
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->DkVLeMdmf:Ljava/lang/String;
+    const-string v1, "%s is not an interface"
 
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 

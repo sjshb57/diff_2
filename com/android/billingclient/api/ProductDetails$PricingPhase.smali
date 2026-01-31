@@ -66,9 +66,7 @@
 
     iput-wide v0, p0, Lcom/android/billingclient/api/ProductDetails$PricingPhase;->zzb:J
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->eIvMoVSKJ:Ljava/lang/String;
+    const-string v0, "recurrenceMode"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 

@@ -53,30 +53,28 @@
 
     iget-object v1, p0, Lcom/android/billingclient/api/Purchase;->zzc:Lorg/json/JSONObject;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->vmOPagnPGtisG:Ljava/lang/String;
+    const-string v2, "productIds"
 
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_27
+    if-eqz v3, :cond_26
 
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    if-eqz v1, :cond_36
+    if-eqz v1, :cond_35
 
     const/4 v2, 0x0
 
-    :goto_17
+    :goto_16
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
-    if-ge v2, v3, :cond_36
+    if-ge v2, v3, :cond_35
 
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
@@ -86,16 +84,16 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_17
+    goto :goto_16
 
-    :cond_27
+    :cond_26
     const-string v2, "productId"
 
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_36
+    if-eqz v3, :cond_35
 
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -103,7 +101,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_36
+    :cond_35
     return-object v0
 .end method
 
@@ -222,11 +220,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_10
 
     const/4 v0, 0x0
 
-    :cond_f
+    :cond_10
     return-object v0
 .end method
 

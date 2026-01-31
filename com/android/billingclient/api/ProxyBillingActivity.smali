@@ -247,7 +247,7 @@
 
     iget-object p2, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->inAppMessageResultReceiver:Landroid/os/ResultReceiver;
 
-    if-eqz p2, :cond_de
+    if-eqz p2, :cond_dd
 
     if-nez p3, :cond_1e
 
@@ -263,7 +263,7 @@
     :goto_22
     invoke-virtual {p2, p1, p3}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    goto/16 :goto_de
+    goto/16 :goto_dd
 
     :cond_27
     new-instance p2, Ljava/lang/StringBuilder;
@@ -284,7 +284,7 @@
 
     invoke-static {v2, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_de
+    goto/16 :goto_dd
 
     :cond_3f
     :goto_3f
@@ -433,21 +433,19 @@
     move-result-object p2
 
     :goto_d2
-    if-ne p1, v1, :cond_db
+    if-ne p1, v1, :cond_da
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->Zgcgv:Ljava/lang/String;
+    const-string p1, "IS_FIRST_PARTY_PURCHASE"
 
     const/4 p3, 0x1
 
     invoke-virtual {p2, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    :cond_db
+    :cond_da
     invoke-virtual {p0, p2}, Lcom/android/billingclient/api/ProxyBillingActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    :cond_de
-    :goto_de
+    :cond_dd
+    :goto_dd
     const/4 p1, 0x0
 
     iput-boolean p1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->sendCancelledBroadcastIfFinished:Z
@@ -476,7 +474,7 @@
 
     const/4 v9, 0x0
 
-    if-nez p1, :cond_dc
+    if-nez p1, :cond_db
 
     const-string v0, "Launching Play Store billing flow"
 
@@ -518,7 +516,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_75
+    if-eqz v1, :cond_74
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
@@ -528,7 +526,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_75
+    if-eqz v1, :cond_74
 
     iput-boolean v11, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->isFlowFromFirstPartyClient:Z
 
@@ -536,22 +534,20 @@
 
     iput v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->activityCode:I
 
-    goto :goto_75
+    goto :goto_74
 
     :cond_4c
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->sHSUERFvOu:Ljava/lang/String;
+    const-string v1, "IN_APP_MESSAGE_INTENT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_74
+    if-eqz v0, :cond_73
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
@@ -579,13 +575,13 @@
 
     iput v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->activityCode:I
 
-    goto :goto_75
+    goto :goto_74
 
-    :cond_74
+    :cond_73
     move-object v0, v10
 
-    :cond_75
-    :goto_75
+    :cond_74
+    :goto_74
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -594,7 +590,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8b
+    if-eqz v1, :cond_8a
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
@@ -608,7 +604,7 @@
 
     iput-wide v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->billingClientTransactionId:J
 
-    :cond_8b
+    :cond_8a
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -617,7 +613,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9f
+    if-eqz v1, :cond_9e
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->getIntent()Landroid/content/Intent;
 
@@ -629,8 +625,8 @@
 
     iput-boolean v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->wasServiceAutoReconnected:Z
 
-    :cond_9f
-    :try_start_9f
+    :cond_9e
+    :try_start_9e
     iput-boolean v11, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->sendCancelledBroadcastIfFinished:Z
 
     invoke-virtual {v0}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
@@ -652,12 +648,12 @@
     move-object v1, p0
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/billingclient/api/ProxyBillingActivity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V
-    :try_end_b3
-    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_9f .. :try_end_b3} :catch_b4
+    :try_end_b2
+    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_9e .. :try_end_b2} :catch_b3
 
     return-void
 
-    :catch_b4
+    :catch_b3
     move-exception v0
 
     const-string v1, "Got exception while trying to start a purchase flow."
@@ -666,13 +662,13 @@
 
     iget-object v0, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->inAppMessageResultReceiver:Landroid/os/ResultReceiver;
 
-    if-eqz v0, :cond_c2
+    if-eqz v0, :cond_c1
 
     invoke-virtual {v0, v9, v10}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    goto :goto_d6
+    goto :goto_d5
 
-    :cond_c2
+    :cond_c1
     sget-object v0, Lcom/google/android/gms/internal/play_billing/zzie;->zzbG:Lcom/google/android/gms/internal/play_billing/zzie;
 
     iget-wide v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->billingClientTransactionId:J
@@ -683,23 +679,23 @@
 
     iget-boolean v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->isFlowFromFirstPartyClient:Z
 
-    if-eqz v1, :cond_d3
+    if-eqz v1, :cond_d2
 
     const-string v1, "IS_FIRST_PARTY_PURCHASE"
 
     invoke-virtual {v0, v1, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    :cond_d3
+    :cond_d2
     invoke-virtual {p0, v0}, Lcom/android/billingclient/api/ProxyBillingActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    :goto_d6
+    :goto_d5
     iput-boolean v9, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->sendCancelledBroadcastIfFinished:Z
 
     invoke-virtual {p0}, Lcom/android/billingclient/api/ProxyBillingActivity;->finish()V
 
     return-void
 
-    :cond_dc
+    :cond_db
     const-string v6, "Launching Play Store billing flow from savedInstanceState"
 
     invoke-static {v8, v6}, Lcom/google/android/gms/internal/play_billing/zzc;->zzm(Ljava/lang/String;Ljava/lang/String;)V
@@ -716,7 +712,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_f7
+    if-eqz v6, :cond_f6
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -726,7 +722,7 @@
 
     iput-object v3, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->inAppMessageResultReceiver:Landroid/os/ResultReceiver;
 
-    :cond_f7
+    :cond_f6
     invoke-virtual {p1, v2, v9}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -745,7 +741,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_111
+    if-eqz v1, :cond_110
 
     invoke-virtual {p1, v5}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
@@ -753,12 +749,12 @@
 
     iput-wide v1, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->billingClientTransactionId:J
 
-    :cond_111
+    :cond_110
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_11d
+    if-eqz v1, :cond_11c
 
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -766,7 +762,7 @@
 
     iput-boolean v0, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->wasServiceAutoReconnected:Z
 
-    :cond_11d
+    :cond_11c
     return-void
 .end method
 
@@ -884,9 +880,7 @@
 
     iget-boolean v0, p0, Lcom/android/billingclient/api/ProxyBillingActivity;->wasServiceAutoReconnected:Z
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->gLPHlwnChZu:Ljava/lang/String;
+    const-string v1, "wasServiceAutoReconnected"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 

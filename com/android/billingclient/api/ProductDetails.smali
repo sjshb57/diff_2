@@ -95,9 +95,7 @@
 
     iput-object p1, p0, Lcom/android/billingclient/api/ProductDetails;->zze:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->GrYAI:Ljava/lang/String;
+    const-string p1, "name"
 
     invoke-virtual {v0, p1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
