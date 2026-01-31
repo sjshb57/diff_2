@@ -52,9 +52,7 @@
     :cond_a
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->oOAjhHXmlHr:Ljava/lang/String;
+    const-string p2, "Null context"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

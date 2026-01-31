@@ -31,7 +31,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_5a
+    if-eqz p1, :cond_5b
 
     :try_start_8
     sget-object v2, Lcom/google/android/gms/internal/measurement/zzgw;->zza:Landroid/net/Uri;
@@ -144,7 +144,7 @@
     :catchall_4b
     move-exception p2
 
-    goto :goto_56
+    goto :goto_57
 
     :catch_4d
     move-exception p2
@@ -157,15 +157,15 @@
     invoke-direct {v0, v1, p2}, Lcom/google/android/gms/internal/measurement/zzhd;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v0
-    :try_end_56
-    .catchall {:try_start_4e .. :try_end_56} :catchall_4b
+    :try_end_57
+    .catchall {:try_start_4e .. :try_end_57} :catchall_4b
 
-    :goto_56
+    :goto_57
     invoke-virtual {p1}, Landroid/content/ContentProviderClient;->release()Z
 
     throw p2
 
-    :cond_5a
+    :cond_5b
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzhd;
 
     const-string p2, "Unable to acquire ContentProviderClient"

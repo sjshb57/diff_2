@@ -334,9 +334,7 @@
 
     aput-object p2, p1, p3
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->IrFd:Ljava/lang/String;
+    const-string p2, "zzg"
 
     const/4 p3, 0x2
 
@@ -376,24 +374,26 @@
 
     return-object p1
 
-    :pswitch_5c  #0x2
+    :pswitch_5b  #0x2
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgf$zzp$zza;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/measurement/zzgf$zzp$zza;-><init>(Lcom/google/android/gms/internal/measurement/zzgp;)V
 
     return-object p1
 
-    :pswitch_62  #0x1
+    :pswitch_61  #0x1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgf$zzp;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzgf$zzp;-><init>()V
 
     return-object p1
 
+    nop
+
     :pswitch_data_68
     .packed-switch 0x1
-        :pswitch_62  #00000001
-        :pswitch_5c  #00000002
+        :pswitch_61  #00000001
+        :pswitch_5b  #00000002
         :pswitch_2d  #00000003
         :pswitch_2a  #00000004
         :pswitch_10  #00000005

@@ -51,9 +51,7 @@
 
     move-result-object v3
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lkotlin/EDDN/hfnXJuYOaqC;->QgD:Ljava/lang/String;
+    const-string v4, "LONG"
 
     const/4 v5, 0x1
 

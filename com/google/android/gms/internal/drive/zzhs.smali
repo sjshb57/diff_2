@@ -424,9 +424,7 @@
 
     new-instance v0, Lcom/google/android/gms/drive/metadata/internal/zzb;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->yxhDfmMK:Ljava/lang/String;
+    const-string v3, "isAppData"
 
     invoke-direct {v0, v3, v2}, Lcom/google/android/gms/drive/metadata/internal/zzb;-><init>(Ljava/lang/String;I)V
 
@@ -628,9 +626,7 @@
 
     new-instance v0, Lcom/google/android/gms/internal/drive/zzib;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->KqHqAAFGz:Ljava/lang/String;
+    const-string v5, "title"
 
     invoke-direct {v0, v5, v4}, Lcom/google/android/gms/internal/drive/zzib;-><init>(Ljava/lang/String;I)V
 

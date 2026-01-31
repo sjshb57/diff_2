@@ -131,9 +131,7 @@
 
     move-result-object p0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->vfcOgkaJW:Ljava/lang/String;
+    const-string v1, "Mutating immutable message: "
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 

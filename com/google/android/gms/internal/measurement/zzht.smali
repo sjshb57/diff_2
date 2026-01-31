@@ -36,7 +36,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_f
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_f} :catch_ba
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_f} :catch_b9
 
     :try_start_f
     new-instance v1, Landroidx/collection/SimpleArrayMap;
@@ -52,7 +52,7 @@
 
     move-result-object v3
     :try_end_1d
-    .catchall {:try_start_f .. :try_end_1d} :catchall_b0
+    .catchall {:try_start_f .. :try_end_1d} :catchall_af
 
     const-string v4, "HermeticFileOverrides"
 
@@ -180,9 +180,7 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->jFUVBH:Ljava/lang/String;
+    const-string p1, " for Android package "
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -197,38 +195,38 @@
     new-instance p0, Lcom/google/android/gms/internal/measurement/zzhm;
 
     invoke-direct {p0, v1}, Lcom/google/android/gms/internal/measurement/zzhm;-><init>(Landroidx/collection/SimpleArrayMap;)V
-    :try_end_ac
-    .catchall {:try_start_21 .. :try_end_ac} :catchall_b0
+    :try_end_ab
+    .catchall {:try_start_21 .. :try_end_ab} :catchall_af
 
-    :try_start_ac
+    :try_start_ab
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
-    :try_end_af
-    .catch Ljava/io/IOException; {:try_start_ac .. :try_end_af} :catch_ba
+    :try_end_ae
+    .catch Ljava/io/IOException; {:try_start_ab .. :try_end_ae} :catch_b9
 
     return-object p0
 
-    :catchall_b0
+    :catchall_af
     move-exception p0
 
-    :try_start_b1
+    :try_start_b0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
-    :try_end_b4
-    .catchall {:try_start_b1 .. :try_end_b4} :catchall_b5
+    :try_end_b3
+    .catchall {:try_start_b0 .. :try_end_b3} :catchall_b4
 
-    goto :goto_b9
+    goto :goto_b8
 
-    :catchall_b5
+    :catchall_b4
     move-exception p1
 
-    :try_start_b6
+    :try_start_b5
     invoke-virtual {p0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :goto_b9
+    :goto_b8
     throw p0
-    :try_end_ba
-    .catch Ljava/io/IOException; {:try_start_b6 .. :try_end_ba} :catch_ba
+    :try_end_b9
+    .catch Ljava/io/IOException; {:try_start_b5 .. :try_end_b9} :catch_b9
 
-    :catch_ba
+    :catch_b9
     move-exception p0
 
     new-instance p1, Ljava/lang/RuntimeException;

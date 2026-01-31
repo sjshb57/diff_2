@@ -643,37 +643,35 @@
 
     const/16 v8, 0x7d
 
-    const/4 v9, 0x0
-
-    sget-object v9, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->Dkh:Ljava/lang/String;
+    const-string v9, "{}"
 
     const/4 v10, 0x0
 
     const/16 v11, 0x7b
 
-    if-gtz v4, :cond_24
+    if-gtz v4, :cond_23
 
     move-object v2, v9
 
-    goto :goto_58
+    goto :goto_57
 
-    :cond_24
+    :cond_23
     invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move v4, v10
 
-    :goto_28
+    :goto_27
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
 
     move-result v12
 
-    if-ge v4, v12, :cond_51
+    if-ge v4, v12, :cond_50
 
-    if-lez v4, :cond_33
+    if-lez v4, :cond_32
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_33
+    :cond_32
     invoke-virtual {v2, v4}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v12
@@ -688,32 +686,32 @@
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-nez v13, :cond_47
+    if-nez v13, :cond_46
 
     move-object v12, v5
 
-    goto :goto_4b
+    goto :goto_4a
 
-    :cond_47
+    :cond_46
     invoke-static {v13}, Lcom/google/android/gms/common/util/Hex;->bytesToStringUppercase([B)Ljava/lang/String;
 
     move-result-object v12
 
-    :goto_4b
+    :goto_4a
     invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_28
+    goto :goto_27
 
-    :cond_51
+    :cond_50
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    :goto_58
+    :goto_57
     iget-object v3, p0, Lcom/google/android/gms/internal/nearby/zzhi;->zze:Ljava/util/Map;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -728,11 +726,11 @@
 
     move-result v12
 
-    if-gtz v12, :cond_6a
+    if-gtz v12, :cond_69
 
-    goto :goto_ab
+    goto :goto_aa
 
-    :cond_6a
+    :cond_69
     invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -743,12 +741,12 @@
 
     move-result-object v3
 
-    :goto_75
+    :goto_74
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v9
 
-    if-eqz v9, :cond_a4
+    if-eqz v9, :cond_a3
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -756,11 +754,11 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    if-lez v10, :cond_86
+    if-lez v10, :cond_85
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_86
+    :cond_85
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v11
@@ -775,32 +773,32 @@
 
     check-cast v9, [B
 
-    if-nez v9, :cond_9a
+    if-nez v9, :cond_99
 
     move-object v9, v5
 
-    goto :goto_9e
+    goto :goto_9d
 
-    :cond_9a
+    :cond_99
     invoke-static {v9}, Lcom/google/android/gms/common/util/Hex;->bytesToStringUppercase([B)Ljava/lang/String;
 
     move-result-object v9
 
-    :goto_9e
+    :goto_9d
     invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v10, v10, 0x1
 
-    goto :goto_75
+    goto :goto_74
 
-    :cond_a4
+    :cond_a3
     invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
 
-    :goto_ab
+    :goto_aa
     iget v3, p0, Lcom/google/android/gms/internal/nearby/zzhi;->zzf:I
 
     iget-object v4, p0, Lcom/google/android/gms/internal/nearby/zzhi;->zzg:Ljava/lang/String;

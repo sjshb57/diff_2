@@ -102,9 +102,7 @@
 
     new-instance p1, Lcom/google/android/gms/measurement/internal/zzhf;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/util/Uhr/zXgie;->HinRLo:Ljava/lang/String;
+    const-string v0, "session_timeout"
 
     const-wide/32 v1, 0x1b7740
 
@@ -773,9 +771,7 @@
 
     const/4 v8, 0x0
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->lUbBsVYGVQs:Ljava/lang/String;
+    const-string v5, "health_monitor"
 
     move-object v3, v0
 
@@ -800,9 +796,7 @@
     return v0
 
     :cond_6
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->DmLpQgRebnnOAm:Ljava/lang/String;
+    const-string v1, "deferred_analytics_collection"
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
@@ -860,7 +854,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v1, Lcom/google/api/client/util/Uhr/zXgie;->GMwD:Ljava/lang/String;
+    sget-object v1, Lcom/google/android/gms/common/images/fgBV/xVnYvYZdvU;->EkoBoCzBSDST:Ljava/lang/String;
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
@@ -1294,15 +1288,13 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/content/Whm/HgKojeDw;->RnelHI:Ljava/lang/String;
+    const-string v1, "measurement_enabled"
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1d
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzha;->zzg()Landroid/content/SharedPreferences;
 
@@ -1320,7 +1312,7 @@
 
     return-object v0
 
-    :cond_1e
+    :cond_1d
     const/4 v0, 0x0
 
     return-object v0

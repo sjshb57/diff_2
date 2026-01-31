@@ -132,9 +132,7 @@
     invoke-static {v1, v2, v3}, Lcom/google/android/gms/measurement/internal/zzgo;->zza(Lcom/google/android/gms/measurement/internal/zzgo;J)V
 
     :cond_4e
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/flatbuffers/OSq/msMBb;->WDlEbYMdFW:Ljava/lang/String;
+    const-string v1, "01VDIWEA?"
 
     iget v2, p0, Lcom/google/android/gms/measurement/internal/zzgr;->zza:I
 
@@ -196,7 +194,7 @@
 
     const/16 v3, 0x400
 
-    if-le v2, v3, :cond_9b
+    if-le v2, v3, :cond_9a
 
     iget-object v1, p0, Lcom/google/android/gms/measurement/internal/zzgr;->zzb:Ljava/lang/String;
 
@@ -206,10 +204,10 @@
 
     move-result-object v1
 
-    :cond_9b
+    :cond_9a
     iget-object v2, v0, Lcom/google/android/gms/measurement/internal/zzha;->zzb:Lcom/google/android/gms/measurement/internal/zzhe;
 
-    if-eqz v2, :cond_a6
+    if-eqz v2, :cond_a5
 
     iget-object v0, v0, Lcom/google/android/gms/measurement/internal/zzha;->zzb:Lcom/google/android/gms/measurement/internal/zzhe;
 
@@ -217,6 +215,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/measurement/internal/zzhe;->zza(Ljava/lang/String;J)V
 
-    :cond_a6
+    :cond_a5
     return-void
 .end method

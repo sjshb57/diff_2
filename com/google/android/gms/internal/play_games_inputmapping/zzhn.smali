@@ -906,12 +906,12 @@
     const-string p0, "peekByteArray"
 
     invoke-virtual {v2, p0, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_83
-    .catchall {:try_start_5 .. :try_end_83} :catchall_84
+    :try_end_84
+    .catchall {:try_start_5 .. :try_end_84} :catchall_85
 
     return v6
 
-    :catchall_84
+    :catchall_85
     return v1
 .end method
 

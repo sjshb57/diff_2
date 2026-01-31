@@ -44,9 +44,7 @@
 
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzgf$zzl$zza;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/content/Whm/HgKojeDw;->FUpLifLDDd:Ljava/lang/String;
+    const-string v1, "RADS"
 
     const/4 v2, 0x0
 

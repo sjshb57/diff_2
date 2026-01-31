@@ -254,7 +254,7 @@
 
     const-string v1, "ConfigurationContentLdr"
 
-    if-nez v0, :cond_16
+    if-nez v0, :cond_17
 
     const-string v0, "Unable to acquire ContentProviderClient, using default values"
 
@@ -266,8 +266,8 @@
 
     return-object v0
 
-    :cond_16
-    :try_start_16
+    :cond_17
+    :try_start_17
     iget-object v3, p0, Lcom/google/android/gms/internal/measurement/zzhi;->zzd:Landroid/net/Uri;
 
     sget-object v4, Lcom/google/android/gms/internal/measurement/zzhi;->zzb:[Ljava/lang/String;
@@ -283,13 +283,13 @@
     invoke-virtual/range {v2 .. v7}, Landroid/content/ContentProviderClient;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
-    :try_end_22
-    .catch Landroid/os/RemoteException; {:try_start_16 .. :try_end_22} :catch_9d
-    .catchall {:try_start_16 .. :try_end_22} :catchall_9b
+    :try_end_23
+    .catch Landroid/os/RemoteException; {:try_start_17 .. :try_end_23} :catch_9e
+    .catchall {:try_start_17 .. :try_end_23} :catchall_9c
 
-    if-nez v2, :cond_36
+    if-nez v2, :cond_37
 
-    :try_start_24
+    :try_start_25
     const-string v3, "ContentProvider query returned null cursor, using default values"
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
@@ -297,74 +297,74 @@
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v3
-    :try_end_2d
-    .catchall {:try_start_24 .. :try_end_2d} :catchall_8f
+    :try_end_2e
+    .catchall {:try_start_25 .. :try_end_2e} :catchall_90
 
-    if-eqz v2, :cond_32
+    if-eqz v2, :cond_33
 
-    :try_start_2f
+    :try_start_30
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_32
-    .catch Landroid/os/RemoteException; {:try_start_2f .. :try_end_32} :catch_9d
-    .catchall {:try_start_2f .. :try_end_32} :catchall_9b
+    :try_end_33
+    .catch Landroid/os/RemoteException; {:try_start_30 .. :try_end_33} :catch_9e
+    .catchall {:try_start_30 .. :try_end_33} :catchall_9c
 
-    :cond_32
+    :cond_33
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     return-object v3
 
-    :cond_36
-    :try_start_36
+    :cond_37
+    :try_start_37
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
     move-result v3
 
-    if-nez v3, :cond_49
+    if-nez v3, :cond_4a
 
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v3
-    :try_end_40
-    .catchall {:try_start_36 .. :try_end_40} :catchall_8f
+    :try_end_41
+    .catchall {:try_start_37 .. :try_end_41} :catchall_90
 
-    if-eqz v2, :cond_45
+    if-eqz v2, :cond_46
 
-    :try_start_42
+    :try_start_43
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_45
-    .catch Landroid/os/RemoteException; {:try_start_42 .. :try_end_45} :catch_9d
-    .catchall {:try_start_42 .. :try_end_45} :catchall_9b
+    :try_end_46
+    .catch Landroid/os/RemoteException; {:try_start_43 .. :try_end_46} :catch_9e
+    .catchall {:try_start_43 .. :try_end_46} :catchall_9c
 
-    :cond_45
+    :cond_46
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     return-object v3
 
-    :cond_49
+    :cond_4a
     const/16 v4, 0x100
 
-    if-gt v3, v4, :cond_53
+    if-gt v3, v4, :cond_54
 
-    :try_start_4d
+    :try_start_4e
     new-instance v4, Landroidx/collection/ArrayMap;
 
     invoke-direct {v4, v3}, Landroidx/collection/ArrayMap;-><init>(I)V
 
-    goto :goto_5a
+    goto :goto_5b
 
-    :cond_53
+    :cond_54
     new-instance v4, Ljava/util/HashMap;
 
     const/high16 v5, 0x3f800000  # 1.0f
 
     invoke-direct {v4, v3, v5}, Ljava/util/HashMap;-><init>(IF)V
 
-    :goto_5a
+    :goto_5b
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_6e
+    if-eqz v3, :cond_6f
 
     const/4 v3, 0x0
 
@@ -380,14 +380,14 @@
 
     invoke-interface {v4, v3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_5a
+    goto :goto_5b
 
-    :cond_6e
+    :cond_6f
     invoke-interface {v2}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v3
 
-    if-nez v3, :cond_86
+    if-nez v3, :cond_87
 
     const-string v3, "Cursor read incomplete (ContentProvider dead?), using default values"
 
@@ -396,70 +396,70 @@
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v3
-    :try_end_7d
-    .catchall {:try_start_4d .. :try_end_7d} :catchall_8f
+    :try_end_7e
+    .catchall {:try_start_4e .. :try_end_7e} :catchall_90
 
-    if-eqz v2, :cond_82
+    if-eqz v2, :cond_83
 
-    :try_start_7f
+    :try_start_80
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_82
-    .catch Landroid/os/RemoteException; {:try_start_7f .. :try_end_82} :catch_9d
-    .catchall {:try_start_7f .. :try_end_82} :catchall_9b
+    :try_end_83
+    .catch Landroid/os/RemoteException; {:try_start_80 .. :try_end_83} :catch_9e
+    .catchall {:try_start_80 .. :try_end_83} :catchall_9c
 
-    :cond_82
+    :cond_83
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     return-object v3
 
-    :cond_86
-    if-eqz v2, :cond_8b
+    :cond_87
+    if-eqz v2, :cond_8c
 
-    :try_start_88
+    :try_start_89
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_8b
-    .catch Landroid/os/RemoteException; {:try_start_88 .. :try_end_8b} :catch_9d
-    .catchall {:try_start_88 .. :try_end_8b} :catchall_9b
+    :try_end_8c
+    .catch Landroid/os/RemoteException; {:try_start_89 .. :try_end_8c} :catch_9e
+    .catchall {:try_start_89 .. :try_end_8c} :catchall_9c
 
-    :cond_8b
+    :cond_8c
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     return-object v4
 
-    :catchall_8f
+    :catchall_90
     move-exception v3
 
-    if-eqz v2, :cond_9a
+    if-eqz v2, :cond_9b
 
-    :try_start_92
+    :try_start_93
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_95
-    .catchall {:try_start_92 .. :try_end_95} :catchall_96
+    :try_end_96
+    .catchall {:try_start_93 .. :try_end_96} :catchall_97
 
-    goto :goto_9a
+    goto :goto_9b
 
-    :catchall_96
+    :catchall_97
     move-exception v2
 
-    :try_start_97
+    :try_start_98
     invoke-virtual {v3, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    :cond_9a
-    :goto_9a
+    :cond_9b
+    :goto_9b
     throw v3
-    :try_end_9b
-    .catch Landroid/os/RemoteException; {:try_start_97 .. :try_end_9b} :catch_9d
-    .catchall {:try_start_97 .. :try_end_9b} :catchall_9b
+    :try_end_9c
+    .catch Landroid/os/RemoteException; {:try_start_98 .. :try_end_9c} :catch_9e
+    .catchall {:try_start_98 .. :try_end_9c} :catchall_9c
 
-    :catchall_9b
+    :catchall_9c
     move-exception v1
 
-    goto :goto_ab
+    goto :goto_ac
 
-    :catch_9d
+    :catch_9e
     move-exception v2
 
-    :try_start_9e
+    :try_start_9f
     const-string v3, "ContentProvider query failed, using default values"
 
     invoke-static {v1, v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -467,14 +467,14 @@
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v1
-    :try_end_a7
-    .catchall {:try_start_9e .. :try_end_a7} :catchall_9b
+    :try_end_a8
+    .catchall {:try_start_9f .. :try_end_a8} :catchall_9c
 
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     return-object v1
 
-    :goto_ab
+    :goto_ac
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     throw v1

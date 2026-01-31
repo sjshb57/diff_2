@@ -82,9 +82,7 @@
 
     new-instance v5, Lcom/google/android/gms/internal/measurement/zzgf$zzo$zzc;
 
-    const/4 v7, 0x0
-
-    sget-object v7, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->OIKckjrOmtujlrq:Ljava/lang/String;
+    const-string v7, "MISSING_SGTM_SETTINGS"
 
     const/4 v8, 0x3
 

@@ -100,7 +100,7 @@
 
     instance-of v4, v3, Ljava/net/HttpURLConnection;
 
-    if-eqz v4, :cond_e9
+    if-eqz v4, :cond_ea
 
     check-cast v3, Ljava/net/HttpURLConnection;
 
@@ -120,8 +120,8 @@
 
     invoke-virtual {v3, v4}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
     :try_end_31
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_31} :catch_12c
-    .catchall {:try_start_9 .. :try_end_31} :catchall_f1
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_31} :catch_12d
+    .catchall {:try_start_9 .. :try_end_31} :catchall_f2
 
     :try_start_31
     iget-object v5, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zze:Ljava/util/Map;
@@ -168,7 +168,7 @@
     :cond_59
     iget-object v5, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzb:[B
 
-    if-eqz v5, :cond_a7
+    if-eqz v5, :cond_a8
 
     iget-object v5, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
 
@@ -219,21 +219,21 @@
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v4
-    :try_end_92
-    .catch Ljava/io/IOException; {:try_start_31 .. :try_end_92} :catch_e6
-    .catchall {:try_start_31 .. :try_end_92} :catchall_e3
+    :try_end_93
+    .catch Ljava/io/IOException; {:try_start_31 .. :try_end_93} :catch_e7
+    .catchall {:try_start_31 .. :try_end_93} :catchall_e4
 
-    :try_start_92
+    :try_start_93
     invoke-virtual {v4, v5}, Ljava/io/OutputStream;->write([B)V
 
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
-    :try_end_98
-    .catch Ljava/io/IOException; {:try_start_92 .. :try_end_98} :catch_a0
-    .catchall {:try_start_92 .. :try_end_98} :catchall_99
+    :try_end_99
+    .catch Ljava/io/IOException; {:try_start_93 .. :try_end_99} :catch_a1
+    .catchall {:try_start_93 .. :try_end_99} :catchall_9a
 
-    goto :goto_a7
+    goto :goto_a8
 
-    :catchall_99
+    :catchall_9a
     move-exception v5
 
     move-object v10, v1
@@ -244,9 +244,9 @@
 
     move-object v2, v5
 
-    goto/16 :goto_f6
+    goto/16 :goto_f7
 
-    :catch_a0
+    :catch_a1
     move-exception v5
 
     move-object v10, v1
@@ -257,41 +257,41 @@
 
     move-object v8, v5
 
-    goto/16 :goto_131
+    goto/16 :goto_132
 
-    :cond_a7
-    :goto_a7
-    :try_start_a7
+    :cond_a8
+    :goto_a8
+    :try_start_a8
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v8
-    :try_end_ab
-    .catch Ljava/io/IOException; {:try_start_a7 .. :try_end_ab} :catch_e6
-    .catchall {:try_start_a7 .. :try_end_ab} :catchall_e3
+    :try_end_ac
+    .catch Ljava/io/IOException; {:try_start_a8 .. :try_end_ac} :catch_e7
+    .catchall {:try_start_a8 .. :try_end_ac} :catchall_e4
 
-    :try_start_ab
+    :try_start_ac
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v11
-    :try_end_af
-    .catch Ljava/io/IOException; {:try_start_ab .. :try_end_af} :catch_df
-    .catchall {:try_start_ab .. :try_end_af} :catchall_da
+    :try_end_b0
+    .catch Ljava/io/IOException; {:try_start_ac .. :try_end_b0} :catch_e0
+    .catchall {:try_start_ac .. :try_end_b0} :catchall_db
 
-    :try_start_af
+    :try_start_b0
     iget-object v2, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
 
     invoke-static {v2, v3}, Lcom/google/android/gms/measurement/internal/zzgv;->zza(Lcom/google/android/gms/measurement/internal/zzgv;Ljava/net/HttpURLConnection;)[B
 
     move-result-object v10
-    :try_end_b5
-    .catch Ljava/io/IOException; {:try_start_af .. :try_end_b5} :catch_d5
-    .catchall {:try_start_af .. :try_end_b5} :catchall_d0
+    :try_end_b6
+    .catch Ljava/io/IOException; {:try_start_b0 .. :try_end_b6} :catch_d6
+    .catchall {:try_start_b0 .. :try_end_b6} :catchall_d1
 
-    if-eqz v3, :cond_ba
+    if-eqz v3, :cond_bb
 
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    :cond_ba
+    :cond_bb
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzl()Lcom/google/android/gms/measurement/internal/zzhv;
@@ -316,7 +316,7 @@
 
     return-void
 
-    :catchall_d0
+    :catchall_d1
     move-exception v4
 
     move-object v2, v4
@@ -325,18 +325,18 @@
 
     move-object v10, v11
 
-    goto :goto_f6
+    goto :goto_f7
 
-    :catch_d5
+    :catch_d6
     move-exception v4
 
     move v7, v8
 
     move-object v10, v11
 
-    goto/16 :goto_130
+    goto/16 :goto_131
 
-    :catchall_da
+    :catchall_db
     move-exception v4
 
     move-object v10, v1
@@ -345,33 +345,33 @@
 
     move v7, v8
 
-    goto :goto_f6
+    goto :goto_f7
 
-    :catch_df
+    :catch_e0
     move-exception v4
 
     move-object v10, v1
 
     move v7, v8
+
+    goto :goto_131
+
+    :catchall_e4
+    move-exception v4
+
+    move-object v10, v1
+
+    goto :goto_f5
+
+    :catch_e7
+    move-exception v4
+
+    move-object v10, v1
 
     goto :goto_130
 
-    :catchall_e3
-    move-exception v4
-
-    move-object v10, v1
-
-    goto :goto_f4
-
-    :catch_e6
-    move-exception v4
-
-    move-object v10, v1
-
-    goto :goto_12f
-
-    :cond_e9
-    :try_start_e9
+    :cond_ea
+    :try_start_ea
     new-instance v3, Ljava/io/IOException;
 
     const-string v4, "Failed to obtain HTTP connection"
@@ -379,33 +379,33 @@
     invoke-direct {v3, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v3
-    :try_end_f1
-    .catch Ljava/io/IOException; {:try_start_e9 .. :try_end_f1} :catch_12c
-    .catchall {:try_start_e9 .. :try_end_f1} :catchall_f1
+    :try_end_f2
+    .catch Ljava/io/IOException; {:try_start_ea .. :try_end_f2} :catch_12d
+    .catchall {:try_start_ea .. :try_end_f2} :catchall_f2
 
-    :catchall_f1
+    :catchall_f2
     move-exception v4
 
     move-object v3, v1
 
     move-object v10, v3
 
-    :goto_f4
+    :goto_f5
     move v7, v2
 
     move-object v2, v4
 
-    :goto_f6
-    if-eqz v1, :cond_110
+    :goto_f7
+    if-eqz v1, :cond_111
 
-    :try_start_f8
+    :try_start_f9
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_fb
-    .catch Ljava/io/IOException; {:try_start_f8 .. :try_end_fb} :catch_fc
+    :try_end_fc
+    .catch Ljava/io/IOException; {:try_start_f9 .. :try_end_fc} :catch_fd
 
-    goto :goto_110
+    goto :goto_111
 
-    :catch_fc
+    :catch_fd
     move-exception v1
 
     iget-object v4, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
@@ -426,13 +426,13 @@
 
     invoke-virtual {v4, v0, v5, v1}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_110
-    :goto_110
-    if-eqz v3, :cond_115
+    :cond_111
+    :goto_111
+    if-eqz v3, :cond_116
 
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    :cond_115
+    :cond_116
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzl()Lcom/google/android/gms/measurement/internal/zzhv;
@@ -459,30 +459,30 @@
 
     throw v2
 
-    :catch_12c
+    :catch_12d
     move-exception v4
 
     move-object v3, v1
 
     move-object v10, v3
 
-    :goto_12f
+    :goto_130
     move v7, v2
 
-    :goto_130
+    :goto_131
     move-object v8, v4
 
-    :goto_131
-    if-eqz v1, :cond_14b
+    :goto_132
+    if-eqz v1, :cond_14c
 
-    :try_start_133
+    :try_start_134
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_136
-    .catch Ljava/io/IOException; {:try_start_133 .. :try_end_136} :catch_137
+    :try_end_137
+    .catch Ljava/io/IOException; {:try_start_134 .. :try_end_137} :catch_138
 
-    goto :goto_14b
+    goto :goto_14c
 
-    :catch_137
+    :catch_138
     move-exception v1
 
     iget-object v2, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
@@ -503,13 +503,13 @@
 
     invoke-virtual {v2, v0, v4, v1}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_14b
-    :goto_14b
-    if-eqz v3, :cond_150
+    :cond_14c
+    :goto_14c
+    if-eqz v3, :cond_151
 
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    :cond_150
+    :cond_151
     iget-object v0, p0, Lcom/google/android/gms/measurement/internal/zzgw;->zzf:Lcom/google/android/gms/measurement/internal/zzgv;
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzl()Lcom/google/android/gms/measurement/internal/zzhv;

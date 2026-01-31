@@ -69,7 +69,7 @@
 
     move-result-object p1
 
-    if-nez p1, :cond_3d
+    if-nez p1, :cond_3c
 
     iget-object p1, p0, Lcom/google/android/gms/measurement/internal/zzhj;->zza:Lcom/google/android/gms/measurement/internal/zzic;
 
@@ -81,20 +81,18 @@
 
     move-result-object p1
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/nano/privacy/eM/RmZCOXza;->JGmtJIa:Ljava/lang/String;
+    const-string p2, "Install Referrer Service returned a null response"
 
     invoke-virtual {p1, p2}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;)V
-    :try_end_3c
-    .catch Ljava/lang/Exception; {:try_start_26 .. :try_end_3c} :catch_3e
+    :try_end_3b
+    .catch Ljava/lang/Exception; {:try_start_26 .. :try_end_3b} :catch_3d
 
     return-object v0
 
-    :cond_3d
+    :cond_3c
     return-object p1
 
-    :catch_3e
+    :catch_3d
     move-exception p1
 
     iget-object p2, p0, Lcom/google/android/gms/measurement/internal/zzhj;->zza:Lcom/google/android/gms/measurement/internal/zzic;

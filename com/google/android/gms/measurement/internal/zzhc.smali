@@ -394,7 +394,7 @@
 
     if-eq v7, v8, :cond_52
 
-    goto :goto_84
+    goto :goto_85
 
     :cond_52
     const-string v7, "la"
@@ -403,11 +403,11 @@
 
     move-result v7
 
-    if-eqz v7, :cond_84
+    if-eqz v7, :cond_85
 
     move v7, v9
 
-    goto :goto_85
+    goto :goto_86
 
     :cond_5c
     const-string v7, "ia"
@@ -416,11 +416,11 @@
 
     move-result v7
 
-    if-eqz v7, :cond_84
+    if-eqz v7, :cond_85
 
     move v7, v10
 
-    goto :goto_85
+    goto :goto_86
 
     :cond_66
     const-string v7, "s"
@@ -429,11 +429,11 @@
 
     move-result v7
 
-    if-eqz v7, :cond_84
+    if-eqz v7, :cond_85
 
     move v7, v0
 
-    goto :goto_85
+    goto :goto_86
 
     :cond_70
     const-string v7, "l"
@@ -442,33 +442,35 @@
 
     move-result v7
 
-    if-eqz v7, :cond_84
+    if-eqz v7, :cond_85
 
     move v7, v11
 
-    goto :goto_85
+    goto :goto_86
 
     :cond_7a
-    const-string v7, "d"
+    const/4 v7, 0x0
+
+    sget-object v7, Lcom/google/android/libraries/play/hpe/Nqz/HXjHgRCaYyjPn;->xmgChXoy:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
-    :try_end_80
-    .catch Lorg/json/JSONException; {:try_start_25 .. :try_end_80} :catch_129
-    .catch Ljava/lang/NumberFormatException; {:try_start_25 .. :try_end_80} :catch_129
+    :try_end_81
+    .catch Lorg/json/JSONException; {:try_start_25 .. :try_end_81} :catch_129
+    .catch Ljava/lang/NumberFormatException; {:try_start_25 .. :try_end_81} :catch_129
 
-    if-eqz v7, :cond_84
+    if-eqz v7, :cond_85
 
     move v7, v12
 
-    goto :goto_85
+    goto :goto_86
 
-    :cond_84
-    :goto_84
+    :cond_85
+    :goto_85
     const/4 v7, -0x1
 
-    :goto_85
+    :goto_86
     const-string v8, "v"
 
     if-eqz v7, :cond_121
@@ -481,7 +483,7 @@
 
     if-eq v7, v9, :cond_a3
 
-    :try_start_91
+    :try_start_92
     iget-object v4, p0, Lcom/google/android/gms/measurement/internal/zzhc;->zzd:Lcom/google/android/gms/measurement/internal/zzha;
 
     invoke-virtual {v4}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -492,9 +494,7 @@
 
     move-result-object v4
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->CWThFdgZ:Ljava/lang/String;
+    const-string v5, "Unrecognized persisted bundle type. Type"
 
     invoke-virtual {v4, v5, v6}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -643,8 +643,8 @@
 
     invoke-virtual {v1, v5, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_128
-    .catch Lorg/json/JSONException; {:try_start_91 .. :try_end_128} :catch_129
-    .catch Ljava/lang/NumberFormatException; {:try_start_91 .. :try_end_128} :catch_129
+    .catch Lorg/json/JSONException; {:try_start_92 .. :try_end_128} :catch_129
+    .catch Ljava/lang/NumberFormatException; {:try_start_92 .. :try_end_128} :catch_129
 
     goto :goto_138
 

@@ -49,12 +49,10 @@
 
     const/4 p1, 0x0
 
-    goto :goto_19
+    goto :goto_18
 
     :cond_4
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->wMXkOib:Ljava/lang/String;
+    const-string v0, "com.google.android.gms.nearby.internal.connection.IResultListener"
 
     invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
@@ -62,22 +60,22 @@
 
     instance-of v1, v0, Lcom/google/android/gms/internal/nearby/zzen;
 
-    if-eqz v1, :cond_13
+    if-eqz v1, :cond_12
 
     move-object p1, v0
 
     check-cast p1, Lcom/google/android/gms/internal/nearby/zzen;
 
-    goto :goto_19
+    goto :goto_18
 
-    :cond_13
+    :cond_12
     new-instance v0, Lcom/google/android/gms/internal/nearby/zzel;
 
     invoke-direct {v0, p1}, Lcom/google/android/gms/internal/nearby/zzel;-><init>(Landroid/os/IBinder;)V
 
     move-object p1, v0
 
-    :goto_19
+    :goto_18
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/internal/nearby/zzgi;->zza:Lcom/google/android/gms/internal/nearby/zzen;

@@ -92,7 +92,7 @@
 
     move-object p1, v0
 
-    goto :goto_2d
+    goto :goto_2e
 
     :cond_1b
     const-string p1, "com.google.android.gms.nearby.internal.connection.IConnectionEventListener"
@@ -103,25 +103,25 @@
 
     instance-of v2, p1, Lcom/google/android/gms/internal/nearby/zzdw;
 
-    if-eqz v2, :cond_28
+    if-eqz v2, :cond_29
 
     check-cast p1, Lcom/google/android/gms/internal/nearby/zzdw;
 
-    goto :goto_2d
+    goto :goto_2e
 
-    :cond_28
+    :cond_29
     new-instance p1, Lcom/google/android/gms/internal/nearby/zzdu;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/nearby/zzdu;-><init>(Landroid/os/IBinder;)V
 
-    :goto_2d
-    if-nez p3, :cond_31
+    :goto_2e
+    if-nez p3, :cond_32
 
     move-object p2, v0
 
-    goto :goto_43
+    goto :goto_44
 
-    :cond_31
+    :cond_32
     const-string p2, "com.google.android.gms.nearby.internal.connection.IConnectionResponseListener"
 
     invoke-interface {p3, p2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
@@ -130,23 +130,23 @@
 
     instance-of v2, p2, Lcom/google/android/gms/internal/nearby/zzec;
 
-    if-eqz v2, :cond_3e
+    if-eqz v2, :cond_3f
 
     check-cast p2, Lcom/google/android/gms/internal/nearby/zzec;
 
-    goto :goto_43
+    goto :goto_44
 
-    :cond_3e
+    :cond_3f
     new-instance p2, Lcom/google/android/gms/internal/nearby/zzea;
 
     invoke-direct {p2, p3}, Lcom/google/android/gms/internal/nearby/zzea;-><init>(Landroid/os/IBinder;)V
 
-    :goto_43
-    if-nez p7, :cond_46
+    :goto_44
+    if-nez p7, :cond_47
 
-    goto :goto_59
+    goto :goto_5a
 
-    :cond_46
+    :cond_47
     const-string p3, "com.google.android.gms.nearby.internal.connection.IConnectionLifecycleListener"
 
     invoke-interface {p7, p3}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
@@ -155,20 +155,20 @@
 
     instance-of v0, p3, Lcom/google/android/gms/internal/nearby/zzdz;
 
-    if-eqz v0, :cond_54
+    if-eqz v0, :cond_55
 
     move-object v0, p3
 
     check-cast v0, Lcom/google/android/gms/internal/nearby/zzdz;
 
-    goto :goto_59
+    goto :goto_5a
 
-    :cond_54
+    :cond_55
     new-instance v0, Lcom/google/android/gms/internal/nearby/zzdx;
 
     invoke-direct {v0, p7}, Lcom/google/android/gms/internal/nearby/zzdx;-><init>(Landroid/os/IBinder;)V
 
-    :goto_59
+    :goto_5a
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/gms/internal/nearby/zzgm;->zza:Lcom/google/android/gms/internal/nearby/zzen;

@@ -224,7 +224,7 @@
 .method public static zzb(Ljava/io/File;)V
     .registers 2
 
-    if-nez p0, :cond_a
+    if-nez p0, :cond_b
 
     const-string p0, "NearbyConnections"
 
@@ -234,7 +234,7 @@
 
     return-void
 
-    :cond_a
+    :cond_b
     sput-object p0, Lcom/google/android/gms/internal/nearby/zzgf;->zza:Ljava/io/File;
 
     return-void

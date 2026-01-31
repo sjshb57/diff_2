@@ -73,7 +73,7 @@
 
     check-cast v2, Lcom/google/android/gms/internal/play_billing/zzgv;
 
-    if-nez v2, :cond_21
+    if-nez v2, :cond_22
 
     iget-object v2, p0, Lcom/google/android/gms/internal/play_billing/zzgs;->zzc:Lcom/google/android/gms/internal/play_billing/zzgw;
 
@@ -89,10 +89,10 @@
 
     check-cast p1, Lcom/google/android/gms/internal/play_billing/zzgv;
 
-    if-eqz p1, :cond_21
+    if-eqz p1, :cond_22
 
     return-object p1
 
-    :cond_21
+    :cond_22
     return-object v2
 .end method

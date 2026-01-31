@@ -111,7 +111,7 @@
     :goto_2d
     if-nez p7, :cond_30
 
-    goto :goto_43
+    goto :goto_44
 
     :cond_30
     const-string p2, "com.google.android.gms.nearby.internal.connection.IDiscoveryListener"
@@ -122,20 +122,20 @@
 
     instance-of v0, p2, Lcom/google/android/gms/internal/nearby/zzeg;
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_3f
 
     move-object v0, p2
 
     check-cast v0, Lcom/google/android/gms/internal/nearby/zzeg;
 
-    goto :goto_43
+    goto :goto_44
 
-    :cond_3e
+    :cond_3f
     new-instance v0, Lcom/google/android/gms/internal/nearby/zzee;
 
     invoke-direct {v0, p7}, Lcom/google/android/gms/internal/nearby/zzee;-><init>(Landroid/os/IBinder;)V
 
-    :goto_43
+    :goto_44
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/gms/internal/nearby/zzgy;->zza:Lcom/google/android/gms/internal/nearby/zzen;

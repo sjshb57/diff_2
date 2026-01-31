@@ -1799,9 +1799,7 @@
 
     aput-object p3, p2, v0
 
-    const/4 p3, 0x0
-
-    sget-object p3, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->rBQchVZXOF:Ljava/lang/String;
+    const-string p3, "zzy"
 
     const/16 v0, 0x15
 
@@ -1903,9 +1901,7 @@
 
     aput-object p3, p2, v0
 
-    const/4 p3, 0x0
-
-    sget-object p3, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->QvUZdhS:Ljava/lang/String;
+    const-string p3, "zzan"
 
     const/16 v0, 0x26
 
@@ -1917,9 +1913,7 @@
 
     aput-object p3, p2, v0
 
-    const/4 p3, 0x0
-
-    sget-object p3, Lcom/google/flatbuffers/OSq/msMBb;->TMtFIpKdDTtWS:Ljava/lang/String;
+    const-string p3, "zzap"
 
     const/16 v0, 0x28
 
@@ -2113,24 +2107,26 @@
 
     return-object p1
 
-    :pswitch_1e0  #0x2
+    :pswitch_1df  #0x2
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgf$zzk$zza;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/measurement/zzgf$zzk$zza;-><init>(Lcom/google/android/gms/internal/measurement/zzgp;)V
 
     return-object p1
 
-    :pswitch_1e6  #0x1
+    :pswitch_1e5  #0x1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgf$zzk;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzgf$zzk;-><init>()V
 
     return-object p1
 
+    nop
+
     :pswitch_data_1ec
     .packed-switch 0x1
-        :pswitch_1e6  #00000001
-        :pswitch_1e0  #00000002
+        :pswitch_1e5  #00000001
+        :pswitch_1df  #00000002
         :pswitch_2d  #00000003
         :pswitch_2a  #00000004
         :pswitch_10  #00000005

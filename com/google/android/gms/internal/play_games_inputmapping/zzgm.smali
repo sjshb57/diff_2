@@ -59,9 +59,7 @@
 .method public final zzb(Ljava/lang/Class;)Lcom/google/android/gms/internal/play_games_inputmapping/zzgp;
     .registers 4
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/print/nh/SlomKQFs;->mdSqXGqL:Ljava/lang/String;
+    const-string v0, "messageType"
 
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/play_games_inputmapping/zzfi;->zzb(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
@@ -73,7 +71,7 @@
 
     check-cast v1, Lcom/google/android/gms/internal/play_games_inputmapping/zzgp;
 
-    if-nez v1, :cond_2a
+    if-nez v1, :cond_29
 
     iget-object v1, p0, Lcom/google/android/gms/internal/play_games_inputmapping/zzgm;->zzb:Lcom/google/android/gms/internal/play_games_inputmapping/zzgq;
 
@@ -95,14 +93,14 @@
 
     check-cast p1, Lcom/google/android/gms/internal/play_games_inputmapping/zzgp;
 
-    if-nez p1, :cond_29
+    if-nez p1, :cond_28
 
-    goto :goto_2a
+    goto :goto_29
 
-    :cond_29
+    :cond_28
     return-object p1
 
-    :cond_2a
-    :goto_2a
+    :cond_29
+    :goto_29
     return-object v1
 .end method
