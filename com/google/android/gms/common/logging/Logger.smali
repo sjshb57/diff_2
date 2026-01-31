@@ -23,7 +23,7 @@
 
     const-string p2, ""
 
-    goto :goto_30
+    goto :goto_31
 
     :cond_6
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +69,7 @@
 
     move-result-object p2
 
-    :goto_30
+    :goto_31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lcom/google/android/gms/common/logging/Logger;->zzb:Ljava/lang/String;
@@ -84,10 +84,10 @@
 
     const/4 p1, 0x2
 
-    :goto_3f
+    :goto_40
     const/4 p2, 0x7
 
-    if-gt p1, p2, :cond_4d
+    if-gt p1, p2, :cond_4e
 
     iget-object p2, p0, Lcom/google/android/gms/common/logging/Logger;->zza:Ljava/lang/String;
 
@@ -95,13 +95,13 @@
 
     move-result p2
 
-    if-nez p2, :cond_4d
+    if-nez p2, :cond_4e
 
     add-int/lit8 p1, p1, 0x1
 
-    goto :goto_3f
+    goto :goto_40
 
-    :cond_4d
+    :cond_4e
     iput p1, p0, Lcom/google/android/gms/common/logging/Logger;->zzd:I
 
     return-void

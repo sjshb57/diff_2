@@ -44,7 +44,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_48
+    if-eqz v2, :cond_4a
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -52,13 +52,13 @@
 
     check-cast v2, Ljava/lang/String;
 
-    if-nez v1, :cond_21
+    if-nez v1, :cond_22
 
     const-string v1, ","
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_21
+    :cond_22
     invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -77,27 +77,27 @@
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_3d
+    if-nez v1, :cond_3f
 
     const-string v1, "null"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_46
+    goto :goto_48
 
-    :cond_3d
+    :cond_3f
     invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_46
+    :goto_48
     move v1, v2
 
     goto :goto_e
 
-    :cond_48
+    :cond_4a
     const-string p1, "}"
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

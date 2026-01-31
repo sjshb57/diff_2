@@ -139,9 +139,7 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->JrzoKOE:Ljava/lang/String;
+    const-string v0, "Failed to find package "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

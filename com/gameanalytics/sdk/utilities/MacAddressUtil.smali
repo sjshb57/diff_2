@@ -75,12 +75,12 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
     return-object v0
 
-    :cond_12
-    :try_start_12
+    :cond_13
+    :try_start_13
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -100,15 +100,15 @@
     invoke-virtual {p0}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
 
     move-result-object p0
-    :try_end_26
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_26} :catch_29
+    :try_end_27
+    .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_27} :catch_2a
 
-    if-eqz p0, :cond_29
+    if-eqz p0, :cond_2a
 
     return-object p0
 
-    :catch_29
-    :cond_29
+    :catch_2a
+    :cond_2a
     const/4 p0, 0x0
 
     return-object p0
@@ -125,11 +125,9 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    const-string v0, "/sys/class/net/"
 
-    sget-object v0, Lcom/google/firebase/remoteconfig/interop/aN/vMQptdnwrA;->LkWVdkXZoey:Ljava/lang/String;
-
-    :try_start_3
+    :try_start_2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -162,14 +160,14 @@
 
     new-array p0, p0, [C
 
-    :goto_29
+    :goto_28
     invoke-virtual {v1, p0}, Ljava/io/BufferedReader;->read([C)I
 
     move-result v2
 
     const/4 v3, -0x1
 
-    if-eq v2, v3, :cond_39
+    if-eq v2, v3, :cond_38
 
     const/4 v3, 0x0
 
@@ -179,20 +177,20 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_29
+    goto :goto_28
 
-    :cond_39
+    :cond_38
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-    :try_end_40
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_40} :catch_41
+    :try_end_3f
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_3f} :catch_40
 
     return-object p0
 
-    :catch_41
+    :catch_40
     const/4 p0, 0x0
 
     return-object p0

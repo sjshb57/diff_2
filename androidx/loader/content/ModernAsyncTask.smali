@@ -276,7 +276,7 @@
 
     sget-object v1, Landroidx/loader/content/ModernAsyncTask$Status;->PENDING:Landroidx/loader/content/ModernAsyncTask$Status;
 
-    if-eq v0, v1, :cond_2f
+    if-eq v0, v1, :cond_2e
 
     sget-object p1, Landroidx/loader/content/ModernAsyncTask$4;->$SwitchMap$androidx$loader$content$ModernAsyncTask$Status:[I
 
@@ -290,7 +290,7 @@
 
     const/4 p2, 0x1
 
-    if-eq p1, p2, :cond_27
+    if-eq p1, p2, :cond_26
 
     const/4 p2, 0x2
 
@@ -307,15 +307,13 @@
     :cond_1e
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->geKewRTXYvSGEX:Ljava/lang/String;
+    const-string p2, "Cannot execute task: the task has already been executed (a task can be executed only once)"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_27
+    :cond_26
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "Cannot execute task: the task is already running."
@@ -324,7 +322,7 @@
 
     throw p1
 
-    :cond_2f
+    :cond_2e
     sget-object v0, Landroidx/loader/content/ModernAsyncTask$Status;->RUNNING:Landroidx/loader/content/ModernAsyncTask$Status;
 
     iput-object v0, p0, Landroidx/loader/content/ModernAsyncTask;->mStatus:Landroidx/loader/content/ModernAsyncTask$Status;

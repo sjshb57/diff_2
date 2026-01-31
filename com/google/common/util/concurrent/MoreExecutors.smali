@@ -434,18 +434,18 @@
     invoke-virtual {v0, v3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
-    :try_end_1f
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_a .. :try_end_1f} :catch_22
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_a .. :try_end_1f} :catch_22
-    .catch Ljava/lang/IllegalAccessException; {:try_start_a .. :try_end_1f} :catch_22
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_a .. :try_end_1f} :catch_22
+    :try_end_20
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_a .. :try_end_20} :catch_23
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_a .. :try_end_20} :catch_23
+    .catch Ljava/lang/IllegalAccessException; {:try_start_a .. :try_end_20} :catch_23
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_a .. :try_end_20} :catch_23
 
-    if-eqz v0, :cond_22
+    if-eqz v0, :cond_23
 
     const/4 v1, 0x1
 
-    :catch_22
-    :cond_22
+    :catch_23
+    :cond_23
     return v1
 .end method
 

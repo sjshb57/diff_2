@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_a1
+    if-eqz v0, :cond_a0
 
     instance-of v1, v0, Landroid/widget/ListView;
 
@@ -86,7 +86,7 @@
 
     iput-object v0, p0, Landroidx/fragment/app/ListFragment;->mList:Landroid/widget/ListView;
 
-    goto :goto_7c
+    goto :goto_7b
 
     :cond_14
     const v1, 0xff0001
@@ -141,7 +141,7 @@
 
     instance-of v1, v0, Landroid/widget/ListView;
 
-    if-nez v1, :cond_60
+    if-nez v1, :cond_5f
 
     if-nez v0, :cond_57
 
@@ -156,31 +156,29 @@
     :cond_57
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->qXkeqKbr:Ljava/lang/String;
+    const-string v1, "Content has view with id attribute \'android.R.id.list\' that is not a ListView class"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_60
+    :cond_5f
     check-cast v0, Landroid/widget/ListView;
 
     iput-object v0, p0, Landroidx/fragment/app/ListFragment;->mList:Landroid/widget/ListView;
 
     iget-object v1, p0, Landroidx/fragment/app/ListFragment;->mEmptyView:Landroid/view/View;
 
-    if-eqz v1, :cond_6c
+    if-eqz v1, :cond_6b
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
-    goto :goto_7c
+    goto :goto_7b
 
-    :cond_6c
+    :cond_6b
     iget-object v0, p0, Landroidx/fragment/app/ListFragment;->mEmptyText:Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_7c
+    if-eqz v0, :cond_7b
 
     iget-object v1, p0, Landroidx/fragment/app/ListFragment;->mStandardEmptyView:Landroid/widget/TextView;
 
@@ -192,8 +190,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
-    :cond_7c
-    :goto_7c
+    :cond_7b
+    :goto_7b
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroidx/fragment/app/ListFragment;->mListShown:Z
@@ -206,7 +204,7 @@
 
     iget-object v0, p0, Landroidx/fragment/app/ListFragment;->mAdapter:Landroid/widget/ListAdapter;
 
-    if-eqz v0, :cond_91
+    if-eqz v0, :cond_90
 
     const/4 v1, 0x0
 
@@ -214,19 +212,19 @@
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/ListFragment;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    goto :goto_99
+    goto :goto_98
 
-    :cond_91
+    :cond_90
     iget-object v0, p0, Landroidx/fragment/app/ListFragment;->mProgressContainer:Landroid/view/View;
 
-    if-eqz v0, :cond_99
+    if-eqz v0, :cond_98
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, v0}, Landroidx/fragment/app/ListFragment;->setListShown(ZZ)V
 
-    :cond_99
-    :goto_99
+    :cond_98
+    :goto_98
     iget-object v0, p0, Landroidx/fragment/app/ListFragment;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroidx/fragment/app/ListFragment;->mRequestFocus:Ljava/lang/Runnable;
@@ -235,7 +233,7 @@
 
     return-void
 
-    :cond_a1
+    :cond_a0
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Content view not yet created"

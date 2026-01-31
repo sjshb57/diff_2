@@ -46,9 +46,7 @@
     const/4 v1, 0x0
 
     :goto_10
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->NTOMIeRBRkmGTq:Ljava/lang/String;
+    const-string v2, "concurrency must be positive."
 
     invoke-static {v1, v2}, Lcom/google/firebase/components/Preconditions;->checkArgument(ZLjava/lang/String;)V
 

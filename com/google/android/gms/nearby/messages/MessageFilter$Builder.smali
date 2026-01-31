@@ -203,9 +203,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->ejXPdbJXwh:Ljava/lang/String;
+    const-string v4, "Invalid value for numAudioBytes: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,14 +217,14 @@
 
     const/16 v0, 0xa
 
-    if-gt p1, v0, :cond_2f
+    if-gt p1, v0, :cond_2e
 
-    goto :goto_30
+    goto :goto_2f
 
-    :cond_2f
+    :cond_2e
     move v1, v2
 
-    :goto_30
+    :goto_2f
     const-string v0, "numAudioBytes is capped by AudioBytes.MAX_SIZE = 10"
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
@@ -307,9 +305,7 @@
 
     const-string v0, "__reserved_namespace"
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/content/Whm/HgKojeDw;->MMjzCeKCqg:Ljava/lang/String;
+    const-string v1, "__i_beacon_id"
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/gms/nearby/messages/MessageFilter$Builder;->zza(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/nearby/messages/MessageFilter$Builder;
 

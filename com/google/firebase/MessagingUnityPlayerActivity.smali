@@ -67,7 +67,7 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_1c
+    if-nez v1, :cond_1d
 
     const-string v1, "message_id"
 
@@ -75,10 +75,10 @@
 
     move-result-object v1
 
-    :cond_1c
-    if-eqz v2, :cond_39
+    :cond_1d
+    if-eqz v2, :cond_3a
 
-    if-eqz v1, :cond_39
+    if-eqz v1, :cond_3a
 
     new-instance v0, Landroid/content/Intent;
 
@@ -100,7 +100,7 @@
 
     invoke-static {p0, v0}, Lcom/google/firebase/messaging/MessageForwardingService;->enqueueWork(Landroid/content/Context;Landroid/content/Intent;)V
 
-    :cond_39
+    :cond_3a
     invoke-virtual {p0, p1}, Lcom/google/firebase/MessagingUnityPlayerActivity;->setIntent(Landroid/content/Intent;)V
 
     return-void

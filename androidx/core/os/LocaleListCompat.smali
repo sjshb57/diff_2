@@ -95,7 +95,7 @@
 
     const/4 v5, 0x1
 
-    if-eqz v1, :cond_37
+    if-eqz v1, :cond_38
 
     invoke-virtual {p0, v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
@@ -103,7 +103,7 @@
 
     array-length v1, v0
 
-    if-le v1, v3, :cond_1f
+    if-le v1, v3, :cond_20
 
     new-instance p0, Ljava/util/Locale;
 
@@ -117,10 +117,10 @@
 
     return-object p0
 
-    :cond_1f
+    :cond_20
     array-length v1, v0
 
-    if-le v1, v5, :cond_2c
+    if-le v1, v5, :cond_2d
 
     new-instance p0, Ljava/util/Locale;
 
@@ -132,10 +132,10 @@
 
     return-object p0
 
-    :cond_2c
+    :cond_2d
     array-length v1, v0
 
-    if-ne v1, v5, :cond_6a
+    if-ne v1, v5, :cond_6b
 
     new-instance p0, Ljava/util/Locale;
 
@@ -145,14 +145,14 @@
 
     return-object p0
 
-    :cond_37
+    :cond_38
     const-string v0, "_"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_83
+    if-eqz v1, :cond_84
 
     invoke-virtual {p0, v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
@@ -160,7 +160,7 @@
 
     array-length v1, v0
 
-    if-le v1, v3, :cond_52
+    if-le v1, v3, :cond_53
 
     new-instance p0, Ljava/util/Locale;
 
@@ -174,10 +174,10 @@
 
     return-object p0
 
-    :cond_52
+    :cond_53
     array-length v1, v0
 
-    if-le v1, v5, :cond_5f
+    if-le v1, v5, :cond_60
 
     new-instance p0, Ljava/util/Locale;
 
@@ -189,10 +189,10 @@
 
     return-object p0
 
-    :cond_5f
+    :cond_60
     array-length v1, v0
 
-    if-ne v1, v5, :cond_6a
+    if-ne v1, v5, :cond_6b
 
     new-instance p0, Ljava/util/Locale;
 
@@ -202,7 +202,7 @@
 
     return-object p0
 
-    :cond_6a
+    :cond_6b
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -225,7 +225,7 @@
 
     throw v0
 
-    :cond_83
+    :cond_84
     new-instance v0, Ljava/util/Locale;
 
     invoke-direct {v0, p0}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
@@ -236,7 +236,7 @@
 .method public static forLanguageTags(Ljava/lang/String;)Landroidx/core/os/LocaleListCompat;
     .registers 5
 
-    if-eqz p0, :cond_26
+    if-eqz p0, :cond_27
 
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
@@ -244,7 +244,7 @@
 
     if-eqz v0, :cond_9
 
-    goto :goto_26
+    goto :goto_27
 
     :cond_9
     const-string v0, ","
@@ -261,8 +261,8 @@
 
     const/4 v2, 0x0
 
-    :goto_14
-    if-ge v2, v0, :cond_21
+    :goto_15
+    if-ge v2, v0, :cond_22
 
     aget-object v3, p0, v2
 
@@ -274,17 +274,17 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_14
+    goto :goto_15
 
-    :cond_21
+    :cond_22
     invoke-static {v1}, Landroidx/core/os/LocaleListCompat;->create([Ljava/util/Locale;)Landroidx/core/os/LocaleListCompat;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_26
-    :goto_26
+    :cond_27
+    :goto_27
     invoke-static {}, Landroidx/core/os/LocaleListCompat;->getEmptyLocaleList()Landroidx/core/os/LocaleListCompat;
 
     move-result-object p0

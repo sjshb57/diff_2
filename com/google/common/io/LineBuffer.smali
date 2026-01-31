@@ -34,30 +34,30 @@
 
     iget-boolean v0, p0, Lcom/google/common/io/LineBuffer;->sawReturn:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_a
 
     const-string v0, "\r\n"
 
-    goto :goto_13
+    goto :goto_14
 
-    :cond_9
+    :cond_a
     const-string v0, "\r"
 
-    goto :goto_13
+    goto :goto_14
 
-    :cond_c
-    if-eqz p1, :cond_11
+    :cond_d
+    if-eqz p1, :cond_12
 
     const-string v0, "\n"
 
-    goto :goto_13
+    goto :goto_14
 
-    :cond_11
+    :cond_12
     const-string v0, ""
 
-    :goto_13
+    :goto_14
     iget-object v1, p0, Lcom/google/common/io/LineBuffer;->line:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

@@ -80,7 +80,7 @@
 
     move-result-object p0
     :try_end_2e
-    .catchall {:try_start_5 .. :try_end_2e} :catchall_4a
+    .catchall {:try_start_5 .. :try_end_2e} :catchall_4b
 
     invoke-virtual {v0}, Landroid/util/JsonReader;->close()V
 
@@ -96,7 +96,7 @@
 
     move-result-object p0
     :try_end_3a
-    .catchall {:try_start_32 .. :try_end_3a} :catchall_4a
+    .catchall {:try_start_32 .. :try_end_3a} :catchall_4b
 
     invoke-virtual {v0}, Landroid/util/JsonReader;->close()V
 
@@ -116,10 +116,10 @@
     invoke-direct {p0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw p0
-    :try_end_4a
-    .catchall {:try_start_3e .. :try_end_4a} :catchall_4a
+    :try_end_4b
+    .catchall {:try_start_3e .. :try_end_4b} :catchall_4b
 
-    :catchall_4a
+    :catchall_4b
     move-exception p0
 
     invoke-virtual {v0}, Landroid/util/JsonReader;->close()V

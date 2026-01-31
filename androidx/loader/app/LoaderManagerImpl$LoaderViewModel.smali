@@ -94,7 +94,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_56
+    if-lez v0, :cond_55
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -108,9 +108,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->BxufMg:Ljava/lang/String;
+    const-string v1, "    "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,14 +118,14 @@
 
     const/4 v1, 0x0
 
-    :goto_23
+    :goto_22
     iget-object v2, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->mLoaders:Landroidx/collection/SparseArrayCompat;
 
     invoke-virtual {v2}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v2
 
-    if-ge v1, v2, :cond_56
+    if-ge v1, v2, :cond_55
 
     iget-object v2, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->mLoaders:Landroidx/collection/SparseArrayCompat;
 
@@ -165,9 +163,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_23
+    goto :goto_22
 
-    :cond_56
+    :cond_55
     return-void
 .end method
 

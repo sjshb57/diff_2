@@ -2096,14 +2096,14 @@
 
     move-result-object p1
     :try_end_10
-    .catch Lcom/google/common/cache/CacheLoader$UnsupportedLoadingOperationException; {:try_start_c .. :try_end_10} :catch_b4
-    .catch Ljava/lang/InterruptedException; {:try_start_c .. :try_end_10} :catch_a6
-    .catch Ljava/lang/RuntimeException; {:try_start_c .. :try_end_10} :catch_9f
-    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_10} :catch_98
-    .catch Ljava/lang/Error; {:try_start_c .. :try_end_10} :catch_91
-    .catchall {:try_start_c .. :try_end_10} :catchall_8e
+    .catch Lcom/google/common/cache/CacheLoader$UnsupportedLoadingOperationException; {:try_start_c .. :try_end_10} :catch_b5
+    .catch Ljava/lang/InterruptedException; {:try_start_c .. :try_end_10} :catch_a7
+    .catch Ljava/lang/RuntimeException; {:try_start_c .. :try_end_10} :catch_a0
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_10} :catch_99
+    .catch Ljava/lang/Error; {:try_start_c .. :try_end_10} :catch_92
+    .catchall {:try_start_c .. :try_end_10} :catchall_8f
 
-    if-eqz p1, :cond_6c
+    if-eqz p1, :cond_6d
 
     invoke-virtual {v0}, Lcom/google/common/base/Stopwatch;->stop()Lcom/google/common/base/Stopwatch;
 
@@ -2199,7 +2199,7 @@
 
     throw p1
 
-    :cond_6c
+    :cond_6d
     iget-object p1, p0, Lcom/google/common/cache/LocalCache;->globalStatsCounter:Lcom/google/common/cache/AbstractCache$StatsCounter;
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -2230,24 +2230,24 @@
 
     throw p1
 
-    :catchall_8e
+    :catchall_8f
     move-exception p1
 
     move v1, v2
 
-    goto :goto_b7
+    goto :goto_b8
 
-    :catch_91
+    :catch_92
     move-exception p1
 
-    :try_start_92
+    :try_start_93
     new-instance p2, Lcom/google/common/util/concurrent/ExecutionError;
 
     invoke-direct {p2, p1}, Lcom/google/common/util/concurrent/ExecutionError;-><init>(Ljava/lang/Error;)V
 
     throw p2
 
-    :catch_98
+    :catch_99
     move-exception p1
 
     new-instance p2, Ljava/util/concurrent/ExecutionException;
@@ -2256,7 +2256,7 @@
 
     throw p2
 
-    :catch_9f
+    :catch_a0
     move-exception p1
 
     new-instance p2, Lcom/google/common/util/concurrent/UncheckedExecutionException;
@@ -2265,7 +2265,7 @@
 
     throw p2
 
-    :catch_a6
+    :catch_a7
     move-exception p1
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -2279,22 +2279,22 @@
     invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
 
     throw p2
-    :try_end_b4
-    .catchall {:try_start_92 .. :try_end_b4} :catchall_8e
+    :try_end_b5
+    .catchall {:try_start_93 .. :try_end_b5} :catchall_8f
 
-    :catch_b4
+    :catch_b5
     move-exception p1
 
-    :try_start_b5
+    :try_start_b6
     throw p1
-    :try_end_b6
-    .catchall {:try_start_b5 .. :try_end_b6} :catchall_b6
+    :try_end_b7
+    .catchall {:try_start_b6 .. :try_end_b7} :catchall_b7
 
-    :catchall_b6
+    :catchall_b7
     move-exception p1
 
-    :goto_b7
-    if-nez v1, :cond_c4
+    :goto_b8
+    if-nez v1, :cond_c5
 
     iget-object p2, p0, Lcom/google/common/cache/LocalCache;->globalStatsCounter:Lcom/google/common/cache/AbstractCache$StatsCounter;
 
@@ -2306,7 +2306,7 @@
 
     invoke-interface {p2, v0, v1}, Lcom/google/common/cache/AbstractCache$StatsCounter;->recordLoadException(J)V
 
-    :cond_c4
+    :cond_c5
     throw p1
 .end method
 

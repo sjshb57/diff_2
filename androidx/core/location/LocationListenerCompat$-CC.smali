@@ -6,12 +6,14 @@
 # direct methods
 .method public static $default$onFlushComplete(Landroidx/core/location/LocationListenerCompat;I)V
     .registers 2
+    .param p0, "_this"  # Landroidx/core/location/LocationListenerCompat;
 
     return-void
 .end method
 
 .method public static $default$onLocationChanged(Landroidx/core/location/LocationListenerCompat;Ljava/util/List;)V
     .registers 5
+    .param p0, "_this"  # Landroidx/core/location/LocationListenerCompat;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -40,18 +42,21 @@
 
 .method public static $default$onProviderDisabled(Landroidx/core/location/LocationListenerCompat;Ljava/lang/String;)V
     .registers 2
+    .param p0, "_this"  # Landroidx/core/location/LocationListenerCompat;
 
     return-void
 .end method
 
 .method public static $default$onProviderEnabled(Landroidx/core/location/LocationListenerCompat;Ljava/lang/String;)V
     .registers 2
+    .param p0, "_this"  # Landroidx/core/location/LocationListenerCompat;
 
     return-void
 .end method
 
 .method public static $default$onStatusChanged(Landroidx/core/location/LocationListenerCompat;Ljava/lang/String;ILandroid/os/Bundle;)V
     .registers 4
+    .param p0, "_this"  # Landroidx/core/location/LocationListenerCompat;
 
     return-void
 .end method

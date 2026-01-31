@@ -356,7 +356,7 @@
 
     monitor-enter v4
 
-    :try_start_b
+    :try_start_c
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v12
@@ -393,17 +393,17 @@
 
     const/4 v10, 0x1
 
-    if-eqz v5, :cond_32
+    if-eqz v5, :cond_33
 
     move/from16 v17, v10
 
-    goto :goto_34
+    goto :goto_35
 
-    :cond_32
+    :cond_33
     move/from16 v17, v11
 
-    :goto_34
-    if-eqz v17, :cond_57
+    :goto_35
+    if-eqz v17, :cond_58
 
     const-string v5, "LocalBroadcastManager"
 
@@ -431,7 +431,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_57
+    :cond_58
     iget-object v3, v1, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->mActions:Ljava/util/HashMap;
 
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -444,13 +444,11 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    if-eqz v3, :cond_169
+    if-eqz v3, :cond_168
 
     if-eqz v17, :cond_79
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->AlyUclEQTIHG:Ljava/lang/String;
+    const-string v5, "LocalBroadcastManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -474,7 +472,7 @@
 
     move-result v5
 
-    if-ge v9, v5, :cond_138
+    if-ge v9, v5, :cond_137
 
     invoke-virtual {v3, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -528,7 +526,7 @@
 
     move v12, v10
 
-    goto/16 :goto_12e
+    goto/16 :goto_12d
 
     :cond_b8
     iget-object v5, v8, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$ReceiverRecord;->filter:Landroid/content/IntentFilter;
@@ -599,14 +597,14 @@
 
     iput-boolean v12, v3, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$ReceiverRecord;->broadcasting:Z
 
-    goto :goto_12e
+    goto :goto_12d
 
     :cond_fb
-    if-eqz v17, :cond_12e
+    if-eqz v17, :cond_12d
 
     const/4 v3, -0x4
 
-    if-eq v5, v3, :cond_116
+    if-eq v5, v3, :cond_115
 
     const/4 v3, -0x3
 
@@ -622,29 +620,27 @@
 
     const-string v3, "unknown reason"
 
-    goto :goto_118
+    goto :goto_117
 
     :cond_10c
     const-string v3, "type"
 
-    goto :goto_118
+    goto :goto_117
 
     :cond_10f
     const-string v3, "data"
 
-    goto :goto_118
+    goto :goto_117
 
     :cond_112
-    const/4 v3, 0x0
+    const-string v3, "action"
 
-    sget-object v3, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->xrYSXBXc:Ljava/lang/String;
+    goto :goto_117
 
-    goto :goto_118
-
-    :cond_116
+    :cond_115
     const-string v3, "category"
 
-    :goto_118
+    :goto_117
     const-string v5, "LocalBroadcastManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -663,8 +659,8 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_12e
-    :goto_12e
+    :cond_12d
+    :goto_12d
     add-int/lit8 v9, v20, 0x1
 
     move v10, v12
@@ -677,19 +673,19 @@
 
     goto/16 :goto_7b
 
-    :cond_138
+    :cond_137
     move v12, v10
 
-    if-eqz v2, :cond_167
+    if-eqz v2, :cond_166
 
     const/4 v11, 0x0
 
-    :goto_13c
+    :goto_13b
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    if-ge v11, v3, :cond_14e
+    if-ge v11, v3, :cond_14d
 
     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -703,9 +699,9 @@
 
     add-int/lit8 v11, v11, 0x1
 
-    goto :goto_13c
+    goto :goto_13b
 
-    :cond_14e
+    :cond_14d
     iget-object v3, v1, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->mPendingBroadcasts:Ljava/util/ArrayList;
 
     new-instance v5, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;
@@ -720,36 +716,36 @@
 
     move-result v0
 
-    if-nez v0, :cond_165
+    if-nez v0, :cond_164
 
     iget-object v0, v1, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v12}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    :cond_165
+    :cond_164
     monitor-exit v4
 
     return v12
 
-    :cond_167
+    :cond_166
     const/4 v5, 0x0
 
-    goto :goto_16a
+    goto :goto_169
 
-    :cond_169
+    :cond_168
     move v5, v11
 
-    :goto_16a
+    :goto_169
     monitor-exit v4
 
     return v5
 
-    :catchall_16c
+    :catchall_16b
     move-exception v0
 
     monitor-exit v4
-    :try_end_16e
-    .catchall {:try_start_b .. :try_end_16e} :catchall_16c
+    :try_end_16d
+    .catchall {:try_start_c .. :try_end_16d} :catchall_16b
 
     throw v0
 .end method

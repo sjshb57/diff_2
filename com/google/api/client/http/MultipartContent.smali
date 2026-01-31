@@ -296,7 +296,7 @@
 
     const-string v5, "\r\n"
 
-    if-eqz v3, :cond_a9
+    if-eqz v3, :cond_aa
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -316,13 +316,13 @@
 
     iget-object v8, v3, Lcom/google/api/client/http/MultipartContent$Part;->headers:Lcom/google/api/client/http/HttpHeaders;
 
-    if-eqz v8, :cond_36
+    if-eqz v8, :cond_37
 
     iget-object v8, v3, Lcom/google/api/client/http/MultipartContent$Part;->headers:Lcom/google/api/client/http/HttpHeaders;
 
     invoke-virtual {v6, v8}, Lcom/google/api/client/http/HttpHeaders;->fromHttpHeaders(Lcom/google/api/client/http/HttpHeaders;)V
 
-    :cond_36
+    :cond_37
     invoke-virtual {v6, v7}, Lcom/google/api/client/http/HttpHeaders;->setContentEncoding(Ljava/lang/String;)Lcom/google/api/client/http/HttpHeaders;
 
     move-result-object v8
@@ -345,7 +345,7 @@
 
     iget-object v8, v3, Lcom/google/api/client/http/MultipartContent$Part;->content:Lcom/google/api/client/http/HttpContent;
 
-    if-eqz v8, :cond_8c
+    if-eqz v8, :cond_8d
 
     const-string v10, "binary"
 
@@ -367,15 +367,15 @@
 
     iget-object v3, v3, Lcom/google/api/client/http/MultipartContent$Part;->encoding:Lcom/google/api/client/http/HttpEncoding;
 
-    if-nez v3, :cond_6c
+    if-nez v3, :cond_6d
 
     invoke-interface {v8}, Lcom/google/api/client/http/HttpContent;->getLength()J
 
     move-result-wide v9
 
-    goto :goto_7e
+    goto :goto_7f
 
-    :cond_6c
+    :cond_6d
     invoke-interface {v3}, Lcom/google/api/client/http/HttpEncoding;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -394,12 +394,12 @@
 
     move-wide v9, v10
 
-    :goto_7e
+    :goto_7f
     const-wide/16 v11, -0x1
 
     cmp-long v3, v9, v11
 
-    if-eqz v3, :cond_8d
+    if-eqz v3, :cond_8e
 
     invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -407,13 +407,13 @@
 
     invoke-virtual {v6, v3}, Lcom/google/api/client/http/HttpHeaders;->setContentLength(Ljava/lang/Long;)Lcom/google/api/client/http/HttpHeaders;
 
-    goto :goto_8d
-
-    :cond_8c
-    move-object v8, v7
+    goto :goto_8e
 
     :cond_8d
-    :goto_8d
+    move-object v8, v7
+
+    :cond_8e
+    :goto_8e
     invoke-virtual {v0, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -422,7 +422,7 @@
 
     invoke-static {v6, v7, v7, v0}, Lcom/google/api/client/http/HttpHeaders;->serializeHeadersForMultipartRequests(Lcom/google/api/client/http/HttpHeaders;Ljava/lang/StringBuilder;Ljava/util/logging/Logger;Ljava/io/Writer;)V
 
-    if-eqz v8, :cond_a4
+    if-eqz v8, :cond_a5
 
     invoke-virtual {v0, v5}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
@@ -430,12 +430,12 @@
 
     invoke-interface {v8, p1}, Lcom/google/api/client/util/StreamingContent;->writeTo(Ljava/io/OutputStream;)V
 
-    :cond_a4
+    :cond_a5
     invoke-virtual {v0, v5}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     goto/16 :goto_13
 
-    :cond_a9
+    :cond_aa
     invoke-virtual {v0, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V

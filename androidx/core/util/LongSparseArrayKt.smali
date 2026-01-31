@@ -186,9 +186,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->YvgAqztOSe:Ljava/lang/String;
+    const-string v0, "action"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -198,8 +196,8 @@
 
     const/4 v1, 0x0
 
-    :goto_10
-    if-ge v1, v0, :cond_24
+    :goto_f
+    if-ge v1, v0, :cond_23
 
     invoke-virtual {p0, v1}, Landroid/util/LongSparseArray;->keyAt(I)J
 
@@ -217,9 +215,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_10
+    goto :goto_f
 
-    :cond_24
+    :cond_23
     return-void
 .end method
 

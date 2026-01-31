@@ -198,9 +198,7 @@
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/common/html/ehW/oZEOPkNlS;->ioYd:Ljava/lang/String;
+    const-string v0, "mLoader="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -216,9 +214,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->ZKOkTYMZZ:Ljava/lang/String;
+    const-string v2, "  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -230,7 +226,7 @@
 
     iget-object p2, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mObserver:Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;
 
-    if-eqz p2, :cond_61
+    if-eqz p2, :cond_5f
 
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -258,7 +254,7 @@
 
     invoke-virtual {p2, p4, p3}, Landroidx/loader/app/LoaderManagerImpl$LoaderObserver;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    :cond_61
+    :cond_5f
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p2, "mData="
@@ -363,7 +359,7 @@
 
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_17
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -377,13 +373,11 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/api/client/util/Uhr/zXgie;->tnfoiTA:Ljava/lang/String;
+    const-string v1, "LoaderManager"
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_18
+    :cond_17
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->mLoader:Landroidx/loader/content/Loader;
 
     invoke-virtual {v0}, Landroidx/loader/content/Loader;->startLoading()V
@@ -436,13 +430,11 @@
 
     const-string v0, "LoaderManager"
 
-    if-eqz p1, :cond_18
+    if-eqz p1, :cond_17
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->jEnotIXFCNhhGm:Ljava/lang/String;
+    const-string v1, "onLoadComplete: "
 
     invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -454,7 +446,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_18
+    :cond_17
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -463,25 +455,25 @@
 
     move-result-object v1
 
-    if-ne p1, v1, :cond_26
+    if-ne p1, v1, :cond_25
 
     invoke-virtual {p0, p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->setValue(Ljava/lang/Object;)V
 
-    goto :goto_32
+    goto :goto_31
 
-    :cond_26
+    :cond_25
     sget-boolean p1, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
-    if-eqz p1, :cond_2f
+    if-eqz p1, :cond_2e
 
     const-string p1, "onLoadComplete was incorrectly called on a background thread"
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2f
+    :cond_2e
     invoke-virtual {p0, p2}, Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;->postValue(Ljava/lang/Object;)V
 
-    :goto_32
+    :goto_31
     return-void
 .end method
 
@@ -606,9 +598,7 @@
 
     invoke-static {v1, v0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->ijj:Ljava/lang/String;
+    const-string v1, "}}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

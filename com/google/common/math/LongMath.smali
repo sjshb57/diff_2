@@ -713,9 +713,7 @@
     :goto_17
     or-int v4, v2, v3
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->LRqFxBevKwNFp:Ljava/lang/String;
+    const-string v5, "checkedAdd"
 
     move-wide v6, p0
 
@@ -1314,16 +1312,16 @@
 
     array-length v1, v0
 
-    if-ge p0, v1, :cond_d
+    if-ge p0, v1, :cond_e
 
     aget-wide v1, v0, p0
 
-    goto :goto_12
+    goto :goto_13
 
-    :cond_d
+    :cond_e
     const-wide v1, 0x7fffffffffffffffL
 
-    :goto_12
+    :goto_13
     return-wide v1
 .end method
 

@@ -345,9 +345,7 @@
     return-object p0
 
     :cond_b
-    const/4 p1, 0x0
-
-    sget-object p1, Lkotlin/EDDN/hfnXJuYOaqC;->QzhV:Ljava/lang/String;
+    const-string p1, "MenuItemCompat"
 
     const-string v0, "setActionProvider: item does not implement SupportMenuItem; ignoring"
 

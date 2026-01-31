@@ -32,8 +32,8 @@
 
     const/4 v3, 0x0
 
-    :goto_c
-    if-ge v3, v2, :cond_1e
+    :goto_d
+    if-ge v3, v2, :cond_1f
 
     aget-object v4, p1, v3
 
@@ -45,16 +45,16 @@
 
     move-result v5
 
-    if-eqz v5, :cond_1b
+    if-eqz v5, :cond_1c
 
     return-object v4
 
-    :cond_1b
+    :cond_1c
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_1e
+    :cond_1f
     return-object v0
 .end method
 

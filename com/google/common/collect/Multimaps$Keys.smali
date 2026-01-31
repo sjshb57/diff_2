@@ -241,7 +241,7 @@
 
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
-    if-nez p2, :cond_c
+    if-nez p2, :cond_d
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Multimaps$Keys;->count(Ljava/lang/Object;)I
 
@@ -249,7 +249,7 @@
 
     return p1
 
-    :cond_c
+    :cond_d
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->asMap()Ljava/util/Map;
@@ -264,28 +264,28 @@
 
     const/4 v0, 0x0
 
-    if-nez p1, :cond_1c
+    if-nez p1, :cond_1d
 
     return v0
 
-    :cond_1c
+    :cond_1d
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v1
 
-    if-lt p2, v1, :cond_26
+    if-lt p2, v1, :cond_27
 
     invoke-interface {p1}, Ljava/util/Collection;->clear()V
 
-    goto :goto_35
+    goto :goto_36
 
-    :cond_26
+    :cond_27
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :goto_2a
-    if-ge v0, p2, :cond_35
+    :goto_2b
+    if-ge v0, p2, :cond_36
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -293,10 +293,10 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_2a
+    goto :goto_2b
 
-    :cond_35
-    :goto_35
+    :cond_36
+    :goto_36
     return v1
 .end method
 

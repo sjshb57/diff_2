@@ -152,7 +152,7 @@
 
     invoke-virtual {p2, p1, v0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->putLoader(ILandroidx/loader/app/LoaderManagerImpl$LoaderInfo;)V
     :try_end_59
-    .catchall {:try_start_4 .. :try_end_59} :catchall_6e
+    .catchall {:try_start_4 .. :try_end_59} :catchall_6d
 
     iget-object p1, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
@@ -170,17 +170,15 @@
     :try_start_65
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/appcheck/debug/internal/Vw/hqIkIHp;->RdPMtpVMvSiGnig:Ljava/lang/String;
+    const-string p2, "Object returned from onCreateLoader must not be null"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-    :try_end_6e
-    .catchall {:try_start_65 .. :try_end_6e} :catchall_6e
+    :try_end_6d
+    .catchall {:try_start_65 .. :try_end_6d} :catchall_6d
 
-    :catchall_6e
+    :catchall_6d
     move-exception p1
 
     iget-object p2, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
@@ -506,7 +504,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_4d
+    if-nez v0, :cond_4e
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -516,11 +514,11 @@
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_45
+    if-ne v0, v1, :cond_46
 
     sget-boolean v0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_32
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -544,14 +542,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_31
+    :cond_32
     iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl;->mLoaderViewModel:Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-virtual {v0, p1}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->getLoader(I)Landroidx/loader/app/LoaderManagerImpl$LoaderInfo;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3f
+    if-eqz v0, :cond_40
 
     const/4 v1, 0x0
 
@@ -559,19 +557,19 @@
 
     move-result-object v0
 
-    goto :goto_40
+    goto :goto_41
 
-    :cond_3f
+    :cond_40
     const/4 v0, 0x0
 
-    :goto_40
+    :goto_41
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/loader/app/LoaderManagerImpl;->createAndInstallLoader(ILandroid/os/Bundle;Landroidx/loader/app/LoaderManager$LoaderCallbacks;Landroidx/loader/content/Loader;)Landroidx/loader/content/Loader;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_45
+    :cond_46
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "restartLoader must be called on the main thread"
@@ -580,7 +578,7 @@
 
     throw p1
 
-    :cond_4d
+    :cond_4e
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "Called while creating a loader"

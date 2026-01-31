@@ -302,7 +302,7 @@
 
     cmp-long v1, v1, v3
 
-    if-eqz v1, :cond_40
+    if-eqz v1, :cond_41
 
     const-string v1, "@"
 
@@ -316,7 +316,7 @@
 
     const/16 v2, 0x64
 
-    if-eq v1, v2, :cond_3a
+    if-eq v1, v2, :cond_3b
 
     const/16 v2, 0x66
 
@@ -326,40 +326,40 @@
 
     if-eq v1, v2, :cond_2e
 
-    goto :goto_45
+    goto :goto_46
 
     :cond_2e
     const-string v1, " LOW_POWER"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_45
+    goto :goto_46
 
     :cond_34
     const-string v1, " BALANCED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_45
+    goto :goto_46
 
-    :cond_3a
+    :cond_3b
     const-string v1, " HIGH_ACCURACY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_45
+    goto :goto_46
 
-    :cond_40
+    :cond_41
     const-string v1, "PASSIVE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_45
+    :goto_46
     iget-wide v1, p0, Landroidx/core/location/LocationRequestCompat;->mDurationMillis:J
 
     cmp-long v1, v1, v3
 
-    if-eqz v1, :cond_55
+    if-eqz v1, :cond_56
 
     const-string v1, ", duration="
 
@@ -369,12 +369,12 @@
 
     invoke-static {v1, v2, v0}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    :cond_55
+    :cond_56
     iget v1, p0, Landroidx/core/location/LocationRequestCompat;->mMaxUpdates:I
 
     const v2, 0x7fffffff
 
-    if-eq v1, v2, :cond_66
+    if-eq v1, v2, :cond_67
 
     const-string v1, ", maxUpdates="
 
@@ -384,20 +384,20 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_66
+    :cond_67
     iget-wide v1, p0, Landroidx/core/location/LocationRequestCompat;->mMinUpdateIntervalMillis:J
 
     const-wide/16 v3, -0x1
 
     cmp-long v3, v1, v3
 
-    if-eqz v3, :cond_7e
+    if-eqz v3, :cond_7f
 
     iget-wide v3, p0, Landroidx/core/location/LocationRequestCompat;->mIntervalMillis:J
 
     cmp-long v1, v1, v3
 
-    if-gez v1, :cond_7e
+    if-gez v1, :cond_7f
 
     const-string v1, ", minUpdateInterval="
 
@@ -407,7 +407,7 @@
 
     invoke-static {v1, v2, v0}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    :cond_7e
+    :cond_7f
     iget v1, p0, Landroidx/core/location/LocationRequestCompat;->mMinUpdateDistanceMeters:F
 
     float-to-double v1, v1
@@ -416,7 +416,7 @@
 
     cmpl-double v1, v1, v3
 
-    if-lez v1, :cond_91
+    if-lez v1, :cond_92
 
     const-string v1, ", minUpdateDistance="
 
@@ -426,7 +426,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    :cond_91
+    :cond_92
     iget-wide v1, p0, Landroidx/core/location/LocationRequestCompat;->mMaxUpdateDelayMillis:J
 
     const-wide/16 v3, 0x2
@@ -437,7 +437,7 @@
 
     cmp-long v1, v1, v3
 
-    if-lez v1, :cond_a6
+    if-lez v1, :cond_a7
 
     const-string v1, ", maxUpdateDelay="
 
@@ -447,7 +447,7 @@
 
     invoke-static {v1, v2, v0}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    :cond_a6
+    :cond_a7
     const/16 v1, 0x5d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;

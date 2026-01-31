@@ -523,19 +523,17 @@
 
     sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
-    if-ne p0, v0, :cond_45
+    if-ne p0, v0, :cond_44
 
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->KreDdmvYcxqorGi:Ljava/lang/String;
+    const-string v0, "Map cannot have both weak and dummy values"
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    :cond_45
+    :cond_44
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V

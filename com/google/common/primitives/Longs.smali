@@ -292,9 +292,7 @@
     move v0, v2
 
     :goto_a
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/google/api/client/util/Uhr/zXgie;->RVIUwjEoInDbyxJ:Ljava/lang/String;
+    const-string v4, "array too small: %s < %s"
 
     array-length v5, p0
 

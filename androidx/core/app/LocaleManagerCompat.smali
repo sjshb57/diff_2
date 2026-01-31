@@ -54,9 +54,7 @@
 .method private static getLocaleManagerForApplication(Landroid/content/Context;)Ljava/lang/Object;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->cCaRNPdhrewO:Ljava/lang/String;
+    const-string v0, "locale"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

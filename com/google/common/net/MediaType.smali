@@ -732,9 +732,7 @@
 
     sput-object v1, Lcom/google/common/net/MediaType;->OGG_VIDEO:Lcom/google/common/net/MediaType;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->BgoN:Ljava/lang/String;
+    const-string v1, "quicktime"
 
     invoke-static {v4, v1}, Lcom/google/common/net/MediaType;->createConstant(Ljava/lang/String;Ljava/lang/String;)Lcom/google/common/net/MediaType;
 
@@ -1158,9 +1156,7 @@
 
     sput-object v0, Lcom/google/common/net/MediaType;->ZIP:Lcom/google/common/net/MediaType;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->ArYYtAe:Ljava/lang/String;
+    const-string v0, "; "
 
     invoke-static {v0}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
 
@@ -1526,9 +1522,7 @@
 .method static createTextType(Ljava/lang/String;)Lcom/google/common/net/MediaType;
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->tSaEdPXFhZBbN:Ljava/lang/String;
+    const-string v0, "text"
 
     invoke-static {v0, p0}, Lcom/google/common/net/MediaType;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/common/net/MediaType;
 

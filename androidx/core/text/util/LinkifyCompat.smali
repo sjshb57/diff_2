@@ -769,7 +769,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_44
+    if-eqz v1, :cond_43
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
@@ -777,7 +777,7 @@
 
     if-gez v2, :cond_12
 
-    goto :goto_44
+    goto :goto_43
 
     :cond_12
     new-instance v3, Landroidx/core/text/util/LinkifyCompat$LinkSpec;
@@ -802,21 +802,19 @@
 
     move-result-object p1
     :try_end_26
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_5 .. :try_end_26} :catch_44
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_5 .. :try_end_26} :catch_43
 
     :try_start_26
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/browser/trusted/sharing/ojW/qJupgSKxzPXJIM;->ybxAZEx:Ljava/lang/String;
+    const-string v2, "UTF-8"
 
     invoke-static {v1, v2}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
-    :try_end_2d
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_26 .. :try_end_2d} :catch_5
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_26 .. :try_end_2d} :catch_44
+    :try_end_2c
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_26 .. :try_end_2c} :catch_5
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_26 .. :try_end_2c} :catch_43
 
-    :try_start_2d
+    :try_start_2c
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -834,14 +832,14 @@
     iput-object v1, v3, Landroidx/core/text/util/LinkifyCompat$LinkSpec;->url:Ljava/lang/String;
 
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_43
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_2d .. :try_end_43} :catch_44
+    :try_end_42
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_2c .. :try_end_42} :catch_43
 
     goto :goto_5
 
-    :catch_44
-    :cond_44
-    :goto_44
+    :catch_43
+    :cond_43
+    :goto_43
     return-void
 .end method
 
