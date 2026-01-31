@@ -123,9 +123,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lkotlin/collections/zgTb/JhPPV;->ZSXjyYoOg:Ljava/lang/String;
+    const-string v3, "Cannot advance the iterator beyond "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

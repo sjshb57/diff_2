@@ -201,11 +201,9 @@
 
     const/4 v2, 0x3
 
-    if-nez v1, :cond_5d
+    if-nez v1, :cond_5c
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->ADJgLViSqRdLFu:Ljava/lang/String;
+    const-string p0, "Rpc"
 
     invoke-static {p0, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
@@ -229,14 +227,14 @@
 
     return-void
 
-    :cond_5d
+    :cond_5c
     const-string v0, "registration_id"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_6b
+    if-nez v0, :cond_6a
 
     const-string v0, "unregistered"
 
@@ -244,7 +242,7 @@
 
     move-result-object v0
 
-    :cond_6b
+    :cond_6a
     const/4 v1, 0x2
 
     const/4 v3, 0x1
@@ -257,7 +255,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_8f
+    if-nez v0, :cond_8e
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -283,7 +281,7 @@
 
     return-void
 
-    :cond_8f
+    :cond_8e
     const-string v4, "Rpc"
 
     invoke-static {v4, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -969,7 +967,7 @@
 
     const v1, 0xdedfaa0
 
-    if-lt v0, v1, :cond_36
+    if-lt v0, v1, :cond_34
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -979,9 +977,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->PwsScOxsE:Ljava/lang/String;
+    const-string v2, "google.message_id"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -989,11 +985,9 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_2a
+    if-eqz p1, :cond_28
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->vfIFsmQvAoSwMqH:Ljava/lang/String;
+    const-string v1, "google.product_id"
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -1001,7 +995,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_2a
+    :cond_28
     iget-object p1, p0, Lcom/google/android/gms/cloudmessaging/Rpc;->zzf:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/google/android/gms/cloudmessaging/zzv;->zzb(Landroid/content/Context;)Lcom/google/android/gms/cloudmessaging/zzv;
@@ -1016,7 +1010,7 @@
 
     return-object p1
 
-    :cond_36
+    :cond_34
     new-instance p1, Ljava/io/IOException;
 
     const-string v0, "SERVICE_NOT_AVAILABLE"

@@ -63,7 +63,7 @@
 
     check-cast v0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
-    if-eqz v0, :cond_3f
+    if-eqz v0, :cond_40
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceListener;->service:Lcom/google/common/util/concurrent/Service;
 
@@ -71,7 +71,7 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    if-eqz v1, :cond_38
+    if-eqz v1, :cond_39
 
     invoke-static {}, Lcom/google/common/util/concurrent/ServiceManager;->access$200()Ljava/util/logging/Logger;
 
@@ -105,14 +105,14 @@
 
     invoke-virtual {v1, v2, v3, p2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_38
+    :cond_39
     iget-object p2, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceListener;->service:Lcom/google/common/util/concurrent/Service;
 
     sget-object v1, Lcom/google/common/util/concurrent/Service$State;->FAILED:Lcom/google/common/util/concurrent/Service$State;
 
     invoke-virtual {v0, p2, p1, v1}, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->transitionService(Lcom/google/common/util/concurrent/Service;Lcom/google/common/util/concurrent/Service$State;Lcom/google/common/util/concurrent/Service$State;)V
 
-    :cond_3f
+    :cond_40
     return-void
 .end method
 

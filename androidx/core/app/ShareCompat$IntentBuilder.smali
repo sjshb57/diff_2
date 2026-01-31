@@ -449,7 +449,7 @@
 
     const-string v1, "android.intent.extra.STREAM"
 
-    if-eqz v0, :cond_45
+    if-eqz v0, :cond_46
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -457,7 +457,7 @@
 
     const/4 v2, 0x1
 
-    if-le v0, v2, :cond_45
+    if-le v0, v2, :cond_46
 
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentBuilder;->mIntent:Landroid/content/Intent;
 
@@ -477,9 +477,9 @@
 
     invoke-static {v0, v1}, Landroidx/core/app/ShareCompat$Api16Impl;->migrateExtraStreamToClipData(Landroid/content/Intent;Ljava/util/ArrayList;)V
 
-    goto :goto_76
+    goto :goto_77
 
-    :cond_45
+    :cond_46
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentBuilder;->mIntent:Landroid/content/Intent;
 
     const-string v2, "android.intent.action.SEND"
@@ -488,13 +488,13 @@
 
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentBuilder;->mStreams:Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6d
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_6c
+    if-nez v0, :cond_6d
 
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentBuilder;->mIntent:Landroid/content/Intent;
 
@@ -516,9 +516,9 @@
 
     invoke-static {v0, v1}, Landroidx/core/app/ShareCompat$Api16Impl;->migrateExtraStreamToClipData(Landroid/content/Intent;Ljava/util/ArrayList;)V
 
-    goto :goto_76
+    goto :goto_77
 
-    :cond_6c
+    :cond_6d
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentBuilder;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
@@ -527,7 +527,7 @@
 
     invoke-static {v0}, Landroidx/core/app/ShareCompat$Api16Impl;->removeClipData(Landroid/content/Intent;)V
 
-    :goto_76
+    :goto_77
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentBuilder;->mIntent:Landroid/content/Intent;
 
     return-object v0

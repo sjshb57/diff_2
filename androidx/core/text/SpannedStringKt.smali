@@ -113,9 +113,7 @@
 
     move-result-object p0
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/core/util/LEr/bFMYUr;->UBOu:Ljava/lang/String;
+    const-string p1, "getSpans(start, end, T::class.java)"
 
     invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

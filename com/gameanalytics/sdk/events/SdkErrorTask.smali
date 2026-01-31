@@ -480,7 +480,7 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_6f
+    if-eqz p1, :cond_71
 
     :try_start_2
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getResponseCode()I
@@ -496,7 +496,7 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_a} :catch_c
 
-    goto :goto_e
+    goto :goto_f
 
     :catch_b
     const/4 v0, 0x0
@@ -504,14 +504,14 @@
     :catch_c
     const-string p1, ""
 
-    :goto_e
+    :goto_f
     iget-object v1, p0, Lcom/gameanalytics/sdk/events/SdkErrorTask;->body:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_30
+    if-eqz v1, :cond_32
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -535,10 +535,10 @@
 
     return-void
 
-    :cond_30
+    :cond_32
     const/16 v1, 0xc8
 
-    if-eq v0, v1, :cond_58
+    if-eq v0, v1, :cond_5a
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -570,7 +570,7 @@
 
     return-void
 
-    :cond_58
+    :cond_5a
     sget-object p1, Lcom/gameanalytics/sdk/events/SdkErrorTask;->countMap:Ljava/util/HashMap;
 
     iget-object v0, p0, Lcom/gameanalytics/sdk/events/SdkErrorTask;->type:Ljava/lang/String;
@@ -593,6 +593,6 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_6f
+    :cond_71
     return-void
 .end method

@@ -1717,13 +1717,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     const-string v0, "{}"
 
     return-object v0
 
-    :cond_9
+    :cond_a
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget v1, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
@@ -1738,34 +1738,34 @@
 
     const/4 v1, 0x0
 
-    :goto_18
+    :goto_19
     iget v2, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
 
-    if-ge v1, v2, :cond_47
+    if-ge v1, v2, :cond_48
 
-    if-lez v1, :cond_23
+    if-lez v1, :cond_24
 
     const-string v2, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_23
+    :cond_24
     invoke-virtual {p0, v1}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     const-string v3, "(this Map)"
 
-    if-eq v2, p0, :cond_2f
+    if-eq v2, p0, :cond_30
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_32
+    goto :goto_33
 
-    :cond_2f
+    :cond_30
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_32
+    :goto_33
     const/16 v2, 0x3d
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -1774,21 +1774,21 @@
 
     move-result-object v2
 
-    if-eq v2, p0, :cond_41
+    if-eq v2, p0, :cond_42
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_44
+    goto :goto_45
 
-    :cond_41
+    :cond_42
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_44
+    :goto_45
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_18
+    goto :goto_19
 
-    :cond_47
+    :cond_48
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;

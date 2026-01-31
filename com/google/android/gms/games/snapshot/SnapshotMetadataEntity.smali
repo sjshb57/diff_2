@@ -436,9 +436,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->fqtCGnAfKdW:Ljava/lang/String;
+    const-string v1, "Description"
 
     invoke-interface {p0}, Lcom/google/android/gms/games/snapshot/SnapshotMetadata;->getDescription()Ljava/lang/String;
 

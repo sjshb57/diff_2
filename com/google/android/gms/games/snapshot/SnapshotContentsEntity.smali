@@ -72,7 +72,7 @@
 
     monitor-enter v0
 
-    :try_start_e
+    :try_start_f
     iget-object v2, p0, Lcom/google/android/gms/games/snapshot/SnapshotContentsEntity;->zzb:Lcom/google/android/gms/drive/Contents;
 
     invoke-virtual {v2}, Lcom/google/android/gms/drive/Contents;->getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
@@ -90,10 +90,10 @@
     new-instance v2, Ljava/io/BufferedOutputStream;
 
     invoke-direct {v2, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_22
-    .catchall {:try_start_e .. :try_end_22} :catchall_44
+    :try_end_23
+    .catchall {:try_start_f .. :try_end_23} :catchall_45
 
-    :try_start_22
+    :try_start_23
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v3
@@ -104,7 +104,7 @@
 
     invoke-virtual {v2, p2, p3, p4}, Ljava/io/OutputStream;->write([BII)V
 
-    if-eqz p5, :cond_34
+    if-eqz p5, :cond_35
 
     array-length p1, p2
 
@@ -112,18 +112,18 @@
 
     invoke-virtual {v3, p1, p2}, Ljava/nio/channels/FileChannel;->truncate(J)Ljava/nio/channels/FileChannel;
 
-    :cond_34
+    :cond_35
     invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
-    :try_end_37
-    .catch Ljava/io/IOException; {:try_start_22 .. :try_end_37} :catch_39
-    .catchall {:try_start_22 .. :try_end_37} :catchall_44
+    :try_end_38
+    .catch Ljava/io/IOException; {:try_start_23 .. :try_end_38} :catch_3a
+    .catchall {:try_start_23 .. :try_end_38} :catchall_45
 
-    :try_start_37
+    :try_start_38
     monitor-exit v0
 
     return v1
 
-    :catch_39
+    :catch_3a
     move-exception p1
 
     const-string p2, "SnapshotContentsEntity"
@@ -138,12 +138,12 @@
 
     return p1
 
-    :catchall_44
+    :catchall_45
     move-exception p1
 
     monitor-exit v0
-    :try_end_46
-    .catchall {:try_start_37 .. :try_end_46} :catchall_44
+    :try_end_47
+    .catchall {:try_start_38 .. :try_end_47} :catchall_45
 
     throw p1
 .end method
@@ -252,7 +252,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_22
-    .catchall {:try_start_e .. :try_end_22} :catchall_42
+    .catchall {:try_start_e .. :try_end_22} :catchall_43
 
     :try_start_22
     invoke-virtual {v2}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
@@ -276,7 +276,7 @@
     invoke-virtual {v2, v4, v5}, Ljava/nio/channels/FileChannel;->position(J)Ljava/nio/channels/FileChannel;
     :try_end_37
     .catch Ljava/io/IOException; {:try_start_22 .. :try_end_37} :catch_39
-    .catchall {:try_start_22 .. :try_end_37} :catchall_42
+    .catchall {:try_start_22 .. :try_end_37} :catchall_43
 
     :try_start_37
     monitor-exit v0
@@ -294,12 +294,12 @@
 
     throw v1
 
-    :catchall_42
+    :catchall_43
     move-exception v1
 
     monitor-exit v0
-    :try_end_44
-    .catchall {:try_start_37 .. :try_end_44} :catchall_42
+    :try_end_45
+    .catchall {:try_start_37 .. :try_end_45} :catchall_43
 
     throw v1
 .end method

@@ -71,9 +71,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->VplwIvlYQjyFrEG:Ljava/lang/String;
+    const-string v0, "builderAction"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -306,8 +304,8 @@
 
     const/4 v1, 0x0
 
-    :goto_18
-    if-ge v1, p2, :cond_28
+    :goto_19
+    if-ge v1, p2, :cond_29
 
     aget-object v2, p1, v1
 
@@ -321,9 +319,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_18
+    goto :goto_19
 
-    :cond_28
+    :cond_29
     return-object p0
 .end method
 

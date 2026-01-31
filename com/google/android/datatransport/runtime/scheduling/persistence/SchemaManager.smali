@@ -262,9 +262,7 @@
 .method static synthetic lambda$static$3(Landroid/database/sqlite/SQLiteDatabase;)V
     .registers 2
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/flatbuffers/OSq/msMBb;->uGnbYnzVdQiu:Ljava/lang/String;
+    const-string v0, "ALTER TABLE events ADD COLUMN inline BOOLEAN NOT NULL DEFAULT 1"
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 

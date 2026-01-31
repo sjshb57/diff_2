@@ -653,30 +653,28 @@
 
     move-result v1
 
-    if-nez v1, :cond_1a
+    if-nez v1, :cond_19
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->anZb:Ljava/lang/String;
+    const-string v1, "android.intent.action.SEND_MULTIPLE"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_17
+
+    goto :goto_19
+
+    :cond_17
+    const/4 v0, 0x0
 
     goto :goto_1a
 
-    :cond_18
-    const/4 v0, 0x0
-
-    goto :goto_1b
-
-    :cond_1a
-    :goto_1a
+    :cond_19
+    :goto_19
     const/4 v0, 0x1
 
-    :goto_1b
+    :goto_1a
     return v0
 .end method
 

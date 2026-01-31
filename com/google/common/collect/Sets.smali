@@ -119,9 +119,7 @@
     const/4 v0, 0x0
 
     :goto_12
-    const/4 v1, 0x0
-
-    sget-object v1, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->GJUIOkjLpcqfti:Ljava/lang/String;
+    const-string v1, "size (%s) must be <= set.size() (%s)"
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->size()I
 
@@ -129,7 +127,7 @@
 
     invoke-static {v0, v1, p1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
-    if-nez p1, :cond_27
+    if-nez p1, :cond_26
 
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
@@ -141,12 +139,12 @@
 
     return-object p0
 
-    :cond_27
+    :cond_26
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->size()I
 
     move-result v0
 
-    if-ne p1, v0, :cond_36
+    if-ne p1, v0, :cond_35
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->keySet()Lcom/google/common/collect/ImmutableSet;
 
@@ -158,7 +156,7 @@
 
     return-object p0
 
-    :cond_36
+    :cond_35
     new-instance v0, Lcom/google/common/collect/Sets$5;
 
     invoke-direct {v0, p1, p0}, Lcom/google/common/collect/Sets$5;-><init>(ILcom/google/common/collect/ImmutableMap;)V

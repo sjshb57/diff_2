@@ -44,7 +44,7 @@
 
     iget-object v0, p0, Lcom/android/billingclient/api/SkuDetailsParams$Builder;->zza:Ljava/lang/String;
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_1e
 
     iget-object v1, p0, Lcom/android/billingclient/api/SkuDetailsParams$Builder;->zzb:Ljava/util/List;
 
@@ -65,15 +65,13 @@
     :cond_16
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->vuIeYp:Ljava/lang/String;
+    const-string v1, "SKU list must be set"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_1f
+    :cond_1e
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "SKU type must be set"

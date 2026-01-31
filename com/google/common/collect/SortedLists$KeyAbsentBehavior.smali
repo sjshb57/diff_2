@@ -48,9 +48,7 @@
 
     new-instance v1, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$2;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lkotlin/collections/zgTb/JhPPV;->QDeyz:Ljava/lang/String;
+    const-string v3, "NEXT_HIGHER"
 
     const/4 v4, 0x1
 

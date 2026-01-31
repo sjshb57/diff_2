@@ -81,7 +81,7 @@
 
     const/4 p2, 0x3
 
-    if-eqz p1, :cond_3f
+    if-eqz p1, :cond_40
 
     const-string p3, "FirebaseInstanceId"
 
@@ -89,7 +89,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_3d
+    if-eqz p2, :cond_3e
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -122,16 +122,16 @@
     move-result-object p3
 
     invoke-static {p2, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_3d
-    .catchall {:try_start_1 .. :try_end_3d} :catchall_82
+    :try_end_3e
+    .catchall {:try_start_1 .. :try_end_3e} :catchall_82
 
-    :cond_3d
+    :cond_3e
     monitor-exit p0
 
     return-object p1
 
-    :cond_3f
-    :try_start_3f
+    :cond_40
+    :try_start_40
     const-string p1, "FirebaseInstanceId"
 
     invoke-static {p1, p2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -164,9 +164,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lkotlin/collections/zgTb/JhPPV;->sLLHSeWVwoWtNW:Ljava/lang/String;
+    const-string p1, "FirebaseInstanceId"
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -193,7 +191,7 @@
 
     invoke-interface {p2, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_80
-    .catchall {:try_start_3f .. :try_end_80} :catchall_82
+    .catchall {:try_start_40 .. :try_end_80} :catchall_82
 
     monitor-exit p0
 

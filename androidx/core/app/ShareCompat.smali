@@ -169,11 +169,9 @@
 
     check-cast v0, Landroid/content/ComponentName;
 
-    if-nez v0, :cond_14
+    if-nez v0, :cond_13
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/util/Uhr/zXgie;->ADkDYPMniXimluD:Ljava/lang/String;
+    const-string v0, "android.support.v4.app.EXTRA_CALLING_ACTIVITY"
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -183,7 +181,7 @@
 
     check-cast v0, Landroid/content/ComponentName;
 
-    :cond_14
+    :cond_13
     return-object v0
 .end method
 

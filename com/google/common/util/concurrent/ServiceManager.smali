@@ -373,7 +373,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_23
+    if-eqz v1, :cond_24
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -403,19 +403,19 @@
 
     goto :goto_6
 
-    :cond_23
+    :cond_24
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager;->services:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object v0
 
-    :goto_29
+    :goto_2a
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_55
+    if-eqz v1, :cond_56
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -423,18 +423,18 @@
 
     check-cast v1, Lcom/google/common/util/concurrent/Service;
 
-    :try_start_35
+    :try_start_36
     iget-object v2, p0, Lcom/google/common/util/concurrent/ServiceManager;->state:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
     invoke-virtual {v2, v1}, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->tryStartTiming(Lcom/google/common/util/concurrent/Service;)V
 
     invoke-interface {v1}, Lcom/google/common/util/concurrent/Service;->startAsync()Lcom/google/common/util/concurrent/Service;
-    :try_end_3d
-    .catch Ljava/lang/IllegalStateException; {:try_start_35 .. :try_end_3d} :catch_3e
+    :try_end_3e
+    .catch Ljava/lang/IllegalStateException; {:try_start_36 .. :try_end_3e} :catch_3f
 
-    goto :goto_29
+    goto :goto_2a
 
-    :catch_3e
+    :catch_3f
     move-exception v2
 
     sget-object v3, Lcom/google/common/util/concurrent/ServiceManager;->logger:Ljava/util/logging/Logger;
@@ -455,9 +455,9 @@
 
     invoke-virtual {v3, v4, v1, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_29
+    goto :goto_2a
 
-    :cond_55
+    :cond_56
     return-object p0
 .end method
 

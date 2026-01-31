@@ -141,18 +141,16 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_d
+    if-eqz p0, :cond_e
 
     return-object p0
 
-    :cond_d
+    :cond_e
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->YAniALCCeQNzkKj:Ljava/lang/String;
+    const-string v1, "Failed to open android.app.shortcuts meta-data resource of "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -201,7 +199,7 @@
 
     move-result v2
 
-    if-eq v2, v1, :cond_37
+    if-eq v2, v1, :cond_38
 
     const/4 v3, 0x3
 
@@ -211,7 +209,7 @@
 
     move-result v3
 
-    if-lez v3, :cond_37
+    if-lez v3, :cond_38
 
     :cond_15
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
@@ -242,16 +240,16 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_33
+    if-nez v2, :cond_34
 
     goto :goto_6
 
-    :cond_33
+    :cond_34
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_6
 
-    :cond_37
+    :cond_38
     return-object v0
 .end method
 
@@ -298,7 +296,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_6f
+    if-eqz v1, :cond_6e
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -306,7 +304,7 @@
 
     if-nez v2, :cond_2b
 
-    goto :goto_6f
+    goto :goto_6e
 
     :cond_2b
     :try_start_2b
@@ -320,7 +318,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6f
+    if-eqz v2, :cond_6e
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -395,13 +393,11 @@
 
     const-string v1, "ShortcutXmlParser"
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->frUf:Ljava/lang/String;
+    const-string v2, "Failed to parse the Xml resource: "
 
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_6f
-    :goto_6f
+    :cond_6e
+    :goto_6e
     return-object v0
 .end method

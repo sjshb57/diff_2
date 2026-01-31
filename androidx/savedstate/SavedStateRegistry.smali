@@ -253,7 +253,7 @@
 
     iget-boolean v0, p0, Landroidx/savedstate/SavedStateRegistry;->mAllowingSavingState:Z
 
-    if-eqz v0, :cond_3d
+    if-eqz v0, :cond_3e
 
     iget-object v0, p0, Landroidx/savedstate/SavedStateRegistry;->mRecreatorProvider:Landroidx/savedstate/Recreator$SavedStateProvider;
 
@@ -314,7 +314,7 @@
 
     throw v1
 
-    :cond_3d
+    :cond_3e
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "Can not perform this action after onSaveInstanceState"

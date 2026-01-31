@@ -811,7 +811,7 @@
 
     iget-object v2, v1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
-    if-eqz v2, :cond_b7
+    if-eqz v2, :cond_b8
 
     iget-object v2, v1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
@@ -873,7 +873,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_71
+    if-eqz v2, :cond_72
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
@@ -883,20 +883,20 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_5b
+    if-nez v2, :cond_5c
 
     const-string v0, "Failed to find font-family tag"
 
     invoke-static {v13, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v11, :cond_5a
+    if-eqz v11, :cond_5b
 
     invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->callbackFailAsync(ILandroid/os/Handler;)V
 
-    :cond_5a
+    :cond_5b
     return-object v16
 
-    :cond_5b
+    :cond_5c
     iget v6, v1, Landroid/util/TypedValue;->assetCookie:I
 
     move-object/from16 v1, p0
@@ -921,7 +921,7 @@
 
     return-object v0
 
-    :cond_71
+    :cond_72
     iget v5, v1, Landroid/util/TypedValue;->assetCookie:I
 
     move-object/from16 v1, p0
@@ -938,25 +938,25 @@
 
     move-result-object v0
 
-    if-eqz v11, :cond_8b
+    if-eqz v11, :cond_8c
 
-    if-eqz v0, :cond_88
+    if-eqz v0, :cond_89
 
     invoke-virtual {v11, v0, v12}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
-    goto :goto_8b
+    goto :goto_8c
 
-    :cond_88
+    :cond_89
     invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->callbackFailAsync(ILandroid/os/Handler;)V
-    :try_end_8b
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3a .. :try_end_8b} :catch_9f
-    .catch Ljava/io/IOException; {:try_start_3a .. :try_end_8b} :catch_8c
+    :try_end_8c
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3a .. :try_end_8c} :catch_a0
+    .catch Ljava/io/IOException; {:try_start_3a .. :try_end_8c} :catch_8d
 
-    :cond_8b
-    :goto_8b
+    :cond_8c
+    :goto_8c
     return-object v0
 
-    :catch_8c
+    :catch_8d
     move-exception v0
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -973,9 +973,9 @@
 
     invoke-static {v13, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_b1
+    goto :goto_b2
 
-    :catch_9f
+    :catch_a0
     move-exception v0
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -992,15 +992,15 @@
 
     invoke-static {v13, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_b1
-    if-eqz v11, :cond_b6
+    :goto_b2
+    if-eqz v11, :cond_b7
 
     invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->callbackFailAsync(ILandroid/os/Handler;)V
 
-    :cond_b6
+    :cond_b7
     return-object v16
 
-    :cond_b7
+    :cond_b8
     new-instance v2, Landroid/content/res/Resources$NotFoundException;
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -94,7 +94,7 @@
     move v1, v2
 
     :goto_1f
-    if-ge v1, v0, :cond_6d
+    if-ge v1, v0, :cond_6c
 
     invoke-virtual {p1, v1}, Lcom/google/android/gms/common/data/DataHolder;->getWindowIndex(I)I
 
@@ -127,7 +127,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_6a
+    if-eqz v4, :cond_69
 
     new-instance v4, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;
 
@@ -137,9 +137,7 @@
 
     move-result-wide v6
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/savedstate/xT/fgyAspfzfnhI;->nrLHTWgYIdgpS:Ljava/lang/String;
+    const-string v5, "formattedScore"
 
     invoke-virtual {p1, v5, v1, v3}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
 
@@ -171,12 +169,12 @@
 
     invoke-virtual {v5, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    :cond_6a
+    :cond_69
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1f
 
-    :cond_6d
+    :cond_6c
     return-void
 .end method
 
@@ -233,9 +231,7 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->KhqgORwmQZAEewl:Ljava/lang/String;
+    const-string v2, "StatusCode"
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
@@ -243,7 +239,7 @@
 
     const/4 v1, 0x0
 
-    :goto_1a
+    :goto_19
     const/4 v2, 0x3
 
     if-ge v1, v2, :cond_3f
@@ -282,7 +278,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_1a
+    goto :goto_19
 
     :cond_3f
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->toString()Ljava/lang/String;

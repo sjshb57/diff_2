@@ -53,9 +53,7 @@
 
     new-instance v3, Lcom/google/common/cache/RemovalCause$3;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->LGgJ:Ljava/lang/String;
+    const-string v5, "COLLECTED"
 
     const/4 v6, 0x2
 
