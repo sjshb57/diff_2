@@ -172,9 +172,7 @@
     :cond_1b
     const-string p3, "GamesAuthenticator"
 
-    const/4 v0, 0x0
-
-    sget-object v0, Landroid/support/customtabs/trusted/YLgH/cfwGapeDBUyjtg;->XqLYu:Ljava/lang/String;
+    const-string v0, "Service connection suspended during the first sign-in attempt. Trying again."
 
     invoke-static {p3, v0}, Lcom/google/android/gms/internal/games_v2/zzez;->zza(Ljava/lang/String;Ljava/lang/String;)V
 

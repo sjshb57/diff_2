@@ -758,7 +758,7 @@
 
     instance-of v1, p3, Lcom/google/android/gms/internal/measurement/zzaf;
 
-    if-eqz v1, :cond_20a
+    if-eqz v1, :cond_209
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -781,15 +781,13 @@
     :cond_201
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->WPY:Ljava/lang/String;
+    const-string p2, "Function name for apply is undefined"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_20a
+    :cond_209
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -813,6 +811,8 @@
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    nop
 
     :pswitch_data_222
     .packed-switch 0x1

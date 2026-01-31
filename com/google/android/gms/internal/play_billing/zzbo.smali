@@ -7,7 +7,7 @@
 .method static zza(Ljava/lang/Object;Ljava/lang/Object;)V
     .registers 4
 
-    if-eqz p0, :cond_23
+    if-eqz p0, :cond_22
 
     if-eqz p1, :cond_5
 
@@ -28,9 +28,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->vRiGxPOcEaW:Ljava/lang/String;
+    const-string p0, "=null"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -42,7 +40,7 @@
 
     throw p1
 
-    :cond_23
+    :cond_22
     new-instance p0, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

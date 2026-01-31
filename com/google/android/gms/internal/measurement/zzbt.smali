@@ -827,7 +827,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2bd
+    if-eqz v0, :cond_2bc
 
     invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -854,18 +854,16 @@
     :cond_2b4
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->IkxYAwzLyMxm:Ljava/lang/String;
+    const-string p2, "Failed to evaluate array element"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_2bd
+    :cond_2bc
     return-object p1
 
-    :pswitch_2be  #0x2
+    :pswitch_2bd  #0x2
     sget-object p1, Lcom/google/android/gms/internal/measurement/zzbv;->zzo:Lcom/google/android/gms/internal/measurement/zzbv;
 
     invoke-static {p1, v1, p3}, Lcom/google/android/gms/internal/measurement/zzg;->zzb(Lcom/google/android/gms/internal/measurement/zzbv;ILjava/util/List;)V
@@ -876,18 +874,18 @@
 
     rem-int/2addr p1, v1
 
-    if-nez p1, :cond_311
+    if-nez p1, :cond_310
 
     move p1, v2
 
-    :goto_2cb
+    :goto_2ca
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v0
 
     sub-int/2addr v0, v3
 
-    if-ge p1, v0, :cond_30e
+    if-ge p1, v0, :cond_30d
 
     invoke-interface {p3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -901,7 +899,7 @@
 
     instance-of v1, v0, Lcom/google/android/gms/internal/measurement/zzas;
 
-    if-eqz v1, :cond_2f6
+    if-eqz v1, :cond_2f5
 
     invoke-interface {v0}, Lcom/google/android/gms/internal/measurement/zzaq;->zzf()Ljava/lang/String;
 
@@ -923,9 +921,9 @@
 
     add-int/lit8 p1, p1, 0x2
 
-    goto :goto_2cb
+    goto :goto_2ca
 
-    :cond_2f6
+    :cond_2f5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -950,12 +948,12 @@
 
     throw p1
 
-    :cond_30e
+    :cond_30d
     sget-object p1, Lcom/google/android/gms/internal/measurement/zzaq;->zzc:Lcom/google/android/gms/internal/measurement/zzaq;
 
     return-object p1
 
-    :cond_311
+    :cond_310
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-interface {p3}, Ljava/util/List;->size()I
@@ -980,7 +978,7 @@
 
     throw p1
 
-    :pswitch_329  #0x1
+    :pswitch_328  #0x1
     sget-object p1, Lcom/google/android/gms/internal/measurement/zzbv;->zzd:Lcom/google/android/gms/internal/measurement/zzbv;
 
     invoke-static {p1, v1, p3}, Lcom/google/android/gms/internal/measurement/zzg;->zza(Lcom/google/android/gms/internal/measurement/zzbv;ILjava/util/List;)V
@@ -997,7 +995,7 @@
 
     instance-of v0, p1, Lcom/google/android/gms/internal/measurement/zzas;
 
-    if-eqz v0, :cond_36c
+    if-eqz v0, :cond_36b
 
     invoke-interface {p1}, Lcom/google/android/gms/internal/measurement/zzaq;->zzf()Ljava/lang/String;
 
@@ -1007,7 +1005,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_358
+    if-eqz v0, :cond_357
 
     invoke-interface {p3, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1027,7 +1025,7 @@
 
     return-object p3
 
-    :cond_358
+    :cond_357
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     invoke-interface {p1}, Lcom/google/android/gms/internal/measurement/zzaq;->zzf()Ljava/lang/String;
@@ -1048,7 +1046,7 @@
 
     throw p2
 
-    :cond_36c
+    :cond_36b
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1073,10 +1071,12 @@
 
     throw p2
 
+    nop
+
     :pswitch_data_384
     .packed-switch 0x1
-        :pswitch_329  #00000001
-        :pswitch_2be  #00000002
+        :pswitch_328  #00000001
+        :pswitch_2bd  #00000002
         :pswitch_284  #00000003
         :pswitch_21c  #00000004
         :pswitch_1f5  #00000005

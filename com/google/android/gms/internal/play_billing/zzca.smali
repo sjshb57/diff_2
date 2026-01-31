@@ -49,9 +49,7 @@
 
     iget v0, p0, Lcom/google/android/gms/internal/play_billing/zzca;->zzc:I
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/nano/privacy/eM/RmZCOXza;->lnLBdsCsJu:Ljava/lang/String;
+    const-string v1, "index"
 
     invoke-static {p1, v0, v1}, Lcom/google/android/gms/internal/play_billing/zzbg;->zza(IILjava/lang/String;)I
 

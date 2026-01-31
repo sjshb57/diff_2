@@ -67,50 +67,50 @@
 
     const/16 v3, 0x3b
 
-    if-ltz p2, :cond_1b
+    if-ltz p2, :cond_1c
 
-    if-gt p2, v3, :cond_1b
+    if-gt p2, v3, :cond_1c
 
     move v4, v1
 
-    goto :goto_1c
+    goto :goto_1d
 
-    :cond_1b
+    :cond_1c
     move v4, v2
 
-    :goto_1c
+    :goto_1d
     const-string v5, "Start minute must be in range [0, 59]."
 
     invoke-static {v4, v5}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    if-ltz p3, :cond_27
+    if-ltz p3, :cond_28
 
-    if-gt p3, v0, :cond_27
+    if-gt p3, v0, :cond_28
 
     move v0, v1
 
-    goto :goto_28
+    goto :goto_29
 
-    :cond_27
+    :cond_28
     move v0, v2
 
-    :goto_28
+    :goto_29
     const-string v4, "End hour must be in range [0, 23]."
 
     invoke-static {v0, v4}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    if-ltz p4, :cond_33
+    if-ltz p4, :cond_34
 
-    if-gt p4, v3, :cond_33
+    if-gt p4, v3, :cond_34
 
     move v0, v1
 
-    goto :goto_34
+    goto :goto_35
 
-    :cond_33
+    :cond_34
     move v0, v2
 
-    :goto_34
+    :goto_35
     const-string v3, "End minute must be in range [0, 59]."
 
     invoke-static {v0, v3}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V
@@ -121,14 +121,14 @@
 
     add-int/2addr v0, p4
 
-    if-lez v0, :cond_40
+    if-lez v0, :cond_41
 
-    goto :goto_41
+    goto :goto_42
 
-    :cond_40
+    :cond_41
     move v1, v2
 
-    :goto_41
+    :goto_42
     const-string v0, "Parameters can\'t be all 0."
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/Object;)V

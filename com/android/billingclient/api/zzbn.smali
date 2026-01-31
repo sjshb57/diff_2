@@ -72,11 +72,11 @@
 
     check-cast p1, Landroid/app/PendingIntent;
 
-    if-eqz v4, :cond_4b
+    if-eqz v4, :cond_4a
 
     if-nez p1, :cond_29
 
-    goto :goto_4b
+    goto :goto_4a
 
     :cond_29
     :try_start_29
@@ -107,16 +107,14 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->ohtE:Ljava/lang/String;
+    const-string v0, "Exception caught while launching intent for in-app messaging."
 
     invoke-static {v1, v0, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
-    :cond_4b
-    :goto_4b
+    :cond_4a
+    :goto_4a
     invoke-virtual {v0, v3, v2}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
     const-string p1, "Unable to launch intent for in-app messaging"

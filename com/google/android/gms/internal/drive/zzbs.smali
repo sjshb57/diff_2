@@ -402,13 +402,13 @@
         }
     .end annotation
 
-    if-eqz p2, :cond_27
+    if-eqz p2, :cond_28
 
     invoke-virtual {p2}, Lcom/google/android/gms/drive/MetadataChangeSet;->getMimeType()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1d
+    if-eqz v0, :cond_1e
 
     invoke-virtual {p2}, Lcom/google/android/gms/drive/MetadataChangeSet;->getMimeType()Ljava/lang/String;
 
@@ -422,7 +422,7 @@
 
     if-eqz v0, :cond_15
 
-    goto :goto_1d
+    goto :goto_1e
 
     :cond_15
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -433,8 +433,8 @@
 
     throw p1
 
-    :cond_1d
-    :goto_1d
+    :cond_1e
+    :goto_1e
     new-instance v0, Lcom/google/android/gms/internal/drive/zzbu;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/internal/drive/zzbu;-><init>(Lcom/google/android/gms/internal/drive/zzbs;Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/drive/MetadataChangeSet;)V
@@ -445,7 +445,7 @@
 
     return-object p1
 
-    :cond_27
+    :cond_28
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "MetadataChangeSet must be provided."

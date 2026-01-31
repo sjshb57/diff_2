@@ -32,19 +32,19 @@
 
     const/4 v1, 0x1
 
-    if-eqz p1, :cond_30
+    if-eqz p1, :cond_2f
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
 
-    if-nez v2, :cond_30
+    if-nez v2, :cond_2f
 
     invoke-virtual {p2, p1}, Lcom/google/android/gms/internal/measurement/zzh;->zzb(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_30
+    if-eqz v2, :cond_2f
 
     invoke-virtual {p2, p1}, Lcom/google/android/gms/internal/measurement/zzh;->zza(Ljava/lang/String;)Lcom/google/android/gms/internal/measurement/zzaq;
 
@@ -69,9 +69,7 @@
 
     aput-object p1, p3, v0
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->ZdhWdjNMGIvINdq:Ljava/lang/String;
+    const-string p1, "Function %s is not defined"
 
     invoke-static {p1, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -81,7 +79,7 @@
 
     throw p2
 
-    :cond_30
+    :cond_2f
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     new-array p3, v1, [Ljava/lang/Object;

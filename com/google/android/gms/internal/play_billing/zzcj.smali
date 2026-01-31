@@ -446,20 +446,18 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_37
+    goto :goto_36
 
     :cond_13
-    if-ne v1, p0, :cond_1c
+    if-ne v1, p0, :cond_1b
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/content/Whm/HgKojeDw;->PVg:Ljava/lang/String;
+    const-string v1, "this future"
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_37
+    goto :goto_36
 
-    :cond_1c
+    :cond_1b
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -484,16 +482,16 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_37
+    :goto_36
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_3a
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_2 .. :try_end_3a} :catch_54
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_3a} :catch_4e
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_3a} :catch_3b
+    :try_end_39
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_2 .. :try_end_39} :catch_53
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_39} :catch_4d
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_39} :catch_3a
 
     return-void
 
-    :catch_3b
+    :catch_3a
     move-exception v0
 
     const-string v1, "UNKNOWN, cause=["
@@ -512,14 +510,14 @@
 
     return-void
 
-    :catch_4e
+    :catch_4d
     const-string v0, "CANCELLED"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
 
-    :catch_54
+    :catch_53
     move-exception v1
 
     const-string v2, "FAILURE, cause=["

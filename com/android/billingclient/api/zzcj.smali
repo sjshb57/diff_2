@@ -253,9 +253,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/billingclient/api/BillingResult$Builder;->setResponseCode(I)Lcom/android/billingclient/api/BillingResult$Builder;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lkotlin/EDDN/hfnXJuYOaqC;->FXhABzmrYqCo:Ljava/lang/String;
+    const-string v5, "SKU can\'t be null."
 
     invoke-virtual {v0, v5}, Lcom/android/billingclient/api/BillingResult$Builder;->setDebugMessage(Ljava/lang/String;)Lcom/android/billingclient/api/BillingResult$Builder;
 

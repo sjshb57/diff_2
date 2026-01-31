@@ -360,15 +360,13 @@
     invoke-virtual {p3, p0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_aa
-    if-eqz v1, :cond_b2
+    if-eqz v1, :cond_b1
 
-    const/4 p0, 0x0
-
-    sget-object p0, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->jStB:Ljava/lang/String;
+    const-string p0, "SKU_DYNAMIC_PRODUCT_TOKEN_LIST"
 
     invoke-virtual {p3, p0, p5}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :cond_b2
+    :cond_b1
     return-object p3
 .end method
 
@@ -387,13 +385,11 @@
 .method public static zzh(Landroid/content/Intent;Ljava/lang/String;)Lcom/android/billingclient/api/BillingResult;
     .registers 4
 
-    if-nez p0, :cond_1c
+    if-nez p0, :cond_1b
 
     const-string p0, "BillingHelper"
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lkotlin/collections/zgTb/JhPPV;->IupyTxCji:Ljava/lang/String;
+    const-string p1, "Got null intent!"
 
     invoke-static {p0, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -415,7 +411,7 @@
 
     return-object p0
 
-    :cond_1c
+    :cond_1b
     invoke-static {}, Lcom/android/billingclient/api/BillingResult;->newBuilder()Lcom/android/billingclient/api/BillingResult$Builder;
 
     move-result-object v0
@@ -532,9 +528,7 @@
 
     move-result-object p0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->KzLJ:Ljava/lang/String;
+    const-string v1, "Unexpected type for debug message: "
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 

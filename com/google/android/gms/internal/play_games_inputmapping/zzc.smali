@@ -106,7 +106,7 @@
 
     const/4 p2, 0x1
 
-    if-eqz p1, :cond_3b
+    if-eqz p1, :cond_3a
 
     const/4 p3, 0x3
 
@@ -160,9 +160,7 @@
 
     aput-object p3, p1, p2
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->BCrdx:Ljava/lang/String;
+    const-string p2, "zzf"
 
     aput-object p2, p1, v0
 
@@ -176,7 +174,7 @@
 
     return-object p1
 
-    :cond_3b
+    :cond_3a
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1

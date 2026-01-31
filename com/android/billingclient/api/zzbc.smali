@@ -38,32 +38,32 @@
 
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/play_billing/zzc;->zzm(Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_7
+    :try_start_8
     iget-object v0, p0, Lcom/android/billingclient/api/zzbc;->zza:Lcom/google/android/gms/internal/play_billing/zzp;
 
     sget-object v2, Lcom/android/billingclient/api/zzcj;->zzj:Lcom/android/billingclient/api/BillingResult;
 
     invoke-virtual {v0, v2}, Lcom/google/android/gms/internal/play_billing/zzp;->zzb(Ljava/lang/Object;)Z
-    :try_end_e
-    .catchall {:try_start_7 .. :try_end_e} :catchall_f
+    :try_end_f
+    .catchall {:try_start_8 .. :try_end_f} :catchall_10
 
-    goto :goto_15
+    goto :goto_16
 
-    :catchall_f
+    :catchall_10
     move-exception v0
 
     const-string v2, "Exception setting completer."
 
     invoke-static {v1, v2, v0}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_15
+    :goto_16
     iget-object v0, p0, Lcom/android/billingclient/api/zzbc;->zzb:Lcom/android/billingclient/api/BillingClientImpl;
 
     invoke-static {v0}, Lcom/android/billingclient/api/BillingClientImpl;->zzh(Lcom/android/billingclient/api/BillingClientImpl;)Lcom/android/billingclient/api/BillingClientStateListener;
 
     move-result-object v1
 
-    if-eqz v1, :cond_25
+    if-eqz v1, :cond_26
 
     new-instance v1, Lcom/android/billingclient/api/zzba;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/billingclient/api/BillingClientImpl;->zzag(Ljava/lang/Runnable;)V
 
-    :cond_25
+    :cond_26
     return-void
 .end method
 

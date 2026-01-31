@@ -1659,9 +1659,7 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/measurement/internal/zzdc;-><init>()V
 
-    const/4 v10, 0x0
-
-    sget-object v10, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->CZH:Ljava/lang/String;
+    const-string v10, "measurement.upload.stale_data_deletion_interval"
 
     invoke-static {v10, v2, v0}, Lcom/google/android/gms/measurement/internal/zzbn;->zzb(Ljava/lang/String;Ljava/lang/Object;Lcom/google/android/gms/measurement/internal/zzfv;)Lcom/google/android/gms/measurement/internal/zzfx;
 
@@ -2149,9 +2147,7 @@
 
     const-string v1, "measurement.rb.attribution.user_properties"
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->mmoqOO:Ljava/lang/String;
+    const-string v3, "_npa,npa|_fot,fot"
 
     invoke-static {v1, v3, v0}, Lcom/google/android/gms/measurement/internal/zzbn;->zzb(Ljava/lang/String;Ljava/lang/Object;Lcom/google/android/gms/measurement/internal/zzfv;)Lcom/google/android/gms/measurement/internal/zzfx;
 
@@ -2227,9 +2223,7 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/measurement/internal/zzet;-><init>()V
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->eBWau:Ljava/lang/String;
+    const-string v1, "measurement.rb.attribution.client.min_time_after_boot_seconds"
 
     invoke-static {v1, v6, v0}, Lcom/google/android/gms/measurement/internal/zzbn;->zzb(Ljava/lang/String;Ljava/lang/Object;Lcom/google/android/gms/measurement/internal/zzfv;)Lcom/google/android/gms/measurement/internal/zzfx;
 
@@ -2293,9 +2287,7 @@
 
     sput-object v0, Lcom/google/android/gms/measurement/internal/zzbn;->zzbv:Lcom/google/android/gms/measurement/internal/zzfx;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lkotlin/EDDN/hfnXJuYOaqC;->XoPRbDHNMPI:Ljava/lang/String;
+    const-string v0, "measurement.quality.checksum"
 
     invoke-static {v0, v7}, Lcom/google/android/gms/measurement/internal/zzbn;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/measurement/internal/zzfx;
 

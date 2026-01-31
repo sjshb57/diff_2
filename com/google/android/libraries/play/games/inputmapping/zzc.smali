@@ -48,13 +48,9 @@
 
     const-string v2, "NoOpInputMappingClientImpl.java"
 
-    const/4 v3, 0x0
+    const-string v3, "com/google/android/libraries/play/games/inputmapping/NoOpInputMappingClientImpl"
 
-    sget-object v3, Landroidx/print/nh/SlomKQFs;->eCV:Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    sget-object v4, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->sHUIFTjGt:Ljava/lang/String;
+    const-string v4, "clearInputMappingProvider"
 
     invoke-interface {v0, v3, v4, v1, v2}, Lcom/google/android/gms/internal/play_games_inputmapping/zzs;->zzn(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lcom/google/android/gms/internal/play_games_inputmapping/zzao;
 

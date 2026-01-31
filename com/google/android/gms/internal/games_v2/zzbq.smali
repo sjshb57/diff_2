@@ -136,9 +136,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/common/html/ehW/oZEOPkNlS;->qySB:Ljava/lang/String;
+    const-string v1, "status"
 
     iget-object v2, p0, Lcom/google/android/gms/internal/games_v2/zzbq;->zzb:Lcom/google/android/gms/common/api/Status;
 

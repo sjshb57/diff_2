@@ -53,7 +53,7 @@
 
     const-string v3, "BillingClient"
 
-    if-nez v2, :cond_1f
+    if-nez v2, :cond_20
 
     const-string v1, "Response bundle doesn\'t contain a response code"
 
@@ -65,12 +65,12 @@
 
     return-void
 
-    :cond_1f
+    :cond_20
     invoke-static {p1, v3}, Lcom/google/android/gms/internal/play_billing/zzc;->zzb(Landroid/os/Bundle;Ljava/lang/String;)I
 
     move-result v2
 
-    if-eqz v2, :cond_3c
+    if-eqz v2, :cond_3d
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -92,7 +92,7 @@
 
     return-void
 
-    :cond_3c
+    :cond_3d
     const-string v2, "ALTERNATIVE_BILLING_ONLY_DIALOG_INTENT"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -103,7 +103,7 @@
 
     const/4 v5, 0x0
 
-    if-nez v4, :cond_52
+    if-nez v4, :cond_53
 
     const-string v0, "User has acknowledged the alternative billing only dialog before."
 
@@ -115,8 +115,8 @@
 
     return-void
 
-    :cond_52
-    :try_start_52
+    :cond_53
+    :try_start_53
     iget-object p1, p0, Lcom/android/billingclient/api/zzbi;->zza:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -140,12 +140,12 @@
     invoke-virtual {v6, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     invoke-virtual {p1, v6}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-    :try_end_6e
-    .catch Ljava/lang/RuntimeException; {:try_start_52 .. :try_end_6e} :catch_6f
+    :try_end_6f
+    .catch Ljava/lang/RuntimeException; {:try_start_53 .. :try_end_6f} :catch_70
 
     return-void
 
-    :catch_6f
+    :catch_70
     move-exception p1
 
     const-string v2, "Runtime error while launching intent for alternative billing only dialog."

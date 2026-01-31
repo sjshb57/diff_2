@@ -45,11 +45,11 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_21
+    if-ne p2, v0, :cond_22
 
     const/4 p1, 0x0
 
-    :cond_21
+    :cond_22
     iput-object p1, p0, Lcom/android/billingclient/api/zzc;->zzc:Ljava/lang/String;
 
     return-void

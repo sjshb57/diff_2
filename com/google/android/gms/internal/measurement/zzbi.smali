@@ -181,9 +181,7 @@
     :cond_f
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/api/client/util/Uhr/zXgie;->sXiqmnAqV:Ljava/lang/String;
+    const-string p1, "Non-iterable type in for...of loop."
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

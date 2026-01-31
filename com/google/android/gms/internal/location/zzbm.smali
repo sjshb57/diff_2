@@ -32,7 +32,7 @@
 
     const-string v3, "index"
 
-    if-ltz p0, :cond_42
+    if-ltz p0, :cond_43
 
     if-gez p1, :cond_2a
 
@@ -83,9 +83,9 @@
 
     move-result-object p0
 
-    goto :goto_52
+    goto :goto_53
 
-    :cond_42
+    :cond_43
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -102,7 +102,7 @@
 
     move-result-object p0
 
-    :goto_52
+    :goto_53
     invoke-direct {p2, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw p2

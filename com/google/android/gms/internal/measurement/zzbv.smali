@@ -234,9 +234,7 @@
 
     new-instance v12, Lcom/google/android/gms/internal/measurement/zzbv;
 
-    const/4 v15, 0x0
-
-    sget-object v15, Landroidx/savedstate/xT/fgyAspfzfnhI;->qONRKlVKmheazI:Ljava/lang/String;
+    const-string v15, "BITWISE_NOT"
 
     const/4 v8, 0x6
 
@@ -576,9 +574,7 @@
 
     move-object/from16 v34, v8
 
-    const/4 v8, 0x0
-
-    sget-object v8, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->HtfPjspPxycBD:Ljava/lang/String;
+    const-string v8, "FOR_OF_CONST"
 
     invoke-direct {v10, v8, v13, v14}, Lcom/google/android/gms/internal/measurement/zzbv;-><init>(Ljava/lang/String;II)V
 
@@ -830,9 +826,7 @@
 
     move-object/from16 v52, v8
 
-    const/4 v8, 0x0
-
-    sget-object v8, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->oPBXRKWyiIbr:Ljava/lang/String;
+    const-string v8, "NULL"
 
     invoke-direct {v10, v8, v13, v14}, Lcom/google/android/gms/internal/measurement/zzbv;-><init>(Ljava/lang/String;II)V
 
@@ -966,9 +960,7 @@
 
     new-instance v10, Lcom/google/android/gms/internal/measurement/zzbv;
 
-    const/4 v13, 0x0
-
-    sget-object v13, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->SKTheOnLMdE:Ljava/lang/String;
+    const-string v13, "SUBTRACT"
 
     const/16 v14, 0x25
 
@@ -1348,8 +1340,8 @@
 
     move v2, v13
 
-    :goto_4c6
-    if-ge v2, v1, :cond_4d8
+    :goto_4c4
+    if-ge v2, v1, :cond_4d6
 
     aget-object v3, v0, v2
 
@@ -1365,9 +1357,9 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_4c6
+    goto :goto_4c4
 
-    :cond_4d8
+    :cond_4d6
     return-void
 .end method
 
@@ -1392,9 +1384,7 @@
     :cond_a
     new-instance p1, Ljava/lang/AssertionError;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->gNVJlQkoQ:Ljava/lang/String;
+    const-string p2, "Native functions over 100 are reserved for runtime implementations."
 
     invoke-direct {p1, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 

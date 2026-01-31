@@ -34,9 +34,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/common/html/ehW/oZEOPkNlS;->aHeu:Ljava/lang/String;
+    const-string v0, "resourceId must not be null"
 
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

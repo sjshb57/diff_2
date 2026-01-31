@@ -51,9 +51,7 @@
 
     const/16 v1, -0x3e7
 
-    const/4 v2, 0x0
-
-    sget-object v2, Lcom/google/firebase/installations/FThT/YftaXkHllyZUho;->TKGRPzJBhXCCpI:Ljava/lang/String;
+    const-string v2, "RESPONSE_CODE_UNSPECIFIED"
 
     const/4 v3, 0x0
 
@@ -179,9 +177,7 @@
 
     new-instance v12, Lcom/google/android/gms/internal/play_billing/zzb;
 
-    const/4 v7, 0x0
-
-    sget-object v7, Lcom/google/flatbuffers/OSq/msMBb;->exNAkkI:Ljava/lang/String;
+    const-string v7, "ITEM_NOT_OWNED"
 
     const/16 v14, 0xc
 
@@ -293,8 +289,8 @@
 
     move v3, v12
 
-    :goto_ef
-    if-ge v3, v2, :cond_ff
+    :goto_ed
+    if-ge v3, v2, :cond_fd
 
     aget-object v4, v1, v3
 
@@ -308,9 +304,9 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_ef
+    goto :goto_ed
 
-    :cond_ff
+    :cond_fd
     invoke-virtual {v0}, Lcom/google/android/gms/internal/play_billing/zzbv;->zzb()Lcom/google/android/gms/internal/play_billing/zzbw;
 
     move-result-object v0

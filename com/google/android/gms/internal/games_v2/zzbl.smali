@@ -305,9 +305,9 @@
 
     const-string v0, "GamesApiManager"
 
-    if-eqz p4, :cond_28
+    if-eqz p4, :cond_29
 
-    if-eqz p3, :cond_28
+    if-eqz p3, :cond_29
 
     iget-object p4, p0, Lcom/google/android/gms/internal/games_v2/zzbl;->zzg:Lcom/google/android/gms/games/internal/zzg;
 
@@ -315,11 +315,11 @@
 
     move-result-object p4
 
-    if-nez p4, :cond_14
+    if-nez p4, :cond_15
 
-    goto :goto_28
+    goto :goto_29
 
-    :cond_14
+    :cond_15
     invoke-static {p4, p3}, Lcom/google/android/gms/games/internal/v2/resolution/zzb;->zzb(Landroid/app/Activity;Landroid/app/PendingIntent;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p3
@@ -338,8 +338,8 @@
 
     return-void
 
-    :cond_28
-    :goto_28
+    :cond_29
+    :goto_29
     iget-object p2, p0, Lcom/google/android/gms/internal/games_v2/zzbl;->zzb:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object p3, Lcom/google/android/gms/internal/games_v2/zzbh;->zzb:Lcom/google/android/gms/internal/games_v2/zzbh;
@@ -352,13 +352,13 @@
 
     const/4 p3, 0x0
 
-    if-nez p5, :cond_45
+    if-nez p5, :cond_46
 
-    if-nez p2, :cond_38
+    if-nez p2, :cond_39
 
-    goto :goto_45
+    goto :goto_46
 
-    :cond_38
+    :cond_39
     const-string p2, "Consumed pending explicit sign-in. Attempting explicit sign-in"
 
     invoke-static {v0, p2}, Lcom/google/android/gms/internal/games_v2/zzez;->zza(Ljava/lang/String;Ljava/lang/String;)V
@@ -371,8 +371,8 @@
 
     return-void
 
-    :cond_45
-    :goto_45
+    :cond_46
+    :goto_46
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
@@ -391,12 +391,12 @@
 
     move-result-object p1
 
-    :goto_59
+    :goto_5a
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p2
 
-    if-eqz p2, :cond_70
+    if-eqz p2, :cond_71
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -412,9 +412,9 @@
 
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
-    goto :goto_59
+    goto :goto_5a
 
-    :cond_70
+    :cond_71
     return-void
 .end method
 
@@ -844,7 +844,7 @@
 
     const/4 v2, 0x1
 
-    if-nez v0, :cond_27
+    if-nez v0, :cond_28
 
     invoke-virtual {p3}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
@@ -878,7 +878,7 @@
 
     return-void
 
-    :cond_27
+    :cond_28
     invoke-virtual {p3}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object p3
@@ -889,7 +889,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_60
+    if-nez v0, :cond_61
 
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -937,12 +937,12 @@
 
     return-void
 
-    :cond_60
+    :cond_61
     invoke-virtual {p3}, Lcom/google/android/gms/internal/games_v2/zzbq;->zzd()Ljava/lang/String;
 
     move-result-object p3
 
-    if-nez p3, :cond_7d
+    if-nez p3, :cond_7e
 
     const-string p3, "Unexpected state: game run token absent"
 
@@ -970,7 +970,7 @@
 
     return-void
 
-    :cond_7d
+    :cond_7e
     const-string p2, "Successfully authenticated"
 
     invoke-static {v1, p2}, Lcom/google/android/gms/internal/games_v2/zzez;->zza(Ljava/lang/String;Ljava/lang/String;)V
@@ -1043,12 +1043,12 @@
 
     move-result-object p1
 
-    :goto_d3
+    :goto_d4
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p2
 
-    if-eqz p2, :cond_e6
+    if-eqz p2, :cond_e7
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1060,9 +1060,9 @@
 
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
-    goto :goto_d3
+    goto :goto_d4
 
-    :cond_e6
+    :cond_e7
     return-void
 .end method
 

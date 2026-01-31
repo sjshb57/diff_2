@@ -242,9 +242,7 @@
 
     aput-object v0, v1, v3
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->sdnWOcRi:Ljava/lang/String;
+    const-string v0, "%.4g"
 
     invoke-static {v5, v0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -266,40 +264,40 @@
 
     throw v0
 
-    :pswitch_91  #0x7
+    :pswitch_90  #0x7
     const-string v1, "d"
 
-    goto :goto_a5
+    goto :goto_a4
 
-    :pswitch_94  #0x6
+    :pswitch_93  #0x6
     const-string v1, "h"
 
-    goto :goto_a5
+    goto :goto_a4
 
-    :pswitch_97  #0x5
+    :pswitch_96  #0x5
     const-string v1, "min"
 
-    goto :goto_a5
+    goto :goto_a4
 
-    :pswitch_9a  #0x4
+    :pswitch_99  #0x4
     const-string v1, "s"
 
-    goto :goto_a5
+    goto :goto_a4
 
-    :pswitch_9d  #0x3
+    :pswitch_9c  #0x3
     const-string v1, "ms"
 
-    goto :goto_a5
+    goto :goto_a4
 
-    :pswitch_a0  #0x2
+    :pswitch_9f  #0x2
     const-string v1, "μs"
 
-    goto :goto_a5
+    goto :goto_a4
 
-    :pswitch_a3  #0x1
+    :pswitch_a2  #0x1
     const-string v1, "ns"
 
-    :goto_a5
+    :goto_a4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -318,15 +316,17 @@
 
     return-object v0
 
+    nop
+
     :pswitch_data_ba
     .packed-switch 0x1
-        :pswitch_a3  #00000001
-        :pswitch_a0  #00000002
-        :pswitch_9d  #00000003
-        :pswitch_9a  #00000004
-        :pswitch_97  #00000005
-        :pswitch_94  #00000006
-        :pswitch_91  #00000007
+        :pswitch_a2  #00000001
+        :pswitch_9f  #00000002
+        :pswitch_9c  #00000003
+        :pswitch_99  #00000004
+        :pswitch_96  #00000005
+        :pswitch_93  #00000006
+        :pswitch_90  #00000007
     .end packed-switch
 .end method
 

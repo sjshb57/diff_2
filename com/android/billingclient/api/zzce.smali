@@ -154,7 +154,7 @@
     :try_start_3
     invoke-direct {p0, v0}, Lcom/android/billingclient/api/zzce;->zzaG(I)V
     :try_end_6
-    .catchall {:try_start_3 .. :try_end_6} :catchall_45
+    .catchall {:try_start_3 .. :try_end_6} :catchall_44
 
     const/4 v0, 0x3
 
@@ -163,15 +163,13 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_26
+    if-eqz v1, :cond_25
 
     iget-object v1, p0, Lcom/android/billingclient/api/zzce;->zzc:Lcom/google/android/gms/internal/play_billing/zzau;
 
-    if-eqz v1, :cond_26
+    if-eqz v1, :cond_25
 
-    const/4 v1, 0x0
-
-    sget-object v1, Landroidx/core/content/Whm/HgKojeDw;->otqN:Ljava/lang/String;
+    const-string v1, "BillingClientTesting"
 
     const-string v3, "Unbinding from Billing Override Service."
 
@@ -189,61 +187,61 @@
 
     iput-object v1, p0, Lcom/android/billingclient/api/zzce;->zzd:Lcom/android/billingclient/api/zzcc;
 
-    :cond_26
+    :cond_25
     iput-object v2, p0, Lcom/android/billingclient/api/zzce;->zzc:Lcom/google/android/gms/internal/play_billing/zzau;
 
     iget-object v1, p0, Lcom/android/billingclient/api/zzce;->zze:Ljava/util/concurrent/ScheduledExecutorService;
 
-    if-eqz v1, :cond_3e
+    if-eqz v1, :cond_3d
 
     iget-object v1, p0, Lcom/android/billingclient/api/zzce;->zze:Ljava/util/concurrent/ScheduledExecutorService;
 
     invoke-interface {v1}, Ljava/util/concurrent/ScheduledExecutorService;->shutdownNow()Ljava/util/List;
 
     iput-object v2, p0, Lcom/android/billingclient/api/zzce;->zze:Ljava/util/concurrent/ScheduledExecutorService;
-    :try_end_33
-    .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_33} :catch_36
-    .catchall {:try_start_7 .. :try_end_33} :catchall_34
+    :try_end_32
+    .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_32} :catch_35
+    .catchall {:try_start_7 .. :try_end_32} :catchall_33
 
-    goto :goto_3e
+    goto :goto_3d
 
-    :catchall_34
+    :catchall_33
     move-exception v1
 
-    goto :goto_42
+    goto :goto_41
 
-    :catch_36
+    :catch_35
     move-exception v1
 
-    :try_start_37
+    :try_start_36
     const-string v2, "BillingClientTesting"
 
     const-string v3, "There was an exception while ending Billing Override Service connection!"
 
     invoke-static {v2, v3, v1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_3e
-    .catchall {:try_start_37 .. :try_end_3e} :catchall_34
+    :try_end_3d
+    .catchall {:try_start_36 .. :try_end_3d} :catchall_33
 
-    :cond_3e
-    :goto_3e
-    :try_start_3e
+    :cond_3d
+    :goto_3d
+    :try_start_3d
     iput v0, p0, Lcom/android/billingclient/api/zzce;->zzb:I
-    :try_end_40
-    .catchall {:try_start_3e .. :try_end_40} :catchall_45
+    :try_end_3f
+    .catchall {:try_start_3d .. :try_end_3f} :catchall_44
 
     monitor-exit p0
 
     return-void
 
-    :goto_42
-    :try_start_42
+    :goto_41
+    :try_start_41
     iput v0, p0, Lcom/android/billingclient/api/zzce;->zzb:I
 
     throw v1
-    :try_end_45
-    .catchall {:try_start_42 .. :try_end_45} :catchall_45
+    :try_end_44
+    .catchall {:try_start_41 .. :try_end_44} :catchall_44
 
-    :catchall_45
+    :catchall_44
     move-exception v0
 
     monitor-exit p0

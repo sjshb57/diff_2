@@ -216,7 +216,7 @@
     :goto_be
     array-length v3, p1
 
-    if-ge v0, v3, :cond_db
+    if-ge v0, v3, :cond_dc
 
     const-string v4, "%s"
 
@@ -226,11 +226,11 @@
 
     const/4 v5, -0x1
 
-    if-ne v4, v5, :cond_cb
+    if-ne v4, v5, :cond_cc
 
-    goto :goto_db
+    goto :goto_dc
 
-    :cond_cb
+    :cond_cc
     invoke-virtual {v1, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v0, 0x1
@@ -249,15 +249,15 @@
 
     goto :goto_be
 
-    :cond_db
-    :goto_db
+    :cond_dc
+    :goto_dc
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
 
     invoke-virtual {v1, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
-    if-ge v0, v3, :cond_106
+    if-ge v0, v3, :cond_107
 
     const-string p0, " ["
 
@@ -269,10 +269,10 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_f0
+    :goto_f1
     array-length v0, p1
 
-    if-ge p0, v0, :cond_101
+    if-ge p0, v0, :cond_102
 
     const-string v0, ", "
 
@@ -286,14 +286,14 @@
 
     move p0, v0
 
-    goto :goto_f0
+    goto :goto_f1
 
-    :cond_101
+    :cond_102
     const/16 p0, 0x5d
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_106
+    :cond_107
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

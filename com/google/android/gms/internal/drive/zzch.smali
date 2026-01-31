@@ -358,14 +358,14 @@
 
     const/high16 v2, 0x10000000
 
-    if-eq v0, v2, :cond_19
+    if-eq v0, v2, :cond_1a
 
-    goto :goto_1a
+    goto :goto_1b
 
-    :cond_19
+    :cond_1a
     const/4 v1, 0x0
 
-    :goto_1a
+    :goto_1b
     const-string v0, "Cannot commit contents opened in MODE_READ_ONLY."
 
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
@@ -390,7 +390,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_49
+    if-eqz v0, :cond_4a
 
     invoke-interface {p1}, Lcom/google/android/gms/drive/DriveContents;->zzi()Lcom/google/android/gms/drive/Contents;
 
@@ -400,11 +400,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_41
+    if-eqz v0, :cond_42
 
-    goto :goto_49
+    goto :goto_4a
 
-    :cond_41
+    :cond_42
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "DriveContents must be valid for conflict detection."
@@ -413,13 +413,13 @@
 
     throw p1
 
-    :cond_49
-    :goto_49
-    if-nez p2, :cond_4d
+    :cond_4a
+    :goto_4a
+    if-nez p2, :cond_4e
 
     sget-object p2, Lcom/google/android/gms/drive/MetadataChangeSet;->zzax:Lcom/google/android/gms/drive/MetadataChangeSet;
 
-    :cond_4d
+    :cond_4e
     new-instance v0, Lcom/google/android/gms/internal/drive/zzcy;
 
     invoke-direct {v0, p0, p3, p1, p2}, Lcom/google/android/gms/internal/drive/zzcy;-><init>(Lcom/google/android/gms/internal/drive/zzch;Lcom/google/android/gms/drive/zzn;Lcom/google/android/gms/drive/DriveContents;Lcom/google/android/gms/drive/MetadataChangeSet;)V
@@ -1000,7 +1000,7 @@
 
     instance-of v0, p1, Lcom/google/android/gms/internal/drive/zzg;
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     check-cast p1, Lcom/google/android/gms/internal/drive/zzg;
 
@@ -1014,7 +1014,7 @@
 
     return-object p1
 
-    :cond_14
+    :cond_15
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "Could not recover key from ListenerToken"

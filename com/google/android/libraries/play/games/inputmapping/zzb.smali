@@ -25,9 +25,7 @@
     :cond_8
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/api/client/util/Uhr/zXgie;->EvyTp:Ljava/lang/String;
+    const-string v0, "InputMappingProvider cannot be null."
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
