@@ -171,7 +171,7 @@
 
     check-cast v0, Lcom/google/android/play/core/review/internal/zzo;
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_22
 
     iget-object v2, p0, Lcom/google/android/play/core/review/internal/zzt;->zzc:Lcom/google/android/play/core/review/internal/zzi;
 
@@ -183,9 +183,9 @@
 
     invoke-interface {v0}, Lcom/google/android/play/core/review/internal/zzo;->zza()V
 
-    goto :goto_4e
+    goto :goto_4f
 
-    :cond_21
+    :cond_22
     iget-object v0, p0, Lcom/google/android/play/core/review/internal/zzt;->zzc:Lcom/google/android/play/core/review/internal/zzi;
 
     iget-object v2, p0, Lcom/google/android/play/core/review/internal/zzt;->zzd:Ljava/lang/String;
@@ -206,12 +206,12 @@
 
     move-result-object v0
 
-    :goto_35
+    :goto_36
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_49
+    if-eqz v1, :cond_4a
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -225,14 +225,14 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/play/core/review/internal/zzj;->zzc(Ljava/lang/Exception;)V
 
-    goto :goto_35
+    goto :goto_36
 
-    :cond_49
+    :cond_4a
     iget-object v0, p0, Lcom/google/android/play/core/review/internal/zzt;->zze:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    :goto_4e
+    :goto_4f
     invoke-direct {p0}, Lcom/google/android/play/core/review/internal/zzt;->zzt()V
 
     return-void

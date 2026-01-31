@@ -41,9 +41,7 @@
 
     new-instance v4, Lcom/google/android/gms/common/Feature;
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/flatbuffers/OSq/msMBb;->HivPzHh:Ljava/lang/String;
+    const-string v5, "support_context_feature_id"
 
     invoke-direct {v4, v5, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 

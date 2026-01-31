@@ -126,9 +126,7 @@
 .method protected final zzb(Lcom/google/android/gms/common/data/DataHolder;II)Z
     .registers 6
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->wrkB:Ljava/lang/String;
+    const-string v0, "permissionId"
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/drive/metadata/internal/zzu;->zzh(Ljava/lang/String;)Ljava/lang/String;
 
@@ -138,7 +136,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_19
+    if-eqz v1, :cond_18
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/drive/metadata/internal/zzu;->zzh(Ljava/lang/String;)Ljava/lang/String;
 
@@ -148,13 +146,13 @@
 
     move-result p1
 
-    if-nez p1, :cond_19
+    if-nez p1, :cond_18
 
     const/4 p1, 0x1
 
     return p1
 
-    :cond_19
+    :cond_18
     const/4 p1, 0x0
 
     return p1
@@ -173,7 +171,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_43
+    if-eqz v2, :cond_42
 
     const-string v0, "displayName"
 
@@ -195,9 +193,7 @@
 
     move-result-object v4
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/common/config/bqv/CDjHFcXmu;->Xse:Ljava/lang/String;
+    const-string v0, "isAuthenticatedUser"
 
     invoke-direct {p0, v0}, Lcom/google/android/gms/drive/metadata/internal/zzu;->zzh(Ljava/lang/String;)Ljava/lang/String;
 
@@ -231,7 +227,7 @@
 
     return-object p1
 
-    :cond_43
+    :cond_42
     const/4 p1, 0x0
 
     return-object p1

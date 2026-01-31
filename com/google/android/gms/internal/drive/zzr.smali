@@ -56,9 +56,7 @@
     const/4 v0, 0x1
 
     :goto_f
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->gZO:Ljava/lang/String;
+    const-string v1, "Cannot create a new read-only contents!"
 
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 

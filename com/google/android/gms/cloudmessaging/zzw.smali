@@ -112,7 +112,7 @@
     :try_start_1
     iget v0, p0, Lcom/google/android/gms/cloudmessaging/zzw;->zzc:I
     :try_end_3
-    .catchall {:try_start_1 .. :try_end_3} :catchall_77
+    .catchall {:try_start_1 .. :try_end_3} :catchall_78
 
     if-eqz v0, :cond_7
 
@@ -152,7 +152,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_24
-    .catchall {:try_start_7 .. :try_end_24} :catchall_77
+    .catchall {:try_start_7 .. :try_end_24} :catchall_78
 
     monitor-exit p0
 
@@ -190,7 +190,7 @@
 
     if-nez v0, :cond_46
 
-    goto :goto_60
+    goto :goto_61
 
     :cond_46
     new-instance v0, Landroid/content/Intent;
@@ -209,27 +209,27 @@
 
     const/4 v1, 0x2
 
-    if-eqz v0, :cond_64
+    if-eqz v0, :cond_65
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_64
+    if-nez v0, :cond_65
 
     move v2, v1
 
-    :goto_60
+    :goto_61
     iput v2, p0, Lcom/google/android/gms/cloudmessaging/zzw;->zzc:I
-    :try_end_62
-    .catchall {:try_start_26 .. :try_end_62} :catchall_77
+    :try_end_63
+    .catchall {:try_start_26 .. :try_end_63} :catchall_78
 
     monitor-exit p0
 
     return v2
 
-    :cond_64
-    :try_start_64
+    :cond_65
+    :try_start_65
     const-string v0, "Metadata"
 
     const-string v3, "Failed to resolve IID implementation package, falling back"
@@ -240,23 +240,23 @@
 
     move-result v0
 
-    if-eq v2, v0, :cond_72
+    if-eq v2, v0, :cond_73
 
-    goto :goto_73
+    goto :goto_74
 
-    :cond_72
+    :cond_73
     move v2, v1
 
-    :goto_73
+    :goto_74
     iput v2, p0, Lcom/google/android/gms/cloudmessaging/zzw;->zzc:I
-    :try_end_75
-    .catchall {:try_start_64 .. :try_end_75} :catchall_77
+    :try_end_76
+    .catchall {:try_start_65 .. :try_end_76} :catchall_78
 
     monitor-exit p0
 
     return v2
 
-    :catchall_77
+    :catchall_78
     move-exception v0
 
     monitor-exit p0

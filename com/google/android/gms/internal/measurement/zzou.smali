@@ -50,9 +50,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/measurement/zzif;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzhx;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/api/client/testing/http/apache/ajPK/nZKzCff;->IzngmQUctsItjsW:Ljava/lang/String;
+    const-string v1, "measurement.sdk.collection.last_deep_link_referrer_campaign2"
 
     const/4 v2, 0x0
 

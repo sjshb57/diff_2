@@ -36,7 +36,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_1a
+    if-nez v1, :cond_1b
 
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzic;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
@@ -52,7 +52,7 @@
 
     return-void
 
-    :cond_1a
+    :cond_1b
     invoke-virtual {v0}, Lcom/google/android/gms/measurement/internal/zzic;->zzp()Lcom/google/android/gms/measurement/internal/zzju;
 
     move-result-object v1

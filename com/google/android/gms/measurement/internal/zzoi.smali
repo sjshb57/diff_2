@@ -204,7 +204,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_1b
+    if-nez v1, :cond_1a
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
@@ -214,20 +214,18 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    sget-object v2, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->dNWrDXrWHui:Ljava/lang/String;
+    const-string v2, "Receiver not registered/enabled"
 
     invoke-virtual {v1, v2}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;)V
 
-    :cond_1b
+    :cond_1a
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/google/android/gms/measurement/internal/zzpn;->zza(Landroid/content/Context;Z)Z
 
     move-result v0
 
-    if-nez v0, :cond_2f
+    if-nez v0, :cond_2e
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
 
@@ -241,7 +239,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/measurement/internal/zzgq;->zza(Ljava/lang/String;)V
 
-    :cond_2f
+    :cond_2e
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzoi;->zzr()V
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zzj()Lcom/google/android/gms/measurement/internal/zzgo;
@@ -292,7 +290,7 @@
 
     cmp-long v0, p1, v2
 
-    if-gez v0, :cond_75
+    if-gez v0, :cond_74
 
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzoi;->zzy()Lcom/google/android/gms/measurement/internal/zzbb;
 
@@ -302,7 +300,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_75
+    if-nez v0, :cond_74
 
     invoke-direct {p0}, Lcom/google/android/gms/measurement/internal/zzoi;->zzy()Lcom/google/android/gms/measurement/internal/zzbb;
 
@@ -310,12 +308,12 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/measurement/internal/zzbb;->zza(J)V
 
-    :cond_75
+    :cond_74
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x18
 
-    if-lt v0, v2, :cond_b5
+    if-lt v0, v2, :cond_b4
 
     invoke-virtual {p0}, Lcom/google/android/gms/measurement/internal/zzjf;->zza()Landroid/content/Context;
 
@@ -373,10 +371,10 @@
 
     return-void
 
-    :cond_b5
+    :cond_b4
     iget-object v2, p0, Lcom/google/android/gms/measurement/internal/zzoi;->zza:Landroid/app/AlarmManager;
 
-    if-eqz v2, :cond_d1
+    if-eqz v2, :cond_d0
 
     sget-object v0, Lcom/google/android/gms/measurement/internal/zzbn;->zzab:Lcom/google/android/gms/measurement/internal/zzfx;
 
@@ -402,7 +400,7 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/app/AlarmManager;->setInexactRepeating(IJJLandroid/app/PendingIntent;)V
 
-    :cond_d1
+    :cond_d0
     return-void
 .end method
 

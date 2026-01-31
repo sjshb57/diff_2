@@ -95,7 +95,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_2a
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -107,9 +107,7 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
-
-    sget-object v4, Lcom/google/firebase/annotations/concurrent/co/shLugSUhvY;->lMyKkibAK:Ljava/lang/String;
+    const-string v4, "Failing "
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -127,7 +125,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2b
+    :cond_2a
     iget-object v0, p0, Lcom/google/android/gms/cloudmessaging/zzs;->zzb:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V

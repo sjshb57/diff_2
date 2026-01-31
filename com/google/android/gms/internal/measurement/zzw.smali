@@ -71,7 +71,7 @@
 
     instance-of v2, v1, Lcom/google/android/gms/internal/measurement/zzar;
 
-    if-eqz v2, :cond_7b
+    if-eqz v2, :cond_7a
 
     const/4 v2, 0x2
 
@@ -87,19 +87,17 @@
 
     instance-of p2, p1, Lcom/google/android/gms/internal/measurement/zzap;
 
-    if-eqz p2, :cond_73
+    if-eqz p2, :cond_72
 
     check-cast p1, Lcom/google/android/gms/internal/measurement/zzap;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/savedstate/xT/fgyAspfzfnhI;->aaNOMLwqzwIIwpu:Ljava/lang/String;
+    const-string p2, "type"
 
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/measurement/zzap;->zzc(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_6b
+    if-eqz v2, :cond_6a
 
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/measurement/zzap;->zza(Ljava/lang/String;)Lcom/google/android/gms/internal/measurement/zzaq;
 
@@ -115,7 +113,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_5f
+    if-eqz v3, :cond_5e
 
     invoke-virtual {p1, v2}, Lcom/google/android/gms/internal/measurement/zzap;->zza(Ljava/lang/String;)Lcom/google/android/gms/internal/measurement/zzaq;
 
@@ -133,12 +131,12 @@
 
     move-result p1
 
-    goto :goto_61
+    goto :goto_60
 
-    :cond_5f
+    :cond_5e
     const/16 p1, 0x3e8
 
-    :goto_61
+    :goto_60
     iget-object v2, p0, Lcom/google/android/gms/internal/measurement/zzw;->zzk:Lcom/google/android/gms/internal/measurement/zzaa;
 
     check-cast v1, Lcom/google/android/gms/internal/measurement/zzar;
@@ -149,7 +147,7 @@
 
     return-object p1
 
-    :cond_6b
+    :cond_6a
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "Undefined rule type"
@@ -158,7 +156,7 @@
 
     throw p1
 
-    :cond_73
+    :cond_72
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "Invalid callback params"
@@ -167,7 +165,7 @@
 
     throw p1
 
-    :cond_7b
+    :cond_7a
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "Invalid callback type"

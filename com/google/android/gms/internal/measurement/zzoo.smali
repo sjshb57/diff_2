@@ -24,9 +24,7 @@
 
     new-instance v0, Lcom/google/android/gms/internal/measurement/zzif;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->YXzpi:Ljava/lang/String;
+    const-string v1, "com.google.android.gms.measurement"
 
     invoke-static {v1}, Lcom/google/android/gms/internal/measurement/zzhu;->zza(Ljava/lang/String;)Landroid/net/Uri;
 

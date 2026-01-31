@@ -524,9 +524,7 @@
     return-void
 
     :catchall_2f
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->JjdPAGf:Ljava/lang/String;
+    const-string p1, "BillingBroadcastManager"
 
     const-string p2, "Failed parsing Api failure."
 
@@ -612,7 +610,7 @@
 
     aput-object p2, v2, v0
 
-    const-string/jumbo v1, "g0r8j0zFxGF1B5ik"
+    const-string/jumbo v1, "3TYXY1t69VET6VeM"
 
     invoke-static {v1, v2}, Lcom/pairip/VMRunner;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 

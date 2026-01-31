@@ -206,9 +206,7 @@
 
     sput-object v1, Lcom/google/android/gms/internal/measurement/zzpa;->zzg:Lcom/google/android/gms/internal/measurement/zzhx;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/collections/zgTb/JhPPV;->FxUJzVeRIvLr:Ljava/lang/String;
+    const-string v1, "measurement.rb.attribution.service"
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/measurement/zzif;->zza(Ljava/lang/String;Z)Lcom/google/android/gms/internal/measurement/zzhx;
 
