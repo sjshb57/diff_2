@@ -81,9 +81,7 @@
     :cond_37
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->oJKjVBTK:Ljava/lang/String;
+    const-string p2, "buffer"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

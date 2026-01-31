@@ -288,7 +288,7 @@
 
     const/4 v1, 0x0
 
-    packed-switch p1, :pswitch_data_72
+    packed-switch p1, :pswitch_data_70
 
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -381,9 +381,7 @@
 
     aput-object p2, p1, p3
 
-    const/4 p2, 0x0
-
-    sget-object p2, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->ujl:Ljava/lang/String;
+    const-string p2, "zzhn"
 
     const/4 p3, 0x3
 
@@ -411,26 +409,24 @@
 
     return-object p1
 
-    :pswitch_65  #0x2
+    :pswitch_64  #0x2
     new-instance p1, Lcom/google/android/gms/internal/drive/zzfb$zza;
 
     invoke-direct {p1, v1}, Lcom/google/android/gms/internal/drive/zzfb$zza;-><init>(Lcom/google/android/gms/internal/drive/zzfc;)V
 
     return-object p1
 
-    :pswitch_6b  #0x1
+    :pswitch_6a  #0x1
     new-instance p1, Lcom/google/android/gms/internal/drive/zzfb;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/drive/zzfb;-><init>()V
 
     return-object p1
 
-    nop
-
-    :pswitch_data_72
+    :pswitch_data_70
     .packed-switch 0x1
-        :pswitch_6b  #00000001
-        :pswitch_65  #00000002
+        :pswitch_6a  #00000001
+        :pswitch_64  #00000002
         :pswitch_3c  #00000003
         :pswitch_39  #00000004
         :pswitch_1f  #00000005

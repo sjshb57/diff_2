@@ -73,23 +73,23 @@
 
     move-result v4
 
-    if-eq v4, v3, :cond_8c
+    if-eq v4, v3, :cond_8b
 
     const/4 v5, 0x2
 
-    if-eq v4, v5, :cond_84
+    if-eq v4, v5, :cond_83
 
     const/4 v5, 0x3
 
-    if-eq v4, v5, :cond_5f
+    if-eq v4, v5, :cond_5e
 
     const/4 v5, 0x4
 
-    if-eq v4, v5, :cond_57
+    if-eq v4, v5, :cond_56
 
     const/16 v5, 0x8
 
-    if-eq v4, v5, :cond_46
+    if-eq v4, v5, :cond_45
 
     invoke-static {}, Lcom/google/android/gms/internal/drive/zzee;->zzai()Lcom/google/android/gms/common/internal/GmsLogger;
 
@@ -99,15 +99,13 @@
 
     aput-object p1, v3, v1
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->fbj:Ljava/lang/String;
+    const-string p1, "Unexpected event: %s"
 
     invoke-virtual {v0, v2, p1, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->wfmt(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
-    :cond_46
+    :cond_45
     check-cast p1, Lcom/google/android/gms/drive/events/zzr;
 
     invoke-virtual {p1}, Lcom/google/android/gms/drive/events/zzr;->zzac()Lcom/google/android/gms/internal/drive/zzh;
@@ -124,7 +122,7 @@
 
     return-void
 
-    :cond_57
+    :cond_56
     check-cast v0, Lcom/google/android/gms/drive/events/zzd;
 
     check-cast p1, Lcom/google/android/gms/drive/events/zzb;
@@ -133,7 +131,7 @@
 
     return-void
 
-    :cond_5f
+    :cond_5e
     check-cast v0, Lcom/google/android/gms/drive/events/zzq;
 
     check-cast p1, Lcom/google/android/gms/drive/events/zzo;
@@ -142,7 +140,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_76
+    if-eqz v1, :cond_75
 
     new-instance v2, Lcom/google/android/gms/drive/MetadataBuffer;
 
@@ -154,12 +152,12 @@
 
     invoke-interface {v0, v1}, Lcom/google/android/gms/drive/events/zzq;->zza(Lcom/google/android/gms/drive/events/zzn;)V
 
-    :cond_76
+    :cond_75
     invoke-virtual {p1}, Lcom/google/android/gms/drive/events/zzo;->zzaa()Z
 
     move-result v1
 
-    if-eqz v1, :cond_83
+    if-eqz v1, :cond_82
 
     invoke-virtual {p1}, Lcom/google/android/gms/drive/events/zzo;->zzab()I
 
@@ -167,10 +165,10 @@
 
     invoke-interface {v0, p1}, Lcom/google/android/gms/drive/events/zzq;->zzc(I)V
 
-    :cond_83
+    :cond_82
     return-void
 
-    :cond_84
+    :cond_83
     check-cast v0, Lcom/google/android/gms/drive/events/CompletionListener;
 
     check-cast p1, Lcom/google/android/gms/drive/events/CompletionEvent;
@@ -179,7 +177,7 @@
 
     return-void
 
-    :cond_8c
+    :cond_8b
     check-cast v0, Lcom/google/android/gms/drive/events/ChangeListener;
 
     check-cast p1, Lcom/google/android/gms/drive/events/ChangeEvent;

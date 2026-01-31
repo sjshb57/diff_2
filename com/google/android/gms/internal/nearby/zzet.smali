@@ -283,7 +283,7 @@
 
     iget-boolean v0, p0, Lcom/google/android/gms/internal/nearby/zzet;->zzg:Z
 
-    if-nez v0, :cond_86
+    if-nez v0, :cond_87
 
     const-string v0, "Can\'t stop NFC dispatching. Not dispatching."
 
@@ -291,7 +291,7 @@
 
     return-void
 
-    :cond_86
+    :cond_87
     iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzet;->zzc:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -300,13 +300,13 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    if-eqz v0, :cond_95
+    if-eqz v0, :cond_96
 
     iget-object v2, p0, Lcom/google/android/gms/internal/nearby/zzet;->zzd:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v2, v0}, Landroid/nfc/NfcAdapter;->disableReaderMode(Landroid/app/Activity;)V
 
-    :cond_95
+    :cond_96
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/gms/internal/nearby/zzet;->zzg:Z

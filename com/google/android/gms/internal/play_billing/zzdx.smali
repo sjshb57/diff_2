@@ -293,7 +293,7 @@
 
     iget v0, p2, Lcom/google/android/gms/internal/play_billing/zzdw;->zza:I
 
-    if-ltz v0, :cond_db
+    if-ltz v0, :cond_da
 
     if-nez v0, :cond_f
 
@@ -533,9 +533,7 @@
 
     aput-object v0, v1, p1
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/appcheck/ktx/FnLm/aulfEPmWWdGjV;->gFHNIvc:Ljava/lang/String;
+    const-string p1, "buffer length=%d, index=%d, size=%d"
 
     invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -545,7 +543,7 @@
 
     throw p0
 
-    :cond_db
+    :cond_da
     new-instance p0, Lcom/google/android/gms/internal/play_billing/zzfq;
 
     const-string p1, "CodedInputStream encountered an embedded string or message which claimed to have negative size."

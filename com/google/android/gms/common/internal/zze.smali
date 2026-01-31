@@ -50,35 +50,33 @@
     :try_start_f
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zze;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->MvwSshFxZJ:Ljava/lang/String;
+    const-string v1, "com.google.android.gms.common.internal.IGmsServiceBroker"
 
     invoke-interface {p2, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v1
 
-    if-eqz v1, :cond_21
+    if-eqz v1, :cond_20
 
     instance-of v2, v1, Lcom/google/android/gms/common/internal/IGmsServiceBroker;
 
-    if-eqz v2, :cond_21
+    if-eqz v2, :cond_20
 
     check-cast v1, Lcom/google/android/gms/common/internal/IGmsServiceBroker;
 
-    goto :goto_26
+    goto :goto_25
 
-    :cond_21
+    :cond_20
     new-instance v1, Lcom/google/android/gms/common/internal/zzad;
 
     invoke-direct {v1, p2}, Lcom/google/android/gms/common/internal/zzad;-><init>(Landroid/os/IBinder;)V
 
-    :goto_26
+    :goto_25
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzh(Lcom/google/android/gms/common/internal/BaseGmsClient;Lcom/google/android/gms/common/internal/IGmsServiceBroker;)V
 
     monitor-exit p1
-    :try_end_2a
-    .catchall {:try_start_f .. :try_end_2a} :catchall_34
+    :try_end_29
+    .catchall {:try_start_f .. :try_end_29} :catchall_33
 
     iget-object p1, p0, Lcom/google/android/gms/common/internal/zze;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
@@ -92,13 +90,13 @@
 
     return-void
 
-    :catchall_34
+    :catchall_33
     move-exception p2
 
-    :try_start_35
+    :try_start_34
     monitor-exit p1
-    :try_end_36
-    .catchall {:try_start_35 .. :try_end_36} :catchall_34
+    :try_end_35
+    .catchall {:try_start_34 .. :try_end_35} :catchall_33
 
     throw p2
 .end method

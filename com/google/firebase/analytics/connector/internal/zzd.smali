@@ -437,9 +437,7 @@
 
     iput-object v1, v0, Lcom/google/firebase/analytics/connector/AnalyticsConnector$ConditionalUserProperty;->timedOutEventName:Ljava/lang/String;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lkotlin/EDDN/hfnXJuYOaqC;->NSf:Ljava/lang/String;
+    const-string v1, "timed_out_event_params"
 
     const-class v4, Landroid/os/Bundle;
 
@@ -477,9 +475,7 @@
 
     const-class v1, Ljava/lang/Long;
 
-    const/4 v4, 0x0
-
-    sget-object v4, Landroidx/core/content/Whm/HgKojeDw;->kVNvBXjmETgmff:Ljava/lang/String;
+    const-string v4, "time_to_live"
 
     invoke-static {p0, v4, v1, v2}, Lcom/google/android/gms/measurement/internal/zzjk;->zza(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1050,7 +1046,7 @@
 
     sparse-switch p1, :sswitch_data_76
 
-    goto :goto_5d
+    goto :goto_5c
 
     :sswitch_3c
     const-string p1, "fiam"
@@ -1061,12 +1057,12 @@
 
     if-nez p0, :cond_45
 
-    goto :goto_5d
+    goto :goto_5c
 
     :cond_45
     const/4 v2, 0x2
 
-    goto :goto_5d
+    goto :goto_5c
 
     :sswitch_47
     const-string p1, "fdl"
@@ -1077,58 +1073,56 @@
 
     if-nez p0, :cond_50
 
-    goto :goto_5d
+    goto :goto_5c
 
     :cond_50
     move v2, v0
 
-    goto :goto_5d
+    goto :goto_5c
 
     :sswitch_52
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/core/util/LEr/bFMYUr;->PXjariqss:Ljava/lang/String;
+    const-string p1, "fcm"
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-nez p0, :cond_5c
+    if-nez p0, :cond_5b
 
-    goto :goto_5d
+    goto :goto_5c
 
-    :cond_5c
+    :cond_5b
     move v2, v1
 
-    :goto_5d
-    const/4 p0, 0x0
-
-    sget-object p0, Landroidx/print/nh/SlomKQFs;->ZzEteQji:Ljava/lang/String;
+    :goto_5c
+    const-string p0, "_cis"
 
     packed-switch v2, :pswitch_data_84
 
     return v1
 
-    :pswitch_64  #0x2
+    :pswitch_62  #0x2
     const-string p1, "fiam_integration"
 
     invoke-virtual {p2, p0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    :pswitch_6a  #0x1
+    :pswitch_69  #0x1
     const-string p1, "fdl_integration"
 
     invoke-virtual {p2, p0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    :pswitch_70  #0x0
+    :pswitch_6f  #0x0
     const-string p1, "fcm_integration"
 
     invoke-virtual {p2, p0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
+
+    nop
 
     :sswitch_data_76
     .sparse-switch
@@ -1139,9 +1133,9 @@
 
     :pswitch_data_84
     .packed-switch 0x0
-        :pswitch_70  #00000000
-        :pswitch_6a  #00000001
-        :pswitch_64  #00000002
+        :pswitch_6f  #00000000
+        :pswitch_69  #00000001
+        :pswitch_62  #00000002
     .end packed-switch
 .end method
 

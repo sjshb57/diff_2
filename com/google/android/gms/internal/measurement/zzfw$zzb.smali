@@ -216,7 +216,7 @@
 
     const/4 p2, 0x0
 
-    packed-switch p1, :pswitch_data_7a
+    packed-switch p1, :pswitch_data_7c
 
     throw p2
 
@@ -345,26 +345,24 @@
 
     return-object p1
 
-    :pswitch_6d  #0x2
+    :pswitch_70  #0x2
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzfw$zzb$zza;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/measurement/zzfw$zzb$zza;-><init>(Lcom/google/android/gms/internal/measurement/zzfz;)V
 
     return-object p1
 
-    :pswitch_73  #0x1
+    :pswitch_76  #0x1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzfw$zzb;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzfw$zzb;-><init>()V
 
     return-object p1
 
-    nop
-
-    :pswitch_data_7a
+    :pswitch_data_7c
     .packed-switch 0x1
-        :pswitch_73  #00000001
-        :pswitch_6d  #00000002
+        :pswitch_76  #00000001
+        :pswitch_70  #00000002
         :pswitch_2d  #00000003
         :pswitch_2a  #00000004
         :pswitch_10  #00000005

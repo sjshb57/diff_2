@@ -1128,9 +1128,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/nearby/zzcn;->zze:Lcom/google/android/gms/internal/nearby/zzo;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/android/gms/games/provider/puL/olHYGdQqt;->GFQhs:Ljava/lang/String;
+    const-string v1, "discovery"
 
     invoke-virtual {v0, p0, v1}, Lcom/google/android/gms/internal/nearby/zzo;->zzg(Lcom/google/android/gms/common/api/GoogleApi;Ljava/lang/String;)Lcom/google/android/gms/tasks/Task;
 

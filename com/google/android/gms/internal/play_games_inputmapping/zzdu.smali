@@ -104,9 +104,7 @@
     :cond_9
     new-instance v0, Ljava/lang/AssertionError;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->jtijZ:Ljava/lang/String;
+    const-string v1, "Mismatched calls to RecursionDepth (possible error in core library)"
 
     invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 

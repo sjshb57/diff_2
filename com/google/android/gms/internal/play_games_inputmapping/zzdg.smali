@@ -143,9 +143,7 @@
 
     const/16 v10, 0x53
 
-    const/4 v12, 0x0
-
-    sget-object v12, Landroidx/activity/result/contract/ao/IxAwIQxxfv;->snLbvGQBuY:Ljava/lang/String;
+    const-string v12, "TIME_SECONDS_OF_MINUTE_PADDED"
 
     const/4 v13, 0x5
 
@@ -283,9 +281,7 @@
 
     const/16 v15, 0x41
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/core/content/Whm/HgKojeDw;->PfCRSyuibchHK:Ljava/lang/String;
+    const-string v3, "DATE_DAY_FULL"
 
     move-object/from16 v19, v7
 
@@ -633,8 +629,8 @@
 
     move v3, v7
 
-    :goto_236
-    if-ge v3, v2, :cond_264
+    :goto_234
+    if-ge v3, v2, :cond_262
 
     aget-object v4, v1, v3
 
@@ -648,13 +644,13 @@
 
     move-result-object v5
 
-    if-nez v5, :cond_249
+    if-nez v5, :cond_247
 
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_236
+    goto :goto_234
 
-    :cond_249
+    :cond_247
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -681,7 +677,7 @@
 
     throw v0
 
-    :cond_264
+    :cond_262
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0

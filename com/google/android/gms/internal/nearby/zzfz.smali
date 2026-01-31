@@ -209,22 +209,22 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_d6
+    if-eqz v1, :cond_d5
 
     iget-object v3, p0, Lcom/google/android/gms/internal/nearby/zzfz;->zzb:Landroid/os/ParcelFileDescriptor;
 
-    if-nez v3, :cond_d6
+    if-nez v3, :cond_d5
 
     :try_start_b
     invoke-static {}, Lcom/google/android/gms/internal/nearby/zzgf;->zzc()Ljava/io/File;
 
     move-result-object v3
     :try_end_f
-    .catch Ljava/lang/IllegalStateException; {:try_start_b .. :try_end_f} :catch_a1
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_f} :catch_7a
-    .catchall {:try_start_b .. :try_end_f} :catchall_78
+    .catch Ljava/lang/IllegalStateException; {:try_start_b .. :try_end_f} :catch_a0
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_f} :catch_79
+    .catchall {:try_start_b .. :try_end_f} :catchall_77
 
-    if-eqz v3, :cond_70
+    if-eqz v3, :cond_6f
 
     :try_start_11
     new-instance v4, Ljava/lang/StringBuilder;
@@ -243,19 +243,17 @@
 
     move-result-object v4
 
-    const/4 v5, 0x0
-
-    sget-object v5, Lcom/google/flatbuffers/OSq/msMBb;->ClRz:Ljava/lang/String;
+    const-string v5, ".tmp"
 
     invoke-static {v4, v5, v3}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     move-result-object v3
-    :try_end_2a
-    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_2a} :catch_67
-    .catch Ljava/lang/IllegalStateException; {:try_start_11 .. :try_end_2a} :catch_a1
-    .catchall {:try_start_11 .. :try_end_2a} :catchall_78
+    :try_end_29
+    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_29} :catch_66
+    .catch Ljava/lang/IllegalStateException; {:try_start_11 .. :try_end_29} :catch_a0
+    .catchall {:try_start_11 .. :try_end_29} :catchall_77
 
-    :try_start_2a
+    :try_start_29
     new-instance v4, Ljava/io/FileOutputStream;
 
     invoke-direct {v4, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -265,13 +263,13 @@
     invoke-static {v3, v5}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v5
-    :try_end_35
-    .catch Ljava/io/FileNotFoundException; {:try_start_2a .. :try_end_35} :catch_5e
-    .catch Ljava/lang/IllegalStateException; {:try_start_2a .. :try_end_35} :catch_a1
-    .catch Ljava/io/IOException; {:try_start_2a .. :try_end_35} :catch_7a
-    .catchall {:try_start_2a .. :try_end_35} :catchall_78
+    :try_end_34
+    .catch Ljava/io/FileNotFoundException; {:try_start_29 .. :try_end_34} :catch_5d
+    .catch Ljava/lang/IllegalStateException; {:try_start_29 .. :try_end_34} :catch_a0
+    .catch Ljava/io/IOException; {:try_start_29 .. :try_end_34} :catch_79
+    .catchall {:try_start_29 .. :try_end_34} :catchall_77
 
-    :try_start_35
+    :try_start_34
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     invoke-static {v4, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
@@ -289,12 +287,12 @@
     new-instance v5, Ljava/io/DataOutputStream;
 
     invoke-direct {v5, v4}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_4a
-    .catch Ljava/lang/IllegalStateException; {:try_start_35 .. :try_end_4a} :catch_a1
-    .catch Ljava/io/IOException; {:try_start_35 .. :try_end_4a} :catch_7a
-    .catchall {:try_start_35 .. :try_end_4a} :catchall_78
+    :try_end_49
+    .catch Ljava/lang/IllegalStateException; {:try_start_34 .. :try_end_49} :catch_a0
+    .catch Ljava/io/IOException; {:try_start_34 .. :try_end_49} :catch_79
+    .catchall {:try_start_34 .. :try_end_49} :catchall_77
 
-    :try_start_4a
+    :try_start_49
     array-length v4, v1
 
     invoke-virtual {v5, v4}, Ljava/io/DataOutputStream;->writeInt(I)V
@@ -304,29 +302,29 @@
     iget-object v1, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/ParcelFileDescriptor;
-    :try_end_55
-    .catch Ljava/lang/IllegalStateException; {:try_start_4a .. :try_end_55} :catch_5c
-    .catch Ljava/io/IOException; {:try_start_4a .. :try_end_55} :catch_5a
-    .catchall {:try_start_4a .. :try_end_55} :catchall_ce
+    :try_end_54
+    .catch Ljava/lang/IllegalStateException; {:try_start_49 .. :try_end_54} :catch_5b
+    .catch Ljava/io/IOException; {:try_start_49 .. :try_end_54} :catch_59
+    .catchall {:try_start_49 .. :try_end_54} :catchall_cd
 
     invoke-static {v5}, Lcom/google/android/gms/internal/nearby/zzfz;->zze(Ljava/io/Closeable;)V
 
-    goto/16 :goto_cb
+    goto/16 :goto_ca
 
-    :catch_5a
+    :catch_59
     move-exception v1
 
-    goto :goto_7c
+    goto :goto_7b
 
-    :catch_5c
+    :catch_5b
     move-exception v1
 
-    goto :goto_a3
+    goto :goto_a2
 
-    :catch_5e
+    :catch_5d
     move-exception v1
 
-    :try_start_5f
+    :try_start_5e
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string v4, "Temporary file is somehow already deleted"
@@ -335,7 +333,7 @@
 
     throw v3
 
-    :catch_67
+    :catch_66
     move-exception v1
 
     new-instance v3, Ljava/lang/IllegalStateException;
@@ -346,7 +344,7 @@
 
     throw v3
 
-    :cond_70
+    :cond_6f
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v3, "Must set temp dir before writing this object to a parcel"
@@ -354,23 +352,23 @@
     invoke-direct {v1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
-    :try_end_78
-    .catch Ljava/lang/IllegalStateException; {:try_start_5f .. :try_end_78} :catch_a1
-    .catch Ljava/io/IOException; {:try_start_5f .. :try_end_78} :catch_7a
-    .catchall {:try_start_5f .. :try_end_78} :catchall_78
+    :try_end_77
+    .catch Ljava/lang/IllegalStateException; {:try_start_5e .. :try_end_77} :catch_a0
+    .catch Ljava/io/IOException; {:try_start_5e .. :try_end_77} :catch_79
+    .catchall {:try_start_5e .. :try_end_77} :catchall_77
 
-    :catchall_78
+    :catchall_77
     move-exception p1
 
-    goto :goto_d0
+    goto :goto_cf
 
-    :catch_7a
+    :catch_79
     move-exception v1
 
     move-object v5, v2
 
-    :goto_7c
-    :try_start_7c
+    :goto_7b
+    :try_start_7b
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -401,16 +399,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v5, :cond_ca
+    if-eqz v5, :cond_c9
 
-    goto :goto_c7
+    goto :goto_c6
 
-    :catch_a1
+    :catch_a0
     move-exception v1
 
     move-object v5, v2
 
-    :goto_a3
+    :goto_a2
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -440,37 +438,37 @@
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_c5
-    .catchall {:try_start_7c .. :try_end_c5} :catchall_ce
+    :try_end_c4
+    .catchall {:try_start_7b .. :try_end_c4} :catchall_cd
 
-    if-eqz v5, :cond_ca
+    if-eqz v5, :cond_c9
 
-    :goto_c7
+    :goto_c6
     invoke-static {v5}, Lcom/google/android/gms/internal/nearby/zzfz;->zze(Ljava/io/Closeable;)V
 
-    :cond_ca
+    :cond_c9
     move-object v1, v2
 
-    :goto_cb
+    :goto_ca
     iput-object v1, p0, Lcom/google/android/gms/internal/nearby/zzfz;->zzb:Landroid/os/ParcelFileDescriptor;
 
-    goto :goto_d6
+    goto :goto_d5
 
-    :catchall_ce
+    :catchall_cd
     move-exception p1
 
     move-object v2, v5
 
-    :goto_d0
-    if-eqz v2, :cond_d5
+    :goto_cf
+    if-eqz v2, :cond_d4
 
     invoke-static {v2}, Lcom/google/android/gms/internal/nearby/zzfz;->zze(Ljava/io/Closeable;)V
 
-    :cond_d5
+    :cond_d4
     throw p1
 
-    :cond_d6
-    :goto_d6
+    :cond_d5
+    :goto_d5
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result v0

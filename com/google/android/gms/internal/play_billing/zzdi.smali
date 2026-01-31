@@ -62,7 +62,7 @@
 
     const/4 p2, 0x1
 
-    if-eqz p1, :cond_45
+    if-eqz p1, :cond_44
 
     const/4 p3, 0x5
 
@@ -116,9 +116,7 @@
 
     aput-object v3, p3, v4
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/google/android/play/core/client/zMw/JMrXXOUwCGVZP;->EKCEsmRaG:Ljava/lang/String;
+    const-string v3, "zze"
 
     aput-object v3, p3, p2
 
@@ -142,7 +140,7 @@
 
     return-object p1
 
-    :cond_45
+    :cond_44
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p1

@@ -176,9 +176,7 @@
 
     aput-object p2, p1, v0
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->zLNVV:Ljava/lang/String;
+    const-string p2, "zzf"
 
     aput-object p2, p1, p3
 
@@ -198,24 +196,26 @@
 
     return-object p1
 
-    :pswitch_48  #0x2
+    :pswitch_47  #0x2
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgc$zza$zzf$zza;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/measurement/zzgc$zza$zzf$zza;-><init>(Lcom/google/android/gms/internal/measurement/zzgg;)V
 
     return-object p1
 
-    :pswitch_4e  #0x1
+    :pswitch_4d  #0x1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgc$zza$zzf;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzgc$zza$zzf;-><init>()V
 
     return-object p1
 
+    nop
+
     :pswitch_data_54
     .packed-switch 0x1
-        :pswitch_4e  #00000001
-        :pswitch_48  #00000002
+        :pswitch_4d  #00000001
+        :pswitch_47  #00000002
         :pswitch_2d  #00000003
         :pswitch_2a  #00000004
         :pswitch_10  #00000005

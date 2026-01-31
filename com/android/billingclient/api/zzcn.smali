@@ -69,18 +69,16 @@
 
     const-string v1, "BillingLogger"
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_c
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/core/util/LEr/bFMYUr;->dkQKAzVqF:Ljava/lang/String;
+    const-string p1, "Skipping logging since initialization failed."
 
     invoke-static {v1, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    :cond_d
-    :try_start_d
+    :cond_c
+    :try_start_c
     iget-object v0, p0, Lcom/android/billingclient/api/zzcn;->zzb:Lcom/google/android/datatransport/Transport;
 
     invoke-static {p1}, Lcom/google/android/datatransport/Event;->ofData(Ljava/lang/Object;)Lcom/google/android/datatransport/Event;
@@ -88,12 +86,12 @@
     move-result-object p1
 
     invoke-interface {v0, p1}, Lcom/google/android/datatransport/Transport;->send(Lcom/google/android/datatransport/Event;)V
-    :try_end_16
-    .catchall {:try_start_d .. :try_end_16} :catchall_17
+    :try_end_15
+    .catchall {:try_start_c .. :try_end_15} :catchall_16
 
     return-void
 
-    :catchall_17
+    :catchall_16
     const-string p1, "logging failed."
 
     invoke-static {v1, p1}, Lcom/google/android/gms/internal/play_billing/zzc;->zzn(Ljava/lang/String;Ljava/lang/String;)V

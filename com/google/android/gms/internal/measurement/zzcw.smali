@@ -41,31 +41,29 @@
 
     move-result-object p2
 
-    const/4 p3, 0x0
-
-    sget-object p3, Lcom/google/flatbuffers/OSq/msMBb;->GXAK:Ljava/lang/String;
+    const-string p3, ""
 
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
-    if-eqz p2, :cond_19
+    if-eqz p2, :cond_18
 
     new-instance p2, Lcom/google/android/gms/internal/measurement/zzcr;
 
     invoke-direct {p2}, Lcom/google/android/gms/internal/measurement/zzcr;-><init>()V
 
-    goto :goto_1a
+    goto :goto_19
 
-    :cond_19
+    :cond_18
     const/4 p2, 0x0
 
-    :goto_1a
-    if-eqz p2, :cond_1d
+    :goto_19
+    if-eqz p2, :cond_1c
 
     return-object p2
 
-    :cond_1d
+    :cond_1c
     sget-object p2, Lcom/google/android/gms/internal/measurement/zzcw;->zza:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -86,12 +84,12 @@
 
     const/4 p3, 0x0
 
-    :try_start_32
+    :try_start_31
     invoke-virtual {p0, p1, p3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p0
-    :try_end_36
-    .catchall {:try_start_32 .. :try_end_36} :catchall_3c
+    :try_end_35
+    .catchall {:try_start_31 .. :try_end_35} :catchall_3b
 
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
@@ -99,7 +97,7 @@
 
     return-object p0
 
-    :catchall_3c
+    :catchall_3b
     move-exception p0
 
     sget-object p1, Lcom/google/android/gms/internal/measurement/zzcw;->zza:Ljava/lang/ThreadLocal;

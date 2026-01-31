@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_1b
+    if-ne p1, v0, :cond_1a
 
     iget-object p1, p0, Lcom/google/android/gms/internal/nearby/zzes;->zza:Lcom/google/android/gms/internal/nearby/zzet;
 
@@ -123,9 +123,7 @@
 
     const-string p1, "NearbyConnections"
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/gms/measurement/internal/LJ/ORAPNAmPcPMG;->ouRrQqnxXhD:Ljava/lang/String;
+    const-string v0, "Activity is hidden."
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -133,6 +131,6 @@
 
     invoke-static {p1}, Lcom/google/android/gms/internal/nearby/zzet;->zze(Lcom/google/android/gms/internal/nearby/zzet;)V
 
-    :cond_1b
+    :cond_1a
     return-void
 .end method

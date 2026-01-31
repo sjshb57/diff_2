@@ -379,9 +379,7 @@
 
     sget-object v26, Lcom/google/android/gms/internal/play_games_inputmapping/zzfl;->zzb:Lcom/google/android/gms/internal/play_games_inputmapping/zzfl;
 
-    const/16 v22, 0x0
-
-    sget-object v22, Lkotlin/EDDN/hfnXJuYOaqC;->fodifAhFPecxE:Ljava/lang/String;
+    const-string v22, "SINT32"
 
     const/16 v23, 0xf
 
@@ -651,9 +649,7 @@
 
     sget-object v40, Lcom/google/android/gms/internal/play_games_inputmapping/zzfl;->zzb:Lcom/google/android/gms/internal/play_games_inputmapping/zzfl;
 
-    const/16 v36, 0x0
-
-    sget-object v36, Lcom/google/android/gms/signin/internal/bwC/SPWjMFnDLRFgu;->CdbdJnFOQMdl:Ljava/lang/String;
+    const-string v36, "SFIXED32_LIST"
 
     const/16 v37, 0x1f
 
@@ -887,9 +883,7 @@
 
     sget-object v54, Lcom/google/android/gms/internal/play_games_inputmapping/zzfl;->zzb:Lcom/google/android/gms/internal/play_games_inputmapping/zzfl;
 
-    const/16 v50, 0x0
-
-    sget-object v50, Landroidx/core/content/Whm/HgKojeDw;->ZbjTeeysfNOxsS:Ljava/lang/String;
+    const-string v50, "SFIXED32_LIST_PACKED"
 
     const/16 v51, 0x2d
 
@@ -1209,8 +1203,8 @@
 
     move/from16 v2, v51
 
-    :goto_44f
-    if-ge v2, v1, :cond_45c
+    :goto_44a
+    if-ge v2, v1, :cond_457
 
     aget-object v3, v0, v2
 
@@ -1222,9 +1216,9 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_44f
+    goto :goto_44a
 
-    :cond_45c
+    :cond_457
     return-void
 .end method
 

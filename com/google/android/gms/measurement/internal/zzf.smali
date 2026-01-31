@@ -56,9 +56,7 @@
     :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
-
-    sget-object v1, Lcom/google/common/html/ehW/oZEOPkNlS;->FVWpMtkxN:Ljava/lang/String;
+    const-string v1, "Not initialized"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

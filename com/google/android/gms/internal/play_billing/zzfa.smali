@@ -409,9 +409,7 @@
 
     sget-object v26, Lcom/google/android/gms/internal/play_billing/zzfr;->zzj:Lcom/google/android/gms/internal/play_billing/zzfr;
 
-    const/16 v22, 0x0
-
-    sget-object v22, Lcom/fasterxml/jackson/core/json/zL/HbBqJljMsdNxs;->ITwDOPkBEzWSeoX:Ljava/lang/String;
+    const-string v22, "GROUP"
 
     const/16 v24, 0x11
 
@@ -1201,8 +1199,8 @@
 
     move/from16 v2, v51
 
-    :goto_44c
-    if-ge v2, v1, :cond_459
+    :goto_450
+    if-ge v2, v1, :cond_45d
 
     aget-object v3, v0, v2
 
@@ -1214,9 +1212,9 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_44c
+    goto :goto_450
 
-    :cond_459
+    :cond_45d
     return-void
 .end method
 

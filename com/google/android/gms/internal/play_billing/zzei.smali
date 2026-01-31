@@ -57,7 +57,7 @@
 
     or-int/2addr v0, v2
 
-    if-gez v0, :cond_5f
+    if-gez v0, :cond_60
 
     if-ltz p0, :cond_46
 
@@ -135,7 +135,7 @@
 
     throw p1
 
-    :cond_5f
+    :cond_60
     return v1
 .end method
 
@@ -249,7 +249,7 @@
 
     move-result-object v2
 
-    goto :goto_39
+    goto :goto_38
 
     :cond_28
     const/16 v2, 0x2f
@@ -262,15 +262,13 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
-
-    sget-object v3, Landroidx/savedstate/xT/fgyAspfzfnhI;->dCwLJBjRk:Ljava/lang/String;
+    const-string v3, "..."
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    :goto_39
+    :goto_38
     const/4 v3, 0x2
 
     aput-object v2, v1, v3

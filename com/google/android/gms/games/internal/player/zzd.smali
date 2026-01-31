@@ -93,7 +93,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_a9
+    if-eqz p1, :cond_a3
 
     const-string p1, "external_player_id"
 
@@ -103,9 +103,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzb:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/saucesdk/android/iLp/agZEpiUJThgYII;->nIzUUPZsiYxqJWF:Ljava/lang/String;
+    const-string p1, "profile_icon_image_uri"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzc:Ljava/lang/String;
 
@@ -117,21 +115,15 @@
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zze:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/privacysandbox/ads/adservices/java/internal/ddSj/sOSbmnglpETjJh;->Vde:Ljava/lang/String;
+    const-string p1, "profile_hi_res_image_url"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzf:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/google/firebase/installations/local/KS/gwjpAWdAPQrAC;->YTInVM:Ljava/lang/String;
+    const-string p1, "last_updated"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzg:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Lcom/nano/privacy/eM/RmZCOXza;->lnXfbYeEu:Ljava/lang/String;
+    const-string p1, "is_in_circles"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzh:Ljava/lang/String;
 
@@ -195,9 +187,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzw:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->vrVlbfKJnU:Ljava/lang/String;
+    const-string p1, "most_recent_game_featured_uri"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzx:Ljava/lang/String;
 
@@ -225,9 +215,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzD:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    sget-object p1, Landroidx/privacysandbox/ads/adservices/java/appsetid/Lg/mbvYx;->oxAoevSTApKNL:Ljava/lang/String;
+    const-string p1, "banner_image_portrait_url"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzE:Ljava/lang/String;
 
@@ -257,12 +245,12 @@
 
     const-string p1, "always_auto_sign_in"
 
-    :goto_a6
+    :goto_a0
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zzL:Ljava/lang/String;
 
     return-void
 
-    :cond_a9
+    :cond_a3
     const-string p1, "nullexternal_player_id"
 
     iput-object p1, p0, Lcom/google/android/gms/games/internal/player/zzd;->zza:Ljava/lang/String;
@@ -413,5 +401,5 @@
 
     const-string p1, "nullalways_auto_sign_in"
 
-    goto/16 :goto_a6
+    goto/16 :goto_a0
 .end method

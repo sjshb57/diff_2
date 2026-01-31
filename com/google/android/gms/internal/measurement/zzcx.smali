@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_28
+    if-eqz v0, :cond_29
 
     :try_start_5
     const-class v2, Landroid/os/UserHandle;
@@ -93,13 +93,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_28
+    if-eqz v2, :cond_29
 
     const-string v2, "myUserId invocation illegal"
 
     invoke-static {v3, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_28
+    :cond_29
     return v1
 .end method
 

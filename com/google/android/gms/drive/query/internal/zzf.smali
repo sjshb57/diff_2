@@ -68,12 +68,12 @@
 
     const-string v2, "ASC"
 
-    goto :goto_13
+    goto :goto_14
 
     :cond_11
     const-string v2, "DESC"
 
-    :goto_13
+    :goto_14
     const/4 v3, 0x1
 
     aput-object v2, v1, v3

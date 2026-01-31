@@ -234,26 +234,24 @@
 
     return-object p1
 
-    :pswitch_51  #0x2
+    :pswitch_52  #0x2
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzfw$zzc$zza;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/measurement/zzfw$zzc$zza;-><init>(Lcom/google/android/gms/internal/measurement/zzfz;)V
 
     return-object p1
 
-    :pswitch_57  #0x1
+    :pswitch_58  #0x1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzfw$zzc;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzfw$zzc;-><init>()V
 
     return-object p1
 
-    nop
-
     :pswitch_data_5e
     .packed-switch 0x1
-        :pswitch_57  #00000001
-        :pswitch_51  #00000002
+        :pswitch_58  #00000001
+        :pswitch_52  #00000002
         :pswitch_2d  #00000003
         :pswitch_2a  #00000004
         :pswitch_10  #00000005

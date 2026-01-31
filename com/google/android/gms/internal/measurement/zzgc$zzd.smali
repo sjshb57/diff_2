@@ -371,9 +371,7 @@
 
     aput-object p2, p1, p3
 
-    const/4 p2, 0x0
-
-    sget-object p2, Lcom/google/firebase/installations/remote/gv/nhOyUCgsCQLu;->puYynLK:Ljava/lang/String;
+    const-string p2, "zzg"
 
     const/4 p3, 0x2
 
@@ -509,24 +507,26 @@
 
     return-object p1
 
-    :pswitch_bc  #0x2
+    :pswitch_bb  #0x2
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgc$zzd$zza;
 
     invoke-direct {p1, p2}, Lcom/google/android/gms/internal/measurement/zzgc$zzd$zza;-><init>(Lcom/google/android/gms/internal/measurement/zzgg;)V
 
     return-object p1
 
-    :pswitch_c2  #0x1
+    :pswitch_c1  #0x1
     new-instance p1, Lcom/google/android/gms/internal/measurement/zzgc$zzd;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/measurement/zzgc$zzd;-><init>()V
 
     return-object p1
 
+    nop
+
     :pswitch_data_c8
     .packed-switch 0x1
-        :pswitch_c2  #00000001
-        :pswitch_bc  #00000002
+        :pswitch_c1  #00000001
+        :pswitch_bb  #00000002
         :pswitch_2d  #00000003
         :pswitch_2a  #00000004
         :pswitch_10  #00000005

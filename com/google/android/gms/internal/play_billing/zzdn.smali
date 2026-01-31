@@ -38,9 +38,7 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/play_billing/zzfi;-><init>()V
 
-    const/4 v0, 0x0
-
-    sget-object v0, Lcom/google/android/instantapps/TY/RrwOBnBWuWT;->UyNMpvwL:Ljava/lang/String;
+    const-string v0, ""
 
     iput-object v0, p0, Lcom/google/android/gms/internal/play_billing/zzdn;->zze:Ljava/lang/String;
 

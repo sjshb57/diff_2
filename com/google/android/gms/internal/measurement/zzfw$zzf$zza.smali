@@ -64,9 +64,7 @@
 
     new-instance v1, Lcom/google/android/gms/internal/measurement/zzfw$zzf$zza;
 
-    const/4 v3, 0x0
-
-    sget-object v3, Lcom/fasterxml/jackson/core/base/nWn/qoDm;->uJEWXzZBZG:Ljava/lang/String;
+    const-string v3, "REGEXP"
 
     const/4 v4, 0x1
 
@@ -86,9 +84,7 @@
 
     new-instance v5, Lcom/google/android/gms/internal/measurement/zzfw$zzf$zza;
 
-    const/4 v7, 0x0
-
-    sget-object v7, Landroidx/savedstate/xT/fgyAspfzfnhI;->RuZcKe:Ljava/lang/String;
+    const-string v7, "ENDS_WITH"
 
     const/4 v8, 0x3
 
@@ -108,9 +104,7 @@
 
     new-instance v9, Lcom/google/android/gms/internal/measurement/zzfw$zzf$zza;
 
-    const/4 v11, 0x0
-
-    sget-object v11, Lcom/nano/privacy/eM/RmZCOXza;->DiNYUhZyLySR:Ljava/lang/String;
+    const-string v11, "EXACT"
 
     const/4 v12, 0x5
 
